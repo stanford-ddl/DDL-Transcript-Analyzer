@@ -21,8 +21,10 @@ def get_metric_sums(delibs):
   return cumulative_df
 
 # normalizing the metric sums to get a distribution
-def get_metric_dist(cumulative_df):
+def get_metric_dist(cumulative_df, results_path):
   row_sums = cumulative_df.sum(axis=1)
   normalized_df = cumulative_df.div(row_sums, axis=0)
-  cumulative_df.to_csv("metric_sums.csv")
-  normalized_df.to_csv("metric_sums_normalized.csv")
+  
+  metrics_path = os.path.join(results_path, "metrics")
+  cumulative_df.to_csv(os.path.join(metrics_path, "metric_sums.csv"))
+  normalized_df.to_csv(os.path.join(metrics_path, "metric_sums_normalized.csv"))

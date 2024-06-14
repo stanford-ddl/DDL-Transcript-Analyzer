@@ -10,6 +10,6 @@ Future work should likely involve the following:
 - Run sanity checks on the model's evaluation of arguments 
 - Adapt and scale the code for other types of deliberations
 
-The data folder contains the deliberation transcripts that we evaluated the current methods on in an initial round of testing. The results for this can be found in results/eval1. 
+The data/1 folder contains the deliberation transcripts that we evaluated the current methods on in an initial round of testing. These results can be found in results/1. 
 
 Access to LLMs is currently provided by a together.ai key. This may need to be replaced in the future if credits get used up.

@@ -118,7 +118,7 @@ def add_results(response, df, line):
 
 # classifies all arguments in all deliberations based on the 7 extracted topics
 # note: most time-expensive function to call / may need to increase token size
-def arg_inference(all_args_indexed):
+def arg_inference(all_args_indexed, results_path):
    # looping over all deliberations
    for deliberation in all_args_indexed.keys():
       args = all_args_indexed[deliberation]
@@ -137,7 +137,7 @@ def arg_inference(all_args_indexed):
         line = arg[1]
         add_results(response, df, line)
       new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
-      df.to_csv(os.path.join(RESULTS_DIR, new_filename))
+      df.to_csv(os.path.join(results_path, new_filename))
 
 if __name__ == '__main__':
     # keys = deliberation ids, values = (argument, index in deliberation)
@@ -145,8 +145,9 @@ if __name__ == '__main__':
     all_args = []
 
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
-    for deliberation in os.listdir(DATA_DIR):
-        path = os.path.join(DATA_DIR, deliberation)
+    data_path = os.path.join(DATA_DIR, "1")
+    for deliberation in os.listdir(data_path):
+        path = os.path.join(data_path, deliberation)
         if path.endswith('xlsx'):
           formatted_args = extract_args(path, deliberation)
           all_args_indexed.update(formatted_args)
@@ -158,9 +159,11 @@ if __name__ == '__main__':
     # topics = extract_topics(sampled_args)
 
     # running inference
-    arg_inference(all_args_indexed)
-    delibs = [os.path.join(RESULTS_DIR, csv) for csv in os.listdir(RESULTS_DIR)]
+    # replace with correct path for results
+    results_path = os.path.join(RESULTS_DIR, "1")
+    arg_inference(all_args_indexed, results_path)
+    delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
     # running post-evaluation
     cumulative_df = get_metric_sums(delibs)
-    get_metric_dist(cumulative_df)
+    get_metric_dist(cumulative_df, results_path)
