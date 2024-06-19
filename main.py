@@ -9,7 +9,7 @@ from eval import get_metric_sums, get_metric_dist
 
 DATA_DIR = 'data'
 RESULTS_DIR = 'results'
-SESSION_NUM = '1'
+SESSION_NUM = '1' # Currently, this must be manually changed
 sys.path.append(os.getcwd())
 
 TOPIC = "ranked choice voting"
@@ -120,25 +120,28 @@ def add_results(response, df, line):
 # classifies all arguments in all deliberations based on the 7 extracted topics
 # note: most time-expensive function to call / may need to increase token size
 def arg_inference(all_args_indexed, results_path):
-   # looping over all deliberations
-   for deliberation in all_args_indexed.keys():
-      args = all_args_indexed[deliberation]
-      path = os.path.join(DATA_DIR, SESSION_NUM, deliberation)
+  print("Analyzing deliberations in Session ", SESSION_NUM)
+  # looping over all deliberations
+  for deliberation in all_args_indexed.keys():
+    args = all_args_indexed[deliberation]
+    path = os.path.join(DATA_DIR, SESSION_NUM, deliberation)
 
-      # initializing df and fields
-      df = pd.DataFrame(pd.read_excel(path)) 
-      for key in TopicClassifier.model_fields.keys():
-        df[key] = False
+    # initializing df and fields
+    df = pd.DataFrame(pd.read_excel(path)) 
+    for key in TopicClassifier.model_fields.keys():
+      df[key] = False
 
-      # loop over a deliberation's arguments
-      for arg in args:
-        topic_class = TopicClassifier
-        prompt = EVAL_PROMPT
-        response = util.json_llm_call(prompt, arg[0], topic_class)
-        line = arg[1]
-        add_results(response, df, line)
-      new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
-      df.to_csv(os.path.join(results_path, new_filename))
+    # loop over a deliberation's arguments
+    for arg in args:
+      topic_class = TopicClassifier
+      prompt = EVAL_PROMPT
+      response = util.json_llm_call(prompt, arg[0], topic_class)
+      line = arg[1]
+      add_results(response, df, line)
+    new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
+    df.to_csv(os.path.join(results_path, new_filename))
+    print("Created ", new_filename)
+  print("Analyzed all deliberations in Session ", SESSION_NUM)
 
 if __name__ == '__main__':
     # keys = deliberation ids, values = (argument, index in deliberation)
