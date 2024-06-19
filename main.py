@@ -9,6 +9,7 @@ from eval import get_metric_sums, get_metric_dist
 
 DATA_DIR = 'data'
 RESULTS_DIR = 'results'
+SESSION_NUM = '1'
 sys.path.append(os.getcwd())
 
 TOPIC = "ranked choice voting"
@@ -122,11 +123,11 @@ def arg_inference(all_args_indexed, results_path):
    # looping over all deliberations
    for deliberation in all_args_indexed.keys():
       args = all_args_indexed[deliberation]
-      path = os.path.join(DATA_DIR, deliberation)
+      path = os.path.join(DATA_DIR, SESSION_NUM, deliberation)
 
       # initializing df and fields
       df = pd.DataFrame(pd.read_excel(path)) 
-      for key in TopicClassifier.__fields__.keys():
+      for key in TopicClassifier.model_fields.keys():
         df[key] = False
 
       # loop over a deliberation's arguments
@@ -145,7 +146,7 @@ if __name__ == '__main__':
     all_args = []
 
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
-    data_path = os.path.join(DATA_DIR, "1")
+    data_path = os.path.join(DATA_DIR, SESSION_NUM)
     for deliberation in os.listdir(data_path):
         path = os.path.join(data_path, deliberation)
         if path.endswith('xlsx'):
@@ -160,7 +161,7 @@ if __name__ == '__main__':
 
     # running inference
     # replace with correct path for results
-    results_path = os.path.join(RESULTS_DIR, "1")
+    results_path = os.path.join(RESULTS_DIR, SESSION_NUM)
     arg_inference(all_args_indexed, results_path)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
