@@ -121,7 +121,7 @@ def add_results(response, df, line):
 # classifies all arguments in all deliberations based on the 7 extracted topics
 # note: most time-expensive function to call / may need to increase token size
 def arg_inference(all_args_indexed, results_path):
-  print("Analyzing deliberations in Session", session_num)
+  print("Started analyzing deliberations in Session", session_num)
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
     args = all_args_indexed[deliberation]
@@ -142,20 +142,19 @@ def arg_inference(all_args_indexed, results_path):
     new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
     df.to_csv(os.path.join(results_path, new_filename))
     print("Created", new_filename)
-  print("Analyzed all deliberations in Session", session_num)
+  print("Finished analyzing deliberations in Session", session_num)
 
-def create_results_path():
+def create_results_path(results_path):
+  print("Creating results and metrics folders for Session", session_num)
   # Creates the required results folder if it does not already exist
-  results_path = os.path.join(RESULTS_DIR, session_num)
   os.makedirs(results_path, exist_ok=True)
 
   # Creates the required metrics folder if it does not already exist
-  metrics_path = os.path.join(RESULTS_DIR, session_num, "metrics")
+  metrics_path = os.path.join(results_path, "metrics")
   os.makedirs(metrics_path, exist_ok=True)
 
 def main():
     print("Entering main() of Session", session_num)
-    create_results_path()
 
     # keys = deliberation ids, values = (argument, index in deliberation)
     all_args_indexed = {}
@@ -178,6 +177,7 @@ def main():
     # running inference
     # replace with correct path for results
     results_path = os.path.join(RESULTS_DIR, session_num)
+    create_results_path(results_path)
     arg_inference(all_args_indexed, results_path)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
@@ -189,6 +189,7 @@ def main():
 # Code starts here
 if __name__ == '__main__':
     print("Program Started")
+    # Iterate through all sessions from 1 through TOTAL_SESSIONS
     for current_session in range(TOTAL_SESSIONS):
       session_num = str(current_session + 1)
        # Temporary since Sessions 1, 2, and 3 for RCV has already been completed
