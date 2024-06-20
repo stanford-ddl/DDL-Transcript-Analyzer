@@ -9,7 +9,8 @@ from eval import get_metric_sums, get_metric_dist
 
 DATA_DIR = 'data'
 RESULTS_DIR = 'results'
-session_num = '2'
+TOTAL_SESSIONS = 4
+session_num = '1'
 sys.path.append(os.getcwd())
 
 TOPIC = "ranked choice voting"
@@ -143,12 +144,18 @@ def arg_inference(all_args_indexed, results_path):
     print("Created", new_filename)
   print("Analyzed all deliberations in Session", session_num)
 
-if __name__ == '__main__':
-    # Creates the required metrics folder if it does not already exist
-    metrics_path = os.path.join(RESULTS_DIR, session_num, "metrics")
-    os.makedirs(metrics_path, exist_ok=True)
+def create_results_path():
+  # Creates the required results folder if it does not already exist
+  results_path = os.path.join(RESULTS_DIR, session_num)
+  os.makedirs(results_path, exist_ok=True)
 
-    print("Yay")
+  # Creates the required metrics folder if it does not already exist
+  metrics_path = os.path.join(RESULTS_DIR, session_num, "metrics")
+  os.makedirs(metrics_path, exist_ok=True)
+
+def main():
+    create_results_path()
+
     # keys = deliberation ids, values = (argument, index in deliberation)
     all_args_indexed = {}
     all_args = []
@@ -156,11 +163,11 @@ if __name__ == '__main__':
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     data_path = os.path.join(DATA_DIR, session_num)
     for deliberation in os.listdir(data_path):
-        path = os.path.join(data_path, deliberation)
-        if path.endswith('xlsx'):
-          formatted_args = extract_args(path, deliberation)
-          all_args_indexed.update(formatted_args)
-          all_args += all_args_indexed[deliberation]
+      path = os.path.join(data_path, deliberation)
+      if path.endswith('xlsx'):
+        formatted_args = extract_args(path, deliberation)
+        all_args_indexed.update(formatted_args)
+        all_args += all_args_indexed[deliberation]
 
     # sampling 50 arguments for topic extraction
     sampled_args = random.sample(all_args, 50)
@@ -176,3 +183,10 @@ if __name__ == '__main__':
     # running post-evaluation
     cumulative_df = get_metric_sums(delibs)
     get_metric_dist(cumulative_df, results_path)
+
+# Code starts here
+if __name__ == '__main__':
+    for current_session in range(TOTAL_SESSIONS):
+      session_num = str(current_session + 1)
+      if session_num == '1': continue # Temporary since Session 1 for RCV has already been completed
+      main()
