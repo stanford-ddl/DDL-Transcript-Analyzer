@@ -9,7 +9,7 @@ from eval import get_metric_sums, get_metric_dist
 
 DATA_DIR = 'data'
 RESULTS_DIR = 'results'
-SESSION_NUM = '1' # Currently, this must be manually changed
+session_num = '2'
 sys.path.append(os.getcwd())
 
 TOPIC = "ranked choice voting"
@@ -120,11 +120,11 @@ def add_results(response, df, line):
 # classifies all arguments in all deliberations based on the 7 extracted topics
 # note: most time-expensive function to call / may need to increase token size
 def arg_inference(all_args_indexed, results_path):
-  print("Analyzing deliberations in Session ", SESSION_NUM)
+  print("Analyzing deliberations in Session", session_num)
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
     args = all_args_indexed[deliberation]
-    path = os.path.join(DATA_DIR, SESSION_NUM, deliberation)
+    path = os.path.join(DATA_DIR, session_num, deliberation)
 
     # initializing df and fields
     df = pd.DataFrame(pd.read_excel(path)) 
@@ -140,16 +140,21 @@ def arg_inference(all_args_indexed, results_path):
       add_results(response, df, line)
     new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
     df.to_csv(os.path.join(results_path, new_filename))
-    print("Created ", new_filename)
-  print("Analyzed all deliberations in Session ", SESSION_NUM)
+    print("Created", new_filename)
+  print("Analyzed all deliberations in Session", session_num)
 
 if __name__ == '__main__':
+    # Creates the required metrics folder if it does not already exist
+    metrics_path = os.path.join(RESULTS_DIR, session_num, "metrics")
+    os.makedirs(metrics_path, exist_ok=True)
+
+    print("Yay")
     # keys = deliberation ids, values = (argument, index in deliberation)
     all_args_indexed = {}
     all_args = []
 
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
-    data_path = os.path.join(DATA_DIR, SESSION_NUM)
+    data_path = os.path.join(DATA_DIR, session_num)
     for deliberation in os.listdir(data_path):
         path = os.path.join(data_path, deliberation)
         if path.endswith('xlsx'):
@@ -164,7 +169,7 @@ if __name__ == '__main__':
 
     # running inference
     # replace with correct path for results
-    results_path = os.path.join(RESULTS_DIR, SESSION_NUM)
+    results_path = os.path.join(RESULTS_DIR, session_num)
     arg_inference(all_args_indexed, results_path)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
