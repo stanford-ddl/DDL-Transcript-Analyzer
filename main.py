@@ -191,6 +191,9 @@ if __name__ == '__main__':
     print("Program Started")
     for current_session in range(TOTAL_SESSIONS):
       session_num = str(current_session + 1)
-      if session_num == '1': continue # Temporary since Session 1 for RCV has already been completed
+       # Temporary since Sessions 1, 2, and 3 for RCV has already been completed
+      if session_num == '1' or session_num == '2' or session_num == '3':
+        print("Skipping Session", session_num)
+        continue
       main()
     print("Program Finished")
