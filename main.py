@@ -154,6 +154,7 @@ def create_results_path():
   os.makedirs(metrics_path, exist_ok=True)
 
 def main():
+    print("Entering main() of Session", session_num)
     create_results_path()
 
     # keys = deliberation ids, values = (argument, index in deliberation)
@@ -183,10 +184,13 @@ def main():
     # running post-evaluation
     cumulative_df = get_metric_sums(delibs)
     get_metric_dist(cumulative_df, results_path)
+    print("Exiting main() of Session", session_num)
 
 # Code starts here
 if __name__ == '__main__':
+    print("Program Started")
     for current_session in range(TOTAL_SESSIONS):
       session_num = str(current_session + 1)
       if session_num == '1': continue # Temporary since Session 1 for RCV has already been completed
       main()
+    print("Program Finished")
