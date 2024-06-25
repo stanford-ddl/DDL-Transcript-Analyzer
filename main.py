@@ -39,23 +39,35 @@ def concat_args(arguments, deliberation):
     cleaned_args[deliberation].append((joined, arg[1]))
   return cleaned_args
 
-# extracts 7 argument topics from a sample of arguments on topic
+# Given a subset of arguments,
+# return a list of topics that most arguments fall under
+# extracts argument topics from a sample of arguments on topic
 def extract_topics(sampled_args):
+   NUM_TOPICS = '7'
+   print("Generating", NUM_TOPICS, "topics from Session " + session_num + "...")
    prompt = """This is a list of arguments presented in a deliberation about """ + TOPIC + """. Your job is to summarize
-   these arguments into 7 distinct topics regarding """ + TOPIC + """ in a Python list of strings, with each string being a topic.
+   these arguments into """ + NUM_TOPICS + """ distinct topics regarding """ + TOPIC + """ in a Python list of strings, with each string being a topic.
    Every string MUST start with 'Ranked choice voting is' followed by a brief summary of the topic.
    Do NOT number the list or indent in your response, and do NOT include apostrophes.
    Do NOT include anything in the list other than the topics themselves. Your response is ONLY the list of topics.
-   Once again, the Python list you return should contain exactly 7 strings. This is an example of what you should return:
+   Once again, the Python list you return should contain exactly """ + NUM_TOPICS + """ strings. This is an example of what you should return:
    ['Ranked choice voting is fair', 'Ranked choice voting is complicated', 'Ranked choice voting is pointless'...]
    The topics in the list should be somewhat distinct from each other.
    You should not have broad topics, such as the advantages and disadvantages of """ + TOPIC + """. Rather,
    you should instead find nuanced groups of arguments that may be present on either side of the discussion."""
    response = util.simple_llm_call(prompt, sampled_args)
    topic_list = ast.literal_eval(response.strip())
-   if len(topic_list) != 7 or type(topic_list) != list:
-     return "The response you provided is not in the correct format. Please provide a list of 7 strings."
+   if len(topic_list) != int(NUM_TOPICS) or type(topic_list) != list:
+     return "The response you provided is not in the correct format. Please provide a list of " + NUM_TOPICS + " strings."
+   print_topics(topic_list)
    return topic_list
+
+# Debug function
+# Given a list of topics,
+# print them
+def print_topics(topic_list):
+  for i in range(len(topic_list)):
+    print("Topic " + str(i+1) + ":", topic_list[i])
 
 # JSON class for extraction
 class TopicClassifier(BaseModel):
@@ -118,7 +130,7 @@ def add_results(response, df, line):
    for key in response.keys():
       df.loc[df['Order'] == line, key] = response[key]
 
-# classifies all arguments in all deliberations based on the 7 extracted topics
+# classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
 def arg_inference(all_args_indexed, results_path):
   print("Analyzing Session", session_num, "deliberations...")
@@ -144,7 +156,8 @@ def arg_inference(all_args_indexed, results_path):
     print("Created", new_filename)
   print("Finished analyzing deliberations in Session", session_num)
 
-# Given a path for a 'results' folder, create that folder and a 'metrics' subfolder if needed
+# Given a path for a 'results' folder,
+# create that folder and a 'metrics' subfolder if needed
 def create_results_path(results_path):
   print("Creating Session", session_num, "results and metrics folders...")
   # Creates the required results folder if it does not already exist
@@ -173,7 +186,10 @@ def main():
     # sampling 50 arguments for topic extraction
     sampled_args = random.sample(all_args, 50)
     # uncomment line below to run topic extraction
-    # topics = extract_topics(sampled_args)
+    topics = extract_topics(sampled_args)
+
+    print("Early return for debugging")
+    return
 
     # running inference
     # replace with correct path for results
