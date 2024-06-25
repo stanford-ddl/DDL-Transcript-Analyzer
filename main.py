@@ -144,6 +144,7 @@ def arg_inference(all_args_indexed, results_path):
     print("Created", new_filename)
   print("Finished analyzing deliberations in Session", session_num)
 
+# Given a path for a 'results' folder, create that folder and a 'metrics' subfolder if needed
 def create_results_path(results_path):
   print("Creating Session", session_num, "results and metrics folders...")
   # Creates the required results folder if it does not already exist
