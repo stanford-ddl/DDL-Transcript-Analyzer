@@ -191,10 +191,9 @@ if __name__ == '__main__':
     print("Program Started")
     # Iterate through all sessions from 1 through TOTAL_SESSIONS
     for current_session in range(TOTAL_SESSIONS):
-      session_num = str(current_session + 1)
-       # Temporary since Sessions 1, 2, and 3 for RCV has already been completed
-      if session_num == '1' or session_num == '2' or session_num == '3':
-        print("Skipping Session", session_num)
-        continue
-      main()
+      current_session = str(current_session + 1)
+       # Skip sessions not selected in session_num global variable
+      if current_session != session_num:
+        print("Skipping Session", current_session)
+    main()
     print("Program Finished")
