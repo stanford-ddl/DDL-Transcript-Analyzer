@@ -121,7 +121,7 @@ def add_results(response, df, line):
 # classifies all arguments in all deliberations based on the 7 extracted topics
 # note: most time-expensive function to call / may need to increase token size
 def arg_inference(all_args_indexed, results_path):
-  print("Started analyzing deliberations in Session", session_num)
+  print("Analyzing Session", session_num, "deliberations...")
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
     args = all_args_indexed[deliberation]
@@ -145,7 +145,7 @@ def arg_inference(all_args_indexed, results_path):
   print("Finished analyzing deliberations in Session", session_num)
 
 def create_results_path(results_path):
-  print("Creating results and metrics folders for Session", session_num)
+  print("Creating Session", session_num, "results and metrics folders...")
   # Creates the required results folder if it does not already exist
   os.makedirs(results_path, exist_ok=True)
 
