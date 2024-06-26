@@ -7,10 +7,13 @@ import ast
 from pydantic import BaseModel, Field
 from eval import get_metric_sums, get_metric_dist 
 
+# Togglable Options
+TOTAL_SESSIONS = 4 # The highest numbered session in the data
+IS_ANALYZE_ALL_SESSIONS = False # If true, all sessions will be analyzed. If false, only 'session_num' will be analyzed.
+session_num = '1' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is false
+
 DATA_DIR = 'data'
 RESULTS_DIR = 'results'
-TOTAL_SESSIONS = 4
-session_num = '1'
 sys.path.append(os.getcwd())
 
 TOPIC = "ranked choice voting"
@@ -332,8 +335,12 @@ def main():
 # Code starts here
 if __name__ == '__main__':
     print("Program Started")
-    # Iterate through all sessions from 1 through TOTAL_SESSIONS
-    for session in range(TOTAL_SESSIONS):
-      session_num = str(session + 1)
-      main()
+    # If all sessions should be analyzed
+    if IS_ANALYZE_ALL_SESSIONS:
+      # Iterate through all sessions from 1 through TOTAL_SESSIONS
+      for session in range(TOTAL_SESSIONS):
+        session_num = str(session + 1)
+        main()
+    # Else, analyze only Session number 'session_num'.
+    else: main()
     print("Program Finished")
