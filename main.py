@@ -8,9 +8,10 @@ from pydantic import BaseModel, Field
 from eval import get_metric_sums, get_metric_dist 
 
 # Togglable Options
+IS_DEBUG = False # If True, additional debug statements will be printed.
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
-IS_ANALYZE_ALL_SESSIONS = False # If true, all sessions will be analyzed. If false, only 'session_num' will be analyzed.
-session_num = '1' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is false
+IS_ANALYZE_ALL_SESSIONS = True # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
+session_num = '1' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
 
 DATA_DIR = 'data'
 RESULTS_DIR = 'results'
@@ -78,7 +79,7 @@ def extract_topics(sampled_args, attempts = 0):
    The Python list you return should contain EXACTLY """ + str(int(NUM_TOPICS)+1) + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
-   #print("\n(DEBUG) Raw response:", response + "\n")
+   if IS_DEBUG: print("\n(DEBUG) Raw response:", response + "\n")
    topic_list = ast.literal_eval(response.strip())
    # If invalid response, try again
    if len(topic_list) != (int(NUM_TOPICS) + 1) or type(topic_list) != list:
@@ -94,7 +95,6 @@ def extract_topics(sampled_args, attempts = 0):
    print_topics(topic_list)
    return topic_list
 
-# Debug function
 # Given a list of topics,
 # print them.
 def print_topics(topic_list):
@@ -131,7 +131,7 @@ def generate_categories(sampled_args, topic, attempts = 0):
    The Python list you return should contain EXACTLY """ + NUM_CATEGORIES + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
-   #print("\n(DEBUG) Raw response:", response + "\n")
+   if IS_DEBUG: print("\n(DEBUG) Raw response:", response + "\n")
    category_list = ast.literal_eval(response.strip())
    # If invalid response, try again
    if len(category_list) != int(NUM_CATEGORIES) or type(category_list) != list:
@@ -174,7 +174,7 @@ def generate_category_variables(category_list, topic, attempts = 0):
    The Python list you return should contain EXACTLY """ + NUM_VARIABLES + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, category_list)
-   #print("\n(DEBUG) Raw response:", response + "\n")
+   if IS_DEBUG: print("\n(DEBUG) Raw response:", response + "\n")
    variable_list = ast.literal_eval(response.strip())
    # If invalid response, try again
    if len(variable_list) != int(NUM_VARIABLES) or type(variable_list) != list:
@@ -190,7 +190,6 @@ def generate_category_variables(category_list, topic, attempts = 0):
    print_categories(category_list, variable_list)
    return variable_list
 
-# Debug function
 # Given a list of categories and their variable shorthand,
 # print them.
 def print_categories(category_list, variable_list):
