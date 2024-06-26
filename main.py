@@ -40,15 +40,10 @@ def concat_args(arguments, deliberation):
   return cleaned_args
 
 # Given a subset of arguments,
-# return a list of topics that most arguments deliberate on
+# return a list of topics that most arguments deliberate on.
 def extract_topics(sampled_args, attempts = 0):
-   # If this failed too many times, give up.
-   if attempts >= 3:
-     print("Failed", attempts, "attempts to generate...")
-     return None
-   
    NUM_TOPICS = '7'
-   print("\nGenerating", NUM_TOPICS, "topics from Session", session_num + "...")
+   if attempts == 0: print("\nGenerating", NUM_TOPICS, "topics from Session", session_num + "...")
 
    prompt = """This is a list of arguments presented in a deliberation. Your job is to identify the single, primary topic deliberated on and write
    """ + NUM_TOPICS + """ distinct policies regarding the primary topic in a Python list of strings, with each string being a policy.
@@ -69,6 +64,7 @@ def extract_topics(sampled_args, attempts = 0):
    Other code ran for several hours before you were given this task.
    If this program crashes, we will need to restart which takes several hours.
    Please take your time and ensure ALL of these instructions are followed.
+   Do NOT write "Primary topic:" in your response.
    Do NOT number the list.
    Do NOT indent in your response.
    Do NOT include a newline character in your response.
@@ -79,32 +75,35 @@ def extract_topics(sampled_args, attempts = 0):
    The Python list you return should contain EXACTLY """ + str(int(NUM_TOPICS)+1) + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
-   print("\n(DEBUG) Raw response:", response + "\n")
+   #print("\n(DEBUG) Raw response:", response + "\n")
    topic_list = ast.literal_eval(response.strip())
    # If invalid response, try again
    if len(topic_list) != (int(NUM_TOPICS) + 1) or type(topic_list) != list:
-     return extract_topics(sampled_args, attempts+1)
+     attempts += 1
+     print("Failed attempt #" + attempts + ".")
+     # If failed too many times, give up
+     if attempts >= 5:
+       print("Giving up :(")
+       return None
+     # Else, try again
+     return extract_topics(sampled_args, attempts)
+   # Else, success!
    print_topics(topic_list)
    return topic_list
 
 # Debug function
 # Given a list of topics,
-# print them
+# print them.
 def print_topics(topic_list):
   print("Primary Topic:", topic_list[0])
   for i in range(1, len(topic_list)):
-    print("Policy " + str(i) + ":", topic_list[i])
+    print("Policy", str(i) + ":", topic_list[i])
 
 # Given a subset of arguments and a topic,
-# return a list of categories that most arguments fall under
+# return a list of categories that most arguments fall under.
 def generate_categories(sampled_args, topic, attempts = 0):
-   # If this failed too many times, give up.
-   if attempts >= 3:
-     print("Failed", attempts, "attempts to generate...")
-     return None
-   
    NUM_CATEGORIES = '7'
-   print("\nGenerating", NUM_CATEGORIES, "categories regarding", topic + "...")
+   if attempts == 0: print("\nGenerating", NUM_CATEGORIES, "categories regarding", topic + "...")
    
    prompt = """This is a list of arguments presented in a deliberation about """ + topic + """. Your job is to summarize
    these arguments into """ + NUM_CATEGORIES + """ distinct categories regarding """ + topic + """ in a Python list of strings, with each string being a category.
@@ -112,8 +111,7 @@ def generate_categories(sampled_args, topic, attempts = 0):
    Your response will be """ + NUM_CATEGORIES + """ strings.
    The categories in the list should be somewhat distinct from each other.
    The categories should be specific to the most common arguments given to you as they relate to """ + topic + """.
-   Do NOT use the words "for" or "against" in your response;
-   rather, your strings should be general topic areas.
+   Do NOT use the words "for" or "against" in your response.
    You should not have broad categories, such as the advantages and disadvantages of """ + topic + """. Rather,
    you should instead find nuanced groups of arguments that may be present on either side of the discussion.
    This program will CRASH if your response fails to conform to these guidelines.
@@ -130,13 +128,71 @@ def generate_categories(sampled_args, topic, attempts = 0):
    The Python list you return should contain EXACTLY """ + NUM_CATEGORIES + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
-   print("\n(DEBUG) Raw response:", response + "\n")
+   #print("\n(DEBUG) Raw response:", response + "\n")
    category_list = ast.literal_eval(response.strip())
    # If invalid response, try again
    if len(category_list) != int(NUM_CATEGORIES) or type(category_list) != list:
-     return generate_categories(sampled_args, topic, attempts+1)
-   print_topics(category_list) # TODO update this
+     attempts += 1
+     print("Failed attempt #" + attempts + ".")
+     # If failed too many times, give up
+     if attempts >= 5:
+       print("Giving up :(")
+       return None
+     # Else, try again
+     return generate_categories(sampled_args, topic, attempts)
+   # Else, success!
    return category_list
+
+# Given a list of categories,
+# return a list of variables that can be used as shorthand for each category.
+def generate_category_variables(category_list, topic, attempts = 0):
+   NUM_VARIABLES = str(len(category_list))
+   if attempts == 0: print("Generating variables for the", NUM_VARIABLES, "categories regarding", topic + "...")
+   
+   prompt = """This is a list of categories representing arguments made in a deliberation about """ + topic + """.
+   Your job is to create variable names for each category in a Python list of strings, with each string being a variable name.
+   Your response will be """ + NUM_VARIABLES + """ strings.
+   The variable names should be short.
+   The variable names should use camel case style.
+   The variable names should encapsulate the core of the category.
+   Here is an example of what you might return:
+   ["VariableOne", "VariableTwo",...]
+   This program will CRASH if your response fails to conform to these guidelines.
+   Other code ran for several hours before you were given this task.
+   If this program crashes, we will need to restart which takes several hours.
+   Please take your time and ensure ALL of these instructions are followed.
+   Do NOT number the list.
+   Do NOT indent in your response.
+   Do NOT include a newline character in your response.
+   Do NOT include anything in the list other than the variable names.
+   Your response is ONLY a single list of variable names.
+   Once again, your response is ONLY a single list.
+   Your response is ONLY one line.
+   The Python list you return should contain EXACTLY """ + NUM_VARIABLES + """ strings.
+   Thank you!"""
+   response = util.simple_llm_call(prompt, category_list)
+   #print("\n(DEBUG) Raw response:", response + "\n")
+   variable_list = ast.literal_eval(response.strip())
+   # If invalid response, try again
+   if len(variable_list) != int(NUM_VARIABLES) or type(variable_list) != list:
+     attempts += 1
+     print("Failed attempt #" + attempts + ".")
+     # If failed too many times, give up
+     if attempts >= 5:
+       print("Giving up :(")
+       return None
+     # Else, try again
+     return generate_category_variables(category_list, topic, attempts)
+   # Else, success!
+   print_categories(category_list, variable_list)
+   return variable_list
+
+# Debug function
+# Given a list of categories and their variable shorthand,
+# print them.
+def print_categories(category_list, variable_list):
+  for i in range(len(category_list)):
+    print("Category", str(i+1) + ":", variable_list[i] + ":", category_list[i])
 
 # JSON class for extraction
 class TopicClassifier(BaseModel):
@@ -255,7 +311,8 @@ def main():
     # sampling 500 arguments for topic extraction
     sampled_args = random.sample(all_args, 500)
     topics = extract_topics(sampled_args)
-    categories = generate_categories(sampled_args, topics[0]) if topics else print("Cannot generate categories: No topic available")
+    categories = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories.")
+    category_variables = generate_category_variables(categories, topics[0]) if topics and categories else print("ERROR: Cannot generate variable shorthand for categories.")
 
     print("\nEarly return for debugging")
     return
@@ -277,10 +334,6 @@ if __name__ == '__main__':
     print("Program Started")
     # Iterate through all sessions from 1 through TOTAL_SESSIONS
     for session in range(TOTAL_SESSIONS):
-      current_session = str(session + 1)
-      # Skip sessions not selected in session_num global variable
-      if current_session != session_num:
-        print("Skipping Session", current_session)
-        continue
+      session_num = str(session + 1)
       main()
     print("Program Finished")
