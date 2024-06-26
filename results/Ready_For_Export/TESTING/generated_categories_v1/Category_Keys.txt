@@ -1,0 +1,10 @@
+Primary Topic: Voting rights for individuals with felony convictions
+
+Categories:
+• autoRegistration: Automatic voter registration
+• voterIdLaws: Voter ID laws
+• felonVotingRights: Felon voting rights
+• onlineVoting: Online and mail-in voting
+• electionSecurityAudits: Election security and audits
+• thirdPartyVoting: Third-party involvement in voting
+• centralizedDecentralizedElectionControl: Centralized vs. decentralized election control

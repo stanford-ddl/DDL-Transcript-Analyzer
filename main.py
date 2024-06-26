@@ -10,8 +10,8 @@ from eval import get_metric_sums, get_metric_dist
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
-IS_ANALYZE_ALL_SESSIONS = True # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
-session_num = '1' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
+IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
+session_num = 'test' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
 
 DATA_DIR = 'data'
 RESULTS_DIR = 'results'
@@ -84,12 +84,13 @@ def extract_topics(sampled_args, attempts = 0):
    # If invalid response, try again
    if len(topic_list) != (int(NUM_TOPICS) + 1) or type(topic_list) != list:
      attempts += 1
-     print("Failed attempt #" + attempts + ".")
+     print("Failed attempt #" + str(attempts))
      # If failed too many times, give up
      if attempts >= 5:
-       print("Giving up :(")
+       print("ERROR: Failed to generate a primary topic and policies")
        return None
      # Else, try again
+     print("Retrying...")
      return extract_topics(sampled_args, attempts)
    # Else, success!
    print_topics(topic_list)
@@ -136,12 +137,13 @@ def generate_categories(sampled_args, topic, attempts = 0):
    # If invalid response, try again
    if len(category_list) != int(NUM_CATEGORIES) or type(category_list) != list:
      attempts += 1
-     print("Failed attempt #" + attempts + ".")
+     print("Failed attempt #" + str(attempts))
      # If failed too many times, give up
      if attempts >= 5:
-       print("Giving up :(")
+       print("ERROR: Failed to generate a primary topic and policies")
        return None
      # Else, try again
+     print("Retrying...")
      return generate_categories(sampled_args, topic, attempts)
    # Else, success!
    return category_list
@@ -179,12 +181,13 @@ def generate_category_variables(category_list, topic, attempts = 0):
    # If invalid response, try again
    if len(variable_list) != int(NUM_VARIABLES) or type(variable_list) != list:
      attempts += 1
-     print("Failed attempt #" + attempts + ".")
+     print("Failed attempt #" + str(attempts))
      # If failed too many times, give up
      if attempts >= 5:
-       print("Giving up :(")
+       print("ERROR: Failed to generate a primary topic and policies")
        return None
      # Else, try again
+     print("Retrying...")
      return generate_category_variables(category_list, topic, attempts)
    # Else, success!
    print_categories(category_list, variable_list)
@@ -252,6 +255,63 @@ EVAL_PROMPT = """You are a skilled annotator tasked with identifying the type of
         You should return true for at least one parameter.
         """
 
+class Categories(BaseModel):
+  var0: bool = Field(default=False)
+  var1: bool = Field(default=False)
+  var2: bool = Field(default=False)
+  var3: bool = Field(default=False)
+  var4: bool = Field(default=False)
+  var5: bool = Field(default=False)
+  var6: bool = Field(default=False)
+  other: bool = Field(default=False)
+  notRelevant: bool = Field(default=False)
+
+# In progress, does not work.
+def build_JSON_class(category_variables):
+  for category in category_variables:
+    setattr(Categories, category, Field(default=False))
+  print(vars(TopicClassifier))
+  print(vars(Categories))
+
+# Given a primary topic and specific categories,
+# return a prompt that the model will use to judge arguments.
+def build_argument_analysis_prompt(topic, categories):
+  prompt = """You are a skilled annotator tasked with identifying the type of arguments made in a deliberation about """ + topic + """.
+        Read through the given arguments presented.
+        Your job is to extract the type of arguments made and load them into the JSON object containing true/false parameters.
+
+        Return true for var0 if the argument is relevant to """ + categories[0] + """.
+        Return false for var0 otherwise.
+        
+        Return true for var1 if the argument is relevant to """ + categories[1] + """.
+        Return false for var1 otherwise.
+        
+        Return true for var2 if the argument is relevant to """ + categories[2] + """.
+        Return false for var2 otherwise.
+        
+        Return true for var3 if the argument is relevant to """ + categories[3] + """.
+        Return false for var3 otherwise.
+        
+        Return true for var4 if the argument is relevant to """ + categories[4] + """.
+        Return false for var4 otherwise.
+        
+        Return true for var5 if the argument is relevant to """ + categories[5] + """.
+        Return false for var5 otherwise.
+        
+        Return true for var6 if the argument is relevant to """ + categories[6] + """.
+        Return false for var6 otherwise.
+        
+        Return true for other if the argument discusses a category that is relevant to """ + topic + """
+        but not covered by the other categories.
+        
+        Return true for notRelevant if the argument is not relevant to the discussion of """ + topic + """.
+        
+        It is possible for a single argument to have multiple true parameters, except for notRelevant.
+        If an argument is not relevant, all other parameters should be false.
+        You should return true for at least one parameter.
+        """
+  return prompt
+
 # adds an LLM's topic classifications for an argument to the deliberation df
 def add_results(response, df, line):
    for key in response.keys():
@@ -259,7 +319,7 @@ def add_results(response, df, line):
 
 # classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
-def arg_inference(all_args_indexed, results_path):
+def arg_inference(all_args_indexed, results_path, argument_analysis_prompt = None):
   print("\nAnalyzing Session", session_num, "deliberations...")
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
@@ -273,8 +333,8 @@ def arg_inference(all_args_indexed, results_path):
 
     # loop over a deliberation's arguments
     for arg in args:
-      topic_class = TopicClassifier
-      prompt = EVAL_PROMPT
+      topic_class = Categories
+      prompt = argument_analysis_prompt
       response = util.json_llm_call(prompt, arg[0], topic_class)
       line = arg[1]
       add_results(response, df, line)
@@ -286,7 +346,7 @@ def arg_inference(all_args_indexed, results_path):
 # Given a path for a 'results' folder,
 # create that folder and a 'metrics' subfolder if needed
 def create_results_path(results_path):
-  print("Creating Session", session_num, "results and metrics folders...")
+  print("\nCreating Session", session_num, "results and metrics folders...")
   # Creates the required results folder if it does not already exist
   os.makedirs(results_path, exist_ok=True)
 
@@ -313,17 +373,16 @@ def main():
     # sampling 500 arguments for topic extraction
     sampled_args = random.sample(all_args, 500)
     topics = extract_topics(sampled_args)
-    categories = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories.")
-    category_variables = generate_category_variables(categories, topics[0]) if topics and categories else print("ERROR: Cannot generate variable shorthand for categories.")
-
-    print("\nEarly return for debugging")
-    return
+    categories = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic")
+    category_variables = generate_category_variables(categories, topics[0]) if categories else print("ERROR: Cannot generate variable shorthand for categories: No categories")
+    #build_JSON_class(category_variables) if category_variables else print("ERROR: Cannot build JSON class: No category variables")
 
     # running inference
     # replace with correct path for results
     results_path = os.path.join(RESULTS_DIR, session_num)
     create_results_path(results_path)
-    arg_inference(all_args_indexed, results_path)
+    argument_analysis_prompt = build_argument_analysis_prompt(topics[0], categories) if topics and categories else print("ERROR: Cannot generate API prompt")
+    arg_inference(all_args_indexed, results_path, argument_analysis_prompt)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
     # running post-evaluation
