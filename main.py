@@ -42,23 +42,49 @@ def concat_args(arguments, deliberation):
 # Given a subset of arguments,
 # return a list of topics that most arguments fall under
 # extracts argument topics from a sample of arguments on topic
-def extract_topics(sampled_args):
+def extract_topics(sampled_args, attempts = 0):
+   # If this failed too many times, give up.
+   if attempts >= 1:
+     print("Failed", attempts, "attempts to generate...")
+     return None
+   
    NUM_TOPICS = '7'
-   print("Generating", NUM_TOPICS, "topics from Session " + session_num + "...")
-   prompt = """This is a list of arguments presented in a deliberation about """ + TOPIC + """. Your job is to summarize
-   these arguments into """ + NUM_TOPICS + """ distinct topics regarding """ + TOPIC + """ in a Python list of strings, with each string being a topic.
-   Every string MUST start with 'Ranked choice voting is' followed by a brief summary of the topic.
-   Do NOT number the list or indent in your response, and do NOT include apostrophes.
-   Do NOT include anything in the list other than the topics themselves. Your response is ONLY the list of topics.
-   Once again, the Python list you return should contain exactly """ + NUM_TOPICS + """ strings. This is an example of what you should return:
-   ['Ranked choice voting is fair', 'Ranked choice voting is complicated', 'Ranked choice voting is pointless'...]
-   The topics in the list should be somewhat distinct from each other.
-   You should not have broad topics, such as the advantages and disadvantages of """ + TOPIC + """. Rather,
-   you should instead find nuanced groups of arguments that may be present on either side of the discussion."""
+   print("\nGenerating", NUM_TOPICS, "topics from Session " + session_num + "...")
+
+   prompt = """This is a list of arguments presented in a deliberation. Your job is to identify the single, primary topic deliberated on and write
+   """ + NUM_TOPICS + """ distinct policies regarding the primary topic in a Python list of strings, with each string being a policy.
+   The first string in the list is the primary topic, and every other string is a policy.
+   It should be possible to define every argument initially provided as being an argument "for" or "against" at least one of the policies you generate.
+   The exceptions to this are the very small number of arguments that are unrelated to the primary topic and all policies.
+   Here is an example of what you might return if the primary topic was 'Ranked choice voting':
+   ["Ranked choice voting", "Implement ranked choice voting as an alternative method both to elected officials and representatives at all levels", "Use proportional representatives to elect elected officials"...]
+   The policies in the list should be somewhat distinct from each other.
+   You should NOT have broad policies, such as the advantages and disadvantages of the primary topic. Rather,
+   you should instead find nuanced groups of arguments that may be present on either side of the discussion.
+   Every policy should be a feasable, actionable change. Here is an example of what a policy should NOT be:
+   "Limit the influence of political parties in elections" This policy is BAD because it is too vague and not actionable;
+   this BAD policy could not feasibly be turned into a law.
+   The following non-case-sensitive words are BANNED and should NOT be included in your response:
+   "and", "but", "or", "by", "Promote", "Encourage", "Ensure", "Explore", "Maintain".
+   This program will CRASH if your response fails to conform to the guidelines above.
+   Other code ran for several hours before you were given this task.
+   If this program crashes, we will need to restart which takes several hours.
+   Please take your time and ensure ALL of these instructions are followed.
+   The Python list you return should contain EXACTLY """ + str((int(NUM_TOPICS)+1)) + """ strings.
+   Do NOT number the list.
+   Do NOT indent in your response.
+   Do NOT have a newline character in your response.
+   Do NOT include anything in the list other than the primary topic and the policies themselves.
+   Your response is ONLY a single list of the primary topic and the policies.
+   Once again, your response is ONLY a single list.
+   Your response is ONLY one line.
+   Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
+   print("\n(DEBUG) Raw response:", response + "\n")
    topic_list = ast.literal_eval(response.strip())
-   if len(topic_list) != int(NUM_TOPICS) or type(topic_list) != list:
-     return "The response you provided is not in the correct format. Please provide a list of " + NUM_TOPICS + " strings."
+   # If invalid response, try again
+   if len(topic_list) != (int(NUM_TOPICS) + 1) or type(topic_list) != list:
+     return extract_topics(sampled_args, attempts+1)
    print_topics(topic_list)
    return topic_list
 
@@ -66,8 +92,9 @@ def extract_topics(sampled_args):
 # Given a list of topics,
 # print them
 def print_topics(topic_list):
-  for i in range(len(topic_list)):
-    print("Topic " + str(i+1) + ":", topic_list[i])
+  print("Primary Topic:", topic_list[0])
+  for i in range(1, len(topic_list)):
+    print("Policy " + str(i) + ":", topic_list[i])
 
 # JSON class for extraction
 class TopicClassifier(BaseModel):
@@ -133,7 +160,7 @@ def add_results(response, df, line):
 # classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
 def arg_inference(all_args_indexed, results_path):
-  print("Analyzing Session", session_num, "deliberations...")
+  print("\nAnalyzing Session", session_num, "deliberations...")
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
     args = all_args_indexed[deliberation]
@@ -184,11 +211,11 @@ def main():
         all_args += all_args_indexed[deliberation]
 
     # sampling 50 arguments for topic extraction
-    sampled_args = random.sample(all_args, 50)
+    sampled_args = random.sample(all_args, 500)
     # uncomment line below to run topic extraction
     topics = extract_topics(sampled_args)
 
-    print("Early return for debugging")
+    print("\nEarly return for debugging")
     return
 
     # running inference
@@ -209,9 +236,5 @@ if __name__ == '__main__':
     # Iterate through all sessions from 1 through TOTAL_SESSIONS
     for current_session in range(TOTAL_SESSIONS):
       session_num = str(current_session + 1)
-       # Temporary since Sessions 1, 2, and 3 for RCV has already been completed
-      if session_num == '1' or session_num == '2' or session_num == '3':
-        print("Skipping Session", session_num)
-        continue
       main()
     print("Program Finished")
