@@ -44,7 +44,7 @@ def concat_args(arguments, deliberation):
 # extracts argument topics from a sample of arguments on topic
 def extract_topics(sampled_args, attempts = 0):
    # If this failed too many times, give up.
-   if attempts >= 1:
+   if attempts >= 3:
      print("Failed", attempts, "attempts to generate...")
      return None
    
@@ -70,7 +70,6 @@ def extract_topics(sampled_args, attempts = 0):
    Other code ran for several hours before you were given this task.
    If this program crashes, we will need to restart which takes several hours.
    Please take your time and ensure ALL of these instructions are followed.
-   The Python list you return should contain EXACTLY """ + str((int(NUM_TOPICS)+1)) + """ strings.
    Do NOT number the list.
    Do NOT indent in your response.
    Do NOT have a newline character in your response.
@@ -78,6 +77,7 @@ def extract_topics(sampled_args, attempts = 0):
    Your response is ONLY a single list of the primary topic and the policies.
    Once again, your response is ONLY a single list.
    Your response is ONLY one line.
+   The Python list you return should contain EXACTLY """ + str((int(NUM_TOPICS)+1)) + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
    print("\n(DEBUG) Raw response:", response + "\n")
@@ -210,7 +210,7 @@ def main():
         all_args_indexed.update(formatted_args)
         all_args += all_args_indexed[deliberation]
 
-    # sampling 50 arguments for topic extraction
+    # sampling 500 arguments for topic extraction
     sampled_args = random.sample(all_args, 500)
     # uncomment line below to run topic extraction
     topics = extract_topics(sampled_args)
@@ -234,10 +234,11 @@ def main():
 if __name__ == '__main__':
     print("Program Started")
     # Iterate through all sessions from 1 through TOTAL_SESSIONS
-    for current_session in range(TOTAL_SESSIONS):
-      current_session = str(current_session + 1)
-       # Skip sessions not selected in session_num global variable
+    for session in range(TOTAL_SESSIONS):
+      current_session = str(session + 1)
+      # Skip sessions not selected in session_num global variable
       if current_session != session_num:
         print("Skipping Session", current_session)
-    main()
+        continue
+      main()
     print("Program Finished")
