@@ -40,8 +40,7 @@ def concat_args(arguments, deliberation):
   return cleaned_args
 
 # Given a subset of arguments,
-# return a list of topics that most arguments fall under
-# extracts argument topics from a sample of arguments on topic
+# return a list of topics that most arguments deliberate on
 def extract_topics(sampled_args, attempts = 0):
    # If this failed too many times, give up.
    if attempts >= 3:
@@ -49,7 +48,7 @@ def extract_topics(sampled_args, attempts = 0):
      return None
    
    NUM_TOPICS = '7'
-   print("\nGenerating", NUM_TOPICS, "topics from Session " + session_num + "...")
+   print("\nGenerating", NUM_TOPICS, "topics from Session", session_num + "...")
 
    prompt = """This is a list of arguments presented in a deliberation. Your job is to identify the single, primary topic deliberated on and write
    """ + NUM_TOPICS + """ distinct policies regarding the primary topic in a Python list of strings, with each string being a policy.
@@ -66,18 +65,18 @@ def extract_topics(sampled_args, attempts = 0):
    this BAD policy could not feasibly be turned into a law.
    The following non-case-sensitive words are BANNED and should NOT be included in your response:
    "and", "but", "or", "by", "Promote", "Encourage", "Ensure", "Explore", "Maintain".
-   This program will CRASH if your response fails to conform to the guidelines above.
+   This program will CRASH if your response fails to conform to these guidelines.
    Other code ran for several hours before you were given this task.
    If this program crashes, we will need to restart which takes several hours.
    Please take your time and ensure ALL of these instructions are followed.
    Do NOT number the list.
    Do NOT indent in your response.
-   Do NOT have a newline character in your response.
+   Do NOT include a newline character in your response.
    Do NOT include anything in the list other than the primary topic and the policies themselves.
    Your response is ONLY a single list of the primary topic and the policies.
    Once again, your response is ONLY a single list.
    Your response is ONLY one line.
-   The Python list you return should contain EXACTLY """ + str((int(NUM_TOPICS)+1)) + """ strings.
+   The Python list you return should contain EXACTLY """ + str(int(NUM_TOPICS)+1) + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
    print("\n(DEBUG) Raw response:", response + "\n")
@@ -95,6 +94,49 @@ def print_topics(topic_list):
   print("Primary Topic:", topic_list[0])
   for i in range(1, len(topic_list)):
     print("Policy " + str(i) + ":", topic_list[i])
+
+# Given a subset of arguments and a topic,
+# return a list of categories that most arguments fall under
+def generate_categories(sampled_args, topic, attempts = 0):
+   # If this failed too many times, give up.
+   if attempts >= 3:
+     print("Failed", attempts, "attempts to generate...")
+     return None
+   
+   NUM_CATEGORIES = '7'
+   print("\nGenerating", NUM_CATEGORIES, "categories regarding", topic + "...")
+   
+   prompt = """This is a list of arguments presented in a deliberation about """ + topic + """. Your job is to summarize
+   these arguments into """ + NUM_CATEGORIES + """ distinct categories regarding """ + topic + """ in a Python list of strings, with each string being a category.
+   The exceptions to this are the very small number of arguments that are unrelated to """ + topic + """.
+   Your response will be """ + NUM_CATEGORIES + """ strings.
+   The categories in the list should be somewhat distinct from each other.
+   The categories should be specific to the most common arguments given to you as they relate to """ + topic + """.
+   Do NOT use the words "for" or "against" in your response;
+   rather, your strings should be general topic areas.
+   You should not have broad categories, such as the advantages and disadvantages of """ + topic + """. Rather,
+   you should instead find nuanced groups of arguments that may be present on either side of the discussion.
+   This program will CRASH if your response fails to conform to these guidelines.
+   Other code ran for several hours before you were given this task.
+   If this program crashes, we will need to restart which takes several hours.
+   Please take your time and ensure ALL of these instructions are followed.
+   Do NOT number the list.
+   Do NOT indent in your response.
+   Do NOT include a newline character in your response.
+   Do NOT include anything in the list other than the categories.
+   Your response is ONLY a single list of categories.
+   Once again, your response is ONLY a single list.
+   Your response is ONLY one line.
+   The Python list you return should contain EXACTLY """ + NUM_CATEGORIES + """ strings.
+   Thank you!"""
+   response = util.simple_llm_call(prompt, sampled_args)
+   print("\n(DEBUG) Raw response:", response + "\n")
+   category_list = ast.literal_eval(response.strip())
+   # If invalid response, try again
+   if len(category_list) != int(NUM_CATEGORIES) or type(category_list) != list:
+     return generate_categories(sampled_args, topic, attempts+1)
+   print_topics(category_list) # TODO update this
+   return category_list
 
 # JSON class for extraction
 class TopicClassifier(BaseModel):
@@ -212,8 +254,8 @@ def main():
 
     # sampling 500 arguments for topic extraction
     sampled_args = random.sample(all_args, 500)
-    # uncomment line below to run topic extraction
     topics = extract_topics(sampled_args)
+    categories = generate_categories(sampled_args, topics[0]) if topics else print("Cannot generate categories: No topic available")
 
     print("\nEarly return for debugging")
     return
