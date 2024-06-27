@@ -4,7 +4,7 @@ import pandas as pd
 import random
 import util
 import ast
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, create_model, Field
 from eval import get_metric_sums, get_metric_dist 
 
 #new
@@ -195,6 +195,8 @@ def generate_category_variables(category_list, topic, attempts = 0):
      return generate_category_variables(category_list, topic, attempts)
    # Else, success!
    print_categories(category_list, variable_list)
+   variable_list.append("other")
+   variable_list.append("notRelevant")
    return variable_list
 
 # Given a list of categories and their variable shorthand,
@@ -203,6 +205,7 @@ def print_categories(category_list, variable_list):
   for i in range(len(category_list)):
     print("Category", str(i+1) + ":", variable_list[i] + ":", category_list[i])
 
+# Nearly deprecated
 # JSON class for extraction
 class TopicClassifier(BaseModel):
   comparisonToCurrentSystem: bool = Field(default=False)
@@ -215,6 +218,7 @@ class TopicClassifier(BaseModel):
   other: bool = Field(default=False)
   notRelevant: bool = Field(default=False)
 
+# Nearly deprecated
 # system prompt for the topic evaluation task based on current extracted topics for ranked choice voting
 EVAL_PROMPT = """You are a skilled annotator tasked with identifying the type of arguments made in a deliberation about """ + TOPIC + """.
         Read through the given arguments presented.
@@ -259,61 +263,35 @@ EVAL_PROMPT = """You are a skilled annotator tasked with identifying the type of
         You should return true for at least one parameter.
         """
 
-class Categories(BaseModel):
-  var0: bool = Field(default=False)
-  var1: bool = Field(default=False)
-  var2: bool = Field(default=False)
-  var3: bool = Field(default=False)
-  var4: bool = Field(default=False)
-  var5: bool = Field(default=False)
-  var6: bool = Field(default=False)
-  other: bool = Field(default=False)
-  notRelevant: bool = Field(default=False)
-
-# In progress, does not work.
+# Given a list of categories,
+# construct a JSON class for the model to use.
 def build_JSON_class(category_variables):
-  for category in category_variables:
-    setattr(Categories, category, Field(default=False))
-  print(vars(TopicClassifier))
-  print(vars(Categories))
+  fields = {var: (bool, Field(default=False)) for var in category_variables}
+  Categories = create_model("Categories", **fields)
+  if IS_DEBUG:
+    categories_instance = Categories()
+    print("JSON Categories:\n" + categories_instance.model_dump_json(indent=2))
+  return Categories()
+  
 
 # Given a primary topic and specific categories,
 # return a prompt that the model will use to judge arguments.
-def build_argument_analysis_prompt(topic, categories):
+def build_argument_analysis_prompt(topic, category_topics, category_variables):
+  category_instructions = """"""
+  for i in range(len(category_topics)):
+     category_instructions += """\nReturn true for """ + category_variables[i] + """ if the argument is relevant to """ + category_topics[i] + """.\nReturn false for """ + category_variables[i] + """ otherwise.\n"""
   prompt = """You are a skilled annotator tasked with identifying the type of arguments made in a deliberation about """ + topic + """.
-        Read through the given arguments presented.
-        Your job is to extract the type of arguments made and load them into the JSON object containing true/false parameters.
+          Read through the given arguments presented.
+          Your job is to extract the type of arguments made and load them into the JSON object containing true/false parameters.
+          """ + category_instructions + """
+          Return true for other if the argument discusses a category that is relevant to """ + topic + """
+          but not covered by the other categories.
+          
+          Return true for notRelevant if the argument is not relevant to the discussion of """ + topic + """.
 
-        Return true for var0 if the argument is relevant to """ + categories[0] + """.
-        Return false for var0 otherwise.
-        
-        Return true for var1 if the argument is relevant to """ + categories[1] + """.
-        Return false for var1 otherwise.
-        
-        Return true for var2 if the argument is relevant to """ + categories[2] + """.
-        Return false for var2 otherwise.
-        
-        Return true for var3 if the argument is relevant to """ + categories[3] + """.
-        Return false for var3 otherwise.
-        
-        Return true for var4 if the argument is relevant to """ + categories[4] + """.
-        Return false for var4 otherwise.
-        
-        Return true for var5 if the argument is relevant to """ + categories[5] + """.
-        Return false for var5 otherwise.
-        
-        Return true for var6 if the argument is relevant to """ + categories[6] + """.
-        Return false for var6 otherwise.
-        
-        Return true for other if the argument discusses a category that is relevant to """ + topic + """
-        but not covered by the other categories.
-        
-        Return true for notRelevant if the argument is not relevant to the discussion of """ + topic + """.
-        
-        It is possible for a single argument to have multiple true parameters, except for notRelevant.
-        If an argument is not relevant, all other parameters should be false.
-        You should return true for at least one parameter.
-        """
+          It is possible for a single argument to have multiple true parameters, except for notRelevant.
+          If an argument is not relevant, all other parameters should be false.
+          You should return true for at least one parameter."""
   return prompt
 
 # adds an LLM's topic classifications for an argument to the deliberation df
@@ -332,7 +310,7 @@ def arg_inference(all_args_indexed, results_path, argument_analysis_prompt = Non
 
     # initializing df and fields
     df = pd.DataFrame(pd.read_excel(path)) 
-    for key in TopicClassifier.model_fields.keys():
+    for key in Categories.model_fields.keys():
       df[key] = False
 
     # loop over a deliberation's arguments
@@ -430,15 +408,22 @@ def main():
     # sampling 500 arguments for topic extraction
     sampled_args = random.sample(all_args, 500)
     topics = extract_topics(sampled_args)
-    categories = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic")
-    category_variables = generate_category_variables(categories, topics[0]) if categories else print("ERROR: Cannot generate variable shorthand for categories: No categories")
-    #build_JSON_class(category_variables) if category_variables else print("ERROR: Cannot build JSON class: No category variables")
+
+    # Generate primary topic, policies, and categories
+    category_topics = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic")
+    category_variables = generate_category_variables(category_topics, topics[0]) if category_topics else print("ERROR: Cannot generate variable shorthand for categories: No category topics")
+    categories = build_JSON_class(category_variables) if category_variables else print("ERROR: Cannot build JSON class: No category variables")
 
     # running inference
     # replace with correct path for results
     results_path = os.path.join(RESULTS_DIR, session_num)
     create_results_path(results_path)
-    argument_analysis_prompt = build_argument_analysis_prompt(topics[0], categories) if topics and categories else print("ERROR: Cannot generate API prompt")
+    argument_analysis_prompt = build_argument_analysis_prompt(topics[0], category_topics, category_variables) if categories else print("ERROR: Cannot generate API prompt: No JSON class")
+    print("Prompt:\n" + argument_analysis_prompt)
+    
+    print("Early return")
+    return
+
     arg_inference(all_args_indexed, results_path, argument_analysis_prompt)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
