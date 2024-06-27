@@ -7,6 +7,10 @@ import ast
 from pydantic import BaseModel, Field
 from eval import get_metric_sums, get_metric_dist 
 
+#new
+import shutil
+from openpyxl import load_workbook
+
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
@@ -353,6 +357,59 @@ def create_results_path(results_path):
   # Creates the required metrics folder if it does not already exist
   metrics_path = os.path.join(results_path, "metrics")
   os.makedirs(metrics_path, exist_ok=True)
+
+# this function takes in text from a deliberation and determines if it contains arguments
+def check_arguments(text):
+    system_prompt = "Determine if the following text contains arguments. Respond ONLY with 'yes' or 'no'. Do not provide an explanation, do not capitalize Yes or No, do not put any punctuation, only respond 'yes' or 'no'."
+    response = util.simple_llm_call(system_prompt, text)
+    # if invalid response, try again
+    if response not in ['yes', 'no']:
+        # print("bad output")
+        response = util.simple_llm_call(system_prompt, text)
+    # print(text + "----->" + response)
+    return response.strip().lower() == 'yes'
+
+# this function duplicates the input spreadsheet in destination folder, and creates and populates contians args column
+def create_args_sheet(file_path, destination_folder):
+    df = pd.read_excel(file_path)
+    duplicated_file_path = os.path.join(destination_folder, 'updated_file.xlsx')
+
+    # Duplicate the file to the destination folder with the new name
+    shutil.copy(file_path, duplicated_file_path)
+
+    # Load the duplicated file with openpyxl to add columns
+    wb = load_workbook(duplicated_file_path)
+    ws = wb.active
+
+    # Add the new columns
+    ws.cell(row=1, column=4, value="has arguments")
+    ws.cell(row=1, column=5, value="all arguments summarized")
+
+    # Iterate over the rows and populate the "has arguments" column
+    for row in range(2, ws.max_row + 1):
+        text = ws.cell(row=row, column=3).value
+        if text is not None:  # Check if the cell is not empty
+            has_arguments = check_arguments(text)
+            ws.cell(row=row, column=4, value="yes" if has_arguments else "no")
+        else:
+            ws.cell(row=row, column=4, value="no")
+        print("DONE")
+
+    # Iterate over the rows again to populate the "all arguments summarized" column
+    for row in range(2, ws.max_row + 1):
+        has_arguments = ws.cell(row=row, column=4).value
+        if has_arguments == "yes":
+            text = ws.cell(row=row, column=3).value
+            # summarized_text = util.simple_llm_call("Summarize the following text in a numbered list. For example, the text input ' thank you. so the last thing was that if there's ten candidates and you only pick your top two, then your and they don't get it, your vote doesn't count it all. so the best thing to do is you got to rank all 10, but again, not enough data on the subject to make predictions. and i think mike use' should be summarized as '1. If you only pick your top two candidates out of ten, your vote doesn't count if they don't win. 2. The best approach is to rank all ten candidates. 3. There is not enough data available to make predictions on the subject.' Follow this formatting exactly.", text)
+            summarized_text = util.simple_llm_call("Summarize the following text in a numbered list.  Follow the output format '1. argument 1 \n 2. argument 2 \n' etcetera.  There could be one or more arguments.", text)
+            ws.cell(row=row, column=5).value = summarized_text
+            print("+++++++++" + text)
+            print("==========" + summarized_text)
+
+    # Save the modified duplicated file
+    wb.save(duplicated_file_path)
+
+
 
 def main():
     print("Entering main() of Session", session_num)
