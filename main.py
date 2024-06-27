@@ -13,20 +13,23 @@ from openpyxl import load_workbook
 
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
+IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
-IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
+IS_ANALYZE_ALL_SESSIONS = True # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
 session_num = 'test' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
 
 DATA_DIR = 'data'
+PROCESSING_DIR = 'processing'
 RESULTS_DIR = 'results'
 sys.path.append(os.getcwd())
 
+# Nearly deprecated
 TOPIC = "ranked choice voting"
 
 # collecting arguments in a deliberation
 def extract_args(path, deliberation):
     df = pd.DataFrame(pd.read_excel(path)) 
-    start_col = df.columns.get_loc("(Beta) For proposal: Implement RCV as an alternative method both to elected officials and representatives at all levels")
+    start_col = df.columns.get_loc("All Arguments Summarized")
     cols = df.columns[start_col:]
 
     # filtering out debugging columns
@@ -266,6 +269,7 @@ EVAL_PROMPT = """You are a skilled annotator tasked with identifying the type of
 # Given a list of categories,
 # construct a JSON class for the model to use.
 def build_JSON_class(category_variables):
+  print("\nBuilding JSON class for the model...")
   fields = {var: (bool, Field(default=False)) for var in category_variables}
   Categories = create_model("Categories", **fields)
   if IS_DEBUG:
@@ -273,7 +277,6 @@ def build_JSON_class(category_variables):
     print("JSON Categories:\n" + categories_instance.model_dump_json(indent=2))
   return Categories()
   
-
 # Given a primary topic and specific categories,
 # return a prompt that the model will use to judge arguments.
 def build_argument_analysis_prompt(topic, category_topics, category_variables):
@@ -286,7 +289,7 @@ def build_argument_analysis_prompt(topic, category_topics, category_variables):
           """ + category_instructions + """
           Return true for other if the argument discusses a category that is relevant to """ + topic + """
           but not covered by the other categories.
-          
+
           Return true for notRelevant if the argument is not relevant to the discussion of """ + topic + """.
 
           It is possible for a single argument to have multiple true parameters, except for notRelevant.
@@ -301,23 +304,22 @@ def add_results(response, df, line):
 
 # classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
-def arg_inference(all_args_indexed, results_path, argument_analysis_prompt = None):
+def arg_inference(all_args_indexed, results_path, argument_analysis_prompt, categories):
   print("\nAnalyzing Session", session_num, "deliberations...")
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
     args = all_args_indexed[deliberation]
-    path = os.path.join(DATA_DIR, session_num, deliberation)
+    path = os.path.join(PROCESSING_DIR, session_num, deliberation)
 
     # initializing df and fields
     df = pd.DataFrame(pd.read_excel(path)) 
-    for key in Categories.model_fields.keys():
+    for key in categories.model_fields.keys():
       df[key] = False
 
     # loop over a deliberation's arguments
     for arg in args:
-      topic_class = Categories
       prompt = argument_analysis_prompt
-      response = util.json_llm_call(prompt, arg[0], topic_class)
+      response = util.json_llm_call(prompt, arg[0], categories)
       line = arg[1]
       add_results(response, df, line)
     new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
@@ -326,7 +328,7 @@ def arg_inference(all_args_indexed, results_path, argument_analysis_prompt = Non
   print("Finished analyzing deliberations in Session", session_num)
 
 # Given a path for a 'results' folder,
-# create that folder and a 'metrics' subfolder if needed
+# create that folder and a 'metrics' subfolder if needed.
 def create_results_path(results_path):
   print("\nCreating Session", session_num, "results and metrics folders...")
   # Creates the required results folder if it does not already exist
@@ -335,6 +337,13 @@ def create_results_path(results_path):
   # Creates the required metrics folder if it does not already exist
   metrics_path = os.path.join(results_path, "metrics")
   os.makedirs(metrics_path, exist_ok=True)
+
+# Given a path for a 'processing' folder,
+# create that folder if needed.
+def create_processing_path(processing_path):
+   print("\nCreating Session", session_num, "processing folder...")
+   # Creates the required results folder if it does not already exist
+   os.makedirs(processing_path, exist_ok=True)
 
 # this function takes in text from a deliberation and determines if it contains arguments
 def check_arguments(text):
@@ -350,7 +359,10 @@ def check_arguments(text):
 # this function duplicates the input spreadsheet in destination folder, and creates and populates contians args column
 def create_args_sheet(file_path, destination_folder):
     df = pd.read_excel(file_path)
-    duplicated_file_path = os.path.join(destination_folder, 'updated_file.xlsx')
+    file_name = os.path.basename(file_path)
+    duplicated_file_path = os.path.join(destination_folder, file_name)
+
+    print("Creating argument columns for", file_name + "...")
 
     # Duplicate the file to the destination folder with the new name
     shutil.copy(file_path, duplicated_file_path)
@@ -360,8 +372,9 @@ def create_args_sheet(file_path, destination_folder):
     ws = wb.active
 
     # Add the new columns
-    ws.cell(row=1, column=4, value="has arguments")
-    ws.cell(row=1, column=5, value="all arguments summarized")
+    ws.cell(row=1, column=4, value="Has Arguments")
+    ws.cell(row=1, column=5, value="All Arguments Summarized")
+    ws.cell(row=1, column=6, value="Order")
 
     # Iterate over the rows and populate the "has arguments" column
     for row in range(2, ws.max_row + 1):
@@ -371,7 +384,8 @@ def create_args_sheet(file_path, destination_folder):
             ws.cell(row=row, column=4, value="yes" if has_arguments else "no")
         else:
             ws.cell(row=row, column=4, value="no")
-        print("DONE")
+        # Construct the "Order" column
+        ws.cell(row=row, column=6, value=row-1)
 
     # Iterate over the rows again to populate the "all arguments summarized" column
     for row in range(2, ws.max_row + 1):
@@ -379,15 +393,13 @@ def create_args_sheet(file_path, destination_folder):
         if has_arguments == "yes":
             text = ws.cell(row=row, column=3).value
             # summarized_text = util.simple_llm_call("Summarize the following text in a numbered list. For example, the text input ' thank you. so the last thing was that if there's ten candidates and you only pick your top two, then your and they don't get it, your vote doesn't count it all. so the best thing to do is you got to rank all 10, but again, not enough data on the subject to make predictions. and i think mike use' should be summarized as '1. If you only pick your top two candidates out of ten, your vote doesn't count if they don't win. 2. The best approach is to rank all ten candidates. 3. There is not enough data available to make predictions on the subject.' Follow this formatting exactly.", text)
-            summarized_text = util.simple_llm_call("Summarize the following text in a numbered list.  Follow the output format '1. argument 1 \n 2. argument 2 \n' etcetera.  There could be one or more arguments.", text)
+            summarized_text = util.simple_llm_call("Summarize the following text in a numbered list.  Follow the output format '1. argument 1 \n 2. argument 2 \n' etcetera. Every argument MUST be on a different line. There could be one or more arguments.", text)
             ws.cell(row=row, column=5).value = summarized_text
             print("+++++++++" + text)
             print("==========" + summarized_text)
 
     # Save the modified duplicated file
     wb.save(duplicated_file_path)
-
-
 
 def main():
     print("Entering main() of Session", session_num)
@@ -398,15 +410,19 @@ def main():
 
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     data_path = os.path.join(DATA_DIR, session_num)
+    processing_path = os.path.join(PROCESSING_DIR, session_num)
+    create_processing_path(processing_path)
     for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
       if path.endswith('xlsx'):
-        formatted_args = extract_args(path, deliberation)
+        if not IS_SKIP_DATA_PROCESS: create_args_sheet(path, processing_path)
+        new_path = os.path.join(processing_path, deliberation)
+        formatted_args = extract_args(new_path, deliberation)
         all_args_indexed.update(formatted_args)
         all_args += all_args_indexed[deliberation]
 
     # sampling 500 arguments for topic extraction
-    sampled_args = random.sample(all_args, 500)
+    sampled_args = random.sample(all_args, 50)
     topics = extract_topics(sampled_args)
 
     # Generate primary topic, policies, and categories
@@ -419,16 +435,11 @@ def main():
     results_path = os.path.join(RESULTS_DIR, session_num)
     create_results_path(results_path)
     argument_analysis_prompt = build_argument_analysis_prompt(topics[0], category_topics, category_variables) if categories else print("ERROR: Cannot generate API prompt: No JSON class")
-    print("Prompt:\n" + argument_analysis_prompt)
-    
-    print("Early return")
-    return
-
-    arg_inference(all_args_indexed, results_path, argument_analysis_prompt)
+    arg_inference(all_args_indexed, results_path, argument_analysis_prompt, categories)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
     # running post-evaluation
-    cumulative_df = get_metric_sums(delibs)
+    cumulative_df = get_metric_sums(delibs, category_variables[0])
     get_metric_dist(cumulative_df, results_path)
     print("Exiting main() of Session", session_num)
 
