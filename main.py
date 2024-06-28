@@ -369,7 +369,13 @@ def create_args_sheet(file_path, destination_folder):
 
     # Load the duplicated file with openpyxl to add columns
     wb = load_workbook(duplicated_file_path)
-    ws = wb.active
+    ws = None
+    if 'proposal' in wb.sheetnames:
+       wb.remove(wb['proposal'])
+    elif 'proposal ' in wb.sheetnames:
+       wb.remove(wb['proposal '])
+    for sheet in wb.sheetnames:
+       ws = wb[sheet]
 
     # Add the new columns
     ws.cell(row=1, column=4, value="Has Arguments")
