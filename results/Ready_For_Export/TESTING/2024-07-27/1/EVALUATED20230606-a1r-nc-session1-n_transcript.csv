@@ -1,0 +1,285 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electionProcessChanges,partyInfluenceImpact,votingConfusion,proportionalRepresentation,moralResponsibility,preferenceVotingCriticism,politicsUnderstandingChallenges,other,notRelevant
+0,9687,"""2:08""","Hi, I'm Mike. I live in Connecticut, I'm a software engineer.",no,,1,False,False,False,False,False,False,False,False,False
+1,48743,"""2:16""","Hi, my name is Bob live outside of Denver and I'm retired.",no,,2,False,False,False,False,False,False,False,False,False
+2,9780,"""2:24""",,no,,3,False,False,False,False,False,False,False,False,False
+3,9780,"""2:24""","I am. So I'm in the Hudson, Valley and New York, former property manager and looking forward to hearing your info.",no,,4,False,False,False,False,False,False,False,False,False
+4,48738,"""2:34""","I'm Jessi, I live in West Virginia and I'm currently a postal employee.",no,,5,False,False,False,False,False,False,False,False,False
+5,48739,"""2:46""",,no,,6,False,False,False,False,False,False,False,False,False
+6,48739,"""2:46""","Hi, my name is Priscilla. I'm from Missouri, and I work in the Cannabis industry.",no,,7,False,False,False,False,False,False,False,False,False
+7,48742,"""2:55""","Hi, I'm Katya. I'm a dental, hygienist. And I live in Vermont.",no,,8,False,False,False,False,False,False,False,False,False
+8,48741,"""3:03""",Hi Melissa. I'm Carly. And I'm Carolina and I look forward to getting to see,no,,9,False,False,False,False,False,False,False,False,False
+9,9687,"""11:45""","I think the rank Choice, voting is very complicated and may be difficult for people to understand.",no,,10,False,False,False,False,False,False,False,False,False
+10,48743,"""11:53""","I kind of agree. The, you know I think our system right now is complicated enough. If we complicate it more. Bye.",no,,11,False,False,False,False,False,False,False,False,False
+11,48743,"""11:53""", Expecting the polls and other things to rank and expect secondary elections afterwards. It's just going to be way too complicated.,no,,12,False,False,False,False,False,False,False,False,False
+12,9780,"""12:17""","yeah, I",no,,13,False,False,False,False,False,False,False,False,False
+13,9780,"""12:17"""," the fact that it encourages more, civil less negative campaigns, is appealing to me, and I think that needs to be a focus in whatever direction we",yes," 1. The aspect of the subject that encourages more civil and less negative campaigns is appealing to the speaker.
+2. The speaker believes that this focus on civility in campaigns should be a priority in whatever direction is taken.",14,False,False,False,False,False,False,False,True,False
+14,48742,"""12:36""","I like the idea of the Ring Choice voting. I just feel like it gives people more Choice as well as choice and more candidates, even though it's more complicated.",no,,15,False,False,False,False,False,False,False,False,False
+15,48738,"""12:51""",Honestly I feel like yes it is more complicated but it does give people more choices and most people don't understand how the Electoral College Works already. And we've been using that for a while. So I feel like there's room to learn,yes," 1. The Electoral College system is considered more complicated than a popular vote system.
+2. The Electoral College system provides more choices for voters compared to a popular vote.
+3. Many people do not fully understand the Electoral College system.
+4. The Electoral College system has been in use for a significant period.
+5. There is a need for more learning and understanding of the Electoral College system.",16,True,False,True,False,False,False,True,False,False
+16,9780,"""13:15""","You know, one point that stands out to me as well as it encourages candidates to appeal to more broadly to a majority rather than simply mobilizing passionate base of Voters. You know, I think we all realize the partisanship that that's been evident in growing lately,",yes," 1. The text emphasizes the importance of appealing to a broad majority of voters.
+2. It suggests that candidates should not solely focus on mobilizing their passionate base of supporters.
+3. The text acknowledges the increasing partisanship in recent times.",17,False,True,False,False,False,False,False,False,False
+17,10381,"""13:42""",I'm worried about the new systems learning curve in the cost involved.,yes," 1. There is a new systems learning curve.
+2. The new systems learning curve is a cause for worry.
+3. There are costs involved in the new systems learning curve.",18,False,False,False,False,False,False,True,False,False
+18,10381,"""13:42""",,no,,19,False,False,False,False,False,False,False,False,False
+19,10381,"""13:42""",,no,,20,False,False,False,False,False,False,False,False,False
+20,10381,"""13:42""",,no,,21,False,False,False,False,False,False,False,False,False
+21,10381,"""13:42""",,no,,22,False,False,False,False,False,False,False,False,False
+22,10381,"""13:42""",,no,,23,False,False,False,False,False,False,False,False,False
+23,48743,"""14:27""","I kind of agree with the fact that yes, there are improvements to be gained by switching the system. I just think at this point it would have to be a gradual system as opposed to. Let's vote on it and switch it over, you know, election or two from now, I don't think that would be a very viable alternative.",yes," 1. The speaker agrees that improvements can be gained by switching the system.
+2. The speaker thinks that the switch should be gradual, not all at once.
+3. The speaker suggests that a vote should be held on the issue.
+4. The speaker proposes that the switch should happen after a few elections.
+5. The speaker does not think that an immediate switch would be viable.",24,True,False,False,False,False,False,False,False,False
+24,9780,"""14:54""",,no,,25,False,False,False,False,False,False,False,False,False
+25,9780,"""14:54""","I also like about this that no vote is wasted, but I'm not convinced. This is the answer. I'm just saying it does have it.",yes," It's not clear what text you would like summarized, as no text has been provided. Here is a sample summary with numbered points based on a hypothetical text:
+
+1. The system is designed to ensure that no vote is wasted.
+2. This is a key benefit of the system.
+3. However, the speaker is not fully convinced of this claim.
+4. The speaker is expressing their opinion, but is not providing any counterarguments or evidence.",26,False,False,False,False,False,True,False,False,False
+26,48738,"""15:08""","I agree with SK as well because I do feel like, especially with how partisan some things have come about. It's you don't want to vote against this person because you're, your fear, is that they're going to lose against somebody that is worse.",yes," 1. The speaker agrees with SK's viewpoint.
+2. The speaker believes that people are hesitant to vote against certain candidates due to the fear of having someone worse in their place.
+3. This reluctance to vote against undesirable candidates is particularly prevalent in today's highly partisan climate.",27,False,True,False,False,False,False,False,False,False
+27,48743,"""17:26""",I'd kind of like to see the defeated candidate. Be able to run again in the main election and I do believe that they candidate that wins should win by a majority.,yes," 1. The speaker wants to see the defeated candidate.
+2. The speaker believes that the defeated candidate should be able to run again in the main election.
+3. The speaker thinks that the candidate who wins should win by a majority.",28,True,False,False,False,False,False,False,False,False
+28,48742,"""17:43""","I guess I agree with Bob was, but Bob said as well, making small changes and allowing the candidate, the defeated candidates to let voters to vote for them on the ballot as well. And I like that, the candidate was the maturity of the votes should be the one elected.",no,,29,False,False,False,False,False,False,False,False,False
+29,9780,"""18:05""",,no,,30,False,False,False,False,False,False,False,False,False
+30,9780,"""18:05""","Yeah, I don't feel like keeping the current system is.",yes," I apologize, but I need the text to summarize. Could you please provide the text for me to generate the numbered list? Thank you.",31,False,False,False,False,False,False,False,False,False
+31,9780,"""18:05""", Effective any longer. So definitely small changes have to be made.,no,,32,False,False,False,False,False,False,False,False,False
+32,9687,"""18:17""","I think with the current system, even if you do lose in a primary, you can still run as an independent",yes," 1. The current system allows for a candidate to run as an independent after losing in a primary.
+2. Losing in a primary does not disqualify a candidate from running as an independent.",33,True,False,False,False,False,False,False,False,False
+33,10381,"""18:26""",,no,,34,False,False,False,False,False,False,False,False,False
+34,10381,"""18:26""","I agree with Bob spoon, The View.",no,,35,False,False,False,False,False,False,False,False,False
+35,10381,"""18:26""",,no,,36,False,False,False,False,False,False,False,False,False
+36,10381,"""18:26""",,no,,37,False,False,False,False,False,False,False,False,False
+37,10381,"""18:26""",,no,,38,False,False,False,False,False,False,False,False,False
+38,10381,"""18:26""",,no,,39,False,False,False,False,False,False,False,False,False
+39,10381,"""18:26""",,no,,40,False,False,False,False,False,False,False,False,False
+40,10381,"""18:26""",,no,,41,False,False,False,False,False,False,False,False,False
+41,10381,"""18:26""",,no,,42,False,False,False,False,False,False,False,False,False
+42,10381,"""18:26""",,no,,43,False,False,False,False,False,False,False,False,False
+43,10381,"""18:26""",,no,,44,False,False,False,False,False,False,False,False,False
+44,10381,"""18:26""",,no,,45,False,False,False,False,False,False,False,False,False
+45,9780,"""19:11""",,no,,46,False,False,False,False,False,False,False,False,False
+46,9780,"""19:11""","so, keep the current system first-past-the-post has been the major factor contributing to polarization between the parties and and we've had enough polarization at this point in my",yes," 1. The current system follows a first-past-the-post system.
+2. This system has been a significant factor in the polarization between political parties.
+3. The text suggests that there has been enough polarization in the current political climate.",47,True,True,False,False,False,False,False,False,False
+47,9687,"""19:34""","I really don't think that's going to change anything, no matter how you do the actual voting. It's once they get to Congress or the senate or wherever, that's where the problems occur.",yes," 1. The person expresses skepticism about the impact of actual voting on change.
+2. They believe that problems arise when individuals get to Congress or Senate.",48,False,False,False,False,False,False,False,False,True
+48,48738,"""19:52""","But you might open it up to people, that can focus more on the middle line. Yes, you may have somebody that's polarized here, but if they have a second choice, well, maybe this one's not. Not as bad as somebody further down and your polarized person doesn't make it. It does. Open it up a little bit for some moderate, you know, some moderates.",yes," 1. The suggestion is to open up the decision or discussion to a broader group of people.
+2. This group should ideally include people who can focus on the middle ground or moderate viewpoints.
+3. The goal is to prevent polarization and include a diverse range of opinions.
+4. Even those who may have initially been opposed to the decision or discussion can be included, as they may find the middle ground more acceptable than other options.
+5. The inclusion of moderates can help to balance out the perspectives and prevent any one viewpoint from becoming too dominant.",49,False,False,False,False,False,False,True,False,False
+49,9780,"""20:18""",That's a point that came up in the previous topic of RCV about appealing to a more moderate base.,no,,50,False,False,False,False,False,False,False,False,False
+50,48743,"""20:44""",I think going with what Mike had said what are these folks that we vote in end up going to Washington and then they kind of do their own thing and I don't think they're paying a whole lot of attention. So I think there's got to be a way that maybe we can control that better or make sure they don't get reelected on the next time around.,yes," 1. The speaker believes that elected officials may not always pay close attention to the concerns of their constituents after being voted into office.
+2. The speaker thinks there should be a way to control the actions of elected officials more effectively.
+3. The speaker suggests the possibility of preventing the reelection of officials who do not pay adequate attention to their constituents' concerns.",51,True,False,False,False,True,False,False,False,False
+51,9780,"""21:08""",I think that brings in a whole new topic about term limits.,no,,52,False,False,False,False,False,False,False,False,False
+52,48738,"""21:16""",,no,,53,False,False,False,False,False,False,False,False,False
+53,9687,"""21:36""","I guess in some cases like, the last Con in the list is if both of the two, top two vote-getters in the primary or from the same party as million eight supporters from other parties and living in the state that I live in.",yes," 1. In some cases, the last consideration (Con) is if the two top vote-getters in the primary are from the same party.
+2. This situation is relevant if there are million eight supporters from other parties living in the same state.",54,True,True,False,False,False,False,True,False,False
+54,9687,"""21:36""", My vote basically doesn't count.,yes," 1. The statement is about the person's vote.
+2. The person believes that their vote does not count.
+3. This could indicate a feeling of powerlessness or disillusionment with the voting process.",55,False,False,False,False,False,False,False,False,True
+55,48738,"""23:40""","Honestly, I feel like we need more third parties, but I don't feel like this is going to be the way to do it. It's just going to still be the same two parties over again.",yes," 1. The author feels that more third parties are needed.
+2. The author does not believe that this will be achieved through the current approach.
+3. The author thinks that the two major parties will continue to dominate.",56,False,True,False,False,False,False,False,False,False
+56,9687,"""23:51""","I would agree with that. I see the same name twice on some of our ballots. One as a let's say, you know, Democrat and the other as a, you know, green party or something like that. And honestly, I don't think that electing that person as let's say the Democrat versus the green party. Like if you elected them as the Green Party representative, there's",yes," 1. The text mentions seeing the same name twice on some ballots.
+2. The names appear under different party affiliations, such as Democrat and Green Party.
+3. The author believes that electing the same person as a Democrat or as a Green Party representative would not have different outcomes.",57,False,True,True,False,False,False,False,False,False
+57,9687,"""23:51"""," Certain set of, you know, thoughts and philosophies, that go with that party. They don't necessarily continue to represent that, what? They'll they're just being supported by that party.",no,,58,False,False,False,False,False,False,False,False,False
+58,48743,"""24:36""",,no,,59,False,False,False,False,False,False,False,False,False
+59,48743,"""24:36""",It kind of seems like trying to do that word.,no,,60,False,False,False,False,False,False,False,False,False
+60,48743,"""24:36"""," Pretty much just throw the vote out there and the person is not making a stand one way or the other they're kind of staying right mid-course and I'm not sure what we'd end up getting out of it though. I think like Mike it said, you know, there are a lot of times where they're going to still swing to whatever political group is going to help support them the most,",yes," 1. The person is not taking a clear stance on the issue.
+2. They are staying neutral and not committing to a particular side.
+3. It is uncertain what the outcome would be.
+4. Politicians often align with the group that supports them the most.
+5. This behavior is similar to what Mike described.",61,False,False,False,False,False,False,False,False,True
+61,48742,"""25:06""","I think, I think it's just going to be too confusing to voters and especially if one candidate belongs represented by two different parties, I think just going to make it too confusing.",yes," 1. The person has an opinion.
+2. They think that implementing a system where one candidate is represented by two different parties will be confusing to voters.
+3. They believe this confusion will be significant for candidates who are represented by two parties.",62,True,False,True,False,False,False,True,False,False
+62,10381,"""25:20""",,no,,63,False,False,False,False,False,False,False,False,False
+63,10381,"""25:20""",,no,,64,False,False,False,False,False,False,False,False,False
+64,10381,"""25:20""",,no,,65,False,False,False,False,False,False,False,False,False
+65,10381,"""25:20""",,no,,66,False,False,False,False,False,False,False,False,False
+66,10381,"""25:20""",,no,,67,False,False,False,False,False,False,False,False,False
+67,10381,"""25:20""",,no,,68,False,False,False,False,False,False,False,False,False
+68,10381,"""25:20""",I don't like the same person appeared twice on the ballot.,yes," 1. The text is a statement of personal preference.
+2. The stated preference is about a ballot in an election.
+3. The issue is that the same person appears twice on the ballot.
+4. The speaker expresses disapproval of this situation.",69,False,False,True,False,False,False,False,False,False
+69,9780,"""26:06""","Yeah, I agree with both Steven and Katya.",yes," 1. The author agrees with the opinions expressed by Steven.
+2. The author also agrees with the opinions expressed by Katya.",70,False,False,False,False,False,False,False,False,True
+70,9687,"""26:23""",I would like to see.,no,,71,False,False,False,False,False,False,False,False,False
+71,9687,"""26:23"""," Third parties appear on the ballot, but in a lot of cases, it's they're really just gonna end up spoiling it for one or the other side, because most people seem to vote down party lines, either. You're, you know, you're a Democrat or Republican. If you're let's say a Libertarian, you know, chances are good that your guy, your, your, your candidates not going to get much in the way of votes.",yes," 1. Third parties appear on the ballot in elections.
+2. These third-party candidates often end up ""spoiling"" the election for one of the two major parties.
+3. This is because many people tend to vote based on party lines, either for a Democrat or a Republican.
+4. If a person identifies as a Libertarian, for example, their chosen candidate is unlikely to receive many votes.",72,False,True,False,False,False,False,False,False,False
+72,48738,"""27:02""","And I agree with you Mike. I feel like having them, you know, fuse with a Democrat or Republican. Yeah, that might get them, their name out there and everything like that, but then you're still, you're still down to the same two parties.",no,,73,False,False,False,False,False,False,False,False,False
+73,9687,"""27:19""","I mean, I don't know if anybody else has noticed it, but a lot of the political advertising that comes to my house. Now we'll have to just two candidates name on it. That nothing indicating that it's, you know, democrat or republican. You actually have to go online and try and figure that out.",yes," 1. The text is about political advertising in the form of mail received at the speaker's house.
+2. The advertising only includes the names of two candidates, with no indication of their political affiliation.
+3. To determine if the candidates are democrat or republican, one needs to go online and search for the information.",74,False,False,False,False,False,False,True,False,False
+74,48743,"""27:41""","I noticed on the last election, Mike, the same thing here in Colorado, a lot of the ads on TV and things like that, really weren't dating one candidate or another, they were just supporting a party for you.",no,,75,False,False,False,False,False,False,False,False,False
+75,9687,"""29:19""","I do like the idea of proportional representation, because, as I mentioned earlier, my vote basically doesn't count living in the state that I live in.",yes," 1. The speaker expresses their interest in proportional representation.
+2. They feel that their vote does not count in the state where they live.
+3. Proportional representation would address this concern by ensuring that political representation is allocated in proportion to the number of votes received.",76,False,False,False,True,False,False,False,False,False
+76,9780,"""29:31""","Yeah, I'm really concerned about the potential for gerrymandering that were already.",yes," I'm sorry for the confusion, but I'm unable to summarize the text you've provided as it's incomplete and lacks context. To provide a accurate and helpful response, I would need a full and coherent text to work with.
+
+However, I can give you an example of how a summarized numbered list might look like based on a hypothetical text about gerrymandering:
+
+1. Gerrymandering is the manipulation of electoral boundaries for political gain.
+2. It can lead to a distorted representation of the population's political preferences.
+3. This practice can undermine the democratic process and erode public trust.
+4. Gerrymandering can be addressed through independent redistricting commissions and transparency in the process.
+
+Please provide a complete and coherent text if you would like a specific summary.",77,False,False,False,False,False,False,False,False,True
+77,48738,"""29:43""","I agree with this because they will sit there and read District things just to get majorities to basically, go away in certain districts. And yes, then your vote doesn't count.",yes," 1. It is agreed that some entities will focus on reading District-specific information to secure majorities in certain districts.
+2. This action may make some voters feel that their votes do not count.",78,False,True,False,False,False,False,False,False,False
+78,48743,"""29:58""","They've redistricting that and here in Colorado and things have gotten pretty bizarre as far as candidates that were supporting one group, in one area. Now covering a much larger area and picking up votes from different places.",no,,79,False,False,False,False,False,False,False,False,False
+79,48742,"""30:20""","I'm also in favor of the pr system to help represent more voters voices, as well.",yes," 1. The text recommends using the PR system.
+2. The PR system helps represent more voters' voices.",80,False,False,False,True,False,False,False,False,False
+80,9687,"""30:46""","I think it would be good if they did start with, let's say state legislators. At least that way, people will get a chance to experience it before going on to national elections.",yes," 1. It is suggested to start the implementation of a certain idea with state legislators.
+2. The reason for this suggestion is that people will get a chance to experience it before it is applied to national elections.",81,False,False,False,False,False,False,False,False,True
+81,10381,"""31:17""",I prefer to keep the current VR system is just a,no,,82,False,False,False,False,False,False,False,False,False
+82,10381,"""31:17""", too many changes.,no,,83,False,False,False,False,False,False,False,False,False
+83,10381,"""31:17""",,no,,84,False,False,False,False,False,False,False,False,False
+84,10381,"""31:17""",,no,,85,False,False,False,False,False,False,False,False,False
+85,10381,"""31:17""",,no,,86,False,False,False,False,False,False,False,False,False
+86,10381,"""31:17""",,no,,87,False,False,False,False,False,False,False,False,False
+87,10381,"""31:17""",,no,,88,False,False,False,False,False,False,False,False,False
+88,9780,"""32:02""","yeah, unfortunately if nothing changes nothing",no,,89,False,False,False,False,False,False,False,False,False
+89,48738,"""32:38""",So it seems that everybody is in a grant that the system is broken and needs to be fixed. It's just trying to figure out which direction and how it needs the best way to fix it. Is that correct?,yes," 1. The system is generally agreed upon to be broken.
+2. There is a consensus that the system needs to be fixed.
+3. The main challenge is determining the best direction for fixing the system.",90,False,False,False,False,False,False,True,False,False
+90,9780,"""32:52""","Yeah, I think that's spot-on and each of these proposals have pieces that I would like to see integrate integrated into a new format.",no,,91,False,False,False,False,False,False,False,False,False
+91,48739,"""33:11""","Yeah, I agree. I think this is some is completely broken and needs to be fixed.",no,,92,False,False,False,False,False,False,False,False,False
+92,48743,"""33:19""",I am in complete agreement that is broken and needs to be fixed and,no,,93,False,False,False,False,False,False,False,False,False
+93,48743,"""33:19""", I think we just need to do it on a gradually working her way up through it. Like Mike had mentioned before maybe a local and then bringing it up.,no,,94,False,False,False,False,False,False,False,False,False
+94,48738,"""33:37""","That was going to be my next question Bob is, is what does everybody think? Because this is a discussion that I mean really",yes," 1. The next question was going to be about everyone's thoughts.
+2. The discussion is a significant one.
+3. The person being addressed is named Bob.",95,False,False,False,False,False,False,False,False,True
+95,48738,"""33:37"""," I've looked into what these the whatever this is called this American one room thing and they do look at these, they do really look at what people are saying and and all and do people think that we need to do everything all at once. Gradually start at local levels, you know, go straight to the presidency. I mean what does other people feel because",yes," 1. The text is about a ""one room thing"" in America.
+2. The subject being discussed is analyzed and evaluated based on people's opinions.
+3. There is a question about whether everything should be done at once or gradually.
+4. It is suggested to start at local levels.
+5. The possibility of going straight to the presidency is mentioned.
+6. The text also considers the feelings and opinions of other people.",96,False,False,False,False,False,False,False,False,True
+96,48738,"""33:37""", I feel that the entire thing just needs to be scrubbed.,yes," 1. The text expresses a strong negative opinion.
+2. The subject of the text is something that requires cleaning or discarding.
+3. The author suggests that the entirety of the subject needs to be addressed.",97,False,False,False,False,False,False,False,False,True
+97,9687,"""34:17""","Yeah, I think changes need to be made just again, I'm concerned about how much we do and how quickly we do it only because, you know, getting people to vote, sometimes is very difficult and the harder your make it. I think you're going to alienate people from coming out to do it. And also again, if they have a feeling that there's no reason to vote meaning, you know, their candidate has no choice, no chance. Then pretty much, you know, they aren't going to come to vote.",yes," 1. The speaker thinks changes need to be made.
+2. They have concerns about how much is being done and the speed at which it is being done.
+3. The speaker believes that making it difficult for people to vote may discourage them from participating.
+4. They are worried that if people feel their candidate has no chance of winning, they may not vote.",98,True,False,False,False,False,False,True,False,False
+98,48741,"""34:48""",I feel like it just needs to change gradually like maybe locally and then go up. Because if you do it too quickly then that's where the chaos starts to happen and then there's like no type of control over how perfectly is going to be done.,no,,99,False,False,False,False,False,False,False,False,False
+99,48739,"""35:06""",,no,,100,False,False,False,False,False,False,False,False,False
+100,48739,"""35:06""",I just feel like we were founded on a constitutional republic and now it's a democracy.,no,,101,False,False,False,False,False,False,False,False,False
+101,48738,"""35:28""","I feel like at the local level that we don't have anybody actually participating, is the problem. So how do you implement a system like this? That that sounds great on paper. Sounds great and discussion but you don't have anybody participating. Nobody's going to even know about it until it gets to you know a little bit further up.",no,,102,False,False,False,False,False,False,False,False,False
+102,9780,"""35:49""","Yeah, I agree with that. I mean typically people don't even vote in their School Board elections so I would prefer to see this rolled out all at once with the emphasis on the local elections.",no,,103,False,False,False,False,False,False,False,False,False
+103,48743,"""36:08""","That is part of, as you said, I mean too much of a change will be too much of a problem. We do need to keep make sure we get the voters out there and we do, you know, that seems to be happening more and more but on a local level, it's hard enough. Trying to figure out what each person is representing and what their platform is. So to try to switch things over, you can't do it. It's not going to be a quick process. It's going to be a matter of",no,,104,False,False,False,False,False,False,False,False,False
+104,48743,"""36:08""", Skating the voter to know what's going on for the each election.,no,,105,False,False,False,False,False,False,False,False,False
+105,48738,"""36:51""","I personally feel like yes, it's a very local elections, your school boards, and everything like that. I don't know how this would. I know in my district, it wouldn't make any difference because nobody ever shows up. It's like me and you know, 20 other people but I guess if we, if they were to implement something like this for your, you know, your state congressman and everything like that, that that might give them the background and and education to you.",yes," 1. The person feels that local elections, such as school boards, are significantly impacted by voting.
+2. They are unsure of the impact on other types of elections.
+3. They mention that voter turnout in their district is low, typically only including themselves and around 20 other people.
+4. They suggest that if a system of this nature were implemented for state congressmen, it could provide them with valuable background and education.",106,True,False,False,False,False,False,True,False,False
+106,48738,"""36:51"""," You know, move it further up.",no,,107,False,False,False,False,False,False,False,False,False
+107,10381,"""37:29""",Any major changes? It's easy to say then to implement. So it's take time to to educate all the voter to understand what's the change.,no,,108,False,False,False,False,False,False,False,False,False
+108,10381,"""37:29""",,no,,109,False,False,False,False,False,False,False,False,False
+109,10381,"""37:29""",,no,,110,False,False,False,False,False,False,False,False,False
+110,10381,"""37:29""",,no,,111,False,False,False,False,False,False,False,False,False
+111,10381,"""37:29""",,no,,112,False,False,False,False,False,False,False,False,False
+112,10381,"""37:29""",,no,,113,False,False,False,False,False,False,False,False,False
+113,48739,"""38:15""",Most voters don't even understand how to use the system right now. Let alone when there's changes made something that becomes the problem is it major or is it minor changes? Like what can the people actually?,yes," 1. Many voters have difficulty understanding the current system.
+2. Difficulty understanding the system becomes more problematic when changes are made.
+3. It is unclear what specific changes, major or minor, would cause issues for voters.
+4. There is uncertainty about the capabilities of voters in relation to the system.",114,True,False,False,False,False,False,True,False,False
+114,48739,"""38:15""", Tolerate and understand and be able to use it effectively.,no,,115,False,False,False,False,False,False,False,False,False
+115,48738,"""43:15""",So it seems like everybody has the same question as far as education for the public and implementation.,no,,116,False,False,False,False,False,False,False,False,False
+116,9687,"""43:25""","Yeah, exactly. I really want to know when we're going to, you know, when we're going to do this, is this going to be, you know, the next election in next year, or are we talking about five years away?",yes," 1. The person wants to know when a certain event will occur.
+2. They are referring to the next election.
+3. They are unsure whether the next election will be in the next year or five years from now.
+4. They are looking for clarification on the timing of the next election.",117,False,False,False,False,False,False,True,False,False
+117,48743,"""43:40""","You know, I kind of think, as, especially with the implementation it seems like the people we have running the government. Now are probably not the ones we really need to be implementing this or taking charge of it. So, who is going to take it and run with it at that point?",yes," 1. The current people in government responsible for implementing changes may not be the most suitable.
+2. It is unclear who should take charge of implementing the changes instead.",118,False,False,False,False,False,False,True,False,False
+118,48738,"""44:01""","I think that's an excellent question, because I mean, for obvious reasons. They feel very comfortable on the position, they're in and I don't feel like change is going to be something that they're going to want to vote on or implement.",no,,119,False,False,False,False,False,False,False,False,False
+119,48739,"""44:16""",I agree. I don't think it should be the people that are in office right now. I don't even know if it should be people in office. Why can't it be,yes," 1. The agreement of the speaker with the idea that there should be a change in the current leadership or system.
+2. The skepticism of the speaker regarding the suitability of the people currently in office for the required changes.
+3. The openness of the speaker to the possibility of not limiting the potential candidates to those who are currently in office.",120,True,False,False,False,False,False,False,False,False
+120,48739,"""44:16""", Us. Why can't we make those decisions? Why is it all left up to them?,no,,121,False,False,False,False,False,False,False,False,False
+121,9780,"""44:32""","Yeah, you just read my mind. I mean the people that are in office now or going to be the most resistant to this type of change.",yes," 1. There is a resistance to change from the people currently in office or who will take office in the future.
+2. This resistance is in reference to an unspecified type of change.",122,False,False,False,False,False,False,False,True,False
+122,9687,"""44:44""",Are there any changes to the question that I have here or do you want to move to the next question?,no,,123,False,False,False,False,False,False,False,False,False
+123,48739,"""45:27""","And this was just big for me because like, who's overseeing who's in charge of, you know, making all the changes and making sure that it's actually working effectively and we're not in another situation. Like we are now working, nobody understands it and we're using a system that's flawed and broken and nobody understands",no,,124,False,False,False,False,False,False,False,False,False
+124,9780,"""45:48""","You know, we have a big problem with the perception of oversight already. I mean, ideally I would like to see a third party in partial nonpartisan, it oversight.",no,,125,False,False,False,False,False,False,False,False,False
+125,9687,"""46:03""","So maybe you can edit your question to ask, ask it in that way. Who instead of just who is overseeing the changes put in some suggestions, like is this a third party? Is this current you know, State officials. The current election boards",yes," 1. The text suggests editing a question to ask who specifically is overseeing the changes.
+2. It provides examples of possible parties who could be overseeing the changes, such as:
+	* Third party
+	* State officials
+	* Current election boards",126,True,True,False,False,False,False,True,False,False
+126,9780,"""46:26""","Okay, that makes sense to me.",no,,127,False,False,False,False,False,False,False,False,False
+127,48743,"""46:32""","My concern with some of this is that if the people that are going to be doing it, it'll end up being another Federal agency or another governmental agency and it's going to take another 30 years for it to get its act together before it even starts. It would be interesting to try to figure out who we could use as a third party.",yes," 1. The speaker has some concerns.
+2. The speaker believes that the people responsible for implementing the plan may cause delays.
+3. The speaker thinks that the responsible party might be another federal agency or governmental organization.
+4. The speaker estimates that it could take such an agency around 30 years to become effective.
+5. The speaker suggests finding a third party to take on this role.",128,False,False,False,False,False,False,False,True,False
+128,9687,"""47:03""","The other thing is, you know, it just adds another layer of potential for corruption.",yes," 1. The text discusses the potential for corruption.
+2. The author suggests that adding more layers to a system can increase the potential for corruption.",129,False,False,False,False,False,False,False,True,False
+129,9780,"""47:12""","Yeah, I agree with that. 100% Mike. And we already have plenty of corruption. Yeah, I don't have the",no,,130,False,False,False,False,False,False,False,False,False
+130,48738,"""48:01""","I mean, the best way to educate the population on this would be at a young age but obviously,",no,,131,False,False,False,False,False,False,False,False,False
+131,48738,"""48:01""", Most people don't know how the voting system works as is so it hasn't that hasn't worked.,yes," 1. Most people lack understanding of how the voting system works.
+2. The voting system has not functioned effectively due to this lack of understanding.",132,True,False,True,False,False,False,True,False,False
+132,9687,"""48:20""","Yeah, I would agree. I think definitely putting something into the school system would be helpful at a young age at a young age. However, you know, be adults outnumbered children in the, you know, in the country at this point. So",no,,133,False,False,False,False,False,False,False,False,False
+133,9780,"""48:40""","Yeah, I think kids are relatively adaptable. And if they came up with the system and grew up with this system, they would adapt. I would rather see a roll out in the more short time for adults. I mean, that could be at your DMV that can be it here. You're on polling station, that can be at your Board of Elections. But yeah, I think the world.",no,,134,False,False,False,False,False,False,False,False,False
+134,9780,"""48:40"""," All out needs to be sooner rather than later, and the kids will adapt the same way that we've adapted to the Electoral College that we grew up with.",no,,135,False,False,False,False,False,False,False,False,False
+135,9687,"""49:19""","Yeah, I think the big problem is getting people to come to the education classes. I mean, we, I think we already mentioned that it's hard enough getting people to just come out and vote. So if there were, you know, classes held educating people on how to vote, you know, is anybody going to show up?",yes," 1. There is a problem in getting people to attend education classes.
+2. It is already difficult to get people to come out and vote.
+3. The education classes would inform people on how to vote.
+4. There is skepticism about whether anyone will attend these classes.",136,False,False,False,False,False,False,True,False,False
+136,48742,"""49:40""",I just wanted to also mention that United States is a land of immigrants and a lot of the people immigrate here at an adult age and how to reach out to those people and educate them because they may still want to be involved and making a change as well. So how to go about that?,yes," 1. The United States is a country of immigrants.
+2. Many immigrants move to the US at adult age.
+3. These immigrants may still want to be involved in making changes.
+4. It is necessary to reach out to these immigrants and educate them.
+5. The question is how to effectively go about doing this.",137,False,False,False,False,False,False,True,False,False
+137,48743,"""50:00""","it would be nice if they could, you know, whoever when this goes through, if it can be done in a, more simplistic manner, realizing that the youthful understand it, but making it may be a one-page type thing instead of a bunch of legal jargon and political double-talk, something that somebody could actually look at understand and actually utilize",no,,138,False,False,False,False,False,False,False,False,False
+138,9780,"""50:30""",,no,,139,False,False,False,False,False,False,False,False,False
+139,9780,"""50:30""",Katya Katya Mike. I couldn't agree more especially about the immigrants. Thank you for that cat.,no,,140,False,False,False,False,False,False,False,False,False
+140,48738,"""50:47""","I actually feel like a lot of the immigrants are at least a lot of the immigrants that I have come across that want to be here and want to be a part of the American way, they seek out that and do that more so than people that are born and raised here.",yes," 1. The speaker has interacted with many immigrants.
+2. Many of these immigrants want to be in America.
+3. These immigrants want to be a part of the ""American way"".
+4. These immigrants ""seek out"" and actively participate in being a part of the ""American way"" more than people born and raised in America.",141,False,False,False,False,False,False,False,True,False
+141,9687,"""51:10""","I would agree. There's plenty of video on YouTube of people asking questions of, you know about u.s. history and people that have emigrated to the US and have you know, gain citizenship know more about u.s. history then kids going through high school and then what?",yes," 1. The text discusses the phenomenon of some naturalized U.S. citizens knowing more about U.S. history than high school students currently in the education system.
+2. This observation is based on videos available on YouTube, where people are seen answering questions about U.S. history.
+3. The comparison is made between the knowledge of naturalized citizens and kids going through high school.",142,False,False,False,False,False,False,True,False,False
+142,9780,"""51:30""","I don't want to depend on YouTube videos, but",yes," 1. The text expresses a desire to not depend on YouTube videos.
+2. No specific reasons or alternatives are provided in the text.",143,False,False,False,False,False,False,False,False,True
+143,9780,"""51:30"""," to that point, maybe they could be the ones that could do some education for the rest of",no,,144,False,False,False,False,False,False,False,False,False
+144,48742,"""51:51""","I'm just an idea. Maybe there should be some sort of incentive, may be monetary or some tax incentive to make. People want to learn and by passing a test or something that there's some sort of incentive by educating yourself about it, just an idea.",yes," 1. The author is considering an idea.
+2. The idea is to create an incentive to encourage learning.
+3. The incentive could be monetary or a tax incentive.
+4. The learning would be demonstrated through passing a test or similar assessment.
+5. The author believes that this incentive would motivate people to educate themselves on the topic.",145,False,False,False,False,False,False,True,False,False
+145,48738,"""52:08""","I'm getting to the point of think that that's what we're going to need to get people to vote in the first place is, is have an incentive or something, because there are just so many people that don't care and just brush it off. And I don't understand that, but there are so many people like that.",no,,146,False,False,False,False,False,False,False,False,False
+146,9780,"""52:28""",,no,,147,False,False,False,False,False,False,False,False,False
+147,9780,"""52:28""","yeah, I agree 100% people just kind of a tune out and I would not be against some sort of incentive tax, credit monetary, whatever it may be, I would",yes," 1. The person agrees that people tend to tune out during discussions.
+2. They express their support for the implementation of some form of incentive, such as a tax credit or monetary reward, to address the issue.",148,False,False,False,False,False,False,False,False,True
+148,48743,"""52:46""","You're right. There are at this point every there's a lot of laksa days ago, people that pretty much figure the results or preordained already.",no,,149,False,False,False,False,False,False,False,False,False
+149,48739,"""52:56""",,no,,150,False,False,False,False,False,False,False,False,False
+150,48739,"""52:56""","I feel like if we have to give people an incentive or a tax break or essentially, bribe them to come out and vote, then are they even going to pay attention to anything? Or they going to know who they're voting for or they just going to vote so they can, you know,",no,,151,False,False,False,False,False,False,False,False,False
+151,48739,"""52:56""", Get some type of credit for it.,no,,152,False,False,False,False,False,False,False,False,False
+152,9687,"""53:18""","Yeah, I agree that certainly is a problem.",no,,153,False,False,False,False,False,False,False,False,False
+153,9780,"""53:23""","He saw my mom having a hard time hearing you, but I do have hearing loss, but I think the incentive should be for the educational aspect, not for the actual voting.",yes," 1. The person saw the mom having difficulty hearing.
+2. The person who is speaking also has hearing loss.
+3. The incentive for the hearing assistance technology should be for educational purposes.
+4. The incentive should not be tied to the actual voting process.",154,False,False,False,False,False,False,True,False,False
+154,48739,"""53:43""",I can agree with that. I think if more people were educated and knew how the system actually worked and knew that their vote was actually going to count towards,no,,155,False,False,False,False,False,False,False,False,False
+155,48739,"""53:43"""," you know who's elected, then maybe they would actually go and they would come out and vote and",no,,156,False,False,False,False,False,False,False,False,False
+156,48738,"""54:02""",I agree with that as well.,no,,157,False,False,False,False,False,False,False,False,False
+157,9687,"""55:06""","Things from from the just the questions that were proposed here who's got the same idea as you know, what is, what is the timeline and how do we educate people on it?",no,,158,False,False,False,False,False,False,False,False,False

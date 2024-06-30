@@ -1,0 +1,260 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electionProcessChanges,partyInfluenceImpact,votingConfusion,proportionalRepresentation,moralResponsibility,preferenceVotingCriticism,politicsUnderstandingChallenges,other,notRelevant
+0,48651,"""2:15""",And I I'm new to this.,no,,1,False,False,False,False,False,False,False,False,False
+1,48674,"""2:21""",,no,,2,False,False,False,False,False,False,False,False,False
+2,48674,"""2:21""",,no,,3,False,False,False,False,False,False,False,False,False
+3,48674,"""2:21""","Hi, I'm Peter and I'm here.",no,,4,False,False,False,False,False,False,False,False,False
+4,48673,"""2:36""",I am Carrie and I'm here too.,no,,5,False,False,False,False,False,False,False,False,False
+5,9671,"""2:43""",I marry and I'm here.,no,,6,False,False,False,False,False,False,False,False,False
+6,9671,"""2:43""",,no,,7,False,False,False,False,False,False,False,False,False
+7,48621,"""3:00""","Hi, I'm Aaron from Michigan.",no,,8,False,False,False,False,False,False,False,False,False
+8,9671,"""3:07""",,no,,9,False,False,False,False,False,False,False,False,False
+9,48674,"""12:37""",,no,,10,False,False,False,False,False,False,False,False,False
+10,48674,"""12:37""","Hi, I'm senator from Wisconsin. I have always been interested in rank Choice voting since I first heard about it some time ago, I think for me, it would be a really good thing because I tend to really follow politics pretty closely and so I'm pretty aware of all the candidates and would like a chance to",no,,11,False,False,False,False,False,False,False,False,False
+11,48674,"""12:37"""," You know, vote for more than one, you know, to rank them the way that the way that that would work. And also, I think that it would make for Less",yes," 1. It is possible to vote for more than one option.
+2. Voting for multiple options allows for ranking of the options.
+3. This would result in ""Less"" of something, possibly less ambiguity or uncertainty.",12,True,False,False,False,False,True,True,False,False
+12,48659,"""13:37""","Hi everyone, I'm sorry. I was having technical difficulties before but I'm Mark, I'm from Maine. We actually have ranked Choice voting and you've had it for the last few elections now and I think it's worked pretty well up here. I think it's more more democratic in that can sort of put your heart on your candidate but still pick, you know, a second candidate after that if you prefer them as opposed to just having to necessarily vote for a candidate because you",yes," 1. The speaker's name is Mark and he is from Maine.
+2. Maine has implemented ranked-choice voting in recent elections.
+3. The speaker believes that ranked-choice voting is more democratic.
+4. With ranked-choice voting, voters can rank candidates in order of preference.
+5. The speaker suggests that this system allows voters to vote for their true first choice while still having a say in the outcome if their first choice does not win.",13,True,False,False,False,False,False,False,False,False
+13,48659,"""13:37""", Don't want another candidate. You think they'll be a better candidate overall?,no,,14,False,False,False,False,False,False,False,False,False
+14,48651,"""14:15""",Do you think that this impacts the voter turnout because of their level of knowledge about the candidates overall?,yes," 1. The text suggests the possibility of an impact on voter turnout.
+2. The suggested impact is due to the level of knowledge about the candidates.
+3. The level of knowledge is mentioned as being overall knowledge about the candidates.",15,False,False,False,False,False,False,True,False,False
+15,48659,"""14:32""",,no,,16,False,False,False,False,False,False,False,False,False
+16,48659,"""14:32""","What, what what exactly do you mean by that?",no,,17,False,False,False,False,False,False,False,False,False
+17,48651,"""14:38""","Well, what I mean is, you know, one of the problems with elections is getting all the eligible voters to vote, we all know that, not every voter votes in every election. And a lot of that's due to lack of knowledge about the candidates for whatever reason. It may be, that's a whole other discussion. But do you think that the rank Choice voting leads to less people?",yes," 1. One of the problems with elections is getting all eligible voters to vote.
+2. Not every voter votes in every election.
+3. A lot of this is due to lack of knowledge about the candidates.
+4. The text asks if rank choice voting leads to less people voting.",18,True,False,True,False,False,False,True,False,False
+18,48651,"""14:38"""," showing up to vote because they don't know enough about all the candidates versus getting more people to vote because they, at least know about one,",yes," 1. The text discusses two opposing perspectives.
+2. The first perspective is about showing up to vote, even if one doesn't know enough about all the candidates.
+3. The second perspective is about getting more people to vote by ensuring they know about at least one candidate.",19,False,False,False,False,True,False,True,False,False
+19,48659,"""15:17""","It's a good question. I could, you can still even with ranked Choice voting. Just vote for for one candidate, you know? Just like you would in any other election. It's just that you can also, you know, pick your second choice, for your third choice, depending on how many candidates there are. And then it sort of just acts as like, an instant run off. Whereas, you don't need to have a election in the future. Someone didn't get the majority or 50% of the votes.",yes," 1. Ranked Choice Voting allows voters to vote for one candidate and also select a second and third choice.
+2. This is similar to how one would vote in any other election, but with the added option of selecting backup choices.
+3. The system then acts as an instant runoff, determining the winner without needing a future election.
+4. This is useful if no candidate receives a majority (50%) of the votes.",20,True,False,False,False,False,False,False,False,False
+20,48673,"""15:45""",,no,,21,False,False,False,False,False,False,False,False,False
+21,48673,"""15:45""","That also brings up one of the concerns that I have, which is that right now, it seems like you have a lot of people that vote for four candidates without knowing anything about them, besides, what letter is next to their name. And I don't know. That adding extra candidates is going to improve that. I think it might actually make it even worse because now people are just going to, you know, think okay. Well, I didn't have time to",no,,22,False,False,False,False,False,False,False,False,False
+22,48673,"""15:45"""," Research, two candidates. Now I'm certainly not going to take the time to research four or five of them. So that's one of my big concerns about it.",no,,23,False,False,False,False,False,False,False,False,False
+23,48614,"""16:26""",Does the ranked Choice voting still go along the two parties or does it allow for third party or independent candidates?,no,,24,False,False,False,False,False,False,False,False,False
+24,48659,"""16:40""","No. Yeah, you can definitely any candidate that qualifies, whatever the qualifications are the thresholds to be on the ballot can appear on the ballot. So it's definitely not limited.",no,,25,False,False,False,False,False,False,False,False,False
+25,48614,"""17:03""",The comments also or the pro indicates that there's less negative campaigning and it's more civil. Have you found that to be true?,no,,26,False,False,False,False,False,False,False,False,False
+26,48659,"""17:15""","For my experience. Yeah it's a little more more toned down because you're not necessarily trying to off put the other the other base because you're still vying for for their vote, as maybe their second choice for their third choice. So I do think it leads to a little more civility in the in the campaign's must less overall negativity and attacks.",no,,27,False,False,False,False,False,False,False,False,False
+27,48659,"""17:15""",,no,,28,False,False,False,False,False,False,False,False,False
+28,48674,"""17:43""",,no,,29,False,False,False,False,False,False,False,False,False
+29,48674,"""17:43""",I wonder what people think about the fact that the pro people people who are in favor of this think that you have less radical candidates on this kind of a system.,yes," 1. Some people think that proponents of a certain system believe in less radical candidates in this system.
+2. This system in question is a specific type, although the text does not specify what type it is.
+3. The text suggests that there is a debate or discussion about the merits of this system.
+4. The fact being considered is the perceived reduction in radical candidates in this system.
+5. However, the text does not provide any evidence or arguments for or against this point.",30,False,False,False,False,False,False,False,True,False
+30,48614,"""18:13""",That's an interesting question across my mind to because there are so people can vote rank order. The radical candidates may be afraid that they come across too radical and alienate voters.,no,,31,False,False,False,False,False,False,False,False,False
+31,9671,"""18:27""",I just want to thank God.,no,,32,False,False,False,False,False,False,False,False,False
+32,9671,"""18:27""", Mr. Basile.,no,,33,False,False,False,False,False,False,False,False,False
+33,9671,"""18:27""", You helped me understand it a whole lot better but and I'm glad that they're also. I mean is there any other states they're doing it in that y'all know of? Because it's like they're easing into it. Maybe since Mains doing it. Maybe somebody else do it next time.,no,,34,False,False,False,False,False,False,False,False,False
+34,48674,"""18:49""",,no,,35,False,False,False,False,False,False,False,False,False
+35,48674,"""18:49""","I know Alaska's using it, I don't know, I think maybe Oregon. Not sure.",no,,36,False,False,False,False,False,False,False,False,False
+36,48659,"""18:58""",I think yeah some states it depends on the type of election to Summer trying it out would like primary elections. I think New York City did that most recently with their most recent primary.,yes," 1. The use of ranked-choice voting in primary elections is being considered by some states.
+2. New York City recently implemented this voting method in their primary election.
+3. The interlocutor is in favor of trying out ranked-choice voting.",37,True,False,False,False,False,True,True,False,False
+37,48659,"""18:58""",,no,,38,False,False,False,False,False,False,False,False,False
+38,48614,"""19:12""","Is this followed in all of your elections, State, local federal or just certain ones at this point?",yes," 1. The text discusses the following of certain procedures in elections.
+2. The elections in question could be at the State, local, or federal level.
+3. It is not clear from the text whether all elections follow these procedures or just certain ones.
+4. The text is a question, asking if these procedures are followed in ""all"" elections or just some.
+5. Therefore, a summary of the text would be:
+
+The text asks if procedures are followed in all State, local, and federal elections or just some.",39,False,False,False,False,False,False,False,False,True
+39,48659,"""19:23""",It's a not 100% sure on that answer. It's definitely used in like the federal presidential and representative for congress elections. I don't think it's used for some of our state elections nor our local elections. I think that's still the old plurality first-past-the-post system.,yes," 1. The use of ranked-choice voting is not definitively confirmed for all elections.
+2. It is used in federal presidential and representative for congress elections.
+3. Ranked-choice voting is not used for some state elections.
+4. Local elections also do not use ranked-choice voting, instead using the old plurality first-past-the-post system.",40,True,False,False,False,False,True,False,False,False
+40,48674,"""20:02""",,no,,41,False,False,False,False,False,False,False,False,False
+41,48674,"""20:02""","I wonder what people think. Do you think that this is too complicated to system too hard to understand? Like I was saying at the beginning, I like the idea for myself because I really do follow politics, but I know a lot of people are less interested in it than I am. And I'm wondering if this goes back, I guess to wasn't somebody asked whether people it would turn people away because it's too complicated and I'm just wondering what",yes," 1. The text discusses the complexity of a certain system or idea.
+2. The author initially expresses their personal interest in politics.
+3. The author acknowledges that not everyone has the same level of interest in politics as they do.
+4. The author raises the question of whether the complexity of the system or idea would turn people away.
+5. The author is seeking the opinions and thoughts of others on this matter.",42,False,False,False,False,False,False,True,False,False
+42,48674,"""20:02""", What other people think about that?,no,,43,False,False,False,False,False,False,False,False,False
+43,48621,"""20:36""","So I guess for mr. Basile, my question for you then is I guess have you, have you noticed that candidate field to the tend to be a large candidate field or a small candidate filled with this type of voting?",no,,44,False,False,False,False,False,False,False,False,False
+44,9671,"""21:00""",Out.,no,,45,False,False,False,False,False,False,False,False,False
+45,9671,"""21:00""",,no,,46,False,False,False,False,False,False,False,False,False
+46,48659,"""21:06""","Fern the last, the last presidential election it was you know, the typical candidate field, you know, Democratic candidate Republican candidate and then I believe there was one independent candidate on the ballot. So it wasn't, you know, overwhelming the amount of candidates. It's it was just the typical ballot that you can rank them all as many or as little as you want to.",no,,47,False,False,False,False,False,False,False,False,False
+47,48659,"""21:06""",,no,,48,False,False,False,False,False,False,False,False,False
+48,48614,"""21:34""",Mr. Best deal did people complained that it was too complicated or they couldn't be bothered to get involved with this kind of system.,no,,49,False,False,False,False,False,False,False,False,False
+49,48659,"""21:44""","I definitely think there are probably people that were were opposed to it now in my younger generation Circle. I think a lot of people were in favor of being able to rank their candidates and have a second choice, not have to feel like they have to compromise on who their preferred candidate is just make sure that a different candidate doesn't get elected by voting for the one that they think will do better against that candidate.",yes," 1. The person believes that there are probably people in their younger generation who were opposed to a system or idea.
+2. A lot of people in the past were in favor of having the ability to rank candidates and have a second choice.
+3. This person thinks that this system would allow people to not compromise on their preferred candidate.
+4. The person thinks that this system would ensure that a different candidate doesn't get elected by allowing people to vote for the candidate they think will do better against their least preferred candidate.",50,True,False,False,False,False,True,True,False,False
+50,48659,"""21:44""",,no,,51,False,False,False,False,False,False,False,False,False
+51,48651,"""22:13""","you know, I think you just made a really good point about the younger Generations, favoring this type of structure and I think that the voting pool is changing over the past 50 years and I think with that change comes the need for change in the way we do elections because if the voters views change and how they want to vote then we need to adapt that but my only concern is",no,,52,False,False,False,False,False,False,False,False,False
+52,48651,"""22:13"""," Well, not my only, but one of my concerns is who would pay the cost involved with changing everything, whether it be the states, the government, and would that impact my taxes at all?",yes," 1. The concern is about the cost of changing everything.
+2. This cost would be incurred by entities such as states and the government.
+3. The concern includes the potential impact on taxes for individuals.",53,False,False,False,False,False,False,False,True,False
+53,48674,"""23:03""","Elections are really run at state and local level. So I think that's where the changes would. That's where the costs would accrue. I'm not sure it would have a huge effect overall, if you look at it in the long term that it probably wouldn't, you probably wouldn't notice a big change in your taxes. I wouldn't think.",no,,54,False,False,False,False,False,False,False,False,False
+54,48614,"""23:32""","I think maybe the initial cost especially teaching people how this system works. That probably would be the front loaded cost after that, once they're comfortable with it, I don't think it would be any different.",yes," 1. The initial cost of implementing the system is a significant factor.
+2. This cost is primarily related to teaching people how to use the system.
+3. After the initial teaching phase, there are no expected ongoing costs.
+4. Once people are comfortable with the system, there is no anticipated difference in usage.",55,False,False,False,False,False,False,True,False,False
+55,48651,"""23:47""",That's a very valid point. Thank you.,no,,56,False,False,False,False,False,False,False,False,False
+56,48674,"""25:47""",,no,,57,False,False,False,False,False,False,False,False,False
+57,48674,"""25:47""","I used to be a real traditionalist about this in wanted to stick. Always thought I want to stick with the party primaries, but I've really changed over the last few years. I think that this idea and I know this is done in California of having one large primary that I think in California and this is the way I. This is the proposal that I like, is to end up with just two candidates, so that it's really simple.",yes," 1. The person used to be a traditionalist and wanted to stick with party primaries.
+2. They have changed their viewpoint over the past few years.
+3. They are in favor of having one large primary, as is done in California.
+4. The goal is to end up with just two candidates.
+5. This proposal is liked by the person because it simplifies the process.",58,True,False,False,False,False,False,False,False,False
+58,48674,"""25:47"""," And in the fall, you just have two candidates. The person that gets the most votes wins and that's, that's the whole story. So, I like this idea.",no,,59,False,False,False,False,False,False,False,False,False
+59,48614,"""26:32""","I tend to agree with you too. Often times, I don't like to vote along party lines and there will be a candidate in one side and a candidate, another side that I like and maybe throw in an independent in there, but you're not able to do that kind of thing easily to vote for different people. That's why I like these approaches",yes," 1. The speaker agrees that they don't like to vote along party lines.
+2. They prefer to vote for individual candidates, even if they belong to different parties.
+3. The speaker finds it difficult to vote for candidates from different parties in the current system.
+4. The speaker supports alternative voting methods that allow for more flexibility in voting for individual candidates.",60,True,False,False,False,False,True,True,False,False
+60,48614,"""27:11""","Would we be in favor, or are you in favor of going all out and really changing it or doing it in incremental steps?",yes," 1. The text presents two options for consideration.
+2. The first option is to ""go all out"" and make significant changes.
+3. The second option is to make changes in ""incremental steps.""
+4. The text does not specify the context or nature of the changes.
+5. The text asks for a decision on which option is favored.",61,False,False,False,False,False,False,False,False,True
+61,48651,"""27:25""",I think incremental steps would be much easier for the general population. Be able to digest and work with. I also tend to like the idea and I've always felt that a winner should be chosen by majority vote not electoral votes.,yes," 1. Incremental steps are easier to digest and work with for the general population.
+2. A winner should be chosen by majority vote, not electoral votes.",62,True,False,False,False,False,True,True,False,False
+62,48614,"""28:15""","I think there's a lot of traditionalists out there or people who find it easier to just push like a one party vote, and they would have a lot of problem with some of these changes, especially in the primary might seem a little too convoluted for them or too much work and they would just want to head right? For the main,",no,,63,False,False,False,False,False,False,False,False,False
+63,48674,"""30:30""",,no,,64,False,False,False,False,False,False,False,False,False
+64,48674,"""30:30""","I think this one's a little weird. I don't have any huge objection to it, I think it's probably, okay. But I'm not sure that it's going to do any good and I think it might confuse some people and I just I'm sort of iffy about it.",no,,65,False,False,False,False,False,False,False,False,False
+65,48659,"""30:52""",Yeah I agree. I don't really get this and I feel like it has the opportunity to be gamed by different parties or candidates trying to appear multiple times on the ballot under weird party labels and things like that.,no,,66,False,False,False,False,False,False,False,False,False
+66,9671,"""31:07""",I totally agree. I think it would be really confusing.,no,,67,False,False,False,False,False,False,False,False,False
+67,48673,"""31:13""","I also agree. I mean, I do think that there should be some better way for third-party candidates to, to actually have a real voice and have, you know, a real saying, the way things work. But I don't think that this is a think this would be way too confusing.",yes," 1. The speaker agrees that there should be a better way for third-party candidates to have a voice.
+2. The speaker thinks that the proposed solution would be too confusing.",68,False,False,True,False,False,False,True,False,False
+68,48609,"""31:34""",,no,,69,False,False,False,False,False,False,False,False,False
+69,48609,"""31:34""",,no,,70,False,False,False,False,False,False,False,False,False
+70,48674,"""31:42""",,no,,71,False,False,False,False,False,False,False,False,False
+71,48674,"""31:42""",I think you're muted.,no,,72,False,False,False,False,False,False,False,False,False
+72,48614,"""31:53""","I agree. I think be, does anyone know of any state that does this kind of voting? I don't. And I think would be very confusing and too easy to be manipulated among candidates and parties.",no,,73,False,False,False,False,False,False,False,False,False
+73,48674,"""32:07""",,no,,74,False,False,False,False,False,False,False,False,False
+74,48674,"""32:07""",I've never heard of it before. This is the first time I've ever encountered that and I do follow this stuff. So I was a little surprised to see that. I don't know of any place where that's being done.,no,,75,False,False,False,False,False,False,False,False,False
+75,48651,"""32:24""",I've never heard of this either and I I too agree that this is just too confusing for most people to grasp.,no,,76,False,False,False,False,False,False,False,False,False
+76,48659,"""32:33""","If I had to guess I would think this is probably a system that they have in certain European countries where they have multiple political parties and that just the two, two main ones like we have here.",no,,77,False,False,False,False,False,False,False,False,False
+77,48674,"""34:10""",,no,,78,False,False,False,False,False,False,False,False,False
+78,48674,"""34:10""","I have very mixed feelings about this. I have lived in a district where, well, this this state is very Jerry. I live in Wisconsin, it's very gerrymandered. And I live in a district where I feel like for the state legislature for both the Senate and the assembly that the I really don't get a chance to have a representative because it's the person.",yes," 1. The author has lived in a district with gerrymandering.
+2. The state referred to is Wisconsin.
+3. The author feels that their district is not given a fair chance to have a representative in the state legislature for both the Senate and the Assembly.
+4. This is due to the district being heavily gerrymandered.",79,False,False,False,True,False,False,False,False,False
+79,48674,"""34:10"""," Is always of the other party. And then the opposite is true of them who conduct congressional district. So it's, it's kind of a mixed bag for me. But I do kind of, like, the idea.",no,,80,False,False,False,False,False,False,False,False,False
+80,48673,"""34:59""","I'm pretty much in the same boat, I live in Maryland, and it's very much, one-party State and my district is is very much the other party, but our district has been gerrymandered so much the that we're not truly represented. So I I do wish that there was a way to get around that, but I'm not sure that this that this would be",yes," 1. The person lives in Maryland.
+2. Maryland is a one-party state.
+3. The person's district is dominated by the other party.
+4. The district has been heavily gerrymandered.
+5. The person feels that they are not truly represented.
+6. The person wishes there was a way to get around gerrymandering.
+7. The person is unsure if the proposed solution would be effective.",81,False,True,False,True,False,False,False,False,False
+81,48673,"""34:59"""," The right thing because I think that they would also open up opportunities for for more gerrymandering, more more cheating if you will. I don't necessarily want to call it that, but yeah.",yes," 1. The subject is about something being not right.
+2. The speaker believes this thing would enable more gerrymandering.
+3. The speaker implies that this thing could lead to cheating.
+4. The speaker seems to be against this thing.",82,False,False,False,True,False,False,False,False,False
+82,48674,"""35:46""","The other thing is, I think that if you have multiple members from One District, then the districts are going to be necessarily much larger. So, you know, if you have three or presentative, your district is going to be 3 times larger. So, there is something to be said for being a little for having one person, a little closer to the constituents. But again, I have",no,,83,False,False,False,False,False,False,False,False,False
+83,48674,"""35:46""", very mixed feelings about it.,no,,84,False,False,False,False,False,False,False,False,False
+84,48614,"""36:22""","I like your comment about districts being larger. If you have more Representatives, you serve lose that feeling of closeness or or personal interaction with the representative, but on the other hand, I'm not sure. I like the way the system is now. But I find that's a little confusing to",no,,85,False,False,False,False,False,False,False,False,False
+85,48674,"""36:53""","I mean, the other thing is, if you have multiple representatives from one District, there's a better possibility that you will have. Somebody one of the, what say you have three in your district. One of the three may be closer to your own beliefs and somebody that you would rather have that you would be able to more relate to. I would certainly feel that way about the state legislature if I had, you know, if there were",no,,86,False,False,False,False,False,False,False,False,False
+86,48674,"""36:53"""," A chance for me to have somebody in the state legislature. Representing my, my beliefs which I don't feel. I have it all now.",no,,87,False,False,False,False,False,False,False,False,False
+87,9671,"""37:56""","By the time they got up there, whoever you elect no matter if you're from a bigger District or whatever.",yes," 1. The event takes place at an elevated location.
+2. The person being referred to will be elected by the audience.
+3. The elected person could be from any district, regardless of its size.",88,False,False,False,False,False,False,False,True,False
+88,9671,"""37:56""", They'll be different by the time they get out.,no,,89,False,False,False,False,False,False,False,False,False
+89,48621,"""38:11""","I guess I'll just throw out. So in Michigan two years ago, the majority of the voters passed a proposal to have a citizen-based committee, basically that Drew district lines. And before that, it was just the whole state was heavily gerrymandered. The district's just looked like jigsaw",no,,90,False,False,False,False,False,False,False,False,False
+90,48621,"""38:11"""," Easels. But add. Yeah, without going into details about parties, we had one party and the governorship and another party that was",no,,91,False,False,False,False,False,False,False,False,False
+91,48674,"""39:14""","Continue Aaron. I'd like to hear what you had to say, evenly timed out.",no,,92,False,False,False,False,False,False,False,False,False
+92,48621,"""39:20""",Yeah. So the proposal was by a group called boaters not politicians which basically you know the idea being that voters actually get to choose the their elected officials instead of the other way around elected officials or politicians. Choosing the voters. So yeah for for 40 years the state was just heavily gerrymandered with jigsaw puzzle booking.,yes," 1. A group called ""Boaters not Politicians"" proposed an idea.
+2. The idea is about allowing voters to choose their elected officials.
+3. This is in contrast to the current situation where elected officials or politicians choose their voters.
+4. The proposal aims to address the issue of gerrymandering in the state.
+5. The gerrymandering has been ongoing for 40 years, resulting in a jigsaw puzzle-like distribution of voting districts.",93,True,False,False,True,False,False,False,False,False
+93,48621,"""39:20"""," In districts. And then we two years ago, we passed a proposal, I'll just hit continue speaking when I run out.",no,,94,False,False,False,False,False,False,False,False,False
+94,48621,"""40:08""","So two years ago, we passed a proposal to have a citizen formed committee. And I think it is, I can't remember the exact breakdown but it's basically equal number of Democrats, equal number of Republicans equal number Independence. And then they sat down and redrew District boundaries for the state. Basically, I'm first of all, they weren't they didn't look good.",no,,95,False,False,False,False,False,False,False,False,False
+95,48621,"""40:08"""," Like uneven, jigsaw puzzles. They're basically the the larger districts were your less populated districts so I think like the entire Upper Peninsula of Michigan, maybe one District now",no,,96,False,False,False,False,False,False,False,False,False
+96,48674,"""40:56""","And Aaron, did you feel at that improved things you know, because I would certainly like to see that happen here. I know Iowa has done that for quite a while and I would certainly like to see the see it happen in Wisconsin, too.",no,,97,False,False,False,False,False,False,False,False,False
+97,48621,"""41:13""","Yeah. So, as I was alluding to. So, basically, we had our governor, our secretary of state, or attorney, general, or from one party, because they were elected by the majority of votes. Yet the House and Senate of in Michigan, were run by the other party. So, what does that tell you, then clearly are",no,,98,False,False,False,False,False,False,False,False,False
+98,48621,"""41:13"""," House and Senate in the state level were not being represented by the popular vote within the state. But after we had the boundaries on gerrymandered, the position of power has now shifted.",yes," 1. The House and Senate in state level were not being represented by the popular vote within the state.
+2. Boundaries on gerrymandered districts have been changed.
+3. The position of power has now shifted towards the gerrymandered districts.",99,True,False,False,True,False,False,False,False,False
+99,48621,"""41:59""","You to all the branches. So the governor's office, the house and the Senate. So, for the first time now, the majority of the votes for the party that the majority of people wanted are actually represented in the House and Senate of Michigan for the first time in 40 years,",no,,100,False,False,False,False,False,False,False,False,False
+100,48674,"""42:27""",,no,,101,False,False,False,False,False,False,False,False,False
+101,48674,"""42:27""","We are very similar in Wisconsin, we have well I'll I'll just say the party. They do, the Democrats control is the state offices and the Republic, but the Republicans have a huge majorities in both houses here. And, and I think what happened in Michigan is very, very similar. I mean, it's very similar situation, we're not quite as Democratic as",no,,102,False,False,False,False,False,False,False,False,False
+102,48674,"""42:27"""," Again, I don't think but but there is it is a fairly equal. And if that is not reflected in our legislature,",no,,103,False,False,False,False,False,False,False,False,False
+103,48673,"""43:12""","Yeah. And in Maryland to me, we're much much smaller State than you guys, but but it's pretty much the same way. The the city centers of Baltimore and around d.c. pretty much control, the whole state and the rest of the state is very different but still pretty much has to fall in line. And so yeah, I rather than going with with the proportional representation thing I would much rather",no,,104,False,False,False,False,False,False,False,False,False
+104,48673,"""43:12"""," if we could read it, read District everything with something similar to what Aaron was describing for Michigan.",no,,105,False,False,False,False,False,False,False,False,False
+105,48659,"""43:48""","It kind of seems like this proposal the proportional representation might be able to help with that because I feel like it'd be a lot harder to gerrymander a larger amount of people than it is currently when you can have many, many, many smaller districts. If you had just a few larger ones and then whoever's in there proportionally votes and gets Representatives.",yes," 1. The proposal is for proportional representation.
+2. Proportional representation might make gerrymandering more difficult.
+3. This is because it is harder to manipulate a smaller number of larger districts.
+4. Under proportional representation, a smaller number of representatives are allocated based on the percentage of votes received by a party.
+5. This system would result in fewer districts that can be manipulated through gerrymandering.",106,False,True,False,True,False,False,False,False,False
+106,48674,"""44:15""",That's a good point. I hadn't thought of that. What is your first name? You've got your last name there?,no,,107,False,False,False,False,False,False,False,False,False
+107,48659,"""44:25""",Yes. Our it's Mark I'll fix my username next time.,no,,108,False,False,False,False,False,False,False,False,False
+108,48614,"""44:38""","I've often heard and I tend to agree that too much focus is often placed on the national elections where we really should focus on the local and the state. And if we get those resolved and we feel that the representation is there for us, then it filters up to the National. And I think if we can do or resolve some of these issues of the gerrymandering or non proportional representation, we might be able to go along those lines where worse sad",no,,109,False,False,False,False,False,False,False,False,False
+109,48614,"""44:38""", Satisfied with our local representation can and can go forth from that and get a little bit more cooperation at the different political levels.,no,,110,False,False,False,False,False,False,False,False,False
+110,48674,"""45:25""","And I think that's a good point about not paying enough, attention to local elections, I'm guilty of that myself. Everybody gets more excited about National issues but local issues are equally as important if not more. So",yes," 1. The importance of paying attention to local elections is highlighted.
+2. Neglecting local elections is identified as a common issue.
+3. National issues are often more exciting for people than local ones.
+4. Local issues can be equally or even more important than national issues.",111,False,False,False,False,True,False,True,False,False
+111,48651,"""45:52""","Living in New York. I've lived downstate New York in New York City for many years and now I live way up in Buffalo New York. So the other end of the state, and I've seen a huge difference in the government. And the way, it's run in different locations even within the state and basically New York City, kind of runs the entire State whoever's elected, that runs the state, and it's a shame. So I think something like this,",yes," 1. The speaker has lived in New York for many years, specifically in downstate New York (New York City).
+2. The speaker now resides in Buffalo, New York, which is at the other end of the state.
+3. The speaker has observed significant differences in government between various locations in New York, even within the same state.
+4. New York City has a substantial influence on the state's governance, as the city's elected officials often control the state's administration.
+5. The speaker believes this situation is unfortunate and in need of change.",112,False,False,False,False,False,False,False,False,True
+112,48651,"""45:52"""," This. If they were able to, as a few of you said, remap the boundaries. I think that might be something useful and beneficial for us here in New York at least.",no,,113,False,False,False,False,False,False,False,False,False
+113,48621,"""46:36""","Yeah. And I will say to I made it actually caused competition in districts because there were districts both Republican and Democrat where it was so skewed to one side that people just run unopposed. And, you know, they really had no incentive to appeal to their voters or anything so they knew they were going to win. Nobody bothered running against them.",yes," 1. The author mentioned a situation where they made a change that resulted in competition in districts.
+2. This change was due to the fact that there were districts, both Republican and Democrat, that were heavily skewed to one side.
+3. This skew led to candidates running unopposed in these districts.
+4. Candidates who ran unopposed had no incentive to appeal to their voters.
+5. Since they knew they were going to win, nobody bothered running against them.",114,True,False,False,True,False,False,True,False,False
+114,48621,"""46:36"""," So I you know, I think, I think it's definitely a good thing to have them. Want you to vote for them, not just know that they're going to win no matter what.",no,,115,False,False,False,False,False,False,False,False,False
+115,48651,"""47:21""","Yeah. I didn't, I'll be honest I did not know much about this particular topic, but I appreciate all you guys explaining it because now, I feel like I have a much better understanding of it.",no,,116,False,False,False,False,False,False,False,False,False
+116,48614,"""52:31""",I think it would be a step in the right direction because the proportional representation would theoretically,no,,117,False,False,False,False,False,False,False,False,False
+117,48614,"""52:31"""," Meet the needs of the people that they represent and if the people they represent want to eliminate eliminate gerrymandering, then you've got the right step started.",yes," 1. It is important for representatives to meet the needs of the people they represent.
+2. If the people represented want to eliminate gerrymandering, then starting the process of addressing this issue is the right step.",118,True,False,False,True,False,False,False,False,False
+118,48674,"""52:54""","I think what we're trying to do now is improve the questions not, not necessarily discuss the answers.",yes," 1. The goal is to improve the questions.
+2. There is no current focus on discussing the answers.",119,False,False,False,False,False,False,True,False,False
+119,48659,"""53:09""",Anyone have any edits they want to make to the question? Or should we move on to the excellent?,no,,120,False,False,False,False,False,False,False,False,False
+120,48674,"""53:46""",,no,,121,False,False,False,False,False,False,False,False,False
+121,48674,"""53:46""","My only comment on this is said, I think it's, I mean, it's pretty clear that it would you would have to redraw the district boundaries, unless I guess you could just jumbled together, several districts. But",no,,122,False,False,False,False,False,False,False,False,False
+122,48674,"""53:46"""," I think the answer to that is pretty. Definitely, yes.",no,,123,False,False,False,False,False,False,False,False,False
+123,48673,"""54:09""","I agree that the logic says that, but since it didn't say that in any of the actual description of what, what this was about, the I just, I don't like assuming things, especially when it comes to the government.",yes," 1. The speaker disagrees with a certain logic.
+2. The speaker did not find any description of what the issue was about.
+3. The speaker does not like assuming things.
+4. The speaker is cautious about assumptions, especially when it comes to the government.",124,False,False,False,False,False,False,False,False,True
+124,48614,"""54:30""","Exactly. I think it's sort of ties in with the first question. It implies that there would be redrawing of district lines, but it doesn't guarantee it,",no,,125,False,False,False,False,False,False,False,False,False
+125,48674,"""55:10""","So everybody loves my question. I guess, huh?",no,,126,False,False,False,False,False,False,False,False,False
+126,48651,"""55:14""",I was just going to say I like that question. It's almost it is two parts but I like it.,no,,127,False,False,False,False,False,False,False,False,False
+127,48674,"""55:53""",,no,,128,False,False,False,False,False,False,False,False,False
+128,48674,"""55:53""",This is kind of a big philosophical question.,no,,129,False,False,False,False,False,False,False,False,False
+129,48674,"""55:53"""," He think I'm not sure how useful it's it is to to have a bunch of experts talking about this. I think probably most people would say it should be eliminated. Anyway. I mean in theory, the question is how to get there. I think that that would be more of a relevant. Question would be, how would we get there?",no,,130,False,False,False,False,False,False,False,False,False
+130,48621,"""56:24""","Yeah, I mean I guess but I just wanted to put a simple question out there. You know, like how many people out there would really say? Yes? I love gerrymandering, I think it's great. I personally, I think it's wrong and I've heard and I've heard the argument to like, oh well, both sides do a. Yeah, it's not right for the other side to do it either. It should be the will of the people who the majority of the people.",yes," 1. The speaker finds gerrymandering wrong.
+2. The speaker has heard the argument that if one side engages in gerrymandering, the other side should also be able to do it.
+3. The speaker believes that political decisions should reflect the will of the majority of people.
+4. The speaker is not aware of many people who openly admit to liking gerrymandering.",131,False,True,False,True,True,False,False,False,False
+131,48621,"""56:24"""," Should be represented and and I can tell you I mean it was a specially disgusting in Michigan, what they did. There were nasty emails going around where they're plotting and scheming how they were gerrymandering.",no,,132,False,False,False,False,False,False,False,False,False
+132,48659,"""57:18""",So the better question be. What's the most like effective way to eliminate gerrymandering trying to get some expert opinion on that?,yes," 1. Seek expert opinion on gerrymandering elimination.
+2. Question focuses on the most effective way to eliminate gerrymandering.
+3. Gerrymandering is a practice of manipulating boundaries of electoral constituencies to favor one party or class.
+4. Eliminating gerrymandering would result in fairer elections and representation.",133,False,False,False,True,False,False,False,False,False
+133,48621,"""57:33""","Okay, well, I'm, I guess I'm biased being as I'm from Michigan, and we did successfully eliminate it, in our state, by having a citizen based group. So it's a citizen based group basically, for the People by the people, if you will cliche as it is. But it's, it's not politicians choosing the voters, it's voters. Actually choosing the",no,,134,False,False,False,False,False,False,False,False,False
+134,48621,"""57:33""", Oceans.,no,,135,False,False,False,False,False,False,False,False,False
+135,48614,"""58:12""","Maybe the question should be more, like should Michigan's success with eliminating gerrymandering be suggested for other states.",no,,136,False,False,False,False,False,False,False,False,False
+136,48621,"""58:31""","Yeah, so maybe like should we should citizen boards? Draw district lines, as opposed to the political party in power.",yes," 1. The idea is about introducing citizen boards.
+2. These citizen boards would be responsible for drawing district lines.
+3. This proposal is an alternative to having the political party in power drawing district lines.",137,True,False,False,True,False,False,False,False,False
+137,48674,"""58:45""",,no,,138,False,False,False,False,False,False,False,False,False
+138,48674,"""58:45""",So you're the only one that can change the question Jaron if you want to change it.,no,,139,False,False,False,False,False,False,False,False,False
+139,48674,"""59:23""","I'm afraid in front of an audience, isn't it?",no,,140,False,False,False,False,False,False,False,False,False
+140,48614,"""59:54""",That's good. And I like that.,no,,141,False,False,False,False,False,False,False,False,False
+141,48621,"""60:00""",Thank you.,no,,142,False,False,False,False,False,False,False,False,False
+142,48674,"""60:02""","Yeah, me too. I approve.",no,,143,False,False,False,False,False,False,False,False,False
+143,48614,"""60:28""",I think that's a very logical question.,no,,144,False,False,False,False,False,False,False,False,False
+144,48651,"""61:59""","So I'm going to jump right in here and say, give me two seconds to re-type. This give me just a minute. Here, I'll redo it.",no,,145,False,False,False,False,False,False,False,False,False
+145,48651,"""61:59""", That's a big debate in this household. I have three teenagers to drive.,no,,146,False,False,False,False,False,False,False,False,False
+146,48651,"""61:59""",,no,,147,False,False,False,False,False,False,False,False,False
+147,48651,"""61:59""",,no,,148,False,False,False,False,False,False,False,False,False
+148,48651,"""61:59""",,no,,149,False,False,False,False,False,False,False,False,False
+149,48651,"""61:59""",,no,,150,False,False,False,False,False,False,False,False,False
+150,48651,"""61:59""",,no,,151,False,False,False,False,False,False,False,False,False
+151,48651,"""61:59""",,no,,152,False,False,False,False,False,False,False,False,False
+152,48674,"""62:57""",Actually electoral votes really only come into play in the in the final national election.,no,,153,False,False,False,False,False,False,False,False,False
+153,48674,"""62:57""",,no,,154,False,False,False,False,False,False,False,False,False
+154,48674,"""63:29""","That's a good question. An old one, but a good one.",no,,155,False,False,False,False,False,False,False,False,False

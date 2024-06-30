@@ -1,0 +1,237 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electionProcessChanges,partyInfluenceImpact,votingConfusion,proportionalRepresentation,moralResponsibility,preferenceVotingCriticism,politicsUnderstandingChallenges,other,notRelevant
+0,48279,"""2:12""",,no,,1,False,False,False,False,False,False,False,False,False
+1,48279,"""2:12""",,no,,2,False,False,False,False,False,False,False,False,False
+2,48279,"""2:19""",,no,,3,False,False,False,False,False,False,False,False,False
+3,48279,"""2:19""","My name is Gloria Dominguez, Cuevas, I'm 63 years old. I live in Stone Mountain Georgia and I'm not sure if anybody can hear me. How do I know if they can hear me?",no,,4,False,False,False,False,False,False,False,False,False
+4,9872,"""2:36""","Gordon, my name is Manuel. I can't hear you Gloria, so you should be sounding, okay? I'm from Texas, I'm 29 and I'm an engineer.",no,,5,False,False,False,False,False,False,False,False,False
+5,48338,"""2:52""",,no,,6,False,False,False,False,False,False,False,False,False
+6,48338,"""2:52""",,no,,7,False,False,False,False,False,False,False,False,False
+7,48338,"""2:52""",,no,,8,False,False,False,False,False,False,False,False,False
+8,48338,"""2:52""",,no,,9,False,False,False,False,False,False,False,False,False
+9,9872,"""3:06""","Sorry, but I can't hear you.",no,,10,False,False,False,False,False,False,False,False,False
+10,48298,"""3:38""",,no,,11,False,False,False,False,False,False,False,False,False
+11,48298,"""3:38""",,no,,12,False,False,False,False,False,False,False,False,False
+12,48298,"""3:38""","Hi, my name is Brian.",no,,13,False,False,False,False,False,False,False,False,False
+13,10409,"""3:52""",Hello. My name is Anderson and I live in Minnesota.,no,,14,False,False,False,False,False,False,False,False,False
+14,48338,"""13:11""",Hi. Can you guys hear me now?,no,,15,False,False,False,False,False,False,False,False,False
+15,48338,"""13:11"""," Yes, thank you. Let me introduce myself. My name is Van de live in Chesapeake. Virginia. Married. I'm a nurse now. Getting to the chance of the question. I am a proponent of changing the electoral system to be more representative of each candidate's districts. Because if there is, if no one reaches the 50/50 percent threshold,",no,,16,False,False,False,False,False,False,False,False,False
+16,48338,"""13:11"""," whole lot of times, you'll see, runoffs, runoffs involved time money, not just for the candidate, but also for the people who have to arrange",yes," 1. Runoffs are frequently seen during elections.
+2. Runoffs often involve both time and money.
+3. It's not just the candidate who is affected by runoffs, but also the people who organize them.",17,True,False,False,False,False,False,True,False,False
+17,48338,"""14:01""","I could get, guess I get cut off, take time off the job. But anyway, there's a financial aspect to that. Thank you very much.",no,,18,False,False,False,False,False,False,False,False,False
+18,9872,"""14:12""",,no,,19,False,False,False,False,False,False,False,False,False
+19,9872,"""14:12""","I think that the I think I'm open to the rcd being used in kind of more the local scenario just so that way I can be a little bit more close to it. I know there's some states that have had some cities that have been using it, so definitely would like to learn of any one that's already in that experience. If they're, I know Alaska. Massachusetts has had some rank Choice voting. And so if anyone has some of, that would be great to hear. But yeah, I think, I think.",yes," 1. The speaker is open to using Ranked Choice Voting (RCD) in a local scenario.
+2. The speaker is interested in learning about any cities or states that have used RCD.
+3. The speaker mentions Alaska and Massachusetts as examples of places that have used RCD.
+4. The speaker would like to hear about any experiences with RCD.",20,True,False,False,False,False,False,False,False,False
+20,9872,"""14:12""", It's worth turned out. Just have to be at the national level but it's it's an experiment that we can. We can see how it goes.,no,,21,False,False,False,False,False,False,False,False,False
+21,48387,"""14:53""",,no,,22,False,False,False,False,False,False,False,False,False
+22,48387,"""14:53""",I agree with Emmanuel. I feel like at a local level it kind of gives you a better feel for it.,no,,23,False,False,False,False,False,False,False,False,False
+23,48387,"""14:53"""," I feel like at a national level for say, presidency people will cast out of bra, learn it just so that they can get the second wave of votes from someone else, who would normally agree with them? And I feel like that can be a bit misleading because they may not do what they agreed to do. Once they get in office, it may just be a ploy to get votes. Politics are very dirty. So, isolated in this National level, that may not be a good idea.",yes," 1. The author suggests that, at a national level, politicians may learn and present certain views merely to appeal to a particular group of voters, without any intention of following through on those views once in office.
+2. This behavior is described as misleading and ""dirty"" in the context of politics.
+3. The author argues that this practice is not a good idea for national-level elections, such as the presidency.",24,False,True,False,False,False,False,False,False,False
+24,48298,"""15:35""","I think I think the RCV is just going to be too complicated for people and in some elections, even especially local elections and a primary. The voter turnout is so poor already that people just won't understand to select multiple and put them in order. They just need to be able to just pick one and that's who they like. I do think that when it gets to presidential elections, I think the electoral college has kind of",no,,25,False,False,False,False,False,False,False,False,False
+25,48298,"""15:35""", of archaic and convoluted.,no,,26,False,False,False,False,False,False,False,False,False
+26,48279,"""16:11""","Hi, I'm off of ranked Choice. Give people the benefit of the doubt, and we won't know if it'll work until we try it, but I like to see it on a local and state level 2 before National",yes," 1. The speaker is no longer participating in ranked-choice voting.
+2. The speaker believes in giving people the benefit of the doubt.
+3. It is unclear if ranked-choice voting will work until it is tried.
+4. The speaker supports ranked-choice voting on a local and state level.
+5. The speaker has not decided if they support ranked-choice voting on a national level.",27,True,False,False,False,False,False,False,False,False
+27,10409,"""16:28""","I agree. It's it'll be a good idea to try at least at the local level and maybe State and do that for a couple of eggs and see how it goes and then decide whether we want to do it national, we don't want to do it all the way and then it doesn't work. And then you got to do all this other stuff to get rid of it.",yes," 1. Agreement to try the idea at a local level.
+2. Possibility of expanding the trial to the State level.
+3. Limiting the number of eggs for the trial.
+4. Observing the results of the trial.
+5. Deciding on a national implementation based on the trial results.
+6. Avoiding a national implementation if the trial is unsuccessful.
+7. Necessity of additional steps to undo a national implementation if it is unsuccessful.",28,False,False,False,False,False,False,False,True,False
+28,48521,"""16:47""",I really do agree with the majority of you saying that to try it at the local and state level just because they just say that there's costs involved with that and you know people are so used to the first past the vote post quote being that we don't know how. Like I got a national level it will just be too too much to do.,no,,29,False,False,False,False,False,False,False,False,False
+29,48407,"""17:14""","Yeah. Hired by the my name is Janice and it's just myself earlier. But anyways, I pretty much agree with the general consensus regarding the north evening.",no,,30,False,False,False,False,False,False,False,False,False
+30,48338,"""18:00""",,no,,31,False,False,False,False,False,False,False,False,False
+31,48338,"""18:00""","Hi. It's Vanda Jagger again and to respond to what Brian said. Respectfully people have always said, well things are too complicated. Well Once Upon a Time, the internet was too complicated for Baby Boomers but we had to progress. You either grow or you become irrelevant. And I think of course you know they would just put that out there. Public service announcements could educate population. You know.",no,,32,False,False,False,False,False,False,False,False,False
+32,48338,"""18:00"""," No they you could meet a community centers, you know, back in the day churches and other community centers, they gave information on how to do things. So I think before they just start that they would educate the population.",no,,33,False,False,False,False,False,False,False,False,False
+33,48298,"""20:26""",,no,,34,False,False,False,False,False,False,False,False,False
+34,48298,"""20:26""","I do think the party system and the primary system. It has some use. It is useful to help narrow down the field for a general election. I agree it. Is it is restrictive. And is somebody, this is a primary can't run in a general election. I don't see a problem with him being able to run as an independent if they in the general election, if they lost a primary.",yes," 1. The party system and primary system are considered useful for narrowing down the field for a general election.
+2. The speaker agrees that these systems are helpful.
+3. The primary system can be restrictive, as it may not allow a candidate who lost a primary to run in the general election.
+4. The speaker suggests that if a candidate loses a primary, they should still be able to run as an independent in the general election.",35,True,True,False,False,False,False,False,False,False
+35,48298,"""20:26"""," Election, but in general, I think keep the party system.",no,,36,False,False,False,False,False,False,False,False,False
+36,10409,"""21:08""","I definitely think we need some kind of system where there's more options just because at least the last two elections, have been so close where it was almost a 50/50. And I think that just shows that a lot of people",yes," 1. The need for a more flexible system is highlighted.
+2. The last two elections were extremely close.
+3. The election results were nearly equal, at about 50/50.
+4. This indicates that many people have varied political preferences.",37,False,False,False,False,False,True,True,False,False
+37,10409,"""21:08"""," They see the options that they're just going to go with one or another, but I don't think everyone was happy with just having those two options.",yes," 1. There were two main options available.
+2. Some individuals were not content with just these two options.",38,False,False,False,False,False,False,True,False,False
+38,48387,"""21:34""","I agree for the last election, just having those two options caused, a lot of people not to vote which caused a lot of chaos, it was just, you know, I do feel that we should just make some small changes. I don't agree with the Electoral College. I feel like we should get rid of it. It's as Brian said, it's very old and barbaric. It's time that they find something new.",yes," 1. The speaker agrees that having only two options in the last election led to many people not voting.
+2. This caused chaos.
+3. The speaker does not agree with the Electoral College.
+4. The speaker believes the Electoral College is outdated and should be replaced with a new system.",39,True,False,False,False,False,False,False,False,False
+39,48338,"""23:25""",,no,,40,False,False,False,False,False,False,False,False,False
+40,48338,"""23:25""","I think having a third party Coalition would work I believe other countries do Israel, Great Britain. The whole goal of an election is to get as many people turned out to express, you know, to be able to put in have their input and I think and it's also about compromise. So I think that would be a good alternative to what we have now.",yes," 1. Having a third party coalition would be a good idea.
+2. This is similar to how other countries, such as Israel and Great Britain, operate.
+3. The purpose of an election is to encourage as many people as possible to express their opinions and have their input.
+4. A third party coalition would promote compromise.",41,True,True,False,False,False,False,True,False,False
+41,9872,"""23:56""","I think the third party. Says Coalition, could have some benefits. I think I untied think this one is one of the ones I'm most understand in terms of being confusing, since you would see the same name twice. But I think if people use it right, it would be really important to be able to see which parties are get some numbers behind, which parties are more supported for a particular candidate. And that would be pretty interesting to see those",yes," 1. The third party, called Coalition, could have benefits.
+2. It is one of the most confusing aspects to understand, as the same name appears twice.
+3. If used correctly, it would allow seeing which parties support a particular candidate and their level of support.
+4. It would be interesting to see the numbers behind each party's support.",42,False,False,True,False,False,False,True,False,False
+42,9872,"""23:56"""," Kinds of numbers, but at the same time, I'm a little bit against it. Because why not just use an endorsement and not have to be on the ballot to show them that you supported?",no,,43,False,False,False,False,False,False,False,False,False
+43,10409,"""24:44""","I'm not ready for having the same person in appeared twice. I feel like that's going to make it easy for them to see a lot of stuff to get more people to vote for them and they're just going to do whatever they wanted to do in the first place. I don't think however, having a third party or like more people especially states that only allow two parties. Forcing them to allow more or at least get people more options and would also Force the other two parties to take.",yes," 1. Opposed to having the same person appear twice in a list.
+2. Believes it would make it easy for them to gain more votes.
+3. Not in favor of having a third party or more people in states that only allow two parties.
+4. Thinks it would force other parties to offer more options.
+5. Believes this would also force the two major parties to take more diverse perspectives into account.",44,True,False,False,True,False,False,True,False,False
+44,10409,"""24:44""", X extreme point of view on there. What they're trying to do in order to get more people to vote for them if they want those votes.,no,,45,False,False,False,False,False,False,False,False,False
+45,48279,"""25:21""",,no,,46,False,False,False,False,False,False,False,False,False
+46,48279,"""25:21""","I just think it's going to be really confused and if I see the same name, come up twice, first thing I'm gonna think is theirs are made. Like I said, for older, people like me, I just think this would be just too confusing.",no,,47,False,False,False,False,False,False,False,False,False
+47,48298,"""25:44""","I do like how it would enable, you know, smaller parties to get their message out, but I think having the same name on a ballot twice would would just confuse things.",yes," 1. The person finds it positive that smaller parties can promote their message through this system.
+2. They believe that having the same name on a ballot twice would cause confusion.",48,False,True,True,False,False,False,False,False,False
+48,48298,"""25:44"""," So to me in all in all, it's probably not a good idea.",yes," 1. The text being summarized expresses a negative opinion.
+2. The specific subject of the negative opinion is not clearly defined in the text.
+3. The text suggests that the subject is not advisable or beneficial.
+4. The phrase ""all in all"" indicates a summary of the overall impression given by the subject.
+5. The word ""probably"" suggests a degree of uncertainty or caution in the negative assessment.",49,False,False,False,False,False,False,False,False,True
+49,48338,"""27:44""",Hi. I think we should consider repealing the federal ban on multi-member districts for Congress and I think that will allow more representation from the local level. Everything. I think everyone will agree German during is a problem. They can do it. So precisely that it's not representative of population in that particular area that,yes," 1. Consider repealing the federal ban on multi-member districts for Congress.
+2. Allowing multi-member districts may increase representation from the local level.
+3. The issue of gerrymandering is a problem.
+4. Even countries like Germany have been able to implement multi-member districts in a way that is representative of the population in that area.",50,True,False,False,True,False,False,True,False,False
+50,48338,"""27:44""", District Precinct. So I think that proportional representation is more democratic,yes," 1. The topic is about District Versus Precinct-Based Voting.
+2. A disadvantage of precinct-based voting is that it can lead to unequal representation.
+3. An example is given of a district with 70% white residents and 30% minority residents.
+4. If the precincts are predominantly white, then the minority residents could have little to no representation.
+5. Proportional representation is suggested to be more democratic.
+6. Proportional representation ensures that each group is represented in proportion to their population.
+7. The argument is made that this system is more fair and representative of the community as a whole.",51,True,False,False,True,False,False,False,False,False
+51,48407,"""28:31""","But basically, I think that the current message is not working out for all of us. And I do agree that if we do, have you just PR do like the members. That might basically be more representative of the area that they are representing. And basically more of hardwood, you can be heard.",no,,52,False,False,False,False,False,False,False,False,False
+52,9872,"""28:54""","I think I understand the need for it in the gerrymandering and the district's getting drawn unfairly. I think the the biggest problem I have with the way that they present the idea with the proportional representation is that it just seems like it's going to add a lot of people to the discussion and will with that, actually let people's voice be heard. But I definitely I acknowledge the problem.",yes," 1. The reader understands the issue of gerrymandering and unfair districting.
+2. They have a concern about proportional representation adding many people to the discussion.
+3. They believe that this addition could let more people's voices be heard.
+4. The reader acknowledges the problem of gerrymandering.",53,False,False,False,True,False,False,False,False,False
+53,9872,"""28:54""", I just don't know if this is the best way to handle it. So maybe there's another option that I can better help.,yes," 1. The reader is uncertain if the current approach is the most effective way to handle a situation.
+2. The reader is open to other options that may be more helpful.",54,False,False,False,False,False,False,True,False,False
+54,48387,"""29:32""",,no,,55,False,False,False,False,False,False,False,False,False
+55,48387,"""29:43""","so,",no,,56,False,False,False,False,False,False,False,False,False
+56,48387,"""29:43""", Don't get me wrong. I like the ideas of the other.,no,,57,False,False,False,False,False,False,False,False,False
+57,48387,"""29:43"""," The other options, the ideas are there but the cons kind of bite back more. So you know, if you were pale the current federal or back current federal band. I feel that it'll become too much at some point for bigger places when they have a people will get confused when they have so many people to choose from because",yes," 1. The other options for tanning are available, but they have drawbacks.
+2. If someone is pale, using the current federal or previous federal tanning band is an option.
+3. Having too many tanning options in larger places may confuse people.
+4. An abundance of choices for tanning may become overwhelming at some point.",58,False,False,False,False,False,False,False,False,True
+58,48387,"""29:43"""," There won't be just one person from a district. Here's five people from this district. 6 people from this District,",yes," 1. The text discusses people from a district.
+2. There will be multiple people from this district, not just one.
+3. Five people from the district are mentioned.
+4. Later, it is mentioned that six people from the district are involved.",59,False,False,False,False,False,False,False,True,False
+59,10409,"""30:36""",,no,,60,False,False,False,False,False,False,False,False,False
+60,10409,"""30:36""","Yeah and it's we're in my opinion. We already had a few too many that's it is. And the the whole gerrymandering thing where it's just that they talk a lot but they never really get to an agreement half the time. If we just add more and more people per District, you just going to have a ton of politicians in a room just talking to each other. Never agree in. And I don't think anything is going to pass at that point because",no,,61,False,False,False,False,False,False,False,False,False
+61,10409,"""30:36""", they're going to so many in so much disagreement. They will just never sign on anything.,no,,62,False,False,False,False,False,False,False,False,False
+62,48338,"""31:07""","I agree with you too many cooks in the kitchen, but I think perhaps if we could address Gera man, during that would solve a lot of the problems because then you will truly have representation of that area. And you won't have a few representing. The views of one person. Representing the views of a few",yes," 1. The issue of ""too many cooks in the kitchen"" is acknowledged.
+2. It is suggested that addressing ""Gera man"" could solve many problems.
+3. ""Gera man"" would provide representation for his area.
+4. This would prevent a few people from representing the views of one person.
+5. Representation would reflect the views of the majority, not just a few individuals.",63,False,False,False,True,False,False,False,False,False
+63,48298,"""31:41""","Yeah, I agree. The gerrymandering is an is an issue. I've seen it where I used to live the redrew, the lines to completely change the demographics, because there was a highly concentrated area of one party there. So something done to help with that but I think multi-member districts are going to again put more names on the ballot.",yes," 1. Gerrymandering is identified as an issue.
+2. The speaker has personally witnessed gerrymandering in a former place of residence.
+3. Lines were redrawn to change the demographics.
+4. This was done because there was a highly concentrated area of one party in that location.
+5. A solution proposed to help with gerrymandering is the implementation of multi-member districts.
+6. Multi-member districts will result in more names on the ballot.",64,True,False,False,True,False,False,True,False,False
+64,48279,"""32:30""",,no,,65,False,False,False,False,False,False,False,False,False
+65,48279,"""32:30""","I had, I think we should have changed. I was like I said before, if something's not working. What's wrong with trying something new? As long as it's going to be the same state-by-state, everybody's doing it the same way I'm all for it. I want things done the same way in every",yes," 1. The speaker suggests that they should have made a change in the past.
+2. The speaker argues that if something is not working, it is reasonable to try something new.
+3. The speaker is in favor of a consistent approach, as long as it is consistent across all states and being done in the same way by everyone.",66,False,False,False,False,False,False,False,False,False
+66,48279,"""37:04""","Hi. I think we got to educate people about the change before we try and implement it. And it seems like all the young people are on social media which I don't do. I don't do Facebook, I don't do any of it, but that's how you're going to reach the majority of them. The first old-school people, you know, the flyers in the mail that works and learning where the candidates are all.",yes," 1. It is important to educate people about the change before implementing it.
+2. Young people are most effectively reached through social media.
+3. The speaker does not use social media platforms such as Facebook.
+4. Traditional methods of outreach, such as flyers in the mail and learning where candidates will be, are still effective for reaching some people.",67,False,False,False,False,False,False,True,False,False
+67,9872,"""37:28""","I think Noelle this is really good question. Totally agree. Would like to hear no matter what changes, how do we actually get people to learn about what it means and good question.",no,,68,False,False,False,False,False,False,False,False,False
+68,48338,"""37:42""","I think we can educate everyone the same way we've educated other people things on Public Safety announcements seatbelts brushing your teeth when we were in school again, you reach the population that they're that's appropriate for them. Teenagers young people social media for us Gloria flyers in the mail emails you know, or even door-to-door, people go around.",no,,69,False,False,False,False,False,False,False,False,False
+69,48338,"""37:42"""," Canvassing collecting senses going to church is going to community centers in a in schools, things like that. So people can be educated education is never should never be an",yes," 1. Canvassing involves collecting senses by going to churches, community centers, and schools.
+2. The purpose of canvassing is to educate people.
+3. Education is considered important and should never be dismissed.",70,False,False,False,False,False,False,True,False,False
+70,48279,"""38:27""","Yeah. Hi the mayor. I bought it for my little town actually came. In my house, sat down on the couch with me while I was crocheting and we talked about what was going on and what he would do to improve education in the schools so door-to-door works.",no,,71,False,False,False,False,False,False,False,False,False
+71,48338,"""39:02""","Regarding German during obviously you can tell, I'm passionate about it. If we had a nonpartisan group of people to draw the lines, no special interest groups to draw the lines fairly with, you know, if they had no vested interest in the process, then I think we could get Democratic representation. That's just my idea.",yes," 1. The speaker is passionate about German.
+2. The speaker believes that if there was a nonpartisan group of people to draw election district lines, it would result in a fair process.
+3. This group should not have any special interest groups influencing the line-drawing process.
+4. The speaker thinks that if these conditions were met, there would be Democratic representation.
+5. The speaker's proposed solution to achieve fair representation is to have a nonpartisan group draw the election district lines.",72,True,False,False,True,False,False,False,False,False
+72,48298,"""39:39""","Yeah, I think that sums it up. It seemed how do you draw the lines? Fairly. I think that local districts are good because you know you have you get to know your local Representatives that way and you feel like they can't they came from the same company. Same area as you but you have the gerrymandering likes. I saw that in person, it change things dramatically.",yes," 1. The person thinks that local districts are generally a good thing because they allow people to get to know their local representatives.
+2. It is believed that local representatives are more accountable to their constituents since they come from the same area.
+3. However, the negative impact of gerrymandering on the fairness of political representation is acknowledged.
+4. The person has personally observed how gerrymandering can significantly alter political outcomes.",73,False,False,False,True,False,False,False,False,False
+73,48407,"""40:04""","I don't think I just simply redrawing life would be a solution because where I'm from is predominantly white area very little minorities and basically we will obviously be screwing over if you just redraw the life because me my family and people look like me but have no say in my area whatsoever. So just simply rejoin. The Lions will not be a solution in my opinion, that be something else but it is I have no idea and yesterday again during his whore.",no,,74,False,False,False,False,False,False,False,False,False
+74,48407,"""40:04"""," Evil is not working, and it needs to be changed.",no,,75,False,False,False,False,False,False,False,False,False
+75,48338,"""40:42""","Again, it's about democracy. The greater number of people for the greater good. I understand what your, what the last speaker is saying, I think it's Janice, but there are so many other places where there are majority majority population of a certain demographics Color, Race, whatever that are getting no representation. I missed your introductions and I don't know where everybody lives but Janice where do you live again please?",no,,76,False,False,False,False,False,False,False,False,False
+76,48407,"""41:13""",I'm right now.,no,,77,False,False,False,False,False,False,False,False,False
+77,48338,"""41:41""","I don't know if move if political thing parties are going to be a thing of the past, but we are so partisan. Now in this country, we're so divided. And is by design, that we are, we've lost the ability to work together. You know, once upon a time, we were all Americans. Now, people want to categorize themselves Democratic Republic and it can independent whatever. So something does need to happen so that we can become first.",no,,78,False,False,False,False,False,False,False,False,False
+78,48338,"""41:41"""," Americans and secondly think of our party we again need to think about the greater good. What is good for America and for the keep our democracy alive and thriving,",yes," 1. The first consideration should be the well-being of Americans.
+2. The second consideration is the political party.
+3. It is important to think about the greater good.
+4. Considerations should include keeping democracy alive and thriving.",79,False,True,False,False,True,False,False,False,False
+79,48279,"""42:25""","I completely agree. I don't like being forced into a category or you're Democrat or are you Republican and usually, and because I am a Democrat. I'm going to put moderate Democrat just because well, I leaned more toward democracy. The Democrat, but I don't like being forced one or the other. It's like, I love to see him. We see us get rid of",no,,80,False,False,False,False,False,False,False,False,False
+80,48387,"""42:51""","So, I asked this question because I feel that if we were to switch to our CV system for voting eventually, political parties would go out the door because candidates won't be so much focusing on a political party more. So, their values, their beliefs, they're going to want to appeal to people because at this point. Okay? So maybe these people don't choose me the first time. Maybe they'll choose me the second time. Or maybe they'll choose me to third time if I can align some of my",yes," 1. The question was asked due to the belief that switching to a CV system for voting would result in the disappearance of political parties.
+2. Candidates would focus more on appealing to people and their values rather than a political party.
+3. The goal for candidates would be to get chosen in future elections if not the first time.
+4. Candidates would try to align some of their beliefs with the people's in order to gain their vote.",81,True,True,False,False,False,True,True,False,False
+81,48387,"""42:51"""," Values with them, it doesn't have to be based. I can be a Democrat but I mean, love some Republican Republican values.",no,,82,False,False,False,False,False,False,False,False,False
+82,48387,"""42:51""",,no,,83,False,False,False,False,False,False,False,False,False
+83,48338,"""43:35""","I agree with both of you. I have voted Republican, I consider myself a Democrat. I do, I've bought a majority Republican, but some of the local things I have, I have chosen a republican candidate. So it shouldn't be either or, you know, we need to loosen those lines. And that way, I think people will find out that they have more in common and we do we have a lot in common as",yes," 1. The person has voted for Republican candidates.
+2. They also consider themselves a Democrat.
+3. They have bought a majority of their items from Republican candidates.
+4. For local elections, they have chosen some Republican candidates.
+5. They believe that political affiliations should not be strictly defined as either/or.
+6. They think that if political affiliations were more flexible, people would find they have more in common.",84,False,True,False,False,False,False,False,False,False
+84,48298,"""43:58""","Yeah, I agree. It's way too divisive now and it's not only divisive, but once a representative like Congress is elected, they get tremendous pressure from their political party to vote the party line so that that just really kind of skews things. To the point of, you know, volume even be punished by being not considered for committees and things. If they don't tow the party line and makes it tough to get.",yes," 1. The individual expresses concern about divisiveness in the current political climate.
+2. They mention that once a representative is elected to Congress, they receive heavy pressure from their political party to vote according to the party line.
+3. This pressure can lead to representatives being punished, such as not being considered for committees, if they don't vote with the party.
+4. The individual finds this situation difficult, as it can hinder a representative's ability to make decisions based on their own judgment or the needs of their constituents.",85,False,True,False,False,False,False,False,False,False
+85,48298,"""43:58"""," you know, represent the people",no,,86,False,False,False,False,False,False,False,False,False
+86,48387,"""45:06""","I understand you feel that our CB May reduce the turnout because a lot of older people there are used to picking one candidate. They're not going to want to come in there and pick five, even a lot of younger people they already don't want to be bothered with voting.",no,,87,False,False,False,False,False,False,False,False,False
+87,48387,"""45:06"""," But now you're telling them. Okay, pick five people rank them in order. They may not want to do that and that may just discourage them from coming out to vote anyway, just like, okay, I'm just not going to deal with it.",yes," 1. User is telling someone to pick five people.
+2. User is telling them to rank these people in order.
+3. It is mentioned that the people may not want to do this.
+4. User suggests that this act of ranking people may discourage them from voting.
+5. User mentions the possibility of people deciding not to engage with the process at all due to this.",88,True,False,True,False,False,False,True,False,False
+88,48279,"""45:36""","I support our CB out like to try it. You know, I like the experiment, see if it works because what we have and now doesn't work and like I say I'm offer let's give it a try. See how see",yes," 1. The speaker is in favor of trying a new approach with their CB (Citizens Band) radio.
+2. The speaker wants to conduct an experiment to see if the new approach works.
+3. The current method is not functioning well.
+4. The speaker is willing to try the new approach.
+5. The speaker wants to observe and evaluate the new approach.",89,False,False,False,False,False,False,False,False,True
+89,48298,"""45:48""","Yeah. After listening to the discussion, I sure I'd be willing to give our CV a try. I was just reading the details of it. Some more about you know if somebody if the one candidate doesn't get enough of the vote, then somebody gets eliminated and those that voted for that eliminated candidate. The votes go to their second choice. If somebody doesn't even know to vote more than one on our CV, then it kind of defeats the system.",no,,90,False,False,False,False,False,False,False,False,False
+90,48298,"""45:48"""," Yeah but I don't know I think I don't know if it would it would reduce turn out if they played it up right with education, it could make it interesting and maybe generate some Buzz around elections.",yes," 1. The person is unsure if they have an opinion on the matter.
+2. They believe that if elections are ""played up right"" with education, it could potentially reduce turnout.
+3. However, they also consider the possibility that education about elections could make the topic interesting.
+4. They suggest that generating buzz around elections could be a positive outcome.",91,True,False,False,False,False,False,True,False,False
+91,48338,"""46:32""","I agree with you. Brian. I don't. I agree with ranked Choice voting. I think we should try it. And education is going to be the rule, the way to go. What we're doing now, is clearly, not working. And lately, we have had amazing voter turnout. These young people, I am so proud of them. They are really getting involved and they are our future, you know. So I don't think our CV is going to be",no,,92,False,False,False,False,False,False,False,False,False
+92,48338,"""46:32"""," Be an obstacle. We just did rank Choice voting when we voted on. These questions, wasn't too complicated for us. We can learn. We can evolve. Thank you.",no,,93,False,False,False,False,False,False,False,False,False
+93,48407,"""47:15""","But in response to the statement, about people not wanting to vote for, like, five different candidates, that's where education comes into play and basically, let them know if you want to vote for one person you can just is that that one person doesn't get to enjoy the post and your vote is not once a castle, but your next one doesn't count. So now just let them know that they have an option to vote for, you know, five to ten people or one, or two people, what they want. It's just what once again, go back.",yes," 1. People may not want to vote for multiple candidates.
+2. Education is important in informing voters that voting for only one candidate does not mean their vote will always count for that candidate in subsequent rounds.
+3. Voters have the option to vote for a range of candidates, from one to ten or any number in between.
+4. The number of candidates a voter chooses to vote for can impact the outcome of the election.",94,True,False,True,False,False,False,True,False,False
+94,48407,"""47:15"""," To Noel's question education, very important reach out to as many people as you can and many different ways as you can, to let them know how to do it to where it's most effective.",yes," 1. Noel asked about the importance of education.
+2. It is very important to reach out to as many people as possible.
+3. This should be done in many different ways.
+4. The goal is to let people know how to get an education effectively.",95,False,False,False,False,False,False,True,False,False
+95,10409,"""47:55""","Yeah, I think that the best part of our CV is going to be that that change in were before if you voted in your the person you voted for, then get elected. Your vote was pretty much just gone, it didn't matter. So to say whereas now if you have more choices maybe you don't get the one you wanted the most but at least it counts towards something. I think people are going to see it that way and say, well maybe it's worth voting where the last time it's like well",no,,96,False,False,False,False,False,False,False,False,False
+96,10409,"""47:55""", The person has report gets very little support. So what's the point of me going there? Because my vote is going to be useless.,yes," 1. The person has a report.
+2. The report receives very little support.
+3. The person is considering going to the report location.
+4. The person believes their vote will not make a difference.
+5. The person thinks their vote will be useless.",97,False,False,False,False,True,False,False,False,True
+97,48279,"""48:46""",I think it will increase voter turnout because I think people would be excited to try something new to see if we can fix our broken system.,yes," 1. The author thinks that a new initiative will increase voter turnout.
+2. The author believes that people would be excited to try this new thing.
+3. The new initiative is aimed at fixing a broken system.",98,True,False,False,False,False,False,False,False,False
+98,48338,"""49:20""",,no,,99,False,False,False,False,False,False,False,False,False
+99,48338,"""49:20""","Any ideas on how we can fix gerrymandering, we all agree, it's bad.",no,,100,False,False,False,False,False,False,False,False,False
+100,48298,"""49:31""","I think getting get involved as much as possible, find out who's in charge of the district lines and maybe campaign social media to pressure.",yes," 1. Get involved as much as possible.
+2. Find out who is in charge of drawing the district lines.
+3. Pressure those in charge through social media campaigns.",101,True,False,False,True,False,False,True,False,False
+101,48298,"""49:31"""," It's kind of the other voices of the people. If enough people speak up, maybe they'll be heard.",no,,102,False,False,False,False,False,False,False,False,False
+102,48298,"""49:31"""," That's really about all, I can think of for the average person to can do.",no,,103,False,False,False,False,False,False,False,False,False
+103,48338,"""50:06""","I agree with you Brian. I was kind of Playing devil's advocate. I had I was thinking along those same lines but I wanted to know if there was something else that we could be doing. Of course you know call your local officials or state officials Etc, create a petition, right to your local newspaper, to the right, a an editorial comment and have it in the paper and just talk about it.",yes," 1. The user agrees with Brian.
+2. The user previously considered a different perspective.
+3. The user suggests contacting local or state officials.
+4. The user suggests creating a petition.
+5. The user suggests writing a letter to the editor of a local newspaper.",104,False,False,False,False,True,False,False,False,False
+104,48338,"""50:06""", It. And at least it starts there and we'll see where it goes.,no,,105,False,False,False,False,False,False,False,False,False
+105,9872,"""50:42""",,no,,106,False,False,False,False,False,False,False,False,False
+106,9872,"""50:42""","I think another one would be talking to our Social Circles wherever. That might be family, Friends Church work to do. Let them know that, you know, this is, this is an actual issue like, Brian. He experienced it firsthand, I think I'm not exactly clear how the system works here in Texas, but I think it kind of happened during some of the during some of the state legislation and so",yes," 1. It is suggested to talk to social circles, such as family, friends, church, and work, about issues related to Brian's experience.
+2. The speaker is not clear about how the system works in Texas, but they mention that the issue may be related to state legislation.",107,False,False,False,False,False,False,True,False,False
+107,9872,"""50:42""", I think some people might not know that there's this is an issue. So just bringing that up to the surface to people's life is a good way to help out.,no,,108,False,False,False,False,False,False,False,False,False

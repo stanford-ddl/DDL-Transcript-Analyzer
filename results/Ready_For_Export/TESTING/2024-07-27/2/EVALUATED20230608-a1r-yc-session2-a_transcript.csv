@@ -1,0 +1,278 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electoralCollegeIssues,supreme CourtPowerLimits,mathEducationImportance,voterInfluenceInElections,civicEducationAndAccountability,educationFundingAndTeacherShortages,electionProcessSimplification,other,notRelevant
+0,9871,"""2:13""",,no,,1,False,False,False,False,False,False,False,False,False
+1,9871,"""2:13""","Hi, I'm back. It's Holly from California.",no,,2,False,False,False,False,False,False,False,False,False
+2,48613,"""2:20""",Greg from Connecticut and I recognize a lot of you from cheese day. So great to see you again.,no,,3,False,False,False,False,False,False,False,False,False
+3,10353,"""2:27""","I heard from Massachusetts, goatee.",no,,4,False,False,False,False,False,False,False,False,False
+4,9650,"""2:33""",Karen from Florida. Hello again.,no,,5,False,False,False,False,False,False,False,False,False
+5,48654,"""2:37""",,no,,6,False,False,False,False,False,False,False,False,False
+6,48654,"""2:37""",Josh from Pennsylvania. Nice to see you all again.,no,,7,False,False,False,False,False,False,False,False,False
+7,10181,"""2:44""",Upstate New York.,no,,8,False,False,False,False,False,False,False,False,False
+8,48677,"""2:51""","Paul from Nashville, Tennessee.",no,,9,False,False,False,False,False,False,False,False,False
+9,48599,"""2:56""",Amelia Frazier from Georgia. Nice to see you all again.,no,,10,False,False,False,False,False,False,False,False,False
+10,10181,"""11:20""",Well I'll open up. I don't think the general public would actually be really for that kind of a idea but their choices without changing the way that elections in general.,no,,11,False,False,False,False,False,False,False,False,False
+11,10181,"""11:20"""," of course, a national party, the Republicans or the Democrats to adopt",no,,12,False,False,False,False,False,False,False,False,False
+12,10353,"""12:07""","I think it's not a bad thing to have both Dynamic parties that are fully decided by the members wherever, however, they change it Minds versus having more static parties, where Elites try to maintain the central ideology to have like a range of choices between how parties change over time. But of course, Kim right now, to Bari system,",no,,13,False,False,False,False,False,False,False,False,False
+13,10353,"""12:07""", We don't have that many options.,no,,14,False,False,False,False,False,False,False,False,False
+14,9650,"""12:38""","I agree. Although I do know that considering we've got, I took some notes rehab 31 percent, Democrat, 25% Republican and 41% Independence that are now voting, and we have to include the independence in all this and so far, they're not being that way considering that we are a two-party system and that's just unfair I think.",yes," 1. The speaker agrees with a certain point.
+2. The speaker mentions a statistic about rehab patients, with 31% being Democrat and 25% being Republican, with the remaining 41% being Independents who are now voting.
+3. The speaker believes that Independents should be included in the discussion.
+4. The speaker thinks that the current two-party system is unfair to Independents.",15,False,False,False,True,True,False,False,False,False
+15,9650,"""12:38""", It should.,yes," I'm sorry, I need a bit more context to provide a summary in the requested format. Here's a general example of how I would summarize a text:
+
+Original Text: ""The quick brown fox jumps over the lazy dog. The fox is quick and agile, able to leap over obstacles with ease. The dog, on the other hand, is content to lounge around and take things easy.""
+
+Summarized Text:
+1. The quick brown fox jumps over the lazy dog.
+2. The fox is quick and agile.
+3. The dog is lazy.",16,False,False,False,False,False,False,False,False,False
+16,10181,"""13:17""","Yeah, I think what those numbers that even implementing again, the primary system is it needs more aggressive change than just saying you have super delegates to vote instead.",yes," 1. The primary system needs more aggressive change than just implementing super delegates to vote.
+2. The system requires a significant modification.
+3. The statement is about the primary election process.
+4. The text does not provide specific details on what the ""aggressive change"" entails.",17,False,False,False,False,False,False,True,False,False
+17,10353,"""13:57""","Maybe it's because people could like, if parties gets Fork into both a more original version and a more Dynamic version and then Cliff like members could like vote in both.",yes," 1. People might prefer parties to split into two versions.
+2. One version could be more original.
+3. The other version could be more dynamic.
+4. Members who are neutral could vote in both versions.",18,False,False,False,False,False,False,False,True,False
+18,48677,"""14:20""",I don't know if this system is broke enough to fix it at this stage. I agree with some of the con arguments is that I think the party leaders have a lot of power right now and I kind of don't see any major reason to change it at this point.,no,,19,False,False,False,False,False,False,False,False,False
+19,48599,"""14:46""","My question is I because I definitely believe it's broken. What other kinds of just keeping everything? The same i--'cause, I definitely see the changes needed and dislike some people feel like what they discussed last week. You know, some change is good, and some people feel like if it's not broke, don't fix it but it's definitely.",yes," 1. The speaker, who refers to themselves as ""I"", believes that ""it"" is broken.
+2. The speaker is unsure about keeping everything the same.
+3. The speaker sees changes that are needed.
+4. Some people, according to the speaker, feel that if something is not broken, it should not be fixed.
+5. The speaker emphasizes that ""it"" is definitely broken and in need of change.",20,False,False,False,False,False,False,False,True,False
+20,48599,"""14:46"""," Broken. So why can't we just invite the other parties in? I mean, it seems like based on the numbers that Karen gave that we should have a say as well.",no,,21,False,False,False,False,False,False,False,False,False
+21,10181,"""15:42""",And the reality is that probably a lot of the elected officials and party leaders and everybody else have enough power through their endorsements and advertising and everything else.,yes," 1. The reality is that many elected officials and party leaders have a lot of power.
+2. This power comes from their endorsements, advertising, and other means.",22,False,False,False,False,True,False,False,False,False
+22,10181,"""15:42"""," To ultimately in a way have their hand and decide upon who they're going through, they want the public to vote. I'm anyways, so I'm not convinced that this is a truly viable option that would",yes," 1. The desire of individuals is to have the public vote on who they will go through in a process.
+2. There is uncertainty about the viability of this option.
+3. It is mentioned that this is not a convincing solution.",23,False,False,False,True,False,False,False,False,True
+23,10181,"""15:42""", bring about actual change.,no,,24,False,False,False,False,False,False,False,False,False
+24,48613,"""17:58""","I definitely think we need to do away with Electro Electoral College. We need to keep the vaunted voting popular. It may not always be the way you want to win, but it just makes more sense. Let's say in one state, so, and so got more votes popular but did not win the electoral college.",yes," 1. The text argues against the Electro Electoral College.
+2. It advocates for keeping the popular vote.
+3. The author believes that winning via popular vote, even if it's not the desired outcome, is more sensible.
+4. An example is given of a situation where a candidate received more popular votes in a state but did not win the electoral college.",25,True,False,False,True,False,False,False,False,False
+25,48613,"""17:58""", That just doesn't make a whole lot of sense in in the election as it stands.,yes," I can't summarize the text as it is incomplete and does not provide enough context to generate a numbered list. However, I can create a numbered list based on the general topic of election issues:
+
+1. Complex election processes
+2. Lack of voter understanding
+3. Insufficient candidate platforms
+4. Ineffective election administration
+5. Limited access to voting
+6. Influence of money in politics
+7. Voter suppression tactics
+8. Gerrymandering and redistricting
+9. Misinformation and propaganda
+10. Lack of transparency and accountability.",26,False,False,False,False,True,False,True,False,False
+26,9871,"""18:31""","Yeah, I agree with with Greg. I think the Electoral College needs to complete overall.",no,,27,False,False,False,False,False,False,False,False,False
+27,10353,"""18:50""","I think popular vote is the best system. I think the fairness to the minority that the EC is supposed to prove is supposed to provide as a mirage. Like you either have the power to override the majority or you don't. I think, based on current policy calls, the median American as pretty good opinions over also died. So I would, I would trust the popular opinion of 2023 to decide the direction of the country, but it's also kind of moot because if you get enough",no,,28,False,False,False,False,False,False,False,False,False
+28,10353,"""18:50"""," No votes to do a constitutional change. Then at that point, you might not need to.",no,,29,False,False,False,False,False,False,False,False,False
+29,10181,"""19:26""","So yeah, the Electoral College is a constitutional thing. I think it was made mostly because in that day and age is harder to bring about to spread information about one candidate versus the other. And so that was kind of made as a in between step, to allow for a more streamlined process. Now today with the fact that information is at our fingertips and that's no, that's a moot point.",no,,30,False,False,False,False,False,False,False,False,False
+30,10181,"""19:26"""," The electoral college should definitely be changed either through having part of it versus having hard to combine with the popular vote, or some fashion, rather think",no,,31,False,False,False,False,False,False,False,False,False
+31,48654,"""20:11""","I definitely think instead of the Electoral College, it should be the popular vote. I just think it'd be more fair. So like if can a gets the most votes but you voted for be your votes, kind of don't count anymore. They don't even count towards the Electoral College anymore. So I kind of think everyone's folks should matter and count.",yes," 1. The speaker thinks that the Electoral College should be replaced by the popular vote.
+2. They believe this would be more fair.
+3. Their reasoning is that in the current system, if candidate A receives the most votes, votes for candidate B do not count anymore, including the speaker's.
+4. The speaker thinks that every vote should matter and be counted.",32,True,False,False,True,False,False,False,False,False
+32,48613,"""20:36""","As Andrew said in that day and age is key to the whole thing about the Electoral College, things are a whole lot different now than they were when this whole thing was founded. So let's move on.",no,,33,False,False,False,False,False,False,False,False,False
+33,9871,"""20:54""","Yeah, I agree. It's we can move on. I was just going to say that being from California. I don't feel like my vote matters. I mean, I vote still but I stated before I'm a republican generally and it doesn't matter. So it really is discouraging to vote here.",yes," 1. The person has expressed that they are from California.
+2. They have mentioned that they generally identify as a Republican.
+3. They feel that their vote does not matter in California.
+4. They still vote despite feeling discouraged.
+5. They have mentioned that it is generally discouraging to vote in California.",34,False,False,False,True,False,False,False,False,False
+34,10353,"""21:11""","I think Massachusetts my vote matters not in terms of affecting about your college results but I think that if say there is another January 6th, Al dispute, I think we certified popular vote results. Vote results would affect people's allegiances.",yes," 1. The person thinks that their vote in Massachusetts may not directly affect their college results.
+2. They believe that their vote would matter if there is another event like the January 6th Capitol attack.
+3. The person thinks that certifying the popular vote results can affect people's allegiances.",35,True,False,False,True,True,False,False,False,False
+35,10181,"""21:29""","The one advantage the Electoral College that's I've heard for an argument, is the fact that it does help with rural States because typically the popular vote will always go towards the cities. The the urban areas that have a high number of people and so the Electoral College much like the fact that we have the separation between the Senate and the House of Representatives to help with balance.",yes," 1. The Electoral College helps to ensure that rural States are represented in presidential elections.
+2. The popular vote tends to favor cities and urban areas, which have a higher population density.
+3. The Electoral College system is similar to the separation between the Senate and the House of Representatives, as it helps to balance the interests of different regions.",36,True,False,False,True,False,False,False,False,False
+36,10181,"""21:29"""," Saying the the Lesser populous states versus the more populous states, the Electoral College just help to balance that. So I think we need something that's a combination of the Electoral College ideas with the popular vote.",yes," 1. The Electoral College helps to balance the power between lesser populous states and more populous states in elections.
+2. There is a need for a system that combines the ideas of the Electoral College and the popular vote.",37,True,False,False,False,False,False,True,False,False
+37,48677,"""22:14""","Yeah, I I'm also on board with the amending or getting rid of the Electoral College or combining it with the suggestion that and roommate, but I don't know if it's ever going to happen because of the Constitutional Amendment requirements. I don't know if that's going to happen any time soon, so we'd like to see some change other than what we have and emphasize popular vote.",yes," 1. The speaker is in favor of amending or getting rid of the Electoral College.
+2. They also mention a suggestion from a roommate, but the content of the suggestion is not provided.
+3. The speaker is unsure if changing the Electoral College will happen due to the requirements for Constitutional Amendments.
+4. They would like to see some change in the system other than what currently exists.
+5. The speaker emphasizes the importance of the popular vote.",38,True,False,False,True,False,False,True,False,False
+38,48677,"""22:14""",,no,,39,False,False,False,False,False,False,False,False,False
+39,10181,"""23:51""","There's going to be a very upset populace with that kind of idea. It sounds fine, but there's gonna be a lot of people that are going to be even angry that people that say, that their vote doesn't count are going to feel that their vote in might not have even more even though it would make some issues, smooth out some things.",yes," 1. The idea would upset many people.
+2. The proposal seems reasonable, but it will anger people who feel that their vote doesn't count.
+3. Those who think their vote doesn't matter may feel that their vote matters even less.
+4. The idea could smooth out some issues, but it would also cause frustration for some people.",40,False,False,False,True,False,False,False,False,False
+40,10181,"""23:51"""," Political way, we're so divided. Now that it's, I don't think that's going to go well.",no,,41,False,False,False,False,False,False,False,False,False
+41,48654,"""24:27""","I agree with Andrew. It sounds great in a practical way. I don't know how, well, it would work, especially if some States, join it, and then they change the rules later and it can get confusing and cause more problems than it solves.",yes," 1. The reader agrees with Andrew's viewpoint.
+2. The reader finds the idea appealing in a practical sense.
+3. The reader expresses uncertainty about the implementation of the idea.
+4. The reader points out potential issues if some states join and later change the rules.
+5. The reader suggests that this could cause confusion and more problems than it solves.",42,False,False,False,False,True,False,True,False,False
+42,9650,"""24:54""","again, I think this would actually",no,,43,False,False,False,False,False,False,False,False,False
+43,9650,"""24:54"""," Allow a Chosen Few to make our choice and which means that our choices out the door, I don't agree with it.",yes," It is not clear what you are asking me to summarize, as the text provided seems to be incomplete and somewhat disjointed. However, I will attempt to summarize it as best I can:
+
+1. A small group of people (a ""Chosen Few"") are being allowed to make a choice.
+2. This choice results in certain things being removed or excluded.
+3. The speaker does not agree with this decision.",44,False,False,False,False,False,False,False,False,True
+44,10353,"""25:19""",,no,,45,False,False,False,False,False,False,False,False,False
+45,10353,"""25:19""","So I think we all know the Practical implications of any national popular. Vote fact, is all of the recent presidents, who'd lost the popular vote. We're from one particular party, so I'm not sure to semantics matter that much whether we do it from like a compact or a constitutional reform thing. But I think any way to achieve that National popular vote is a good thing.",yes," 1. The practical implications of a national popular vote are significant.
+2. Recently, several presidents have won the election despite losing the popular vote.
+3. This has been the case for presidents who are from one particular political party.
+4. The specific method for implementing a national popular vote, whether through a compact or constitutional reform, is less important.
+5. Overall, any way to achieve a national popular vote is a positive development.",46,True,False,False,True,False,False,True,False,False
+46,48613,"""26:52""","I definitely support the 18-year limit. There's just a point where no offense, but you're just too old to be doing this anymore and being able to appoint a new judge. This makes a whole lot of sense.",no,,47,False,False,False,False,False,False,False,False,False
+47,9871,"""27:14""",,no,,48,False,False,False,False,False,False,False,False,False
+48,9871,"""27:14""","Yeah, I absolutely agree. I think it should be 18 years. I like that. There's what it would say. It would stagger every two year term.",no,,49,False,False,False,False,False,False,False,False,False
+49,9871,"""27:14""", Or every four years. Sorry I'm trying to read it quickly but it regardless I like that and of course upholding them to the same ethical standards as any other judge should absolutely be a no-brainer.,no,,50,False,False,False,False,False,False,False,False,False
+50,48654,"""27:37""","I agree. Like I just don't understand why there isn't a code of ethics for the Supreme Court, especially since the role in such important things for our country, and I definitely think they should be term limited and not be appointed for life.",yes," 1. The writer thinks there should be a code of ethics for the Supreme Court.
+2. The Supreme Court plays an important role in the country.
+3. The writer believes Supreme Court justices should be term limited.
+4. The writer believes Supreme Court justices should not be appointed for life.",51,False,True,False,False,True,False,False,False,False
+51,10181,"""27:57""","I agree with a lot of, especially the ethics standards, everybody else in the government has to comply. The lower courts have to comply. The Supreme Court Justices should apply comply with that. I think there also needs to be better oversights of the Supreme Court regarding the checks and balances system. There's a lot of checks and balances my comes between the president, the executive branch and the Congressional legislative branch. But once this",no,,52,False,False,False,False,False,False,False,False,False
+52,10181,"""27:57"""," Once a justice has chosen, there's almost no. I feel like no check or balance on what they can do to help. Make sure that Supreme Court Justices are complying with ethics. I think that needs to be changed too.",yes," 1. A justice has the power to choose how they will act once selected.
+2. There is almost no check or balance on what Supreme Court Justices can do to help.
+3. It is important to ensure that Supreme Court Justices are complying with ethics.
+4. Changes are needed to address this issue.",53,False,True,False,False,True,False,False,False,False
+53,10353,"""28:42""","So I think just as sort of a devil's advocate thing, I think given how the rest of government is subject to this huge turnover with all the term limits. We already have having one organization that is theoretically devoted to the Constitution is not necessarily a bad thing for the stability of the country. But of course in practice, the Supreme Court is subject to Politics as any",no,,54,False,False,False,False,False,False,False,False,False
+54,10353,"""28:42""", other organization.,no,,55,False,False,False,False,False,False,False,False,False
+55,10181,"""29:14""","A co-worker of mine had an interesting point regarding the Supreme Court that even though it won't change their ideology. That once adjust, this is confirmed that they should have to give up their, their actual party Association that they should have to say that you're no longer truly associated with the Democratic party, as a party, or the Republican party in that to make a statement.",no,,56,False,False,False,False,False,False,False,False,False
+56,10181,"""29:14"""," Of Independence. As far as that goes, which I thought was an interesting thing, I'm sure that would go into the ethical part of it as well.",no,,57,False,False,False,False,False,False,False,False,False
+57,10181,"""29:14""",,no,,58,False,False,False,False,False,False,False,False,False
+58,10181,"""29:14""",,no,,59,False,False,False,False,False,False,False,False,False
+59,48677,"""30:03""",,no,,60,False,False,False,False,False,False,False,False,False
+60,48677,"""30:03""","Yeah, I'm on board with most of our group, I think term limits are absolutely essential and the ethical component to the standards need to apply to federal judges as well as a yes.",no,,61,False,False,False,False,False,False,False,False,False
+61,48599,"""30:21""","I am definitely on board with term limits. I've always felt like that. It's just doesn't seem fair to just hold your term forever and there's no one to just, you know. And then we have to go through all this other stuff, to elect someone new, especially if there's some change within that two-year term that they kept talking about. I feel like, yes, that's what we need. We need,",yes," 1. The speaker is in favor of term limits.
+2. They have always held this belief.
+3. They think it is unfair for someone to hold their term indefinitely.
+4. They believe there should be a limit to how long someone can hold a term.
+5. They mention the difficulty of making a change within a two-year term.
+6. They express support for term limits as a means of facilitating change.",62,False,False,False,False,True,False,False,False,False
+62,48599,"""30:21"""," Fresh faces. Because once I believe, once you're at a certain age, it's just like, hey, I'm set in my ways. I have my opinion. You have yours. I don't really care about what everyone else thinks you.",no,,63,False,False,False,False,False,False,False,False,False
+63,48599,"""31:06""",,no,,64,False,False,False,False,False,False,False,False,False
+64,10181,"""31:19""","While on term limits, also, that should be for Senate and House of Representative people, as well.",yes," 1. The text discusses term limits.
+2. The term limits being discussed should apply to members of the Senate.
+3. The term limits should also apply to members of the House of Representatives.
+4. The term limits apply to ""House of Representative people,"" which likely refers to members of the House of Representatives.",65,False,False,False,False,True,False,False,False,False
+65,48599,"""32:32""","I feel like it should be included in the school's strictly because, you know, when I'm talking with people who are younger than me, they don't really care about politics. They don't know much of anything about anything, involving politics, and then they're getting closer to the age where they're getting ready to vote. They're just like, well, I don't want to vote, because, I don't know, I don't want to vote because, you know, no, no one sat me down, and",no,,66,False,False,False,False,False,False,False,False,False
+66,48599,"""32:32""", And taught me anything about anything involving my choice for who I should vote for what Civic duties. Do I have to my own?,yes," 1. The text does not provide specific teachings or information.
+2. The text mentions the concept of being taught about civic duties.
+3. It specifically mentions the duty of voting, but no further details are given.
+4. The text also includes a question about personal responsibilities in civic duties.",67,False,False,False,False,True,False,False,False,False
+67,9871,"""33:17""","Yeah, I agree with you Amelia. I am, I have two kids and neither of them choose to vote. They don't think it's important and I wish that, you know, I did a better job at all so that the high school maybe just like anything else, like English for years, maybe they have to take Civics for four years and really see how important it is because we're going to lose a whole generation, who spends all their time, on Tick Tock, but doesn't care about voting at all.",yes," 1. The speaker has two children who do not vote.
+2. The children do not think voting is important.
+3. The speaker wishes they had done a better job educating their children about voting.
+4. The speaker suggests that high school students should take Civics for four years.
+5. The speaker is concerned that a generation of young people who spend a lot of time on TikTok do not care about voting.",68,False,False,False,True,True,False,False,False,False
+68,48654,"""33:43""","I totally agree coming from personal experience. I think the quality of the teachers is also important that teach this being in a rural school, that doesn't have a lot of teachers. It was usually coaches who are also teachers.",yes," 1. The importance of teachers in a learning experience is agreed upon, stemming from personal experience.
+2. The text highlights the significance of teacher quality.
+3. The context is a rural school setting with a limited number of teachers.
+4. In such settings, it is often coaches who also take on teaching responsibilities.",69,False,False,False,False,False,True,False,False,False
+69,48654,"""33:43"""," They didn't always do their best and we're not exactly focused on their task. So I need, I think they should have more spending and definitely educating on civics.",yes," 1. They did not consistently perform at their best.
+2. The group in question was not particularly focused on their task.
+3. It is necessary to have more spending on a certain area.
+4. They should receive a significant education on civics.",70,False,False,False,False,True,True,False,False,False
+70,10181,"""34:13""","Yeah, when I was in high school I remember we had to do a pig class participation participation in government or we had to go to town hall meetings and look at newspaper clippings and print them out and everything and learn all about that. I thought that was really worthwhile. I'm not sure what is really taught in high schools anymore as far as the kind of civics classes or ho Mac anything else that just teaches",no,,71,False,False,False,False,False,False,False,False,False
+71,10181,"""34:13""", Shows you how to live.,no,,72,False,False,False,False,False,False,False,False,False
+72,10181,"""34:13"""," Be a lot of Reform to save me. We need to reform, education to choose more better trackways Pathways for students. That's a whole nother.",no,,73,False,False,False,False,False,False,False,False,False
+73,10353,"""34:58""",I think I want I would want the main focus of any expansion and civic education to be teaching people how to use the system. I think a big cause of the material divided between different groups of people is in their ability to access resources and levers in the system that are theoretically available. But they might not know how to fully utilize.,yes," 1. The main focus of expanding civic education should be teaching people how to use the system.
+2. Many people are unable to access resources and levers in the system due to their inability to fully utilize them.
+3. Even if resources are theoretically available, people might not know how to use them effectively.",74,False,False,False,False,True,False,True,False,False
+74,9650,"""35:19""","I think it depends on what state you're from. When I went to high school in California, Civics was required. And yes, it was taught by coaches. So but we had a blast and we learned a lot about politics. My granddaughter is here with me today and I asked her if she she went to high school in Washington state and she had Civics as a requirement, so it really and Florida. My other granddaughters were",no,,75,False,False,False,False,False,False,False,False,False
+75,9650,"""35:19""", Here they don't learn nothing about civics or if they don't learn nothing about anything here but it really depends on the state on where Civic sets.,yes," 1. Students may not learn about civics in this location.
+2. There is no instruction on any other subject either.
+3. The specific subjects taught depend on the state where ""Civic"" is located.
+4. It is unclear what ""Civic"" refers to in this context.",76,False,False,False,False,True,False,False,False,False
+76,48599,"""36:02""","As a Florida high school graduate, I can attest that we didn't learn anything about Civics if you wanted to learn anything about Civics, it was on your own time, you know. Or maybe if you took like a AP class, they would probably incorporate that in there. But we are not giving Civics classes whatsoever in Georgia. I'm not too sure. I haven't really. They focus, really a lot on stage.",yes," 1. The speaker is a Florida high school graduate.
+2. They did not learn about Civics in school.
+3. Learning about Civics was dependent on the student's own time and effort.
+4. If Civics was taught, it was likely in an AP class.
+5. The speaker is unsure if Civics is taught in Georgia high schools.
+6. Georgia high schools reportedly focus a lot on ""stage.""",77,False,False,False,False,True,False,False,False,False
+77,48599,"""36:02""", I'm over here. So I highly doubt that they're gonna devote any time. The Civic at all either is just it's all you hear is stem stem stem. But you need,no,,78,False,False,False,False,False,False,False,False,False
+78,48677,"""36:47""",,no,,79,False,False,False,False,False,False,False,False,False
+79,48677,"""36:47""","Yeah, just quickly, I agree with the arguments. We should have more civic education, just to note some of you probably don't know, I've lived in six different states. In some of these states, the YMCA sponsored a program called Model state legislators and it encouraged high school students to join a group which was just like being part of a legislature and they had actually meet at the state capitals and discuss it so we did.",yes," 1. The speaker agrees with the importance of more civic education.
+2. The speaker has lived in six different states.
+3. In some of these states, the YMCA sponsored a program called Model state legislators.
+4. This program encouraged high school students to join a group that simulated a legislature.
+5. The students in the program would meet at the state capitals and discuss issues.",80,False,False,False,False,True,False,False,False,False
+80,48677,"""36:47"""," I think we need more more of those kind of programs to encourage kids, to get involved.",yes," 1. We need more programs that encourage kids to get involved.
+2. These programs should be similar to the kind that was just mentioned.",81,False,False,False,False,True,False,False,False,False
+81,9871,"""37:25""","I think this is on the same topic but I just wonder if we should modernize the way. I don't know. You know we get the voting guide and and you're expected to do your own research kids aren't going to do that anymore. So is there is there some way we can bring technology into this too? To help them II, don't know? I just like I said, I'd go back to my own children, and they are always facing the screen, and they're never going to. Look at that voting guide and read and choose to vote on their own. That's not going to happen.",yes," 1. The text suggests modernizing the way voting guides are presented.
+2. The current system assumes voters will do their own research, which may not be true for younger generations.
+3. The text proposes incorporating technology to assist voters, particularly younger ones.
+4. The new system should consider that young voters are more likely to use technology and may not read traditional voting guides.",82,False,False,False,False,True,False,True,False,False
+82,48654,"""37:56""","I think Holly's touched upon something forward to because your generation is definitely glued to their screens and phones. We almost need a tick tock version of civics or something. Something to, you know, get their focus. So they're actually thing.",no,,83,False,False,False,False,False,False,False,False,False
+83,10353,"""38:11""",So I really like direct ballot initiatives and I want to do that over here and I want a website with all the issues and for like my party or my preferred ideological group to send me a guide on like what to vote for just like directly rather than through this huge company in the system.,yes," 1. The user is expressing interest in direct ballot initiatives.
+2. The user wants to create a website for presenting various issues.
+3. The user's goal is to have their preferred political party or ideological group provide voting guides directly, instead of through a larger company or organization.",84,False,False,False,True,True,False,True,False,False
+84,48613,"""38:32""","My senior year in high school, we had our history class which was really dealing with government. And every week we had the need to know list of things. And that was ranging from the president's, the vice president's, the parties, they ran for, we didn't need to know all the Senators and all that sort of thing. But it changed every week and it was, it was important to know these things. And, and just guide us all involved in, in the",no,,85,False,False,False,False,False,False,False,False,False
+85,48613,"""38:32""", The government situation.,no,,86,False,False,False,False,False,False,False,False,False
+86,10181,"""39:05""","I'm actually a father to two young girls that my wife. She was home-schooled for her her whole childhood so she's elected go home school. Our kids to you can be sure. I mean we're going to I'm going to probably drag him to a town meeting every once in a while in our small really rural town, just start that process and",no,,87,False,False,False,False,False,False,False,False,False
+87,10181,"""39:05"""," Make make sure that we tailor and education so that it's well-rounded is the biggest thing, but at the same time, I think is key. So",no,,88,False,False,False,False,False,False,False,False,False
+88,10353,"""44:19""","So, I'm just asking this question, because I think there's a bit of a consensus that you're good. The thing yard Vic New York did where they, let Republicans win. More was not a good political move for immigrants and that state. And so like, even if on principle making system more fair, as a good idea, if it hurts like my side, I would not want it to happen. So I think that would be something where",yes," 1. The user is questioning the political move made by the yard Vic New York, where they allowed Republicans to win.
+2. The user believes that this move was not beneficial for immigrants and the state of New York.
+3. The user thinks that even if a political move aims to make the system fairer, they would not support it if it harms ""my side"" (presumably the user's political allies or affiliations).
+4. The user suggests that this example could be a potential drawback of prioritizing fairness in political systems.",89,False,False,False,False,True,False,False,True,False
+89,10353,"""44:19"""," because our system right now is hugely bias in favor of Republicans, allow them to work win with weight viewer, votes overall. So, I don't think so. That's my question.",yes," It is not clear what the full context of this text is, so I will summarize the specific points made in the text as follows:
+
+1. The current system is biased in favor of Republicans.
+2. The system allows Republicans to work with a weighted viewer and have more votes overall.
+3. The speaker does not think this is appropriate.
+4. The speaker is asking a question about the situation.",90,False,False,False,True,False,False,False,False,False
+90,10353,"""45:28""","So basically, my question is, how do we get Republicans to shoot themselves in the foot?",no,,91,False,False,False,False,False,False,False,False,False
+91,10181,"""45:57""","My question kind of also is much like Ericsson the fact that unfortunately going to a popular vote only, it would greatly Democrat, greatly favored, the Democrats, especially in the presidential election, more than likely and with growing time for what seems like right now. So",yes," 1. The question is similar to Ericsson's concern.
+2. A popular vote in presidential elections would favor the Democrats.
+3. This bias towards the Democrats is likely to grow over time.",92,True,False,False,True,False,False,False,False,False
+92,10181,"""45:57""", And which way would it be the most fair to still have a mix in some ways?,no,,93,False,False,False,False,False,False,False,False,False
+93,9650,"""47:12""","Self-explanatory, I really like that question.",no,,94,False,False,False,False,False,False,False,False,False
+94,48677,"""47:22""","The purpose of the questions, I think we're all in agreement that the electoral college process? Should possibly change. But what's the best way to get there? Which which methodology and which one will actually be passed because the chances of tooth, I think it's 2/3 of the conquerors basically has to vote to approve an amendment to the Constitution. So I don't know if that's going to happen anytime soon. So I'm just",yes," 1. The purpose of the questions is to consider changing the electoral college process.
+2. It is agreed that the electoral college process should possibly change.
+3. The question is which methodology would be passed, considering",95,False,False,False,True,True,False,True,False,False
+95,48677,"""47:22""", Which process stands the best chance of change.,no,,96,False,False,False,False,False,False,False,False,False
+96,10353,"""47:56""",I think our discussion so far on our CV has been on.,no,,97,False,False,False,False,False,False,False,False,False
+97,10353,"""47:56"""," Popular vote elections chance at least, or at least on like the state level. So, I'm curious how we will combine that with Federal elections.",no,,98,False,False,False,False,False,False,False,False,False
+98,9650,"""48:10""","If it's going to take a constitutional amendment, we have, it's not going to happen. I mean, you've got all those lifers in Congress and Senate that really don't want to do anything except what they want to do. They're not going to do anything for us. They're doing it for themselves and their parties. So",yes," 1. A constitutional amendment is required to make certain changes.
+2. It is unlikely that a constitutional amendment will be passed.
+3. Many long-serving members of Congress and Senate are against making changes.
+4. These members are more concerned with pursuing their own interests and the interests of their political parties.",99,False,False,False,False,True,False,False,False,False
+99,10181,"""48:30""","The rank Choice. Voting would not mean a constitutional amendment implemented just yet though. Just be at the state level. Each state could choose that, that's how they're going to elect their electors. That would not need a constitutional amendment, would be a lot easier to implement to actually fully change the electoral college system and need a constitutional amendment to actually do so. So,",no,,100,False,False,False,False,False,False,False,False,False
+100,10181,"""48:30""", That would kind of answer that in a way.,yes," 1. The text provided for summarization is a single sentence.
+2. The sentence is a statement that contains a vague response to an unspecified question or request.
+3. The sentence does not provide any clear or specific information.
+4. The sentence may be a part of a larger conversation or context, but on its own, it does not convey a clear meaning.",101,False,False,False,False,False,False,False,False,True
+101,10181,"""48:30""", But you'd still ranked Choice. Voting would still have to elect. The would be used to elect the electors at the state level.,yes," 1. The ranked-choice voting system is being discussed.
+2. In this system, voters rank candidates in order of preference.
+3. However, the text states that the Electoral College system would still be used.
+4. Under the Electoral College system, electors are chosen at the state level.
+5. These electors would then be responsible for electing the president.
+6. Therefore, even if ranked-choice voting were implemented, the Electoral College system would still have a role in electing the president.",102,True,False,False,False,False,False,True,False,False
+102,10353,"""49:44""",I feel like this is more of a statement but it's one I agree with and it's part of why I think compulsory voting is a good idea even though I know guys sort of like constitutional issues with doing that in America but I feel like,yes," 1. The speaker agrees with the statement.
+2. The statement has to do with compulsory voting.
+3. The speaker acknowledges potential constitutional issues with implementing compulsory voting in America.
+4. The speaker thinks compulsory voting is a good idea despite these potential issues.",103,False,False,False,True,True,False,False,False,False
+103,10353,"""49:44""", that be outcomes will be better if we had been reversal participation in all politics.,no,,104,False,False,False,False,False,False,False,False,False
+104,9650,"""50:09""","You could change the wording to say, what do we need to include Civics and schools, just like we have sinned. That's just the suggestion. Amelia you could actually change it. I think that would make it a little bit more of a question.",no,,105,False,False,False,False,False,False,False,False,False
+105,9650,"""50:09""", What do we need to do to do to include Civics and schools?,yes," 1. Teach Civics in schools.
+2. Incorporate Civics into existing curriculum.
+3. Provide training for teachers in Civics education.
+4. Develop age-appropriate Civics materials.
+5. Encourage community involvement in Civics education.
+6. Measure student understanding of Civics concepts.
+7. Advocate for Civics education at the policy level.",106,False,False,False,False,True,False,False,False,False
+106,9650,"""50:09"""," just,",no,,107,False,False,False,False,False,False,False,False,False
+107,48599,"""50:44""",Thank you. Care that. I did change it to make it more questions. Stuff a statement.,no,,108,False,False,False,False,False,False,False,False,False
+108,48599,"""50:44""", It's definitely true because a lot of States focus on stem and that's just the whole that's all they talk about. From elementary school to Middle School to high school stem stem stem. Why don't we make it a try to incorporate it into maybe a history class that way you know and not just an AP class make it towards the kids who are not maybe class,yes," 1. Many states prioritize STEM education, focusing on it from elementary to high school.
+2. The text suggests incorporating STEM into history classes to make it more accessible to all students, not just those in advanced placement (AP) classes.",109,False,False,True,False,True,False,False,False,False
+109,48599,"""50:44""", is as well so they can also get that same knowledge.,no,,110,False,False,False,False,False,False,False,False,False
+110,10353,"""52:37""","I think I would be interested in knowing the number of civics teachers that we would need and as us lead time for training all these extra teachers,",yes," 1. Request for information about the number of civics teachers required
+2. Request for lead time needed for training the additional teachers",111,False,False,False,False,True,True,False,False,False
+111,9650,"""52:49""",,no,,112,False,False,False,False,False,False,False,False,False
+112,9650,"""52:49""",I mean I was kind of like trying to type fast and I got a quart of my way and everything else.,no,,113,False,False,False,False,False,False,False,False,False
+113,9650,"""52:49"""," What? I mean on this is one, we don't have the teachers qualified and because not that many teachers are qualified.",no,,114,False,False,False,False,False,False,False,False,False
+114,9650,"""52:49"""," I mean, would it be better to have certain people come in, maybe a State Rep or somebody to actually explain civics or someone that is like so close to that level to actually do something about it and teach the kids. This is",no,,115,False,False,False,False,False,False,False,False,False
+115,9650,"""52:49"""," Yeah, guest speakers Central. Sorry.",no,,116,False,False,False,False,False,False,False,False,False
+116,10181,"""53:34""","yeah, I agree that 45 seconds was really not long enough, but to your question, I think,",no,,117,False,False,False,False,False,False,False,False,False
+117,10181,"""53:34"""," It's a good question because Civics in general is so polarized as well. The fairness of being able to teach a non-polar as class has been really, really difficult in that kind of situation of feel. We're even having kids debate, each other, and try to for a teacher to moderate that. In today's society is going to be really difficult in general. So I do agree with that.",no,,118,False,False,False,False,False,False,False,False,False
+118,10181,"""53:34""", That type of question as well.,no,,119,False,False,False,False,False,False,False,False,False
+119,48677,"""54:17""","Yeah I think Terrence point on the qualified teachers to teach it as one point. I think the development of the curriculum that they would teach would be even more important. And you certainly would have some good teachers who are qualified enough to study that curriculum and again, use outside resources as help to develop the proper. Curriculum to try and get today's kids up to speed on civics.",yes," 1. The importance of having qualified teachers to teach civics.
+2. The development of a suitable curriculum is even more crucial.
+3. The curriculum should be designed to bring today's kids up to speed on civics.
+4. Good teachers should study the curriculum and use outside resources to develop the proper curriculum.",120,False,False,False,False,True,True,False,False,False
+120,10181,"""54:47""",I agree. There's probably a lot of there's probably plenty of qualified teachers to do that. It's just I would be afraid of the interference from the state allowing those qualified teachers to teach it as well without so much polarized inputs would be my issue.,yes," 1. The person agrees that there are probably many qualified teachers to teach the subject.
+2. They would be afraid of interference from the state regarding the teaching of the subject.
+3. Their issue is allowing qualified teachers to teach the subject without polarized inputs.",121,False,False,False,False,True,False,False,False,False
+121,9650,"""55:09""","I remember when I had Civics, Mike, the coaches, actually, separated the room. We had our red party and we had our blue party and we would actually come together and debate. It was basically a debate class, and, but we would learn about what actually goes on in Congress and what goes on in the Senate and how to vote in elections. And, but we had fun doing it. I mean, this is something that the kids need to enjoy.",no,,122,False,False,False,False,False,False,False,False,False
+122,9650,"""55:09"""," Joy as well because when it becomes a job, they don't want to do it, and that's how kids are today.",no,,123,False,False,False,False,False,False,False,False,False

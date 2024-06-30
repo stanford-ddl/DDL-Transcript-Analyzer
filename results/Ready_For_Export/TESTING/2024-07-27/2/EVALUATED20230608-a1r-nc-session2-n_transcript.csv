@@ -1,0 +1,365 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electoralCollegeIssues,supreme CourtPowerLimits,mathEducationImportance,voterInfluenceInElections,civicEducationAndAccountability,educationFundingAndTeacherShortages,electionProcessSimplification,other,notRelevant
+0,48738,"""2:06""",,no,,1,False,False,False,False,False,False,False,False,False
+1,9780,"""2:12""",,no,,2,False,False,False,False,False,False,False,False,False
+2,48742,"""2:14""","Hi, I'm Katya. I'm from Vermont.",no,,3,False,False,False,False,False,False,False,False,False
+3,9687,"""2:18""",I might come from Connecticut software engineer.,no,,4,False,False,False,False,False,False,False,False,False
+4,48741,"""2:22""",,no,,5,False,False,False,False,False,False,False,False,False
+5,48739,"""2:27""",,no,,6,False,False,False,False,False,False,False,False,False
+6,48739,"""2:27""","Priscilla, I'm from Missouri.",no,,7,False,False,False,False,False,False,False,False,False
+7,10381,"""2:39""",Steven me from Los Angeles.,no,,8,False,False,False,False,False,False,False,False,False
+8,10381,"""2:39""",,no,,9,False,False,False,False,False,False,False,False,False
+9,10381,"""2:39""",,no,,10,False,False,False,False,False,False,False,False,False
+10,10381,"""2:39""",,no,,11,False,False,False,False,False,False,False,False,False
+11,10381,"""2:39""",,no,,12,False,False,False,False,False,False,False,False,False
+12,9687,"""3:00""","When you're done, you need to hit the Finish speaking.",no,,13,False,False,False,False,False,False,False,False,False
+13,48743,"""3:06""",,no,,14,False,False,False,False,False,False,False,False,False
+14,48743,"""3:06""","Hey, it's Bob from Denver Colorado.",no,,15,False,False,False,False,False,False,False,False,False
+15,48743,"""11:18""",I don't think it's a great idea at this point goes again you're giving more power back into the bigger political parties instead of the individuals.,yes," 1. The person does not think it is a good idea to proceed.
+2. This opinion is based on the belief that more power will be given to larger political parties.
+3. The proposed action would shift power away from individuals.",16,False,False,False,True,False,False,False,False,False
+16,9780,"""11:36""",,no,,17,False,False,False,False,False,False,False,False,False
+17,48738,"""11:52""",I agree. I also don't feel like we need more party influence on who gets elected.,yes," 1. You agree to the previous statement.
+2. You believe that there should not be more party influence on elections.",18,False,False,False,True,True,False,False,False,False
+18,9780,"""12:37""",,no,,19,False,False,False,False,False,False,False,False,False
+19,9780,"""12:37""",,no,,20,False,False,False,False,False,False,False,False,False
+20,9687,"""14:33""",My understanding of the Electoral colleges to prevent large states with high populations from being the only influencers of the election. So you know being from a small state with with a small population it feels like my vote wouldn't count without the Electoral College.,yes," 1. The Electoral College is a system intended to prevent large states with high populations from being the only influencers of the election.
+2. The text's author, who is from a small state with a small population, feels that their vote wouldn't count without the Electoral College.",21,True,False,False,True,False,False,False,False,False
+21,48742,"""14:55""","Well, I thought it may be too complicated with the Amendment of the Constitution, and maybe starting with the rank Choice voting within each state. First to determine determine winners of the Electoral College and then if the system works, then feud in the future could be, you know, could be considered with the Constitutional amendment to give it some time and to see the system actually works.",yes," 1. The idea is to consider the possibility of a Constitutional amendment to change the voting system to Rank Choice voting.
+2. However, the suggestion is to start by implementing Rank Choice voting within each state for determining the winners of the Electoral College.
+3. This would allow for testing the system and seeing if it works before moving forward with a Constitutional amendment.
+4. The thought is that this approach would take some time and give people the opportunity to see the system in action before making any major changes to the Constitution.",22,True,False,False,False,False,False,True,False,False
+22,48743,"""15:25""","I agree with Kasha and that make starting with the rank Choice voting within each state, and then seeing how that goes and then working our way beyond that.",yes," 1. Agreement with Kasha's perspective
+2. Proposal to start with ranked-choice voting within each state
+3. Plan to evaluate the results of this approach
+4. Eventual goal to expand beyond this initial implementation.",23,False,False,False,True,True,False,True,False,False
+23,10381,"""15:38""",I prefer the third proposal to take the popular vote into consideration and to represent the whole country.,yes," 1. The third proposal should be taken.
+2. This proposal aims to consider the popular vote.
+3. It also intends to represent the whole country.",24,False,False,False,True,False,False,False,False,False
+24,10381,"""15:38""",,no,,25,False,False,False,False,False,False,False,False,False
+25,10381,"""15:38""",,no,,26,False,False,False,False,False,False,False,False,False
+26,9780,"""15:59""",,no,,27,False,False,False,False,False,False,False,False,False
+27,9780,"""15:59""",,no,,28,False,False,False,False,False,False,False,False,False
+28,48738,"""16:14""","I think that keeping the Electoral College is something that especially being from a smaller state or smaller demographic should be kept, at least at this time. But I think the rank Choice. Voting purse by state would be something that would be good to add in. I do like how the rank Choice voting seems to work. And I think that does that should be",no,,29,False,False,False,False,False,False,False,False,False
+29,48738,"""16:14"""," Something taken into consideration to use, but I think the Electoral College needs to stay and definitely needs a constitutional amendment to change.",yes," 1. The idea of changing the Electoral College is being considered.
+2. The speaker thinks that the Electoral College should stay in place.
+3. A constitutional amendment is required to change the Electoral College.",30,True,False,False,False,False,False,False,False,False
+30,48739,"""16:54""",I still feel like I just need more information. I don't feel comfortable making a decision.,no,,31,False,False,False,False,False,False,False,False,False
+31,9687,"""17:03""","It would be interesting if using ranked Choice, voting the top vote, getter is the president and the second vote-getter becomes the vice president.",no,,32,False,False,False,False,False,False,False,False,False
+32,9687,"""17:03"""," That way, you kind of have some some balance at that level.",no,,33,False,False,False,False,False,False,False,False,False
+33,48743,"""17:26""","Like interesting idea, definitely outside the box, would be interesting to see.",no,,34,False,False,False,False,False,False,False,False,False
+34,48738,"""17:42""","I feel like what you were saying Mike is just going to have animosity with one party. I we already have that and it doesn't seem to be working. So binding up another part, you know, binding up the",yes," 1. The opinion expressed is that what was being discussed would result in animosity with one party.
+2. It is noted that there already is animosity and it doesn't seem to be effective.
+3. Adding more animosity by involving another party is not seen as a viable solution.",35,False,False,False,False,False,False,False,False,True
+35,48738,"""17:42""",,no,,36,False,False,False,False,False,False,False,False,False
+36,48738,"""17:42""", I'm sorry I'm drawing a blank right now but binding up that branch of the government. I just don't see that working very well as great as it sounds.,no,,37,False,False,False,False,False,False,False,False,False
+37,9687,"""18:20""",You could provide some balance though so that it's not all one-sided.,yes," 1. The text suggests that there might be a lack of balance in the summary that needs to be addressed.
+2. It is implied that the summary may be biased or lacking in some way.
+3. The reader is encouraged to consider adding a counterpoint or alternative perspective to the summary.
+4. The ultimate goal is to provide a more balanced and comprehensive summary.",38,False,False,False,False,False,False,False,False,True
+38,48738,"""18:30""",It could. And I hope that it would if that would be something that happens but unfortunately looking at Congress that's not the case.,no,,39,False,False,False,False,False,False,False,False,False
+39,9687,"""18:49""","But if there's some sort of, you know, work together requirements, you know, that that that make, you know, Force the hand on it, so to speak. You know, I mean, we know Congress can't do anything without the Senate and vice versa and you know, when you have one one party controlling Congress and the other party controlling the Senate, a lot of stuff doesn't seem to happen.",yes," 1. The need for work requirements can force parties to work together.
+2. Congress and the Senate need to work together to get things done.
+3. When one party controls Congress and the other party controls the Senate, less legislation is passed.",40,False,False,False,False,True,False,False,False,False
+40,9687,"""18:49"""," But the things that do happen are potentially things that you know, people actually want to happen as opposed to being very one sided or the other.",no,,41,False,False,False,False,False,False,False,False,False
+41,9687,"""19:58""","I also don't think that, you know, the electoral college system really skews the candidates. You know, they say that it's used the candidates Focus to only being the swing states that for their interest, but that may just be to get elected. But ultimately, you know, the president of the country is the president for all the states.",no,,42,False,False,False,False,False,False,False,False,False
+42,9780,"""20:26""",,no,,43,False,False,False,False,False,False,False,False,False
+43,9780,"""20:26""",,no,,44,False,False,False,False,False,False,False,False,False
+44,9687,"""20:36""",We can't hear you SK.,no,,45,False,False,False,False,False,False,False,False,False
+45,9687,"""22:54""","Well, the first pro listed that the method would ensure the winner of the national popular vote also wins. The Electoral College and becomes president really, just means eliminate the Electoral College and go to a national popular vote.",no,,46,False,False,False,False,False,False,False,False,False
+46,48738,"""23:12""","Yeah, this doesn't sound like something good at all. If they want to get rid of the Electoral College and it needs to be an amendment to the Constitution Point Blank. And yeah, this is this is just a reach-around.",yes," 1. The speaker thinks that getting rid of the Electoral College and moving to a popular vote system is not a good idea.
+2. To make this change, it would require an amendment to the Constitution.
+3. The speaker views the proposal as a ""reach-around,"" indicating that they believe it is a disingenuous or manipulative attempt to achieve a certain goal.",47,True,False,False,True,False,False,True,False,False
+47,48739,"""23:29""",I agree with Jess.,yes," 1. You agree with Jess.
+
+(The original text only contains the statement ""I agree with Jess,"" so the summary is a simple restatement of that.)",48,False,False,False,False,False,False,False,False,True
+48,48743,"""23:32""","Yeah, there's just too many ways that this can be.",no,,49,False,False,False,False,False,False,False,False,False
+49,48743,"""23:32""", Kind of tweaked to work one way or the other for one party or whoever's in there.,no,,50,False,False,False,False,False,False,False,False,False
+50,48742,"""23:55""","And I agree the chain should be done and should be done, was the Constitutional Amendment. That does something like it's a work around the Electoral College.",no,,51,False,False,False,False,False,False,False,False,False
+51,9780,"""24:06""",,no,,52,False,False,False,False,False,False,False,False,False
+52,9780,"""24:06""",,no,,53,False,False,False,False,False,False,False,False,False
+53,48742,"""24:40""","The, the smaller States would not have as much. Say, if it was to go this method and big states, that California would be the ones making a lot of decisions.",yes," 1. The smaller States would not have as much influence.
+2. If the proposed method was implemented, California as a big state would make a lot of decisions.",54,True,False,False,True,False,False,False,False,False
+54,48738,"""24:49""","It's not even necessarily the small states. It's any state with a lower population. Even when they take up a good portion of the country,",yes," 1. The issue of representation is not limited to small states.
+2. It also applies to any state with a lower population.
+3. This even includes states that cover a significant portion of the country.",55,True,False,False,True,False,False,False,False,False
+55,9687,"""25:00""",Yeah exactly. I mean you're basically looking at Left Coast and right Coast in the States considered the flyover states which really represent by area. The majority of the country would have very little influence,yes," 1. The text discusses the idea of the United States having a division between a ""Left Coast"" and ""Right Coast"".
+2. The ""flyover states"" refer to the majority of the country that is located between these two coasts.
+3. The ""flyover states"" are said to represent the majority of the country in terms of area.
+4. The text suggests that the people living in the ""flyover states"" have very little influence.",56,False,False,False,True,False,False,False,False,False
+56,9687,"""25:33""","Could be a very unpopular opinion, but this seems sort of like a Democrat move to make these changes, so that Democrats continue to control all of the government going forward.",yes," 1. The text expresses an opinion about political changes.
+2. The opinion is that the changes are being made by Democrats.
+3. The opinion is that the purpose of these changes is to enable Democrats to control all of the government in the future.
+4. The opinion is characterized as unpopular.",57,False,False,False,False,False,False,False,False,True
+57,9780,"""25:56""",,no,,58,False,False,False,False,False,False,False,False,False
+58,9780,"""25:56""",,no,,59,False,False,False,False,False,False,False,False,False
+59,9687,"""26:09""",We can't hear you SK.,no,,60,False,False,False,False,False,False,False,False,False
+60,9687,"""26:22""",Is it just me or does everyone not here SK?,no,,61,False,False,False,False,False,False,False,False,False
+61,48738,"""26:25""","No, we can't hear her either.",no,,62,False,False,False,False,False,False,False,False,False
+62,48743,"""26:30""","Nope, can't hear.",no,,63,False,False,False,False,False,False,False,False,False
+63,48739,"""26:35""","Nope, can't hear him.",no,,64,False,False,False,False,False,False,False,False,False
+64,9780,"""26:38""",,no,,65,False,False,False,False,False,False,False,False,False
+65,48738,"""26:45""",Try to exit and then come back and see if that helps.,yes," 1. An action was taken to attempt to exit the current situation.
+2. There was a suggestion to wait for a short period.
+3. After that, an attempt should be made to return to the previous situation.
+4. The hope is that this action will help to resolve any issues being experienced.",66,False,False,False,False,False,False,False,False,True
+66,9687,"""27:07""","I just wonder if any of these changes are really necessary. I mean, the system's been working for the most part for 200 years.",no,,67,False,False,False,False,False,False,False,False,False
+67,9687,"""27:07""",,no,,68,False,False,False,False,False,False,False,False,False
+68,9687,"""27:07""",,no,,69,False,False,False,False,False,False,False,False,False
+69,9780,"""27:38""",,no,,70,False,False,False,False,False,False,False,False,False
+70,48742,"""27:43""","I do like the idea of the change, I just think it should be gradual and I like the idea that it could be experimented on the inside the state, first to see if it works before putting it on a national level.",yes," 1. The reader likes the idea of the change.
+2. They believe that the change should be implemented gradually.
+3. The reader suggests experimenting with the change within the state first.
+4. This would allow for determining the change's effectiveness before implementing it on a national level.",71,False,False,False,False,True,False,True,False,False
+71,48743,"""27:56""","You know, I think with us Mike and kind of mentioned with California and New York. It's pretty much going in that direction. And again it's adding another complexity to our already confusing elections process.",no,,72,False,False,False,False,False,False,False,False,False
+72,48738,"""28:15""","I feel like that change is something that's necessary. Yes, the basis of the system is working but the two-party system isn't. I feel like the ranked voting might help that but I do feel like the Electoral College is something that needs to stay on 2%.",yes," 1. The change to the system is considered necessary.
+2. The current basis of the system is working.
+3. However, the two-party system is not working.
+4. The use of ranked voting might help improve the system.
+5. The Electoral College should remain, but with a reduced role of 2%.",73,True,False,False,False,False,False,True,False,False
+73,9780,"""28:38""",,no,,74,False,False,False,False,False,False,False,False,False
+74,9780,"""30:49""",I can you hear me now?,no,,75,False,False,False,False,False,False,False,False,False
+75,9780,"""30:49""",,no,,76,False,False,False,False,False,False,False,False,False
+76,9780,"""30:49""", Hello.,no,,77,False,False,False,False,False,False,False,False,False
+77,48738,"""30:55""",,no,,78,False,False,False,False,False,False,False,False,False
+78,48738,"""30:55""",Yes.,no,,79,False,False,False,False,False,False,False,False,False
+79,9687,"""31:01""",,no,,80,False,False,False,False,False,False,False,False,False
+80,9687,"""31:05""","So I'm in favor of all of these items, keeping the same supreme court size is great. I think certainly term limits are are really one of the biggest things that the Supreme Court should have had all along this. This keeping justices on, you know, for forever is I don't think is necessarily the right thing to do.",no,,81,False,False,False,False,False,False,False,False,False
+81,9687,"""31:05""","I think we need to bring in newer, newer judges occasionally because they'll have new ideas and 18 years. Certainly feels like plenty of time, I don't think people need to be a judge on the Supreme Court into their 90's.",yes," 1. It is important to bring in newer judges occasionally.
+2. New judges will bring fresh ideas and perspectives.
+3. Supreme Court judges should not serve into their 90's.
+4. 18 years is a sufficient amount of time for a Supreme Court judge to serve.",82,False,True,False,False,False,False,False,False,False
+82,48743,"""31:48""","How many common agreement, I think, the term limit of 18, it would definitely be an improvement. I think definitely nine judges, the same way we've got, it seems to be working so far. And I was a little surprised with the ethnics option. But yes, I think they should be made to follow the same ethics code as everyone else.",yes," 1. A common agreement on the term limit of 18 should be reached.
+2. Nine judges would be an improvement.
+3. The current system of having nine judges seems to be working.
+4. Judges should follow the same ethics code as everyone else.",83,False,True,False,False,False,False,False,False,False
+83,48738,"""32:17""","I agree. I think keeping him at nine is is the way to go. My only issue with the term limits which I'm for for just about everything else is, this is supposed to be something that's not a partisan issue. They're not partisan people. So whether or not they, you know,",yes," 1. The person speaking agrees with keeping the individual at a limit of nine.
+2. They generally support term limits.
+3. Their concern is that term limits should not be a partisan issue.
+4. The people who this pertains to are not supposed to be partisan.
+5. The speaker implies that there might be an issue if the individuals are partisan.",84,False,False,False,False,True,False,False,False,False
+84,48738,"""32:17""", they were elected or they were appointed under a Democrat or Republican. That really shouldn't be an issue. I know it is. And so that one I'm a little,no,,85,False,False,False,False,False,False,False,False,False
+85,48738,"""32:17""", unsure of,no,,86,False,False,False,False,False,False,False,False,False
+86,9780,"""32:56""","Yeah, I think the non-partisanship has been blurred of late, so I should I fully support each of these. And Bob, I'm glad you mentioned the ethics because that kind of speaks to, you know, some of the partisanship and and whatever else you're seeing. So I think these three items tie in together very well and could be very effective.",no,,87,False,False,False,False,False,False,False,False,False
+87,48739,"""33:23""",I agree with both of them.,yes," 1. You agree with two unspecified individuals or ideas.
+2. There are no specific arguments or points provided for summarization.",88,False,False,False,False,False,False,False,True,False
+88,48742,"""33:34""","I agree with everything said as well, keeping the nine justices, the 18-year term. Seems a little lengthy, but I may not fully understand that process.",yes," 1. The reader agrees with points made in the previous text.
+2. They agree to keep the number of Supreme Court justices at nine.
+3. They agree to keep the 18-year term limit for Supreme Court justices.
+4. The reader finds the 18-year term lengthy, but they may not fully understand the process.",89,False,True,False,False,False,False,False,False,False
+89,9687,"""33:47""",Does anyone know what the ethics differences are?,no,,90,False,False,False,False,False,False,False,False,False
+90,48739,"""33:58""",I don't.,no,,91,False,False,False,False,False,False,False,False,False
+91,9780,"""34:05""","One one case in point, most recently would be just as Thomas has lack of full Financial disclosure and and you know events and and circumstances regarding his wife and then we have the leak of the Roe v--, Wade, overturning as well.",yes," 1. Thomas did not have full financial disclosure.
+2. There were events and circumstances regarding his wife.
+3. The Roe v. Wade overturning was leaked.",92,False,True,False,False,True,False,False,False,False
+92,48743,"""34:29""","Yeah, I kind of agree with that. I think what's it's basically disclosing their finances and we're, you know, if they've got any kind of Investments, if they've got any kind of",no,,93,False,False,False,False,False,False,False,False,False
+93,48743,"""34:29"""," I don't know, couldn't control over anything that should be disclosed.",no,,94,False,False,False,False,False,False,False,False,False
+94,10381,"""35:03""",,no,,95,False,False,False,False,False,False,False,False,False
+95,10381,"""35:03""","Yeah, we should have said, I turned them at for the, for the shoeprint. George it just doesn't make sense. That's currently, it's a, you can have to do this for the lifetime. It's just doesn't make any sense.",no,,96,False,False,False,False,False,False,False,False,False
+96,10381,"""35:03""",,no,,97,False,False,False,False,False,False,False,False,False
+97,9780,"""35:20""","So question, if they're going to be term limits, could adjust this be reintroduced by a current president. At the end of his term, I mean, that may be too far out to you even imagine, but, you know, there would be some details to work out.",yes," 1. The question is about term limits for a certain position.
+2. The person asking the question wonders if a current office holder can reintroduce term limits at the end of their term.
+3. The end of the term might seem too far out to consider.
+4. There would be details to work out if term limits were to be reintroduced.",98,False,False,False,False,True,False,False,False,False
+98,9687,"""35:43""","Yeah, I think that would be a minor detail other, you know? I mean if we're talking 18-year term limits, what's going to happen, I mean, you know a two-year break and then put them back on the bench. I think I think somebody else would be better appointed. Then you know, bringing back and recycling.",yes," 1. The speaker thinks that 18-year term limits for certain positions could be a minor detail.
+2. The speaker wonders what would happen if someone served an 18-year term, took a two-year break, and then returned to the same position.
+3. The speaker believes that someone else would be better suited for appointment after an 18-year term.
+4. The speaker is against the idea of bringing back and recycling people who have already served for a long time.",99,False,True,False,False,False,False,False,False,False
+99,9687,"""36:09""","I certainly don't believe in this, you know, packing of the Supreme Court. So I'm certainly in favor of keeping the current size because we certain, especially if, if we don't have the term limits because I mean, we know that right now, that's the entire Democratic plan is to pack the Supreme Court with Democrats if they were to increase the size. And if you know,",yes," 1. The person quoted does not believe in packing the Supreme Court.
+2. They favor keeping the current size of the Supreme Court.
+3. They express concern about not having term limits for Supreme Court Justices.
+4. They mention that the Democratic plan is to pack the Supreme Court with Democrats if they increase its size.
+5. They imply that if the size of the Supreme Court is increased, it will be done for partisan reasons.",100,False,True,False,False,False,False,False,False,False
+100,9687,"""36:09"""," Basically let the legislate by, by by judges happen.",no,,101,False,False,False,False,False,False,False,False,False
+101,48738,"""36:45""","Yeah. Adding judges, just add judges in your favor for either side. I don't agree.",yes," 1. The speaker disagrees with adding judges to either side of a debate.
+2. The speaker's concern is that adding judges would only result in having more people in favor of one side.",102,False,False,False,False,True,False,False,False,False
+102,9780,"""36:53""","Yeah. No, I agree, 100%. I mean adding more justices without other concrete reform is just muddying the waters.",no,,103,False,False,False,False,False,False,False,False,False
+103,48739,"""37:22""","So we are, are we all on a grants?",no,,104,False,False,False,False,False,False,False,False,False
+104,9780,"""37:28""",,no,,105,False,False,False,False,False,False,False,False,False
+105,9780,"""37:28""",Sounds that way to me.,no,,106,False,False,False,False,False,False,False,False,False
+106,9687,"""38:52""","I do feel civic education in schools would be a great thing. I think we talked about this last time you know, which was how would we educate voters on rank Choice, voting and so forth. I think we all agreed that the school system would be a good place to do that. So certainly you know in the high schools, you know as kids get closer to voting age, you know we should have something, I don't necessarily believe it should be done in college because not everybody's",no,,107,False,False,False,False,False,False,False,False,False
+107,9687,"""38:52"""," Going to go to college. But certainly at the high school level, it should be done. And as far as promoting opportunities, you know, outside of schools, you know, I think I think",no,,108,False,False,False,False,False,False,False,False,False
+108,48742,"""39:37""","I agree with Mike, I think it is important to keep promoting civic education, promoting opportunities, maybe really encouraged students to be involved in town, hall, meetings and elections. So there was more knowledge, more understanding, and",no,,109,False,False,False,False,False,False,False,False,False
+109,48742,"""39:37"""," Yeah, definitely. I think that's important to a good education is definitely important.",yes," 1. The importance of a good education is emphasized.
+2. No specific arguments about the nature of a good education are provided.",110,False,False,False,False,False,False,False,False,True
+110,48738,"""40:07""",,no,,111,False,False,False,False,False,False,False,False,False
+111,48738,"""40:07""","Education 100% is important on every aspect of our system. It's something that unfortunately I feel that our education system is failing and multiple ways, but this is a big one. Most people don't know how our Edge our electoral system works even now and most people don't understand why local elections.",yes," 1. Education is crucial in every aspect of the system.
+2. The speaker believes that the current education system is failing in multiple ways, especially in relation to civic education.
+3. Many people do not understand how the electoral system works.
+4. Specifically, many people do not understand the importance of local elections.",112,False,False,False,False,True,False,False,False,False
+112,48738,"""40:07""", Are a big deal and that's something that we've really failed. Are you then?,yes," It seems like the text provided is incomplete or does not contain any specific arguments to summarize. Here is a summarized list based on the given text:
+
+1. The term ""big deal"" is emphasized.
+2. There is a mention of a failure related to the subject of ""big deal"".
+3. The phrase ""Are you then?"" is posed as a question.
+
+Please provide a more complete text for a more detailed summary.",113,False,False,False,False,False,False,False,False,False
+113,48743,"""40:43""","Yeah, I agree. I mean basically any kind of education where people can get a better understanding and a better handle for how the government works, how local government works, and how they actually have a say in it. I think it should be done. My only concern on the where it's taught, as I think there should be an oak. Some kind of an open syllabus as opposed to allowing teacher by teacher.",yes," 1. The text discusses the importance of education on government functions.
+2. The education should cover both federal and local government operations.
+3. The goal is to help people understand how government works and how they can participate in it.
+4. The teaching of this subject should be done in an open syllabus format.
+5. The author has concerns about allowing individual teachers to decide how to teach the subject.",114,False,False,False,False,True,False,False,False,False
+114,48743,"""40:43""", To create a syllabus that may end up making it more of a slanted perspective.,yes," 1. Identify the goal of creating a syllabus that may result in a slanted perspective.
+2. Understand that the syllabus can influence the way information is presented and perceived.
+3. Consider the potential biases of the syllabus creator.
+4. Select readings and resources that align with the desired slant or perspective.
+5. Exclude or minimize opposing viewpoints in the syllabus.
+6. Arrange the syllabus content in a way that supports the chosen perspective.
+7. Be aware of the impact of the slanted syllabus on students' learning and understanding.",115,False,False,False,False,True,False,False,False,False
+115,9780,"""41:19""",,no,,116,False,False,False,False,False,False,False,False,False
+116,9780,"""41:19""","Yeah, I think civic education needs to come up in the rank of importance. I equally believe and probably more so than ever that the time. As such as this people have different views and backgrounds especially our high school children. Even even our younger children than that, perhaps Middle School. They need to have exposure in opportunity to dialogue and communicate with one another.",no,,117,False,False,False,False,False,False,False,False,False
+117,9780,"""41:19"""," Other, because, in fact, we're raising tomorrow's leaders. And if tomorrow's leaders don't have an understanding and intolerance of their own neighbors, we're not going to make Headway anyway, anytime",no,,118,False,False,False,False,False,False,False,False,False
+118,48742,"""42:04""","I just found something interesting. When reading the material I didn't realize in 2020 presidential election, it was the highest participant of the voters. It's 67 percent during a covid year, and that was the highest number of people participating in voting within the century. So I always thought that number would be higher. So I think it's a good addition would help to increase those numbers as well.",yes," 1. In the 2020 presidential election, there was the highest participation of voters in the century.
+2. The voter turnout was 67% during a year when Covid-19 was prevalent.
+3. This number is the highest recorded in the century.
+4. The reader initially thought the number would be higher.
+5. A good addition to the text would be ways to increase voter turnout further.",119,False,False,False,False,True,False,False,False,False
+119,48738,"""42:36""","And just think that's a presidential election, which historically have the highest numbers. If you look at Governor tutorial elections that you have in different states, some of those numbers are in the 20s.",no,,120,False,False,False,False,False,False,False,False,False
+120,9687,"""42:52""","Yeah, I would agree. I think anytime there's an election that comes up the, you know, that needs to be discussed in a school system in a classroom setting of some sort. It certainly, I think can't, you know, has to come from a common syllabus? I think someone mentioned because it can't be skewed one way or another you know, something something just talking about the fact that not who you're electing, but the reason you're electing those people, you know, school boards, or governor.",yes," 1. Elections are a topic that should be discussed in school systems, including classroom settings.
+2. The discussion should be based on a common syllabus to ensure impartiality and prevent bias.
+3. The focus of the discussion should be on the reasons for electing certain people, such as school boards or governors, rather than just who to elect.",121,False,False,False,False,True,False,False,False,False
+121,9687,"""42:52"""," Or you know local Congress or even on National, someone's got to explain that and why it's important.",no,,122,False,False,False,False,False,False,False,False,False
+122,48743,"""43:33""",I saw something I guess it was about it maybe a year ago where they were some of the schools were actually doing a vote at the same time for a 16 year olds and up so that they could get kind of an idea of the concept of what was going on.,no,,123,False,False,False,False,False,False,False,False,False
+123,48742,"""43:51""","I just feel like if the new generation knew that they could make a difference by participating by voting that that could make a difference as well. So even doing on basic levels at schools or colleges could help them to understand that, their participation can make a change with the very important.",yes," 1. The new generation can make a difference by participating in voting.
+2. Voting awareness can be raised at schools or colleges.
+3. Understanding the impact of participation in voting can lead to change in important matters.",124,False,False,False,True,True,False,False,False,False
+124,48738,"""44:14""",And the best way to do that is to teach them how the system works. And I think that's something that's gone to the Wayside. You get a lot of,no,,125,False,False,False,False,False,False,False,False,False
+125,48738,"""44:14"""," It doesn't seem like it's important or we don't care and or you get the opposite, you get people that are trying to teach their politics, not necessarily how things are working. But what they feel. And I think that happens a little more often than it should in the school systems.",no,,126,False,False,False,False,False,False,False,False,False
+126,9687,"""44:44""","I also think that, you know, encouraging students to have have a debate about things in a, in a civil manner as opposed to, you know, fighting about it or, you know, calling each other names over it, you know, just know that, you know, they can work together in a civil way because as it was mentioned, you know, these will be the Future Leaders and if everything",no,,127,False,False,False,False,False,False,False,False,False
+127,9687,"""44:44"""," Has to be their way and there's no other way than what are, you know, what are these Future Leaders going to be like?",no,,128,False,False,False,False,False,False,False,False,False
+128,48743,"""45:28""","And hopefully to if some of the parents of some of these kids and a lot of the adults. Now if we are not as you know everything's black or white, if people learn that there are varying grades and varying shades of what happens in with politics and things like that. I think they that may help. You know the kids get a little better perspective on what they're",yes," 1. The text suggests the potential benefit of teaching individuals, particularly kids, about the varying grades and shades of politics.
+2. It is implied that current teaching methods may not fully convey the complexities of politics.
+3. The author suggests that understanding the complexities of politics could help kids gain a better perspective on political matters.
+4. The text also implies that some adults could also benefit from this education.",129,False,False,False,False,True,False,False,False,False
+129,9687,"""46:02""","Also included with, you know, civic education, I would believe in some Financial education as well. Because I think a lot of young younger folks aren't prepared for what the real world has to offer when it comes to money.",yes," 1. The importance of financial education
+2. Lack of financial preparation for young people
+3. Real-world money challenges.",130,False,False,False,False,True,False,False,False,False
+130,48738,"""46:20""","I agree, 100%.",no,,131,False,False,False,False,False,False,False,False,False
+131,10381,"""46:50""",I agree. We said everything has been said and education. Definitely is the Cornerstone foundation for,no,,132,False,False,False,False,False,False,False,False,False
+132,10381,"""46:50""", the success.,no,,133,False,False,False,False,False,False,False,False,False
+133,9780,"""47:14""",,no,,134,False,False,False,False,False,False,False,False,False
+134,9780,"""47:14""","You know, on con number two on on our display screens, high quality deliberations requires extensive resources, you know, we're in the United States of America, we have unlimited resources and I don't think that should be a reason to put this off of the table.",no,,135,False,False,False,False,False,False,False,False,False
+135,9687,"""52:04""",Anybody have any thoughts on this question?,no,,136,False,False,False,False,False,False,False,False,False
+136,48743,"""52:09""",,no,,137,False,False,False,False,False,False,False,False,False
+137,48743,"""52:09""","A Mike, I think I kind of would like to see something like this, but I'm not sure if In Our Lifetime, it's going to be something that they'll be able to pull off.",yes," 1. The speaker is unsure if ""In Our Lifetime"" will be able to pull off a certain unspecified thing.
+2. The speaker thinks they would like to see this unspecified thing.
+3. The person being addressed is named Mike.",138,False,False,False,False,False,False,False,False,True
+138,48742,"""52:21""",I like the idea of it. I think it would also maybe help the people running for president to maybe work with each other. And so I think it's I think it's a good idea.,no,,139,False,False,False,False,False,False,False,False,False
+139,48738,"""52:35""",This is going to encourage people to try to assassinate the president or vice president.,yes," 1. This is a statement of concern about the potential consequences of certain actions or circumstances.
+2. The specific actions or circumstances are not detailed in the text.
+3. The concern is that these actions or circumstances will encourage people to attempt to assassinate the president or vice president.
+4. The word ""assassinate"" implies the use of violence or force with the intent to kill.
+5. The text suggests that the speaker believes there is a risk of such violence occurring.",140,False,False,False,False,True,False,False,False,False
+140,48743,"""52:49""","and actually since the vice president, generally the ends up kind of being an afterthought, it might not be",yes," 1. The vice president is often considered an afterthought.
+2. Their role and importance may not be fully recognized.",141,False,False,False,False,True,False,False,False,False
+141,48743,"""53:46""",Sleeve and I'm on the same page as you. I kind of threw the same question out and I'm not exactly sure how to get that to work either.,no,,142,False,False,False,False,False,False,False,False,False
+142,9687,"""53:57""","Yeah, it seems to me that for the, for the most part, the popular vote, determines the electoral vote from each state. So,",no,,143,False,False,False,False,False,False,False,False,False
+143,10381,"""54:10""","Yeah, I think it happened before, I the winner. Have a few million votes. Sure than the loser. I just try to avoid this similar situation happen again in the future.",yes," 1. The speaker claims to have won in the past.
+2. The speaker received significantly more votes than the runner-up.
+3. The speaker is identified as ""I"".
+4. The speaker wants to prevent a similar situation from happening again.",144,False,False,False,True,False,False,False,False,False
+144,48738,"""54:24""","I'm with Mike here, for the most part, the Electoral College goes with the popular vote of your state and then your State's electoral votes, go towards that.",no,,145,False,False,False,False,False,False,False,False,False
+145,9687,"""54:41""","Could be interesting to see if, you know some sort of ranked Choice, voting would happen. We're like, let's say a state goes 60/40, you know, Democrat report versus Republican and you have the ability to have, you know, if you have 10 votes for Electoral College, six, go to the Democrat. And for go to the Republican.",yes," 1. The idea of ranked-choice voting is proposed.
+2. This system could be used in the Electoral College.
+3. If a state's results are 60% for the Democratic candidate and 40% for the Republican candidate, the six Electoral College votes from that state could go to the Democratic candidate.
+4. The remaining four Electoral College votes from that state could go to the Republican candidate.",146,True,False,False,False,False,False,True,False,False
+146,48738,"""55:02""","That would be very interesting, especially with some of these very close call races where you might eliminate some people's first vote and get their second one and which way it's queues.",no,,147,False,False,False,False,False,False,False,False,False
+147,9687,"""55:20""","By doing something like you know what I just said it certainly doesn't give all of the state's electoral votes to one side or the other. So that kind of does, you know, go towards, you know, some of the cons that they were discussing about.",no,,148,False,False,False,False,False,False,False,False,False
+148,9687,"""55:20"""," You know, it having, you know, an entire state gets, you know, either, you know, a single Democrat Vote or a single Republican vote or all of the votes go to one party or the other.",no,,149,False,False,False,False,False,False,False,False,False
+149,48738,"""55:53""","So Mike, what you're saying is having different districts have their own Electoral College vote? Is that what you're trying to say?",no,,150,False,False,False,False,False,False,False,False,False
+150,48743,"""56:01""","That might not be a bad idea, this very similar in New York. I mean down stayed pretty much the New York City area. Determines what the state's going to do? So if you broke it up, that may be one way to do it.",no,,151,False,False,False,False,False,False,False,False,False
+151,9687,"""56:20""","Yeah exactly. That's what I was trying to say is that you know some sort of District by District, you know, electoral vote going in or maybe not District by District. But you know, a certain percentage of the entire state. So if you have an entire State that's",no,,152,False,False,False,False,False,False,False,False,False
+152,9687,"""56:20"""," Pretty close in Split you're not giving all of your State's votes to, you know, the party that just happens to Edge out the other.",yes," 1. The text is about the concept of ""faithless electors"" in the United States' presidential election process.
+2. A faithless elector is a member of the Electoral College who does not vote for the presidential candidate who won the popular vote in their state.
+3. The text suggests that a faithless elector should not give all of their state's votes to the party that has a narrow advantage.
+4. Instead, the text implies that faithless electors should consider other factors and potentially vote for a different candidate.
+5. The text uses the examples of ""Split"" and ""Edge out"" to illustrate the idea of a close election where a faithless elector could make a difference.",153,True,False,False,True,True,False,False,False,False
+153,48738,"""56:51""",I would definitely be in agreeance with that.,yes," I'm sorry, I need a complete text to summarize. The sentence you provided is too short for me to generate a numbered list. Could you please provide the full text? Thank you.",154,False,False,False,False,False,False,False,False,True
+154,9687,"""56:58""","Maybe since Steven and Bob have very similar questions, maybe maybe Bob you want to switch your question up when it gets to the your turn to maybe ask that.",yes," 1. The text suggests that Steven and Bob have similar questions.
+2. The reader is advised that when it gets to Bob's turn to ask a question, he may want to change his question to make it different from Steven's.
+3. The word ""maybe"" is repeated unnecessarily, but the main idea is to suggest that Bob should consider changing his question.",155,False,False,False,False,False,False,False,False,True
+155,48743,"""57:11""","Yeah, I mean, it is pretty much the same question. So,",no,,156,False,False,False,False,False,False,False,False,False
+156,48743,"""57:11""",,no,,157,False,False,False,False,False,False,False,False,False
+157,9687,"""57:18""","I mean obviously the people running this you look at the questions because I don't know if everybody watched the you know the stuff that happened after we were done here but they do ask you know, these questions that we ask her that we're developing now do get asked of the panel of speakers",no,,158,False,False,False,False,False,False,False,False,False
+158,48738,"""58:15""","I would wonder if you're asking for age restriction, either too old or too young.",no,,159,False,False,False,False,False,False,False,False,False
+159,9780,"""58:22""",That was my question. Exactly. Or maybe even both?,no,,160,False,False,False,False,False,False,False,False,False
+160,9687,"""58:27""","Yeah. That's that's certainly you know? Yeah, both sides. So you may want to modify your question, you know I don't know if there is a minimum age to be a Supreme Court Justice. But certainly, you know, someone has to have plenty of experience, you know, to to get that position. They, you know, we don't want them just being appointed, you know, on a political basis. We want them to have experience in that setting.",yes," 1. The text does not provide a clear minimum age for a Supreme Court Justice.
+2. It emphasizes the importance of plenty of experience for the position.
+3. It states that Supreme Court Justices should not be appointed on a political basis.
+4. The person speaking favors experienced candidates for the position of Supreme Court Justice.",161,False,False,False,False,True,False,False,False,False
+161,9780,"""58:57""","Yeah, so I assume it's been edited to be a maximum age restriction. Here's my concern with that. We don't do that with any of our other Federal officials.",no,,162,False,False,False,False,False,False,False,False,False
+162,48738,"""59:16""","And if we're going to be adding a you no term limit, then, does that negate having an older age person? If they're only going to be able to be there for 18 years?",yes," 1. The addition of a ""no term limit"" policy is being considered.
+2. This raises the question of whether this negates the value of having an older age person in the position, who may only be able to serve for 18 years.",163,False,False,False,False,True,False,False,False,False
+163,9687,"""59:28""","Yeah that would probably negate you know if there was a term limit but also you know the other side of this is that a minimum age? You know, I don't know if there is like I said, I don't know if there is one and whether or not that a minimum set of requirements.",no,,164,False,False,False,False,False,False,False,False,False
+164,48738,"""59:47""",I'm not sure of a minimum age either and I do think that that might be something that should be added if it's not there already.,yes," 1. The text suggests the need for a minimum age requirement.
+2. It is not specified what the minimum age should be.
+3. The text implies that this requirement might not currently exist.
+4. Adding a minimum age requirement is suggested as an improvement.",165,False,False,False,False,True,False,False,False,False
+165,48743,"""59:57""","I think the minimum age, they probably figure on experience and by the time you get through school and then actually being on the bench for varying places. I am assuming maybe it's pretty dumb but that you wouldn't go be nominated if you had no experience on state Supreme Courts and things like that. But the top-end age definitely makes sense. But with the age if we're if",no,,166,False,False,False,False,False,False,False,False,False
+166,48743,"""59:57"""," Are going to do a term limit, then that probably doesn't get that.",no,,167,False,False,False,False,False,False,False,False,False
+167,9780,"""60:32""","Yeah, I agree with that.",no,,168,False,False,False,False,False,False,False,False,False
+168,9780,"""60:40""","Maybe, maybe men the question, too. Boring term limits? Should there be a maximum age restriction?",no,,169,False,False,False,False,False,False,False,False,False
+169,9687,"""60:53""","Yeah, that sounds like something that could go in there pretty well.",no,,170,False,False,False,False,False,False,False,False,False
+170,48742,"""61:00""",Could you repeat that again? How to word that?,no,,171,False,False,False,False,False,False,False,False,False
+171,9780,"""61:04""",In lieu of term restrictions.,no,,172,False,False,False,False,False,False,False,False,False
+172,9780,"""61:04"""," Putting in place a maximum age, restriction.",yes," 1. The idea of implementing a maximum age restriction is being proposed.
+2. This restriction would limit the age of individuals who are eligible for certain opportunities or services.
+3. The specific age limit would need to be determined.
+4. The implementation of this restriction would require careful planning and consideration.
+5. It could potentially affect a large number of people.
+6. The maximum age restriction would need to be enforced consistently.
+7. It is important to communicate the reasons and details of the restriction clearly to all stakeholders.
+8. The impact of the restriction should be regularly reviewed and assessed for any necessary adjustments.",173,False,False,False,False,True,False,False,False,False
+173,9780,"""61:04""", So it's in either or not a both and,no,,174,False,False,False,False,False,False,False,False,False
+174,9687,"""61:25""","Yeah, country. You may want to put that in the front of you question as opposed to at the end.",no,,175,False,False,False,False,False,False,False,False,False
+175,9780,"""61:41""","you know, just I'm going to point out once again though the disparity that if we were to have maximum age restriction on our Court Justices,",yes," 1. The text suggests implementing a maximum age restriction for Court Justices.
+2. This suggestion is made to address the current disparity in the system.
+3. However, the text does not provide further details about the proposed maximum age restriction.",176,False,True,False,False,False,False,False,False,False
+176,9780,"""61:41""", Why then would we not have that at other levels of federal?,yes," 1. The argument against having a federal department of education is that education is better handled at the state and local level.
+2. This is because local school boards and state governments are more aware of the specific educational needs of their communities.
+3. Additionally, a federal department of education would likely result in a one-size-fits-all approach to education, which would not be able to accommodate the diverse needs of students across the country.
+4. Furthermore, the federal government does not have a good track record when it comes to managing large programs, and a federal department of education would likely be no exception.
+5. Finally, there is the argument that the federal government should not be involved in education at all, as it is not mentioned in the Constitution.",177,False,False,False,False,False,False,False,True,False
+177,9687,"""62:01""",I think that's another America in one room session. Maybe not this time around.,no,,178,False,False,False,False,False,False,False,False,False
+178,48738,"""62:10""","honestly, I feel like that's something that should be addressed, but at the same time, most other offices that you're looking at have restrictions",yes," 1. The text suggests that something should be addressed.
+2. The speaker has a concern about certain matters.
+3. However, there are restrictions in other offices that should be taken into consideration.",179,False,False,False,False,False,False,False,False,True
+179,48742,"""62:20""",,no,,180,False,False,False,False,False,False,False,False,False
+180,9780,"""62:22""",Like you had me laughing out loud because you are 100%. Correct. And I'll see you at that a1r.,no,,181,False,False,False,False,False,False,False,False,False
+181,48742,"""62:51""","I apologize, it got disconnected, but I just wanted to agree that I think that maximum age restrictions should apply across the board. I mean, just as simple as the, you know, Pilots, you know, there's an age limit, there's an H cut off because, you know, obviously we did not perform as well as a certain age, but just like Mike pointed out, that's a whole new discussion.",yes," 1. The speaker believes that maximum age restrictions should apply generally.
+2. The speaker uses pilots as an example of a profession with an age limit.
+3. The age limit for pilots is due to a decline in performance at a certain age.
+4. The speaker acknowledges that discussing age limits in other contexts is a separate discussion.",182,False,False,False,False,False,False,False,True,False
+182,9780,"""63:25""",,no,,183,False,False,False,False,False,False,False,False,False
+183,9780,"""63:25""","That's a very very broad question. Not a bad one, can you elaborate for me?",no,,184,False,False,False,False,False,False,False,False,False
+184,48743,"""63:38""","I think we've already kind of beat this one down because one up earlier and so I'm not really sure. I mean, basically keep the electoral college, but, you know, not lose the popular vote. And I think like we had discussed earlier that there are states where downstate New York for instance, where New York City will take will pretty much carry the entire State as far as the population.",yes," 1. Keep the Electoral College.
+2. Do not lose the popular vote.
+3. There are states where the population of a single city can carry the entire state's vote, such as downstate New York where New York City's population is dominant.",185,True,False,False,True,False,False,False,False,False
+185,48743,"""63:38""", And so the remainder of the state really has no say at all. So but I think we pretty much beat this one up before.,no,,186,False,False,False,False,False,False,False,False,False
+186,48738,"""64:15""","I was going to say, that's pretty much what the Electoral College does is on a nationwide scale.",no,,187,False,False,False,False,False,False,False,False,False
+187,9687,"""64:22""",didn't we want to change this question a little bit so that it did talk about using sort of a districting method of choosing,yes," 1. The text suggests changing the question to discuss using a districting method for choice.
+2. This would involve dividing a certain area into districts.
+3. The method of choosing would then be applied to each district.
+4. The suggested change aims to make the question more specific and clear.",188,False,False,False,False,True,False,True,False,False
+188,9780,"""64:35""","Yeah, it's kind of going to the idea of the rank Choice voting.",no,,189,False,False,False,False,False,False,False,False,False
+189,48743,"""64:45""","Yeah, I kind of talked about it. I'm don't seem able to modify it at this point though. So",no,,190,False,False,False,False,False,False,False,False,False
+190,48738,"""64:54""","It should be in the next portion of this, when you go.",no,,191,False,False,False,False,False,False,False,False,False
+191,9780,"""65:00""",Yeah. Yeah. Bob I'm seeing that you can now edit the question.,no,,192,False,False,False,False,False,False,False,False,False
+192,9687,"""65:08""","Yeah, I think it's at the top of the screen where you can make changes.",no,,193,False,False,False,False,False,False,False,False,False
+193,48743,"""65:17""","Yeah, for some reason, I'm not showing it on. I'm on a tablet today and it doesn't seem to be showing where it is.",no,,194,False,False,False,False,False,False,False,False,False
+194,9780,"""65:29""",You might want to reach out to the help people there pretty quick.,no,,195,False,False,False,False,False,False,False,False,False
+195,48743,"""65:36""","I'm going to try to get on my computer for the next part, but we'll see.",no,,196,False,False,False,False,False,False,False,False,False
+196,9780,"""65:41""",,no,,197,False,False,False,False,False,False,False,False,False
+197,9780,"""65:41""",,no,,198,False,False,False,False,False,False,False,False,False
+198,9687,"""66:32""",Was everyone able to watch the second part of this last Tuesday?,no,,199,False,False,False,False,False,False,False,False,False
+199,48738,"""66:39""","I was, and",no,,200,False,False,False,False,False,False,False,False,False
+200,9780,"""66:41""",,no,,201,False,False,False,False,False,False,False,False,False
+201,9780,"""66:41""","Yeah, me too. It was actually good. Apparently, there were 20 plus groups just like ours across the country and their top questions, went to the plenary professionals to discuss, who was actually very good.",no,,202,False,False,False,False,False,False,False,False,False
+202,48742,"""66:57""","Yeah, I like to chew, it was nice to hear opinions of the people in the field and I know our one of our questions. What was addressed as well?",no,,203,False,False,False,False,False,False,False,False,False
+203,48743,"""67:08""",,no,,204,False,False,False,False,False,False,False,False,False
+204,48743,"""67:08""","Yeah, it was, it was very good afterwards. I did have an issue initially getting into the program, but after about two minutes to tweaking, it was okay.",yes," 1. The person had an issue getting into the program.
+2. They were able to resolve the issue after tweaking for about two minutes.
+3. After resolving the issue, they found the program to be very good.",205,False,False,False,False,False,False,False,False,True
+205,9687,"""67:42""","In some ways, I kind of wish that we had, you know, that that plenary group for half an hour explaining a little bit more of this prior to doing these exercises.",no,,206,False,False,False,False,False,False,False,False,False
+206,9780,"""67:55""","Yeah, that has benefits but also each of us has a group shooting from the hip as it has its benefits as well. I like this format very much",yes," 1. The text suggests that there are benefits to having a coordinated group shooting strategy.
+2. On the other hand, there are also advantages to having a more individualistic approach, where each person ""shoots from the hip.""
+3. The text indicates that the speaker has a preference for this format, which likely refers to the individualistic approach.",207,False,False,False,False,False,False,False,False,True

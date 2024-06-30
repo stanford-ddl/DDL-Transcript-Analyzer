@@ -1,0 +1,183 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electionProcessChanges,partyInfluenceImpact,votingConfusion,proportionalRepresentation,moralResponsibility,preferenceVotingCriticism,politicsUnderstandingChallenges,other,notRelevant
+0,10514,"""2:07""",Hi. I am Michael Brown from Connecticut.,no,,1,False,False,False,False,False,False,False,False,False
+1,10490,"""2:18""","Hi, I'm Josh Josh Olsen from Charlotte, North Carolina.",no,,2,False,False,False,False,False,False,False,False,False
+2,48432,"""2:24""","Yes, I'm Dave Clevenger and I'm from Sterling Virginia.",no,,3,False,False,False,False,False,False,False,False,False
+3,48304,"""2:33""","Hi, I'm Rick Olson. No relation relation to the other Olsen I'm from Colorado.",no,,4,False,False,False,False,False,False,False,False,False
+4,48360,"""2:40""",,no,,5,False,False,False,False,False,False,False,False,False
+5,48360,"""2:40""","Nancy and a from Kirkland, Washington State.",no,,6,False,False,False,False,False,False,False,False,False
+6,48424,"""2:48""","I'm Johnny's on from Waco, Texas.",no,,7,False,False,False,False,False,False,False,False,False
+7,48461,"""2:52""","Hi, I'm Kevin Swisher from Pennsylvania.",no,,8,False,False,False,False,False,False,False,False,False
+8,48275,"""2:57""",,no,,9,False,False,False,False,False,False,False,False,False
+9,10384,"""3:02""","Hi, my name is Noah. I'm from Nebraska.",no,,10,False,False,False,False,False,False,False,False,False
+10,48483,"""3:13""","Hi, I'm Lynn and I'm from Michigan.",no,,11,False,False,False,False,False,False,False,False,False
+11,48483,"""3:13""",,no,,12,False,False,False,False,False,False,False,False,False
+12,10384,"""3:42""","Hey, I don't know. I think it was Sandra but just so you know there was one person who we couldn't hear you talking.",no,,13,False,False,False,False,False,False,False,False,False
+13,48275,"""11:53""",,no,,14,False,False,False,False,False,False,False,False,False
+14,48275,"""11:53""",,no,,15,False,False,False,False,False,False,False,False,False
+15,48275,"""11:53""",,no,,16,False,False,False,False,False,False,False,False,False
+16,48432,"""12:11""",,no,,17,False,False,False,False,False,False,False,False,False
+17,48432,"""12:11""",,no,,18,False,False,False,False,False,False,False,False,False
+18,48483,"""12:32""",,no,,19,False,False,False,False,False,False,False,False,False
+19,48483,"""12:32""","Okay, I'll go.",no,,20,False,False,False,False,False,False,False,False,False
+20,48483,"""12:32""", I don't understand the rank Choice voting.,no,,21,False,False,False,False,False,False,False,False,False
+21,48483,"""12:32"""," The my thought on it is, let's say we have two extremists running on five candidates. If they rank 4 and 5 in the voting, you get rid of five. But all of those candidates, second choice would be for and he would get elected over the people that were above him.",yes," 1. Two extremists are part of a group of five candidates.
+2. Voters rank the candidates in order of preference.
+3. If the two extremists receive the fourth and fifth rankings in the voting, the fifth candidate is eliminated.
+4. The second choices of those who voted for the fifth candidate are then considered.
+5. It is suggested that the second choices of the voters would lead to the election of one of the extremists over the candidates who originally received higher rankings.",22,True,False,False,False,False,True,False,False,False
+22,48483,"""12:32""", I think the special interest could still control the voting using that,no,,23,False,False,False,False,False,False,False,False,False
+23,48424,"""13:09""","So I thought about it before, I personally think that the rank Choice voting would be a good change for party primaries in particular. I don't know how I feel about it in more broader elections. Like general elections are just more major ones other than party primaries, but I think it would be a good change in Party primary system specifically",yes," 1. The reader believes that rank choice voting could be a good change for party primaries.
+2. The reader is unsure about their opinion of rank choice voting in more general elections.
+3. The reader thinks that rank choice voting would be a good change for the specific system of party primaries.",24,True,False,False,False,False,False,False,False,False
+24,10490,"""13:39""","Yeah, I kind of I have a similar thought. I think I also am not sure about like a general presidential election. I'm not sure how I feel about Choice voting for that but yes I think definitely for primaries. You know for me my concern with primaries is it does it can get too extreme and you know, you can get a candidate who's more extreme than what most of the country would be comfortable with. And I think that, you know, this this system would force a person to win, 50% more than 50%.",no,,25,False,False,False,False,False,False,False,False,False
+25,10490,"""13:39"""," Sent to win outright and so that I think that would that should alleviate extremism because it forces a candidates to appeal, more broadly, in a more broad way. At least that's what I would think that it's hard to say. What would happen?",no,,26,False,False,False,False,False,False,False,False,False
+26,10455,"""14:22""","I'm sorry I didn't expect to come out so quick. I'll, my concern is that there is so many people that don't really know the candidates. And I I was an election judge at one point and the people that would come in with, just pull a lever. So you're not",no,,27,False,False,False,False,False,False,False,False,False
+27,10455,"""14:22""", They don't even want to learn about all the candidates. They just want to do their party so they're not going to do the primaries and I think you're going to get somebody like other people have said that are just,yes," 1. The individuals do not express interest in learning about all the candidates.
+2. They intend to support their preferred party, rather than participating in primaries.
+3. The result might be the emergence of a candidate who is not thoroughly vetted or widely accepted by the general public.",28,False,True,False,False,False,True,False,False,False
+28,48424,"""15:07""","Sorry if you hadn't finished her thought, I, I agree. I think a lot of people just show up and want to want to check the box. I don't think it would change all that much in regards to people, not knowing the candidates because whether it's ranked Choice voting, or the way it is. Right now, I think David that would still be an issue as far as it being a calm that it's more complicated. I don't know if it's that",no,,29,False,False,False,False,False,False,False,False,False
+29,48424,"""15:07""", Don't think it's that complicated personal. You just pick your favorites down the line 12345 and,no,,30,False,False,False,False,False,False,False,False,False
+30,10455,"""15:50""","The thing that I think back when I was in college and I'd sometimes phone and I wouldn't really know the candidates, but I like the name and that's not a proper way to do it. And I have, it was one election and past that I learned my what I was doing, but you're going to have people do that and it's, they don't know. They really don't know.",no,,31,False,False,False,False,False,False,False,False,False
+31,10455,"""15:50""",,no,,32,False,False,False,False,False,False,False,False,False
+32,10455,"""15:50""",,no,,33,False,False,False,False,False,False,False,False,False
+33,48275,"""16:29""",,no,,34,False,False,False,False,False,False,False,False,False
+34,48275,"""16:29""",,no,,35,False,False,False,False,False,False,False,False,False
+35,48483,"""16:47""",,no,,36,False,False,False,False,False,False,False,False,False
+36,48483,"""16:47""","Sandra if you don't know that we still cannot see or hear you. So whatever you just said was lost, I just wanted to add I agree with Ellen but I think that's going to be true. No matter what the voting system is that people are Jonah's going to pick a name or a party. None of that is going to change as far as the primaries are concerned. I think an Open Primary is absolutely necessary. I don't vote in primaries because I'm not declaring a party. I'm not sticking",yes," 1. Sandra, your recent comments cannot be heard or seen.
+2. Ellen and I share the same opinion.
+3. The voting system does not significantly affect the selection of a name or party.
+4. I believe an Open Primary is necessary.
+5. I do not participate in primaries because I do not want to declare a party.",37,True,False,False,False,False,False,True,False,False
+37,48483,"""16:47""", To a party. And I hear people who will declare the opposite party to disrupt the voting. I think they got to change the primary system.,no,,38,False,False,False,False,False,False,False,False,False
+38,48432,"""17:30""",,no,,39,False,False,False,False,False,False,False,False,False
+39,48432,"""17:30""","Yeah, I experienced the ranked voting, I think last year, and in the primary and I had to do a whole lot of research to find out all the people that are on the ballot. And it's it's a lot involved in doing that and I just don't believe there's that many people who do that. Usually you go with where you see the most ads run and",no,,40,False,False,False,False,False,False,False,False,False
+40,48432,"""17:30""", So I'm not so sure that it it was any better than just doing it. Just do it the other way.,no,,41,False,False,False,False,False,False,False,False,False
+41,48424,"""18:15""","I'm just out of curiosity. Does anybody else have any experience with that already? Because I know some states, like maybe Alaska have already implemented the",no,,42,False,False,False,False,False,False,False,False,False
+42,48360,"""18:25""","He wants you to stay, we do it by mail and you get your voter pamphlet thing a few weeks been van so you can study up on the candidates and we have had some of those where everyone is on the stood and you can go through and rank you, the best in the local.",no,,43,False,False,False,False,False,False,False,False,False
+43,48360,"""18:25""", Candidates not on a major level of or even quit state-wise. So I don't know if they're going to change it everywhere and it's not just in some of the city levels but we have been by mail for several years here in Washington State.,no,,44,False,False,False,False,False,False,False,False,False
+44,10384,"""19:10""",,no,,45,False,False,False,False,False,False,False,False,False
+45,10384,"""19:10""","I wonder if they're with ranked Choice voting, if you're forced to rank everyone or if you're allowed to just choose one person, or rank one, or two people and not vote for several, cuz I know that with the amount of time I up to this point had been willing to invest in researching everyone.",yes," 1. The text discusses ranked-choice voting.
+2. The reader wonders if they have to rank all candidates or if they can choose/rank a limited number.
+3. The reader has invested time in researching the candidates.
+4. The reader may not have had enough time to research all candidates thoroughly.",46,True,False,False,False,False,True,True,False,False
+46,10384,"""19:10""", I do think that.,no,,47,False,False,False,False,False,False,False,False,False
+47,10384,"""19:10"""," Even myself personally. But ever lots of people aren't going to be able to make an informed ranking of the people and I don't want to help someone that maybe it would force me to do more research, but are most people going to do that.",no,,48,False,False,False,False,False,False,False,False,False
+48,48424,"""19:52""","I think it in some of the materials they did say that, like it's you're not required to do four or five or however many if you want one, you just do the one and then like, if that's the only person, you know, then you just do, you know, you can just do that one person and you're not having to go out on a limb on, just ranking random people that you're not aware of their positions. And",no,,49,False,False,False,False,False,False,False,False,False
+49,10490,"""20:23""","I think it might be healthy for democracy for a system that puts a little bit of pressure on people to research again. Yeah, I don't think you know people don't have to research and you can just put down one candidate if you know, if people want to do that. But I think researching is good. I think you know, democracy voting is a kind of sacred Duty and I think it's good to, you know, to put some research into",yes," 1. It might be healthy for democracy to have a system that encourages people to research before voting.
+2. Currently, people have the option to vote for a candidate without conducting research.
+3. The speaker believes that researching before voting is a good practice.
+4. Voting is considered a sacred duty in a democracy.
+5. The speaker suggests that putting research into voting is a positive action.",50,False,False,False,False,True,False,False,False,False
+50,10455,"""21:21""",I think too many of the citizens just will not.,no,,51,False,False,False,False,False,False,False,False,False
+51,10455,"""21:21""", Do the research.,no,,52,False,False,False,False,False,False,False,False,False
+52,10455,"""21:21"""," They don't care enough, they they're into drugs, partying, other activities, going to work, raising families. There is so much going on. That people are just it's sad but they don't care enough. And yeah in Texas we get Maybe",yes," 1. Many people do not show enough concern for important issues.
+2. Some people are interested in drugs and partying.
+3. Some people are focused on working and raising families.
+4. There are many activities and responsibilities that can distract people from caring about important issues.
+5. The speaker finds it sad that many people do not care enough.
+6. In Texas, people may experience particular issues or distractions that affect their level of concern.",53,False,False,False,False,True,False,False,False,False
+53,10455,"""21:21"""," Ten percent ten to fifteen percent that voted in the smaller elections and even in presidential elections, you don't get that.",no,,54,False,False,False,False,False,False,False,False,False
+54,48424,"""23:42""","So I can start us off with this one just because I the my major qualms with this is that very last con where if you are, if you make this change in your holding one Norm, Parson election and the two winners are both from the same party. I just I think that looks really bad. I don't think that's the result that you should be going for. But I mean, I guess if you have controls in there, to still allow for some opposition and it's",no,,55,False,False,False,False,False,False,False,False,False
+55,48424,"""23:42""", not like leading to have a one-party election or anything like that.,no,,56,False,False,False,False,False,False,False,False,False
+56,48483,"""24:23""","I do think we need to do the Open primary. I said that before, but maybe we have to have more than two candidates in the real election. Then so that that doesn't happen that it's all one party. I don't know, I don't want five or six but maybe three, I don't know where where you draw the line.",yes," 1. The speaker thinks that an Open primary should be implemented.
+2. They have previously expressed this opinion.
+3. The speaker suggests that more than two candidates should be in the real election.
+4. This is to prevent all candidates from being from one party.
+5. The speaker is unsure about the exact number of candidates, but suggests maybe having three.
+6. The speaker is uncertain where to draw the line regarding the number of candidates.",57,True,False,True,True,False,False,True,False,False
+57,48304,"""24:45""","Yeah, I don't know about the results of the primary, but I would definitely like to see nonpartisan primary. So if you're the, if you're in the independent group, you're not excluded from voting for particular party, if that's the candidate you like, for that particular election. But past that, I'm not sure of the issues that are brought up",yes," 1. The text is about the desire to see a nonpartisan primary.
+2. The author believes that individuals who are not affiliated with a particular party should be able to vote for any candidate they like in a primary election.
+3. The author is uncertain about the specific issues related to the primary election.
+4. The author is an independent or not affiliated with any political party.",58,True,True,False,False,False,True,True,True,False
+58,48275,"""25:14""",Can you guys hear me now?,no,,59,False,False,False,False,False,False,False,False,False
+59,48275,"""25:14"""," Okay. Okay. So yeah, I think that keeping the current system and making changes, whereas a person wants their defeated, they could come in as an independent. I think that that would be a good idea because it definitely needs some type of change.",yes," 1. Keep the current system.
+2. Allow defeated persons to come back as independents.
+3. This change is a good idea.
+4. The current system needs change.",60,True,False,False,False,False,True,False,False,False
+60,10455,"""25:42""",I think that the primaries.,no,,61,False,False,False,False,False,False,False,False,False
+61,10455,"""25:42"""," Should be the way that their run should be determined by the parties themselves. Yes. I know like you've got the Republicans. So you got the Democrats and you got the independence and I am an independent, but it doesn't prevent me from picking one of the two primaries and voting in that primary. I'm sure that some states probably do. Some of the problems is, there's times that I",no,,62,False,False,False,False,False,False,False,False,False
+62,10455,"""25:42"""," I know that the Democrats have flooded the Republican primaries to get out,",no,,63,False,False,False,False,False,False,False,False,False
+63,10455,"""25:42""", Someone they didn't want to get picked as the primary.,no,,64,False,False,False,False,False,False,False,False,False
+64,48424,"""26:32""","we are not able to hear you anymore Ellen cuz your time went up, but if you click it again, we can make it",no,,65,False,False,False,False,False,False,False,False,False
+65,10455,"""26:38""","okay, it",no,,66,False,False,False,False,False,False,False,False,False
+66,10455,"""26:38"""," I'm sorry, I did click it again and I'll sort of lost my Chain of Thought, but",no,,67,False,False,False,False,False,False,False,False,False
+67,10455,"""26:38"""," you've got a lot of people again that try and rig the system for one way or the other. And you're going to have that no matter what, if you have, too many candidates running, I mean, they're going to put four or five candidates in just two, so someone never gets 50% and then you get an extreme person in there.",no,,68,False,False,False,False,False,False,False,False,False
+68,10455,"""26:38"""," when it, when they start doing things like the ranked voting and I just see",no,,69,False,False,False,False,False,False,False,False,False
+69,48275,"""27:26""",,no,,70,False,False,False,False,False,False,False,False,False
+70,48275,"""27:26""","Yeah, I understand what you're saying, but you know, this current system has not prevented extremists to be to be elected because we have that all over the place at this point. So like I said, the door does need to be some type of change, what change? I'm not sure, but definitely a change.",no,,71,False,False,False,False,False,False,False,False,False
+71,48424,"""27:46""","I was thinking back to what you were saying Rick with about independence, and I think having the having the open primaries, which would give them a voice. If so many of the independent crowd, is the determinant factor in general elections, and like it's a bit of a pretty large demographic of Voters, it would give them a choice or give them, I guess, the, a voice in the, in the system before.",no,,72,False,False,False,False,False,False,False,False,False
+72,48424,"""27:46"""," It before they just go on Election Day and they have a ballot and they didn't get a say in, who is on the ballot?",yes," 1. Voters sometimes just go to Election Day.
+2. They have a ballot to complete.
+3. They did not have a say in who is on the ballot.",73,True,False,True,False,False,False,True,False,False
+73,48360,"""28:35""",,no,,74,False,False,False,False,False,False,False,False,False
+74,48360,"""28:35""","in Washington state and our eastern part of State, certain counties had",no,,75,False,False,False,False,False,False,False,False,False
+75,48360,"""28:35"""," What they called absentees where you could get a percentage, the absentee ballot, then you would automatically get into the general election. So we often had would have, like, little three people running each party and then so, but some people got around the rule by just getting enough absentee. So they didn't have to campaign or work. They would just jump into the general election and as Independence. So I don't know if every state has that, but we have some counties that",no,,76,False,False,False,False,False,False,False,False,False
+76,48360,"""28:35"""," Have that giving which was, you know modified so I don't know.",no,,77,False,False,False,False,False,False,False,False,False
+77,10490,"""29:20""",I'm sorry looks like the time went out there but yeah I don't none of these to me none of I do feel like something needs to change for the primaries. There's this very awkward situation where in the primary kind of catering to the most extreme people in the general election. You have to cater to the people in the middle and that's very awkward. But I don't know if any of these particular changes would help that much not to go back to the previous topic I do.,no,,78,False,False,False,False,False,False,False,False,False
+78,10490,"""29:20"""," Ink. Right choice. Voting would be the best way to avoid extremism in the primaries, but I'm not sure about any of these. I don't know about other states but in North Carolina Independents can vote at least in the Democrat primary and you can always temporarily become a republican if you want to vote in the Republican primary. So,",no,,79,False,False,False,False,False,False,False,False,False
+79,48483,"""30:21""",This will show my ignorance. But can you change in a primary and declare yourself a republican? When you've been a Democrat all along just to vote in that one?,yes," 1. The text is a question about political party affiliation.
+2. The person asking wonders if it's possible to change from being a Democrat to a Republican.
+3. They suggest that this change could be done primarily for the purpose of voting in a specific election.
+4. The person acknowledges that this action might be seen as a form of political opportunism or insincerity.",80,True,True,False,False,False,True,True,False,False
+80,10455,"""30:36""","And in Texas what they do. If you vote in a primary, I think you're you're there for the year, but each year it changes.",no,,81,False,False,False,False,False,False,False,False,False
+81,10455,"""30:36""",,no,,82,False,False,False,False,False,False,False,False,False
+82,10455,"""30:36""",,no,,83,False,False,False,False,False,False,False,False,False
+83,10455,"""30:36""",,no,,84,False,False,False,False,False,False,False,False,False
+84,10455,"""30:36""",,no,,85,False,False,False,False,False,False,False,False,False
+85,10455,"""30:36"""," I'm sorry, I guess we get 45 seconds, even if we're not expecting it.",no,,86,False,False,False,False,False,False,False,False,False
+86,10455,"""30:36""", Yes. We like I said we have Democrats and everything.,no,,87,False,False,False,False,False,False,False,False,False
+87,48483,"""31:21""","So, if it works that way, doesn't that allow it to be more for extremists? Because you're going to pick the candidate based on?",yes," 1. The text suggests the possibility of a system where a voter can select a candidate based on their views.
+2. The text raises a concern that this system might favor extremist candidates, as they may have more distinct views.
+3. The text also questions the basis on which the candidate is chosen in this hypothetical system.",88,False,False,False,False,False,True,False,False,False
+88,48483,"""31:21"""," what reasons it's not going to be R along party lines, then",yes," 1. The President's nominee for the Supreme Court has not received support from both parties.
+2. Some senators have expressed concerns about the nominee's qualifications.
+3. Other senators have cited the need to thoroughly vet the nominee before making a decision.
+4. Additionally, the upcoming election has added a layer of political complexity to the confirmation process.
+5. As a result, it is unlikely that the nomination will be approved along party lines.",89,True,True,False,False,False,False,True,False,False
+89,48483,"""32:40""","I'm not sure I understand the value in this, if you can go in and vote for a candidate anyway. I don't understand what you're gaining by this.",no,,90,False,False,False,False,False,False,False,False,False
+90,48304,"""32:53""","It seems to me, it's for may be geared towards people that vote along party lines. So if you have someone who's going to vote, Republican every election and now you have someone, maybe that was more independent Democrat. But now they're labeled and the Republican party. You might get more votes because maybe that's what they align with for that particular election. But I don't know.",no,,91,False,False,False,False,False,False,False,False,False
+91,48275,"""33:22""","Yeah, to me sounds like a waste of time, same person, same thoughts. What difference does it matter which box you check is if their box",yes," 1. The author believes that voting for the same political candidate as someone else, even if they have the same thoughts, is a waste of time.
+2. The author emphasizes that it doesn't matter which political party or candidate the person supports, as they see it as the same.
+3. The text suggests that the author is frustrated or uninterested in the perceived lack of diversity in political choices.",92,False,False,False,False,False,True,False,False,False
+92,48304,"""33:36""","Yeah and also to me it does seem rather confusing, I think if a lot of people aren't following along with maybe a change like this and then you get a candidate under to party labels they would be very, very confused. I would think",no,,93,False,False,False,False,False,False,False,False,False
+93,10490,"""33:58""","Yeah, I don't see how it makes any sense without like a parliamentary system, like the UK, where you could have a prime minister based on a coalition government, but in our system where you can't have a coalition government. Yeah, it's it seems like more of a psychological thing, you know, than a real tangible benefit.",yes," 1. The text discusses the concept of a political figure, such as a prime minister, in a non-parliamentary system.
+2. The speaker wonders about the possibility of having a prime minister in a system without a coalition government.
+3. The speaker suggests that the idea may be more psychological than offering any tangible benefits.",94,False,False,False,False,False,False,False,False,True
+94,48424,"""34:25""",I would agree with with mostly on saying that I did seems a little redundant and a little kind of pointless.,no,,95,False,False,False,False,False,False,False,False,False
+95,10490,"""34:38""","I mean, in a sense like, in our system,",no,,96,False,False,False,False,False,False,False,False,False
+96,10490,"""34:38"""," You know, both the Democrats and the Republicans are basically Coalition parties there, a coalition of a bunch of different interests already. So, you know, you're basically picking between two coalition's.",no,,97,False,False,False,False,False,False,False,False,False
+97,10455,"""35:56""","I think the current system may have some glitches but I don't know that anything that I saw proposed would make it any better. They're the politicians that are in when you get people that are get reelected time after time, just because of name recognition, none of these",no,,98,False,False,False,False,False,False,False,False,False
+98,10455,"""35:56"""," these proposals are going to fix that because you're going to have a voter go in and just either vote for, or against the name, they recognize",yes," 1. Proposals have been made to address an issue.
+2. The issue is about the need for voters to go in and vote for or against a name they recognize.
+3. Voters will have to vote either for or against the name.",99,False,False,False,False,False,False,True,False,False
+99,10455,"""35:56""",,no,,100,False,False,False,False,False,False,False,False,False
+100,48424,"""36:43""","So I'm thinking if the goal of something like this would be to increase representation. I I see it doing the opposite. If certain districts are too big and I guess it just depends on the size of the what the district would be. But if you have an area like a big city, I feel like you would probably alienate a lot of surrounding areas if those areas are included in the district. So you would just have basically an ER,",no,,101,False,False,False,False,False,False,False,False,False
+101,48424,"""36:43"""," Urban area, picking all the representatives and then the people kind of the surrounding areas, would not get any. I'm not",no,,102,False,False,False,False,False,False,False,False,False
+102,48275,"""37:21""",,no,,103,False,False,False,False,False,False,False,False,False
+103,48275,"""37:21""","Yeah, I'm not I'm not sure what needs to be done, but definitely something needs to be done to prevent all the gerrymandering because, you know, doesn't seem to be fair in a lot of these districts. So, but again, what none of these looks like",yes," 1. There is a need to take action to prevent gerrymandering.
+2. Gerrymandering is not fair in many districts.
+3. It is unclear what specific action should be taken.
+4. The speaker expresses uncertainty about the current situation with gerrymandering.",104,False,True,False,True,False,False,False,False,False
+104,48275,"""37:21"""," It makes any sense to me, but it definitely needs to change.",no,,105,False,False,False,False,False,False,False,False,False
+105,10490,"""37:48""",I'm going to work on.,no,,106,False,False,False,False,False,False,False,False,False
+106,10490,"""37:48""",,no,,107,False,False,False,False,False,False,False,False,False
+107,10490,"""37:48""",,no,,108,False,False,False,False,False,False,False,False,False
+108,10490,"""37:48""", I have to redo my.,no,,109,False,False,False,False,False,False,False,False,False
+109,10490,"""39:29""","Sorry, again, I'm I got interrupted. I'm sorry about that awkward, but what I was going to say actually was kind of a question, which is I wonder about the on the final topic. How how does, how does proportional representation interface with gerrymandering? It seems to me that maybe the point is to try to overcome gerrymandering. But, you know, again, I can't do all the math in my head but I feel like maybe it could still be gerrymandered, you know?",yes," 1. The text presents a question about the relationship between proportional representation and gerrymandering.
+2. The speaker wonders if proportional representation can help overcome gerrymandering.
+3. The speaker acknowledges that they are not sure if gerrymandering can still occur in a system with proportional representation.
+4. The speaker admits that they are unable to do the necessary mathematical calculations in their head to determine the answer.",110,False,False,False,True,False,False,False,False,False
+110,10490,"""39:29"""," I don't know if it would Death Sara, Lee killed gerrymandering so I guess that's one. One thing I'm wondering about that, kind of proposal.",no,,111,False,False,False,False,False,False,False,False,False
+111,10384,"""41:48""",Can someone remind me what the pr is it?,no,,112,False,False,False,False,False,False,False,False,False
+112,48424,"""41:54""","It's just short for proportional representation. Which is that system where? Well actually, I forgot.",no,,113,False,False,False,False,False,False,False,False,False
+113,48461,"""42:43""",I like your questionnaire John cuz I know here in Pennsylvania. We do any kind of Elections. We see three or four areas where,no,,114,False,False,False,False,False,False,False,False,False
+114,48461,"""42:43"""," Like the city, those and stuff are where then the rest is all urban areas. But you always see like those three or four areas, always seem to be winning out on the votes. That's really good question.",no,,115,False,False,False,False,False,False,False,False,False
+115,10384,"""43:55""",,no,,116,False,False,False,False,False,False,False,False,False
+116,10384,"""43:55""","So if I'm understanding right, is the idea of PR here that instead of having one person over a huge area, it would be broken up into lots of small areas.",yes," 1. The idea of PR, or Public Relations, discussed is to divide a large area into smaller ones.
+2. This division aims to assign a person to each smaller area, rather than having one person manage a vast region.",117,False,False,False,True,False,False,False,False,False
+117,10384,"""43:55"""," and,",no,,118,False,False,False,False,False,False,False,False,False
+118,10384,"""43:55"""," and then that way, you know, with people talking about gerrymandering the districts that wouldn't allow Republicans to control this huge area where if it could be a mix of Democrats and Republicans and more areas, more people representing people",yes," 1. Gerrymandering is a practice of manipulating the boundaries of an electoral constituency to favor one party.
+2. The text discusses the negative impact of gerrymandering on the political representation of people.
+3. If districts were not gerrymandered, there could be a mix of Democrats and Republicans, allowing for better representation of people.
+4. The text suggests that gerrymandering has prevented Republicans from controlling a huge area that could have been mixed with both Democrats and Republicans.",119,True,False,False,True,False,False,False,False,False
+119,48424,"""46:01""",But we only have two questions that everybody hits some it. I think it will move on to the next.,no,,120,False,False,False,False,False,False,False,False,False

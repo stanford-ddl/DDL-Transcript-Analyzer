@@ -427,7 +427,7 @@ def main():
         all_args_indexed.update(formatted_args)
         all_args += all_args_indexed[deliberation]
 
-    # sampling 500 arguments for topic extraction
+    # sampling 50 arguments for topic extraction
     sampled_args = random.sample(all_args, 50)
     topics = extract_topics(sampled_args)
 
@@ -457,6 +457,8 @@ if __name__ == '__main__':
       # Iterate through all sessions from 1 through TOTAL_SESSIONS
       for session in range(TOTAL_SESSIONS):
         session_num = str(session + 1)
+        if session_num == '1' or session_num == '2': # Skip 1 - 1 is analyzed
+           continue
         main()
     # Else, analyze only Session number 'session_num'.
     else: main()
