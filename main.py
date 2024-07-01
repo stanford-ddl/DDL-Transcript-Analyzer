@@ -23,9 +23,6 @@ PROCESSING_DIR = 'processing'
 RESULTS_DIR = 'results'
 sys.path.append(os.getcwd())
 
-# Nearly deprecated
-TOPIC = "ranked choice voting"
-
 # collecting arguments in a deliberation
 def extract_args(path, deliberation):
     df = pd.DataFrame(pd.read_excel(path)) 
