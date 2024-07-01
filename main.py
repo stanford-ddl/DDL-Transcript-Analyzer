@@ -470,12 +470,15 @@ def main():
 
     # sampling 50 arguments for topic extraction
     sampled_args = random.sample(all_args, 50)
+
+    # Generate primary topic [0] and policies [1] - [7]
     topics = extract_topics(sampled_args)
 
-    # Generate primary topic, policies, and categories
     #category_topics = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic") nearly depricated
+    
+    # Generate shorthand variables for each policy and load them into a JSON class
     policy_variables = generate_policy_variables(topics) if topics else print("ERROR: Cannot generate variable shorthand: No topics")
-    json = build_JSON_class(policy_variables) if policy_variables else print("ERROR: Cannot build JSON class: No category variables")
+    json = build_JSON_class(policy_variables) if policy_variables else print("ERROR: Cannot build JSON class: No variables")
 
     # running inference
     # replace with correct path for results
