@@ -12,10 +12,10 @@ import shutil
 from openpyxl import load_workbook
 
 # Togglable Options
-IS_DEBUG = False # If True, additional debug statements will be printed.
-IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
+IS_DEBUG = True # If True, additional debug statements will be printed.
+IS_SKIP_DATA_PROCESS = True # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
-IS_ANALYZE_ALL_SESSIONS = True # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
+IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
 session_num = 'test' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
 
 DATA_DIR = 'data'
@@ -110,6 +110,7 @@ def print_topics(topic_list):
   for i in range(1, len(topic_list)):
     print("Policy", str(i) + ":", topic_list[i])
 
+# Nearly depricated
 # Given a subset of arguments and a topic,
 # return a list of categories that most arguments fall under.
 def generate_categories(sampled_args, topic, attempts = 0):
@@ -155,18 +156,24 @@ def generate_categories(sampled_args, topic, attempts = 0):
    # Else, success!
    return category_list
 
-# Given a list of categories,
-# return a list of variables that can be used as shorthand for each category.
-def generate_category_variables(category_list, topic, attempts = 0):
-   NUM_VARIABLES = str(len(category_list))
-   if attempts == 0: print("Generating variables for the", NUM_VARIABLES, "categories regarding", topic + "...")
+# Given a list of policies,
+# return a list of variables that can be used as shorthand for each policy.
+def generate_policy_variables(topics, attempts = 0):
+   NUM_VARIABLES = str(len(topics) - 1)
+   PRIMARY_TOPIC = topics[0]
+
+   policy_list = []
+   for i in range(int(NUM_VARIABLES)):
+      policy_list.append(topics[i + 1])
+
+   if attempts == 0: print("Generating variables for the", NUM_VARIABLES, "policies regarding", PRIMARY_TOPIC + "...")
    
-   prompt = """This is a list of categories representing arguments made in a deliberation about """ + topic + """.
-   Your job is to create variable names for each category in a Python list of strings, with each string being a variable name.
+   prompt = """This is a list of policies representing arguments made in a deliberation about """ + PRIMARY_TOPIC + """.
+   Your job is to create variable names for each policy in a Python list of strings, with each string being a variable name.
    Your response will be """ + NUM_VARIABLES + """ strings.
    The variable names should be short.
    The variable names should use camel case style.
-   The variable names should encapsulate the core of the category.
+   The variable names should encapsulate the core of the policy.
    Here is an example of what you might return:
    ["VariableOne", "VariableTwo",...]
    This program will CRASH if your response fails to conform to these guidelines.
@@ -180,13 +187,14 @@ def generate_category_variables(category_list, topic, attempts = 0):
    Your response is ONLY a single list of variable names.
    Once again, your response is ONLY a single list.
    Your response is ONLY one line.
+   One again, the variable names must be SHORT
    The Python list you return should contain EXACTLY """ + NUM_VARIABLES + """ strings.
    Thank you!"""
-   response = util.simple_llm_call(prompt, category_list)
+   response = util.simple_llm_call(prompt, policy_list)
    if IS_DEBUG: print("\n(DEBUG) Raw response:", response + "\n")
-   variable_list = ast.literal_eval(response.strip())
+   response_list = ast.literal_eval(response.strip())
    # If invalid response, try again
-   if len(variable_list) != int(NUM_VARIABLES) or type(variable_list) != list:
+   if len(response_list) != int(NUM_VARIABLES) or type(response_list) != list:
      attempts += 1
      print("Failed attempt #" + str(attempts))
      # If failed too many times, give up
@@ -195,18 +203,27 @@ def generate_category_variables(category_list, topic, attempts = 0):
        return None
      # Else, try again
      print("Retrying...")
-     return generate_category_variables(category_list, topic, attempts)
+     return generate_policy_variables(topics, attempts)
    # Else, success!
-   print_categories(category_list, variable_list)
+   print_list(response_list, "Variable")
+   
+   variable_list = []
+   for i in range(len(response_list)):
+      variable_list.append("FOR: " + response_list[i])
+      variable_list.append("AGAINST: " + response_list[i])
    variable_list.append("other")
    variable_list.append("notRelevant")
+   if IS_DEBUG:
+      print("\n(DEBUG) variable_list:")
+      print_list(variable_list)
    return variable_list
 
-# Given a list of categories and their variable shorthand,
-# print them.
-def print_categories(category_list, variable_list):
-  for i in range(len(category_list)):
-    print("Category", str(i+1) + ":", variable_list[i] + ":", category_list[i])
+# Called if IS_DEBUG:
+# Given a list and (optionally) a header,
+# print it
+def print_list(list, header = ""):
+   for i in range(len(list)):
+      print(header, str(i) + ":", list[i])
 
 # Nearly deprecated
 # JSON class for extraction
@@ -274,27 +291,51 @@ def build_JSON_class(category_variables):
   Categories = create_model("Categories", **fields)
   if IS_DEBUG:
     categories_instance = Categories()
-    print("JSON Categories:\n" + categories_instance.model_dump_json(indent=2))
+    print("\n(DEBUG) JSON Categories:\n" + categories_instance.model_dump_json(indent=2) + "\n")
   return Categories()
   
-# Given a primary topic and specific categories,
+# Given a primary topic and specific policies,
 # return a prompt that the model will use to judge arguments.
-def build_argument_analysis_prompt(topic, category_topics, category_variables):
-  category_instructions = """"""
-  for i in range(len(category_topics)):
-     category_instructions += """\nReturn true for """ + category_variables[i] + """ if the argument is relevant to """ + category_topics[i] + """.\nReturn false for """ + category_variables[i] + """ otherwise.\n"""
-  prompt = """You are a skilled annotator tasked with identifying the type of arguments made in a deliberation about """ + topic + """.
+def build_argument_analysis_prompt(topics, policy_variables):
+  NUM_POLICIES = len(topics) - 1
+  PRIMARY_TOPIC = topics[0]
+
+  policies = []
+  for_policies = []
+  against_policies = []
+  for i in range(NUM_POLICIES):
+     policies.append(topics[i + 1])
+     for_policies.append(policy_variables[i * 2])
+     against_policies.append(policy_variables[i * 2 + 1])
+  
+  if IS_DEBUG:
+     print("\n(DEBUG) policies:")
+     print_list(policies)
+     print("\n(DEBUG) for_policies:")
+     print_list(for_policies)
+     print("\n(DEBUG) against_policies:")
+     print_list(against_policies)
+
+  policy_instructions = """"""
+  for i in range(NUM_POLICIES):
+     policy_instructions += """\nReturn true for """ + for_policies[i] + """ if the argument is IN SUPPORT OF """ + policies[i] + """.\nReturn false for """ + for_policies[i] + """ otherwise.
+     Return true for """ + against_policies[i] + """ if the argument is IN OPPOSITION TO """ + policies[i] + """\nReturn false for """ + against_policies[i] + """ otherwise.\n"""
+  
+  prompt = """You are a skilled annotator tasked with identifying the type of arguments made in a deliberation about """ + PRIMARY_TOPIC + """.
           Read through the given arguments presented.
           Your job is to extract the type of arguments made and load them into the JSON object containing true/false parameters.
-          """ + category_instructions + """
-          Return true for other if the argument discusses a category that is relevant to """ + topic + """
+          """ + policy_instructions + """
+          Return true for other if the argument is relevant to """ + PRIMARY_TOPIC + """
           but not covered by the other categories.
 
-          Return true for notRelevant if the argument is not relevant to the discussion of """ + topic + """.
+          Return true for notRelevant if the argument is not relevant to the discussion of """ + PRIMARY_TOPIC + """.
 
           It is possible for a single argument to have multiple true parameters, except for notRelevant.
           If an argument is not relevant, all other parameters should be false.
           You should return true for at least one parameter."""
+  
+  if IS_DEBUG: print("\n(DEBUG) build_argument_analysis_prompt Prompt:\n" + prompt + "\n")
+  
   return prompt
 
 # adds an LLM's topic classifications for an argument to the deliberation df
@@ -304,7 +345,7 @@ def add_results(response, df, line):
 
 # classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
-def arg_inference(all_args_indexed, results_path, argument_analysis_prompt, categories):
+def arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json):
   print("\nAnalyzing Session", session_num, "deliberations...")
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
@@ -313,13 +354,13 @@ def arg_inference(all_args_indexed, results_path, argument_analysis_prompt, cate
 
     # initializing df and fields
     df = pd.DataFrame(pd.read_excel(path)) 
-    for key in categories.model_fields.keys():
+    for key in json.model_fields.keys():
       df[key] = False
 
     # loop over a deliberation's arguments
     for arg in args:
       prompt = argument_analysis_prompt
-      response = util.json_llm_call(prompt, arg[0], categories)
+      response = util.json_llm_call(prompt, arg[0], json)
       line = arg[1]
       add_results(response, df, line)
     new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
@@ -432,20 +473,20 @@ def main():
     topics = extract_topics(sampled_args)
 
     # Generate primary topic, policies, and categories
-    category_topics = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic")
-    category_variables = generate_category_variables(category_topics, topics[0]) if category_topics else print("ERROR: Cannot generate variable shorthand for categories: No category topics")
-    categories = build_JSON_class(category_variables) if category_variables else print("ERROR: Cannot build JSON class: No category variables")
+    #category_topics = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic") nearly depricated
+    policy_variables = generate_policy_variables(topics) if topics else print("ERROR: Cannot generate variable shorthand: No topics")
+    json = build_JSON_class(policy_variables) if policy_variables else print("ERROR: Cannot build JSON class: No category variables")
 
     # running inference
     # replace with correct path for results
     results_path = os.path.join(RESULTS_DIR, session_num)
     create_results_path(results_path)
-    argument_analysis_prompt = build_argument_analysis_prompt(topics[0], category_topics, category_variables) if categories else print("ERROR: Cannot generate API prompt: No JSON class")
-    arg_inference(all_args_indexed, results_path, argument_analysis_prompt, categories)
+    argument_analysis_prompt = build_argument_analysis_prompt(topics, policy_variables) if json else print("ERROR: Cannot generate API prompt: No JSON class")
+    arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
     # running post-evaluation
-    cumulative_df = get_metric_sums(delibs, category_variables[0])
+    cumulative_df = get_metric_sums(delibs, policy_variables[0])
     get_metric_dist(cumulative_df, results_path)
     print("Exiting main() of Session", session_num)
 
