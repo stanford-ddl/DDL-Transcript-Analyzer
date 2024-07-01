@@ -448,6 +448,12 @@ def create_args_sheet(file_path, destination_folder):
     # Save the modified duplicated file
     wb.save(duplicated_file_path)
 
+# Called when an error occurs
+def error(reason = "No reason provided"):
+   print("A critical error has occured:", reason)
+   print("Program Terminated")
+   sys.exit()
+
 def main():
     print("Entering main() of Session", session_num)
 
