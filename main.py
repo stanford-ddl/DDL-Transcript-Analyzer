@@ -106,52 +106,6 @@ def print_topics(topic_list):
   for i in range(1, len(topic_list)):
     print("Policy", str(i) + ":", topic_list[i])
 
-# Nearly depricated
-# Given a subset of arguments and a topic,
-# return a list of categories that most arguments fall under.
-def generate_categories(sampled_args, topic, attempts = 0):
-   NUM_CATEGORIES = '7'
-   if attempts == 0: print("\nGenerating", NUM_CATEGORIES, "categories regarding", topic + "...")
-   
-   prompt = """This is a list of arguments presented in a deliberation about """ + topic + """. Your job is to summarize
-   these arguments into """ + NUM_CATEGORIES + """ distinct categories regarding """ + topic + """ in a Python list of strings, with each string being a category.
-   The exceptions to this are the very small number of arguments that are unrelated to """ + topic + """.
-   Your response will be """ + NUM_CATEGORIES + """ strings.
-   The categories in the list should be somewhat distinct from each other.
-   The categories should be specific to the most common arguments given to you as they relate to """ + topic + """.
-   Do NOT use the words "for" or "against" in your response.
-   You should not have broad categories, such as the advantages and disadvantages of """ + topic + """. Rather,
-   you should instead find nuanced groups of arguments that may be present on either side of the discussion.
-   This program will CRASH if your response fails to conform to these guidelines.
-   Other code ran for several hours before you were given this task.
-   If this program crashes, we will need to restart which takes several hours.
-   Please take your time and ensure ALL of these instructions are followed.
-   Do NOT number the list.
-   Do NOT indent in your response.
-   Do NOT include a newline character in your response.
-   Do NOT include anything in the list other than the categories.
-   Your response is ONLY a single list of categories.
-   Once again, your response is ONLY a single list.
-   Your response is ONLY one line.
-   The Python list you return should contain EXACTLY """ + NUM_CATEGORIES + """ strings.
-   Thank you!"""
-   response = util.simple_llm_call(prompt, sampled_args)
-   if IS_DEBUG: print("\n(DEBUG) Raw response:", response + "\n")
-   category_list = ast.literal_eval(response.strip())
-   # If invalid response, try again
-   if len(category_list) != int(NUM_CATEGORIES) or type(category_list) != list:
-     attempts += 1
-     print("Failed attempt #" + str(attempts))
-     # If failed too many times, give up
-     if attempts >= 5:
-       print("ERROR: Failed to generate a primary topic and policies")
-       return None
-     # Else, try again
-     print("Retrying...")
-     return generate_categories(sampled_args, topic, attempts)
-   # Else, success!
-   return category_list
-
 # Given a list of policies,
 # return a list of variables that can be used as shorthand for each policy.
 def generate_policy_variables(topics, attempts = 0):
@@ -474,8 +428,6 @@ def main():
 
     # Generate primary topic [0] and policies [1] - [7]
     topics = extract_topics(sampled_args)
-
-    #category_topics = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic") nearly depricated
     
     # Generate shorthand variables for each policy and load them into a JSON class
     policy_variables = generate_policy_variables(topics)
