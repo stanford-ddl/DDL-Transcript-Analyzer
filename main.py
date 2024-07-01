@@ -173,51 +173,6 @@ def print_list(list, header = ""):
    for i in range(len(list)):
       print(header, str(i) + ":", list[i])
 
-# Nearly deprecated
-# system prompt for the topic evaluation task based on current extracted topics for ranked choice voting
-EVAL_PROMPT = """You are a skilled annotator tasked with identifying the type of arguments made in a deliberation about """ + TOPIC + """.
-        Read through the given arguments presented.
-        Your job is to extract the type of arguments made and load them into the JSON object containing true/false parameters.
-
-        Return true for comparisonToCurrentSystem if the argument compares ranked choice voting to the current system.
-        For example, 'Ranked choice voting is more equitable than the current system that only allows for two dominant parties to win'.
-        Return false for comparisonToCurrentSystem otherwise.
-        
-        Return true for votingDecisions if the argument discusses the impact of ranked choice voting on voting decisions.
-        For example, 'Ranked choice voting will allow voters to vote for their preferred candidate without fear of wasting their vote'.
-        Return false for votingDecisions otherwise.
-        
-        Return true for partyRepresentation if the argument discusses how ranked choice voting may impact party representation.
-        For example, 'Ranked choice voting will allow for more third-party candidates to win elections'.
-        Return false for partyRepresentation otherwise.
-        
-        Return true for voterTurnout if the argument discusses how ranked choice voting may impact voter turnout.
-        For example, 'Ranked choice voting will increase voter turnout and encourage more people to engage in elections.
-        Return false for voterTurnout otherwise.
-        
-        Return true for strategicVoting if the argument discusses how ranked choice voting may impact strategic voting.
-        For example, 'Ranked choice voting will prevent people from voting for a candidate they don't like to avoid a worse outcome'.
-        Return false for strategicVoting otherwise.
-        
-        Return true for moderateCandidates if the argument discusses how ranked choice voting may impact moderate candidates.
-        For example, 'Ranked choice voting will allow moderate candidates to win elections'. 
-        Return false for moderateCandidates otherwise.
-        
-        Return true for moneyInPolitics if the argument discusses how ranked choice voting may impact money in politics.
-        For example, 'Ranked choice voting will reduce the influence of money in politics'.
-        Return false for moneyInPolitics otherwise.
-        
-        Return true for other if the argument discusses a topic not covered by the other parameters.
-        For example, 'Ranked choice voting will make voting too complicated.'
-        
-        Return true for notRelevant if the argument is not relevant to the discussion of ranked choice voting.
-        For example, 'I have a dog and two kids.'
-        
-        It is possible for a single argument to have multiple true parameters, except for notRelevant.
-        If an argument is not relevant, all other parameters should be false.
-        You should return true for at least one parameter.
-        """
-
 # Given a list of categories,
 # construct a JSON class for the model to use.
 def build_JSON_class(category_variables):
