@@ -13,7 +13,7 @@ from openpyxl import load_workbook
 
 # Togglable Options
 IS_DEBUG = True # If True, additional debug statements will be printed.
-IS_SKIP_DATA_PROCESS = True # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
+IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
 session_num = 'test' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
@@ -216,7 +216,6 @@ def generate_policy_variables(topics, attempts = 0):
       print_list(variable_list)
    return variable_list
 
-# Called if IS_DEBUG:
 # Given a list and (optionally) a header,
 # print it
 def print_list(list, header = ""):
@@ -305,14 +304,6 @@ def build_argument_analysis_prompt(topics, policy_variables):
      policies.append(topics[i + 1])
      for_policies.append(policy_variables[i * 2])
      against_policies.append(policy_variables[i * 2 + 1])
-  
-  if IS_DEBUG:
-     print("\n(DEBUG) policies:")
-     print_list(policies)
-     print("\n(DEBUG) for_policies:")
-     print_list(for_policies)
-     print("\n(DEBUG) against_policies:")
-     print_list(against_policies)
 
   policy_instructions = """"""
   for i in range(NUM_POLICIES):
@@ -401,8 +392,6 @@ def create_args_sheet(file_path, destination_folder):
     file_name = os.path.basename(file_path)
     duplicated_file_path = os.path.join(destination_folder, file_name)
 
-    print("Creating argument columns for", file_name + "...")
-
     # Duplicate the file to the destination folder with the new name
     shutil.copy(file_path, duplicated_file_path)
 
@@ -415,35 +404,44 @@ def create_args_sheet(file_path, destination_folder):
        wb.remove(wb['proposal '])
     for sheet in wb.sheetnames:
        ws = wb[sheet]
+    
+    ws.insert_cols(1) # Insert "Order" column
+
+    # Define columns
+    ORDER_COL = 1 # Order
+    TEXT_COL = 4 # text
+    HAS_ARG_COL = 5 # Has Arguments
+    ARG_SUM_COL = 6 # All Arguments Summarized
 
     # Add the new columns
-    ws.cell(row=1, column=4, value="Has Arguments")
-    ws.cell(row=1, column=5, value="All Arguments Summarized")
-    ws.cell(row=1, column=6, value="Order")
+    ws.cell(row=1, column=ORDER_COL, value="Order")
+    ws.cell(row=1, column=HAS_ARG_COL, value="Has Arguments")
+    ws.cell(row=1, column=ARG_SUM_COL, value="All Arguments Summarized")
 
     # Iterate over the rows and populate the "has arguments" column
     for row in range(2, ws.max_row + 1):
-        text = ws.cell(row=row, column=3).value
+        text = ws.cell(row=row, column=TEXT_COL).value
         if text is not None:  # Check if the cell is not empty
             has_arguments = check_arguments(text)
-            ws.cell(row=row, column=4, value="yes" if has_arguments else "no")
+            ws.cell(row=row, column=HAS_ARG_COL, value="yes" if has_arguments else "no")
         else:
-            ws.cell(row=row, column=4, value="no")
+            ws.cell(row=row, column=HAS_ARG_COL, value="no")
         # Construct the "Order" column
-        ws.cell(row=row, column=6, value=row-1)
+        ws.cell(row=row, column=ORDER_COL, value=row-1)
 
     # Iterate over the rows again to populate the "all arguments summarized" column
     for row in range(2, ws.max_row + 1):
-        has_arguments = ws.cell(row=row, column=4).value
+        has_arguments = ws.cell(row=row, column=HAS_ARG_COL).value
         if has_arguments == "yes":
-            text = ws.cell(row=row, column=3).value
+            text = ws.cell(row=row, column=TEXT_COL).value
             # summarized_text = util.simple_llm_call("Summarize the following text in a numbered list. For example, the text input ' thank you. so the last thing was that if there's ten candidates and you only pick your top two, then your and they don't get it, your vote doesn't count it all. so the best thing to do is you got to rank all 10, but again, not enough data on the subject to make predictions. and i think mike use' should be summarized as '1. If you only pick your top two candidates out of ten, your vote doesn't count if they don't win. 2. The best approach is to rank all ten candidates. 3. There is not enough data available to make predictions on the subject.' Follow this formatting exactly.", text)
             summarized_text = util.simple_llm_call("Summarize the following text in a numbered list.  Follow the output format '1. argument 1 \n 2. argument 2 \n' etcetera. Every argument MUST be on a different line. There could be one or more arguments.", text)
-            ws.cell(row=row, column=5).value = summarized_text
-            print("+++++++++" + text)
-            print("==========" + summarized_text)
+            ws.cell(row=row, column=ARG_SUM_COL).value = summarized_text
+            #print("+++++++++" + text)
+            #print("==========" + summarized_text)
 
     # Save the modified duplicated file
+    print("Processed", file_name)
     wb.save(duplicated_file_path)
 
 # Called when an error occurs
@@ -463,6 +461,7 @@ def main():
     data_path = os.path.join(DATA_DIR, session_num)
     processing_path = os.path.join(PROCESSING_DIR, session_num)
     create_processing_path(processing_path)
+    print("\nIdentifying arguments in Session", session_num + "...")
     for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
       if path.endswith('xlsx'):
@@ -471,6 +470,7 @@ def main():
         formatted_args = extract_args(new_path, deliberation)
         all_args_indexed.update(formatted_args)
         all_args += all_args_indexed[deliberation]
+    print("Finished identifying arguments in Session", session_num)
 
     # sampling 50 arguments for topic extraction
     sampled_args = random.sample(all_args, 50)
