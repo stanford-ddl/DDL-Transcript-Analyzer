@@ -94,8 +94,7 @@ def extract_topics(sampled_args, attempts = 0):
      print("Failed attempt #" + str(attempts))
      # If failed too many times, give up
      if attempts >= 5:
-       print("ERROR: Failed to generate a primary topic and policies")
-       return None
+       error("Failed to generate a primary topic and policies")
      # Else, try again
      print("Retrying...")
      return extract_topics(sampled_args, attempts)
@@ -199,8 +198,7 @@ def generate_policy_variables(topics, attempts = 0):
      print("Failed attempt #" + str(attempts))
      # If failed too many times, give up
      if attempts >= 5:
-       print("ERROR: Failed to generate a primary topic and policies")
-       return None
+       error("Failed to generate variables for each policy")
      # Else, try again
      print("Retrying...")
      return generate_policy_variables(topics, attempts)
@@ -450,7 +448,7 @@ def create_args_sheet(file_path, destination_folder):
 
 # Called when an error occurs
 def error(reason = "No reason provided"):
-   print("A critical error has occured:", reason)
+   print("ERROR:", reason)
    print("Program Terminated")
    sys.exit()
 
@@ -483,14 +481,14 @@ def main():
     #category_topics = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic") nearly depricated
     
     # Generate shorthand variables for each policy and load them into a JSON class
-    policy_variables = generate_policy_variables(topics) if topics else print("ERROR: Cannot generate variable shorthand: No topics")
-    json = build_JSON_class(policy_variables) if policy_variables else print("ERROR: Cannot build JSON class: No variables")
+    policy_variables = generate_policy_variables(topics)
+    json = build_JSON_class(policy_variables)
 
     # running inference
     # replace with correct path for results
     results_path = os.path.join(RESULTS_DIR, session_num)
     create_results_path(results_path)
-    argument_analysis_prompt = build_argument_analysis_prompt(topics, policy_variables) if json else print("ERROR: Cannot generate API prompt: No JSON class")
+    argument_analysis_prompt = build_argument_analysis_prompt(topics, policy_variables) if json else error("Cannot generate API prompt: No JSON class")
     arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
