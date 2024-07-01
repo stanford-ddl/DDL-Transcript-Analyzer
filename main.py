@@ -174,19 +174,6 @@ def print_list(list, header = ""):
       print(header, str(i) + ":", list[i])
 
 # Nearly deprecated
-# JSON class for extraction
-class TopicClassifier(BaseModel):
-  comparisonToCurrentSystem: bool = Field(default=False)
-  votingDecisions: bool = Field(default=False)
-  partyRepresentation: bool = Field(default=False)
-  voterTurnout: bool = Field(default=False)
-  strategicVoting: bool = Field(default=False)
-  moderateCandidates: bool = Field(default=False)
-  moneyInPolitics: bool = Field(default=False)
-  other: bool = Field(default=False)
-  notRelevant: bool = Field(default=False)
-
-# Nearly deprecated
 # system prompt for the topic evaluation task based on current extracted topics for ranked choice voting
 EVAL_PROMPT = """You are a skilled annotator tasked with identifying the type of arguments made in a deliberation about """ + TOPIC + """.
         Read through the given arguments presented.
