@@ -472,7 +472,7 @@ def add_arg_result(int_response, line, path, arg):
  
 # classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
-def arg_sort(all_args_indexed, processing_path, argument_analysis_prompt, topics):
+def arg_sort(all_args_indexed, topics):
   print("\nAnalyzing Session", session_num, "deliberations...")
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
