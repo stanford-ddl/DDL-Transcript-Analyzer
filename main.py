@@ -550,6 +550,9 @@ def main():
     sampled_args = random.sample(all_args, 50)
     topics = extract_topics(sampled_args)
 
+    # classify all arguments in Excel files
+    arg_sort(all_args_indexed, topics)
+
     # Generate primary topic, policies, and categories
     category_topics = generate_categories(sampled_args, topics[0]) if topics else print("ERROR: Cannot generate categories: No topic")
     category_variables = generate_category_variables(category_topics, topics[0]) if category_topics else print("ERROR: Cannot generate variable shorthand for categories: No category topics")
