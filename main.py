@@ -469,7 +469,14 @@ def add_arg_result(int_response, line, path, arg):
     wb.save(path)
 
     print(f"Added '{arg}' to row {actual_row}, column {int_response}")
- 
+
+#cleans up output repsponse by stopping before first newline character
+def response_clean(response):
+  newline_index = response.find('\n')
+  if newline_index != -1:
+    response = response[:newline_index]
+  return response
+
 # classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
 def arg_sort(all_args_indexed, topics):
@@ -504,7 +511,7 @@ def arg_sort(all_args_indexed, topics):
           If the argument is against """ + topics[7] + """, return "20".
           If the argument discusses a category that is relevant to """ + topics[0] + """ but not covered by the other categories, return '21'.
           If the argument is not relevant to the discussion of """ + topics[0] + """, return "22".
-          Only return one of these number options.  Do not include punctuation or any words except for the number.  Do not add extra text after the answer.  Your response should only be one or two characters depening if the answer is a one or two digit number.
+          Only return one of these number options.  Do not include punctuation or any words except for the number.  Do not add extra text after the answer.  Your response should only be one or two characters depening if the answer is a one or two digit number.  Do not put a space before the answer. Create the shortest possible response.
           """
     print(prompt)
 
@@ -518,10 +525,12 @@ def arg_sort(all_args_indexed, topics):
         if arg == "": # skip empty strings
            continue
         response = util.simple_llm_call(prompt, arg)
+        respone = response_clean(response)
         counter = 0
         print("RESPONSE:" + response)
         while response not in [str(i) for i in range(7, 23)]:
            response = util.simple_llm_call(prompt, arg)
+           respone = response_clean(response)
            counter += 1
            if counter >= 5: # couter to prevent infinite loops
               response = "22"
