@@ -515,6 +515,8 @@ def arg_sort(all_args_indexed, topics):
       line = arg_group[1] # zero based indexed (eg 9 means line 10 of the Excel sheet)
       arg_group_parsed = arg_group[0].split(".")
       for arg in arg_group_parsed:
+        if arg == "": # skip empty strings
+           continue
         response = util.simple_llm_call(prompt, arg)
         counter = 0
         while response not in [str(i) for i in range(7, 23)]:
