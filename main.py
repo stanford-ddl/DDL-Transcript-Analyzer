@@ -475,6 +475,10 @@ def response_clean(response):
   newline_index = response.find('\n')
   if newline_index != -1:
     response = response[:newline_index]
+  backslash_index = response.find('\\')
+  # If a backslash is found, return the substring up to the backslash
+  if backslash_index != -1:
+    response = response[:backslash_index]
   return response.replace(" ", "")
 
 # classifies all arguments in all deliberations in session_num based on the generated topics
@@ -502,7 +506,7 @@ def arg_sort(all_args_indexed, topics):
             If the argument is not relevant to the discussion of """ + topics[0] + """, return "22".
             Only return one of these number options.  Do not include punctuation or any words except for the number.  Do not add extra text after the answer.  Your response should only be one or two characters depening if the answer is a one or two digit number.  Do not put a space before the answer. Create the shortest possible response.
             """
-    print(prompt)
+  print(prompt)
 
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
