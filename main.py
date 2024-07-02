@@ -536,6 +536,7 @@ def arg_sort(all_args_indexed, topics):
            response = util.simple_llm_call(prompt, arg)
            response = response_clean(response)
            counter += 1
+           print("RETRY:" + str(counter))
            if counter >= 5: # couter to prevent infinite loops
               response = "22"
               break
