@@ -475,7 +475,7 @@ def response_clean(response):
   newline_index = response.find('\n')
   if newline_index != -1:
     response = response[:newline_index]
-  backslash_index = response.find('\')
+  backslash_index = response.find('\\')
   # If a backslash is found, return the substring up to the backslash
   if backslash_index != -1:
     response = response[:backslash_index]
