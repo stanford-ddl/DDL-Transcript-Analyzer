@@ -6,6 +6,8 @@ import util
 import ast
 from pydantic import BaseModel, create_model, Field
 from eval import get_metric_sums, get_metric_dist 
+import openpyxl
+from openpyxl.utils.dataframe import dataframe_to_rows
 
 #new
 import shutil
@@ -388,6 +390,133 @@ def csv_to_xlsx(data_path):
          new_path = os.path.join(data_path, new_file)
          df.to_excel(new_path)
          format_sheet(new_path)
+# Upades excel file with "for", "against", "other", and "not relevant" columns
+def format_excel(path, topics):
+   # Read the existing Excel file
+    wb = openpyxl.load_workbook(path)
+    ws = wb.active
+
+    # Convert worksheet to DataFrame
+    df = pd.DataFrame(ws.values)
+
+    # Set the first row as column headers
+    df.columns = df.iloc[0]
+    df = df[1:]
+
+    # Start adding new columns from column 7
+    start_col = 6
+
+    # Add columns for each policy (up to 7)
+    for i, policy in enumerate(topics[1:8], start=1):  # Skip the first item (primary topic)
+        df.insert(start_col, f"for: {policy}", "")
+        df.insert(start_col + 1, f"against: {policy}", "")
+        start_col += 2
+
+    # Add "other" and "not relevant" columns
+    df.insert(start_col, "other", "")
+    df.insert(start_col + 1, "not relevant", "")
+
+    # Clear the worksheet and write the updated DataFrame
+    ws.delete_rows(1, ws.max_row)
+    for r in dataframe_to_rows(df, index=False, header=True):
+        ws.append(r)
+  
+    # Save the changes
+    wb.save(path)
+    print(f"Updated {path} with new policy columns")
+  
+# adds the classified argument to the Excel sheet
+def add_arg_result(int_response, line, path, arg):
+   # Load the workbook and select the active sheet
+    wb = openpyxl.load_workbook(path)
+    sheet = wb.active
+
+    # Calculate the actual row number (add 1 because Excel is 1-indexed)
+    actual_row = line + 1
+
+    # Get the current cell value
+    current_value = sheet.cell(row=actual_row, column=int_response).value
+
+    # If there's already content, append the new arg. Otherwise, use the new arg.
+    if current_value:
+        new_value = f"{current_value} {arg}"
+    else:
+        new_value = arg
+
+    # Update the cell with the new value
+    sheet.cell(row=actual_row, column=int_response, value=new_value)
+
+    # Save the workbook
+    wb.save(path)
+
+    print(f"Added '{arg}' to row {actual_row}, column {int_response}")
+
+#cleans up output repsponse by stopping before first newline character
+def response_clean(response):
+  newline_index = response.find('\n')
+  if newline_index != -1:
+    response = response[:newline_index]
+  backslash_index = response.find('\\')
+  # If a backslash is found, return the substring up to the backslash
+  if backslash_index != -1:
+    response = response[:backslash_index]
+  return response.replace(" ", "")
+
+# classifies all arguments in all deliberations in session_num based on the generated topics
+# note: time-expensive
+def arg_sort(all_args_indexed, topics):
+  print("\nAnalyzing Session", session_num, "deliberations...")
+
+  prompt = """You are a skilled annotator tasked with catagorizing the type of arguments made in a deliberation about """ + topics[0] + """.
+            Read through the given argument presented.
+            If the argument is in favor of """ + topics[1] + """, return "7".
+            If the argument is against """ + topics[1] + """, return "8".
+            If the argument is in favor of """ + topics[2] + """, return "9".
+            If the argument is against """ + topics[2] + """, return "10".
+            If the argument is in favor of """ + topics[3] + """, return "11".
+            If the argument is against """ + topics[3] + """, return "12".
+            If the argument is in favor of """ + topics[4] + """, return "13".
+            If the argument is against """ + topics[4] + """, return "14".
+            If the argument is in favor of """ + topics[5] + """, return "15".
+            If the argument is against """ + topics[5] + """, return "16".
+            If the argument is in favor of """ + topics[6] + """, return "17".
+            If the argument is against """ + topics[6] + """, return "18".
+            If the argument is in favor of """ + topics[7] + """, return "19".
+            If the argument is against """ + topics[7] + """, return "20".
+            If the argument discusses a category that is relevant to """ + topics[0] + """ but not covered by the other categories, return '21'.
+            If the argument is not relevant to the discussion of """ + topics[0] + """, return "22".
+            Only return one of these number options.  Do not include punctuation or any words except for the number.  Do not add extra text after the answer.  Your response should only be one or two characters depening if the answer is a one or two digit number.  Do not put a space before the answer. Create the shortest possible response.
+            """
+  print(prompt)
+
+  # looping over all deliberations
+  for deliberation in all_args_indexed.keys():
+    args = all_args_indexed[deliberation]
+    path = os.path.join(PROCESSING_DIR, session_num, deliberation)
+
+    # add columns to Excel sheets to prepare for classification
+    format_excel(path, topics)
+
+    # loop over a deliberation's arguments
+    for arg_group in args:
+      line = arg_group[1] # zero based indexed (eg 9 means line 10 of the Excel sheet)
+      arg_group_parsed = arg_group[0].split(".")
+      for arg in arg_group_parsed:
+        if arg == "": # skip empty strings
+           continue
+        response = util.simple_llm_call(prompt, arg)
+        response = response_clean(response)
+        counter = 0
+        print("RESPONSE:" + response)
+        while response not in [str(i) for i in range(7, 23)]:
+           response = util.simple_llm_call(prompt, arg)
+           response = response_clean(response)
+           counter += 1
+           if counter >= 5: # couter to prevent infinite loops
+              response = "22"
+              break
+        int_response = int(response)
+        add_arg_result(int_response, line, path, arg)
 
 def main():
     print("Entering main() of Session", session_num)
@@ -422,6 +551,9 @@ def main():
     policy_variables = generate_policy_variables(topics)
     json = build_JSON_class(policy_variables)
 
+    # classify all arguments in Excel files
+    arg_sort(all_args_indexed, topics)
+    
     # running inference
     # replace with correct path for results
     results_path = os.path.join(RESULTS_DIR, session_num)
