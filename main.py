@@ -525,12 +525,12 @@ def arg_sort(all_args_indexed, topics):
         if arg == "": # skip empty strings
            continue
         response = util.simple_llm_call(prompt, arg)
-        respone = response_clean(response)
+        response = response_clean(response)
         counter = 0
         print("RESPONSE:" + response)
         while response not in [str(i) for i in range(7, 23)]:
            response = util.simple_llm_call(prompt, arg)
-           respone = response_clean(response)
+           response = response_clean(response)
            counter += 1
            if counter >= 5: # couter to prevent infinite loops
               response = "22"
