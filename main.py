@@ -15,9 +15,9 @@ from openpyxl import load_workbook
 
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
-IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
+IS_SKIP_DATA_PROCESS = True # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
-IS_ANALYZE_ALL_SESSIONS = True # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
+IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
 session_num = 'test' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
 
 DATA_DIR = 'data'
@@ -504,7 +504,7 @@ def arg_sort(all_args_indexed, topics):
           If the argument is against """ + topics[7] + """, return "20".
           If the argument discusses a category that is relevant to """ + topics[0] + """ but not covered by the other categories, return '21'.
           If the argument is not relevant to the discussion of """ + topics[0] + """, return "22".
-          Only return one of these number options.  Do not include punctuation or any words except for the number.
+          Only return one of these number options.  Do not include punctuation or any words except for the number.  Do not add extra text after the answer.  Your response should only be one or two characters depening if the answer is a one or two digit number.
           """
     print(prompt)
 
@@ -519,6 +519,7 @@ def arg_sort(all_args_indexed, topics):
            continue
         response = util.simple_llm_call(prompt, arg)
         counter = 0
+        print("RESPONSE:" + response)
         while response not in [str(i) for i in range(7, 23)]:
            response = util.simple_llm_call(prompt, arg)
            counter += 1
