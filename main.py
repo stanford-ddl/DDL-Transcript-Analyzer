@@ -16,7 +16,11 @@ IS_DEBUG = True # If True, additional debug statements will be printed.
 IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
-session_num = 'test' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
+session_num = 'test2' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
+# IMPORTANT: One, and only one, of the three booleans below should be True at all times.
+IS_DOWNLOADED_CSV = True # Set to True if the data being used is from the "Step 1: Downloaded CSVs" Google Drive
+IS_READY_FOR_FILEREAD = False # Set to True if the data being used is from the "Step 2: Ready for Fileread Download" Google Drive
+IS_FILEREAD_RESULTS = False # Set to True if the data being used is from the "Step 3: Fileread Results" Google Drive
 
 DATA_DIR = 'data'
 PROCESSING_DIR = 'processing'
@@ -246,7 +250,7 @@ def arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json
       line = arg[1]
       add_results(response, df, line)
     new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
-    df.to_csv(os.path.join(results_path, new_filename))
+    df.to_csv(os.path.join(results_path, new_filename), index=False)
     print("Created", new_filename)
   print("Finished analyzing deliberations in Session", session_num)
 
@@ -279,6 +283,41 @@ def check_arguments(text):
     # print(text + "----->" + response)
     return response.strip().lower() == 'yes'
 
+# Checks Togglable Options,
+# throws an error if they are invalid.
+def valid_options_check():
+  error_message = "The Togglable Options have been incorrectly set up. Please refer to 'Togglable Options' at the top of main.py and ensure everything is set up correctly. Currently, the data is marked as coming from multiple sources which is not allowed. Please review 'IS_DOWNLOADED_CSV', 'IS_READY_FOR_FILEREAD', and 'IS_FILEREAD_RESULTS' for more information."
+  if IS_DOWNLOADED_CSV and IS_READY_FOR_FILEREAD:
+    error(error_message)
+  elif IS_DOWNLOADED_CSV and IS_FILEREAD_RESULTS:
+    error(error_message)
+  elif IS_READY_FOR_FILEREAD and IS_FILEREAD_RESULTS:
+    error(error_message)
+
+# Given a sheet,
+# format it appropriately.
+def format_sheet(sheet_path):
+  valid_options_check() # Ensures all Togglable Options are valid
+
+  wb = load_workbook(sheet_path)
+  ws = None
+  if 'proposal' in wb.sheetnames:
+    wb.remove(wb['proposal'])
+  elif 'proposal ' in wb.sheetnames:
+    wb.remove(wb['proposal '])
+  for sheet in wb.sheetnames:
+    ws = wb[sheet]
+  
+  if IS_DOWNLOADED_CSV:
+     ws.delete_rows(1)
+     ws.delete_cols(1)
+     ws.delete_cols(2, 2)
+     ws.cell(row=1, column=1).value = "speaker"
+     ws.cell(row=1, column=3).value = "text"
+
+  ws.insert_cols(1) # Insert "Order" column
+  wb.save(sheet_path)
+
 # this function duplicates the input spreadsheet in destination folder, and creates and populates contians args column
 def create_args_sheet(file_path, destination_folder):
     df = pd.read_excel(file_path)
@@ -288,18 +327,13 @@ def create_args_sheet(file_path, destination_folder):
     # Duplicate the file to the destination folder with the new name
     shutil.copy(file_path, duplicated_file_path)
 
+    format_sheet(duplicated_file_path) # Format the file
+
     # Load the duplicated file with openpyxl to add columns
     wb = load_workbook(duplicated_file_path)
-    ws = None
-    if 'proposal' in wb.sheetnames:
-       wb.remove(wb['proposal'])
-    elif 'proposal ' in wb.sheetnames:
-       wb.remove(wb['proposal '])
     for sheet in wb.sheetnames:
        ws = wb[sheet]
     
-    ws.insert_cols(1) # Insert "Order" column
-
     # Define columns
     ORDER_COL = 1 # Order
     TEXT_COL = 4 # text
@@ -343,6 +377,18 @@ def error(reason = "No reason provided"):
    print("Program Terminated")
    sys.exit()
 
+# Given a folder,
+# convert all CSV files to XLSX
+def csv_to_xlsx(data_path):
+   for deliberation in os.listdir(data_path):
+      path = os.path.join(data_path, deliberation)
+      if path.endswith('csv'):
+         df = pd.read_csv(path)
+         new_file = deliberation.replace('csv', 'xlsx')
+         new_path = os.path.join(data_path, new_file)
+         df.to_excel(new_path)
+         format_sheet(new_path)
+
 def main():
     print("Entering main() of Session", session_num)
 
@@ -352,12 +398,13 @@ def main():
 
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     data_path = os.path.join(DATA_DIR, session_num)
+    csv_to_xlsx(data_path)
     processing_path = os.path.join(PROCESSING_DIR, session_num)
     create_processing_path(processing_path)
     print("\nIdentifying arguments in Session", session_num + "...")
     for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
-      if path.endswith('xlsx'):
+      if path.endswith('xlsx') or path.endswith('csv'):
         if not IS_SKIP_DATA_PROCESS: create_args_sheet(path, processing_path)
         new_path = os.path.join(processing_path, deliberation)
         formatted_args = extract_args(new_path, deliberation)
