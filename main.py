@@ -475,7 +475,7 @@ def response_clean(response):
   newline_index = response.find('\n')
   if newline_index != -1:
     response = response[:newline_index]
-  return response
+  return response.replace(" ", "")
 
 # classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
