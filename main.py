@@ -14,7 +14,7 @@ import shutil
 from openpyxl import load_workbook
 
 # Togglable Options
-IS_DEBUG = True # If True, additional debug statements will be printed.
+IS_DEBUG = False # If True, additional debug statements will be printed.
 IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
@@ -317,7 +317,6 @@ def format_sheet(sheet_path):
      ws.cell(row=1, column=1).value = "speaker"
      ws.cell(row=1, column=3).value = "text"
 
-  ws.insert_cols(1) # Insert "Order" column
   wb.save(sheet_path)
 
 # this function duplicates the input spreadsheet in destination folder, and creates and populates contians args column
@@ -343,6 +342,7 @@ def create_args_sheet(file_path, destination_folder):
     ARG_SUM_COL = 6 # All Arguments Summarized
 
     # Add the new columns
+    ws.insert_cols(1) # Insert "Order" column
     ws.cell(row=1, column=ORDER_COL, value="Order")
     ws.cell(row=1, column=HAS_ARG_COL, value="Has Arguments")
     ws.cell(row=1, column=ARG_SUM_COL, value="All Arguments Summarized")
@@ -380,16 +380,31 @@ def error(reason = "No reason provided"):
    sys.exit()
 
 # Given a folder,
-# convert all CSV files to XLSX
+# convert all CSV files in it to XLSX files
 def csv_to_xlsx(data_path):
    for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
       if path.endswith('csv'):
-         df = pd.read_csv(path)
+         df = pd.read_csv(path, header=1)
+
+         # Convert Headers
+         headers = pd.DataFrame([df.columns.tolist()], columns=df.columns[:6]) # Get column headers
+         df = pd.concat([headers, df]) # Add column headers to the top of the df
+
+         # Convert Room ID
+         with open(path, 'r') as f:
+            room_ID_list = f.readline().strip().split(',') # Get a list of first row values
+         room_ID_row = pd.DataFrame([room_ID_list], columns=df.columns[:2]) # Convert to a df row
+         room_ID_row.loc[0, "userId"] = pd.to_numeric(room_ID_row.loc[0, "userId"]) # Convert roomID number from text to a numeric value
+         df = pd.concat([room_ID_row, df]) # Add Room ID row to the top of the df
+
+         # Convert from CSV to XLSX
          new_file = deliberation.replace('csv', 'xlsx')
          new_path = os.path.join(data_path, new_file)
-         df.to_excel(new_path)
-         format_sheet(new_path)
+         df.to_excel(new_path, index=False, header=False, sheet_name="in")
+
+         os.remove(path)
+
 # Upades excel file with "for", "against", "other", and "not relevant" columns
 def format_excel(path, topics):
    # Read the existing Excel file
@@ -541,8 +556,8 @@ def main():
         all_args += all_args_indexed[deliberation]
     print("Finished identifying arguments in Session", session_num)
 
-    # sampling 50 arguments for topic extraction
-    sampled_args = random.sample(all_args, 50)
+    # sampling 400 arguments for topic extraction
+    sampled_args = random.sample(all_args, 400)
 
     # Generate primary topic [0] and policies [1] - [7]
     topics = extract_topics(sampled_args)
@@ -552,7 +567,7 @@ def main():
     json = build_JSON_class(policy_variables)
 
     # classify all arguments in Excel files
-    arg_sort(all_args_indexed, topics)
+    #arg_sort(all_args_indexed, topics)
     
     # running inference
     # replace with correct path for results
