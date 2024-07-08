@@ -13,12 +13,14 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 import shutil
 from openpyxl import load_workbook
 
+from datetime import datetime
+
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
-IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
+IS_SKIP_DATA_PROCESS = True # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
-session_num = 'test2' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
+session_num = 'test' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
 # IMPORTANT: One, and only one, of the three booleans below should be True at all times.
 IS_DOWNLOADED_CSV = True # Set to True if the data being used is from the "Step 1: Downloaded CSVs" Google Drive
 IS_READY_FOR_FILEREAD = False # Set to True if the data being used is from the "Step 2: Ready for Fileread Download" Google Drive
@@ -161,6 +163,9 @@ def generate_policy_variables(topics, attempts = 0):
      return generate_policy_variables(topics, attempts)
    # Else, success!
    print_list(response_list, "Variable")
+
+   results_path = os.path.join(RESULTS_DIR, session_num)
+   generate_key(topics, response_list, results_path)
    
    variable_list = []
    for i in range(len(response_list)):
@@ -532,6 +537,23 @@ def arg_sort(all_args_indexed, topics):
               break
         int_response = int(response)
         add_arg_result(int_response, line, path, arg)
+
+def generate_key(topics, policy_variables, results_path):
+   KEY_NAME = "KEY_Session_" + session_num + ".txt"
+   key_path = os.path.join(results_path, "metrics", KEY_NAME)
+
+   key_text = "Session " + session_num + " Key"
+   time = datetime.now().strftime("%Y-%m-%d at %H:%M:%S")
+   key_text += "\nGenerated on: " + time
+   key_text += "\n\nPrimary Topic: " + topics[0]
+   key_text += "\n\nPolicy Key:"
+   for i in range(len(policy_variables)):
+      key_text += "\n* " + policy_variables[i] + " = " + topics[i+1]
+   
+   if IS_DEBUG: print("\n(DEBUG) key_text:\n" + key_text)
+   
+   with open(key_path, 'w') as key:
+      key.write(key_text)
 
 def main():
     print("Entering main() of Session", session_num)
