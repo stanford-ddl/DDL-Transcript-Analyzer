@@ -21,10 +21,6 @@ IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the pr
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
 session_num = 'test3' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
-# IMPORTANT: One, and only one, of the three booleans below should be True at all times.
-IS_DOWNLOADED_CSV = False # Set to True if the data being used is from the "Step 1: Downloaded CSVs" Google Drive
-IS_READY_FOR_FILEREAD = True # Set to True if the data being used is from the "Step 2: Ready for Fileread Download" Google Drive
-IS_FILEREAD_RESULTS = False # Set to True if the data being used is from the "Step 3: Fileread Results" Google Drive
 
 DATA_DIR = 'data'
 PROCESSING_DIR = 'processing'
@@ -294,32 +290,34 @@ def check_arguments(text):
     # print(text + "----->" + response)
     return response.strip().lower() == 'yes'
 
-# Checks Togglable Options,
-# throws an error if they are invalid.
-def valid_options_check():
-  error_message = "The Togglable Options have been incorrectly set up. Please refer to 'Togglable Options' at the top of main.py and ensure everything is set up correctly. Currently, the data is marked as coming from multiple sources which is not allowed. Please review 'IS_DOWNLOADED_CSV', 'IS_READY_FOR_FILEREAD', and 'IS_FILEREAD_RESULTS' for more information."
-  if IS_DOWNLOADED_CSV and IS_READY_FOR_FILEREAD:
-    error(error_message)
-  elif IS_DOWNLOADED_CSV and IS_FILEREAD_RESULTS:
-    error(error_message)
-  elif IS_READY_FOR_FILEREAD and IS_FILEREAD_RESULTS:
-    error(error_message)
-
 # Given a sheet,
 # format it appropriately.
 def format_sheet(sheet_path):
-  valid_options_check() # Ensures all Togglable Options are valid
-
   wb = load_workbook(sheet_path)
   ws = wb.worksheets[0]
   
-  if IS_DOWNLOADED_CSV:
+  # If this sheet is from the "Step 1: Downloaded CSVs" Google Drive
+  if ws.cell(row=1, column=1).value == "roomId":
      ws.delete_rows(1)
      ws.delete_cols(1)
      ws.delete_cols(2, 2)
-     ws.cell(row=1, column=1).value = "speaker"
-     ws.cell(row=1, column=3).value = "text"
+  
+  # If this sheet is from the "Step 3: Fileread Results" Google Drive
+  if ws.cell(row=1, column=1).value == "Order":
+     ws.delete_cols(1)
+  NUM_COLUMNS_TO_KEEP = 3
+  if ws.max_column > NUM_COLUMNS_TO_KEEP:
+     for col in range(ws.max_column, NUM_COLUMNS_TO_KEEP, -1):
+        ws.delete_cols(col)
+  ws.cell(row=1, column=1).value = "Speaker"
+  ws.cell(row=1, column=2).value = "Time"
+  ws.cell(row=1, column=3).value = "Text"
 
+  for row in ws.iter_rows():
+     for cell in row:
+        cell.style = "Normal"
+
+  # Sheet is now equivalent to a sheet from the "Step 2: Ready for Fileread Download" Google Drive
   wb.save(sheet_path)
 
 # Given a data folder,
@@ -336,6 +334,13 @@ def clean_data(data_path):
         for sheet_name in wb.sheetnames:
             if sheet_name != "in":
               wb.remove(wb[sheet_name])
+        
+        # If a number is incorrectly stored as a string,
+        # convert it into a number.
+        for row in ws.iter_rows():
+           for cell in row:
+              if cell.value and isinstance(cell.value, str) and cell.value.isdigit():
+                 cell.value = int(cell.value)
     
         wb.save(path)
 
@@ -580,7 +585,6 @@ def main():
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     data_path = os.path.join(DATA_DIR, session_num)
     clean_data(data_path)
-    error("TEMP @ 579")
     processing_path = os.path.join(PROCESSING_DIR, session_num)
     create_processing_path(processing_path)
     print("\nIdentifying arguments in Session", session_num + "...")
