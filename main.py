@@ -14,10 +14,11 @@ import shutil
 from openpyxl import load_workbook
 
 from datetime import datetime
+from openpyxl.styles import Alignment
 
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
-IS_SKIP_DATA_PROCESS = True # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
+IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
 session_num = 'test3' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
@@ -218,12 +219,26 @@ def check_arguments(text):
     # print(text + "----->" + response)
     return response.strip().lower() == 'yes'
 
+def resize_columns(ws):
+   for col in ws.columns:
+      width = 0
+      column = col[0].column_letter
+      for cell in col:
+         try:
+            if len(str(cell.value)) > width:
+               width = len(str(cell.value))
+         except:
+            pass
+      ws.column_dimensions[column].width = width
+
+def wrap_text(ws):
+   for row in ws.iter_rows():
+      for cell in row:
+         cell.alignment = Alignment(wrap_text=True)
+
 # Given a sheet,
 # format it appropriately.
-def format_sheet(sheet_path):
-  wb = load_workbook(sheet_path)
-  ws = wb.worksheets[0]
-  
+def format_sheet(ws):
   # If this sheet is from the "Step 1: Downloaded CSVs" Google Drive
   if ws.cell(row=1, column=1).value == "roomId":
      ws.delete_rows(1)
@@ -245,12 +260,10 @@ def format_sheet(sheet_path):
      for cell in row:
         cell.style = "Normal"
 
-  # Sheet is now equivalent to a sheet from the "Step 2: Ready for Fileread Download" Google Drive
-  wb.save(sheet_path)
-
 # Given a data folder,
 # clean the data in it.
 def clean_data(data_path):
+   print("\nCleaning Session", session_num, "data folder...")
    for deliberation in os.listdir(data_path):
       csv_to_xlsx(data_path, deliberation)
    for deliberation in os.listdir(data_path):
@@ -269,23 +282,17 @@ def clean_data(data_path):
            for cell in row:
               if cell.value and isinstance(cell.value, str) and cell.value.isdigit():
                  cell.value = int(cell.value)
-    
+
         wb.save(path)
+        print("Cleaned", deliberation)
+   print("Finished cleaning Session", session_num, "data folder")
 
 # this function duplicates the input spreadsheet in destination folder, and creates and populates contians args column
 def create_args_sheet(file_path, destination_folder):
-    df = pd.read_excel(file_path)
-    file_name = os.path.basename(file_path)
-    duplicated_file_path = os.path.join(destination_folder, file_name)
-
-    # Duplicate the file to the destination folder with the new name
-    shutil.copy(file_path, duplicated_file_path)
-
-    format_sheet(duplicated_file_path) # Format the file
-
-    # Load the duplicated file with openpyxl to add columns
-    wb = load_workbook(duplicated_file_path)
+    wb = load_workbook(file_path)
     ws = wb.worksheets[0]
+
+    format_sheet(ws) # Format the file
     
     # Define columns
     ORDER_COL = 1 # Order
@@ -309,6 +316,8 @@ def create_args_sheet(file_path, destination_folder):
             ws.cell(row=row, column=HAS_ARG_COL, value="no")
         # Construct the "Order" column
         ws.cell(row=row, column=ORDER_COL, value=row-1)
+    
+    resize_columns(ws)
 
     # Iterate over the rows again to populate the "all arguments summarized" column
     for row in range(2, ws.max_row + 1):
@@ -321,9 +330,13 @@ def create_args_sheet(file_path, destination_folder):
             #print("+++++++++" + text)
             #print("==========" + summarized_text)
 
+    wrap_text(ws)
+    
     # Save the modified duplicated file
+    file_name = os.path.basename(file_path)
+    new_file_path = os.path.join(destination_folder, file_name)
+    wb.save(new_file_path)
     print("Processed", file_name)
-    wb.save(duplicated_file_path)
 
 # Called when an error occurs
 def error(reason = "No reason provided"):
@@ -478,13 +491,15 @@ def arg_sort(all_args_indexed, topics, policy_variables, results_path):
               break
         int_response = int(response)
         add_arg_result(int_response, line, ws, arg)
+    
     label_policy_variables(ws)
+    wrap_text(ws)
 
     basename = os.path.basename(path)
     new_filename = "EVALUATED" + basename.replace("xlsx", "csv")
     df = pd.DataFrame(ws.values)
     df.to_csv(os.path.join(results_path, new_filename), index=False, header=False)
-    print("Created", new_filename)
+    print("Analyzed", basename)
   print("Finished analyzing deliberations in Session", session_num)
 
 def generate_key(topics, policy_variables, results_path):
