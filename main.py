@@ -358,7 +358,7 @@ def csv_to_xlsx(data_path, deliberation):
     os.remove(path)
 
 # Upades excel file with "for", "against", "other", and "not relevant" columns
-def format_excel(ws, policy_variables):
+def add_policy_columns(ws, policy_variables):
     # Start adding new columns from column 7
     column = 7
     label = ""
@@ -369,17 +369,6 @@ def format_excel(ws, policy_variables):
           ws.cell(row=1, column=column, value=policy_variables[i] + label)
           column += 1
       label = " (bool)"
-    
-    return
-
-    # Clear the worksheet and write the updated DataFrame
-    ws.delete_rows(1, ws.max_row)
-    for r in dataframe_to_rows(df, index=False, header=True):
-        ws.append(r)
-  
-    # Save the changes
-    wb.save(path)
-    print(f"Updated {path} with new policy columns")
   
 # adds the classified argument to the Excel sheet
 def add_arg_result(int_response, line, ws, arg):
@@ -466,7 +455,7 @@ def arg_sort(all_args_indexed, topics, policy_variables, results_path):
     ws = wb.worksheets[0]
 
     # add columns to Excel sheets to prepare for classification
-    format_excel(ws, policy_variables)
+    add_policy_columns(ws, policy_variables)
 
     # loop over a deliberation's arguments
     for arg_group in args:
