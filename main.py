@@ -236,32 +236,6 @@ def add_results(response, df, line):
    for key in response.keys():
       df.loc[df['Order'] == line, key] = response[key]
 
-# classifies all arguments in all deliberations based on the extracted topics
-# note: most time-expensive function to call / may need to increase token size
-def arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json):
-  return # TEMP
-  print("\nAnalyzing Session", session_num, "deliberations...")
-  # looping over all deliberations
-  for deliberation in all_args_indexed.keys():
-    args = all_args_indexed[deliberation]
-    path = os.path.join(PROCESSING_DIR, session_num, deliberation)
-
-    ## initializing df and fields
-    #df = pd.DataFrame(pd.read_excel(path)) 
-    #for key in json.model_fields.keys():
-      #df[key] = False
-
-    ## loop over a deliberation's arguments
-    #for arg in args:
-      #prompt = argument_analysis_prompt
-      #response = util.json_llm_call(prompt, arg[0], json)
-      #line = arg[1]
-      #add_results(response, df, line)
-    new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
-    df.to_csv(os.path.join(results_path, new_filename), index=False)
-    print("Created", new_filename)
-  print("Finished analyzing deliberations in Session", session_num)
-
 # Given a path for a 'results' folder,
 # create that folder and a 'metrics' subfolder if needed.
 def create_results_path(results_path):
@@ -628,7 +602,6 @@ def main():
     arg_sort(all_args_indexed, topics, policy_variables, results_path)
 
     argument_analysis_prompt = build_argument_analysis_prompt(topics, policy_variables) if json else error("Cannot generate API prompt: No JSON class")
-    arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
     # running post-evaluation
