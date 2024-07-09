@@ -1,13 +1,13 @@
 Session test Key
-Generated on: 2024-07-08 at 15:57:15
+Generated on: 2024-07-08 at 16:51:25
 
-Primary Topic: Voting rights and procedures
+Primary Topic: Voting methods and access
 
 Policy Key:
-* autoRegistration = Implement automatic voter registration for eligible individuals
-* photoIdVoting = Require government-issued photo ID for in-person voting
-* onlineRegistration = Allow online registration for voting with verification measures
-* universalVotingStandards = Establish a universal set of standards for voting machines and procedures nationwide
-* earlyVotingMailIn = Allow for a period of early voting and expand mail-in voting options
-* prohibitPartisanObservers = Prohibit the use of partisan poll watchers and observers
-* randomAuditSystem = Create a system for random audits of ballots and voting systems
+* autoRegistration = Implement automatic voter registration through state agencies
+* onlineRegistration = Allow for online voter registration
+* secureOnlineVoting = Provide a secure online voting system
+* nationwideVotingStandard = Establish a nationwide standard for in-person, mail-in, and early voting
+* equalVotingAccess = Ensure equal access to voting for all eligible citizens
+* strengthenElectionSecurity = Strengthen election security measures
+* promoteTransparency = Promote transparency and accountability in the election process

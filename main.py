@@ -17,13 +17,13 @@ from datetime import datetime
 
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
-IS_SKIP_DATA_PROCESS = True # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
+IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
-session_num = 'test' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
+session_num = 'test3' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
 # IMPORTANT: One, and only one, of the three booleans below should be True at all times.
-IS_DOWNLOADED_CSV = True # Set to True if the data being used is from the "Step 1: Downloaded CSVs" Google Drive
-IS_READY_FOR_FILEREAD = False # Set to True if the data being used is from the "Step 2: Ready for Fileread Download" Google Drive
+IS_DOWNLOADED_CSV = False # Set to True if the data being used is from the "Step 1: Downloaded CSVs" Google Drive
+IS_READY_FOR_FILEREAD = True # Set to True if the data being used is from the "Step 2: Ready for Fileread Download" Google Drive
 IS_FILEREAD_RESULTS = False # Set to True if the data being used is from the "Step 3: Fileread Results" Google Drive
 
 DATA_DIR = 'data'
@@ -88,7 +88,9 @@ def extract_topics(sampled_args, attempts = 0):
    Your response is ONLY a single list of the primary topic and the policies.
    Once again, your response is ONLY a single list.
    Your response is ONLY one line.
-   The Python list you return should contain EXACTLY """ + str(int(NUM_TOPICS)+1) + """ strings.
+   VERY IMPORTANT: EVERY argument initially provided to you should be an argument "for" or "against" at least one of the policies you generate.
+   Once again, EVERY argument should be relevant to one of the policies you return.
+   Please, the Python list you return should contain EXACTLY """ + str(int(NUM_TOPICS)+1) + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
    if IS_DEBUG: print("\n(DEBUG) Raw response:", response + "\n")
@@ -164,7 +166,9 @@ def generate_policy_variables(topics, attempts = 0):
    # Else, success!
    print_list(response_list, "Variable")
 
+   # Generate results, metrics, and key
    results_path = os.path.join(RESULTS_DIR, session_num)
+   create_results_path(results_path)
    generate_key(topics, response_list, results_path)
    
    variable_list = []
@@ -307,13 +311,7 @@ def format_sheet(sheet_path):
   valid_options_check() # Ensures all Togglable Options are valid
 
   wb = load_workbook(sheet_path)
-  ws = None
-  if 'proposal' in wb.sheetnames:
-    wb.remove(wb['proposal'])
-  elif 'proposal ' in wb.sheetnames:
-    wb.remove(wb['proposal '])
-  for sheet in wb.sheetnames:
-    ws = wb[sheet]
+  ws = wb.worksheets[0]
   
   if IS_DOWNLOADED_CSV:
      ws.delete_rows(1)
@@ -323,6 +321,23 @@ def format_sheet(sheet_path):
      ws.cell(row=1, column=3).value = "text"
 
   wb.save(sheet_path)
+
+# Given a data folder,
+# clean the data in it.
+def clean_data(data_path):
+   for deliberation in os.listdir(data_path):
+      csv_to_xlsx(data_path, deliberation)
+   for deliberation in os.listdir(data_path):
+      path = os.path.join(data_path, deliberation)
+      if path.endswith('xlsx'):
+        wb = load_workbook(path)
+        ws = wb.worksheets[0]
+        ws.title = "in"
+        for sheet_name in wb.sheetnames:
+            if sheet_name != "in":
+              wb.remove(wb[sheet_name])
+    
+        wb.save(path)
 
 # this function duplicates the input spreadsheet in destination folder, and creates and populates contians args column
 def create_args_sheet(file_path, destination_folder):
@@ -380,35 +395,35 @@ def create_args_sheet(file_path, destination_folder):
 
 # Called when an error occurs
 def error(reason = "No reason provided"):
-   print("ERROR:", reason)
-   print("Program Terminated")
+   print("\n\nERROR:", reason)
+   print("\nProgram Terminated\n")
    sys.exit()
 
-# Given a folder,
-# convert all CSV files in it to XLSX files
-def csv_to_xlsx(data_path):
-   for deliberation in os.listdir(data_path):
-      path = os.path.join(data_path, deliberation)
-      if path.endswith('csv'):
-         df = pd.read_csv(path, header=1)
+# Given a deliberation,
+# convert it from a CSV file into a XLSX file if needed.
+def csv_to_xlsx(data_path, deliberation):
+  path = os.path.join(data_path, deliberation)
+  if path.endswith('numbers'): error("""".numbers" files are not supported. Please manually convert them to ".csv" files using Apple's Numbers Application.\n1. Open the .numbers file in Apple Numbers.\n2. Go to File -> Export To -> CSV.\n3. Save the file as a ".csv".""")
+  if path.endswith('csv'):
+    df = pd.read_csv(path, header=1)
 
-         # Convert Headers
-         headers = pd.DataFrame([df.columns.tolist()], columns=df.columns[:6]) # Get column headers
-         df = pd.concat([headers, df]) # Add column headers to the top of the df
+    # Convert Headers
+    headers = pd.DataFrame([df.columns.tolist()], columns=df.columns[:6]) # Get column headers
+    df = pd.concat([headers, df]) # Add column headers to the top of the df
 
-         # Convert Room ID
-         with open(path, 'r') as f:
-            room_ID_list = f.readline().strip().split(',') # Get a list of first row values
-         room_ID_row = pd.DataFrame([room_ID_list], columns=df.columns[:2]) # Convert to a df row
-         room_ID_row.loc[0, "userId"] = pd.to_numeric(room_ID_row.loc[0, "userId"]) # Convert roomID number from text to a numeric value
-         df = pd.concat([room_ID_row, df]) # Add Room ID row to the top of the df
+    # Convert Room ID
+    with open(path, 'r') as f:
+      room_ID_list = f.readline().strip().split(',') # Get a list of first row values
+    room_ID_row = pd.DataFrame([room_ID_list], columns=df.columns[:2]) # Convert to a df row
+    room_ID_row.loc[0, "userId"] = pd.to_numeric(room_ID_row.loc[0, "userId"]) # Convert roomID number from text to a numeric value
+    df = pd.concat([room_ID_row, df]) # Add Room ID row to the top of the df
 
-         # Convert from CSV to XLSX
-         new_file = deliberation.replace('csv', 'xlsx')
-         new_path = os.path.join(data_path, new_file)
-         df.to_excel(new_path, index=False, header=False, sheet_name="in")
+    # Convert from CSV to XLSX
+    new_file = deliberation.replace('csv', 'xlsx')
+    new_path = os.path.join(data_path, new_file)
+    df.to_excel(new_path, index=False, header=False)
 
-         os.remove(path)
+    os.remove(path)
 
 # Upades excel file with "for", "against", "other", and "not relevant" columns
 def format_excel(path, topics):
@@ -564,7 +579,8 @@ def main():
 
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     data_path = os.path.join(DATA_DIR, session_num)
-    csv_to_xlsx(data_path)
+    clean_data(data_path)
+    error("TEMP @ 579")
     processing_path = os.path.join(PROCESSING_DIR, session_num)
     create_processing_path(processing_path)
     print("\nIdentifying arguments in Session", session_num + "...")
@@ -592,9 +608,7 @@ def main():
     #arg_sort(all_args_indexed, topics)
     
     # running inference
-    # replace with correct path for results
     results_path = os.path.join(RESULTS_DIR, session_num)
-    create_results_path(results_path)
     argument_analysis_prompt = build_argument_analysis_prompt(topics, policy_variables) if json else error("Cannot generate API prompt: No JSON class")
     arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
