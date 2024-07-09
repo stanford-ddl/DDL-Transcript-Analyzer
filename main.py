@@ -15,6 +15,7 @@ from openpyxl import load_workbook
 
 from datetime import datetime
 from openpyxl.styles import Alignment
+import re
 
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
@@ -29,7 +30,7 @@ sys.path.append(os.getcwd())
 
 # collecting arguments in a deliberation
 def extract_args(path, deliberation):
-    df = pd.DataFrame(pd.read_excel(path)) # TODO: Catch errors here if path does not exist. That means data has not been processed.
+    df = pd.DataFrame(pd.read_excel(path))
     start_col = df.columns.get_loc("All Arguments Summarized")
     cols = df.columns[start_col:]
 
@@ -164,7 +165,6 @@ def generate_policy_variables(topics, attempts = 0):
 
    # Generate results, metrics, and key
    results_path = os.path.join(RESULTS_DIR, session_num)
-   create_results_path(results_path)
    generate_key(topics, response_list, results_path)
    
    variable_list = []
@@ -192,20 +192,22 @@ def add_results(response, df, line):
 # Given a path for a 'results' folder,
 # create that folder and a 'metrics' subfolder if needed.
 def create_results_path(results_path):
-  print("\nCreating Session", session_num, "results and metrics folders...")
+  print("\nCreating Session", session_num, "results and metrics folders...", end=" ")
   # Creates the required results folder if it does not already exist
   os.makedirs(results_path, exist_ok=True)
 
   # Creates the required metrics folder if it does not already exist
   metrics_path = os.path.join(results_path, "metrics")
   os.makedirs(metrics_path, exist_ok=True)
+  print("Done")
 
 # Given a path for a 'processing' folder,
 # create that folder if needed.
 def create_processing_path(processing_path):
-   print("\nCreating Session", session_num, "processing folder...")
+   print("\nCreating Session", session_num, "processing folder...", end=" ")
    # Creates the required results folder if it does not already exist
    os.makedirs(processing_path, exist_ok=True)
+   print("Done")
 
 # this function takes in text from a deliberation and determines if it contains arguments
 def check_arguments(text):
@@ -219,6 +221,7 @@ def check_arguments(text):
     return response.strip().lower() == 'yes'
 
 def resize_columns(ws):
+   BUFFER = 10
    for col in ws.columns:
       width = 0
       column = col[0].column_letter
@@ -228,7 +231,7 @@ def resize_columns(ws):
                width = len(str(cell.value))
          except:
             pass
-      ws.column_dimensions[column].width = width
+      ws.column_dimensions[column].width = width / 2 + BUFFER
 
 def wrap_text(ws):
    for row in ws.iter_rows():
@@ -261,7 +264,7 @@ def format_sheet(ws):
 
 # Given a data folder,
 # clean the data in it.
-def clean_data(data_path):
+def clean_input_data(data_path):
    print("\nCleaning Session", session_num, "data folder...")
    for deliberation in os.listdir(data_path):
       csv_to_xlsx(data_path, deliberation)
@@ -295,7 +298,7 @@ def create_args_sheet(file_path, destination_folder):
     new_file_path = os.path.join(destination_folder, file_name)
 
     if os.path.exists(new_file_path):
-       print(file_name, "has previously been processed, skipping")
+       print("Skipped", file_name, "because it has previously been processed")
        return
 
     format_sheet(ws) # Format the file
@@ -464,6 +467,13 @@ def arg_sort(all_args_indexed, topics, policy_variables, results_path):
 
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
+    new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
+    new_filepath = os.path.join(results_path, new_filename)
+
+    if os.path.exists(new_filepath):
+      print("Skipped", deliberation, "because it has previously been analyzed")
+      continue
+
     args = all_args_indexed[deliberation]
     path = os.path.join(PROCESSING_DIR, session_num, deliberation)
 
@@ -499,11 +509,9 @@ def arg_sort(all_args_indexed, topics, policy_variables, results_path):
     label_policy_variables(ws)
     wrap_text(ws)
 
-    basename = os.path.basename(path)
-    new_filename = "EVALUATED" + basename.replace("xlsx", "csv")
     df = pd.DataFrame(ws.values)
-    df.to_csv(os.path.join(results_path, new_filename), index=False, header=False)
-    print("Analyzed", basename)
+    df.to_csv(new_filepath, index=False, header=False)
+    print("Analyzed", deliberation)
   print("Finished analyzing deliberations in Session", session_num)
 
 def generate_key(topics, policy_variables, results_path):
@@ -523,6 +531,48 @@ def generate_key(topics, policy_variables, results_path):
    with open(key_path, 'w') as key:
       key.write(key_text)
 
+def read_key(key, topics, policy_variables):
+   with open(key, 'r') as file:
+      text = file.read()
+   
+   # Get primary topic
+   primary_topic = re.search(r'Primary Topic:\s*(.*)', text)
+   if primary_topic:
+      topics.append(primary_topic.group(1).strip())
+   
+   # Get policies and variables
+   policies = re.findall(r'\* (\w+)\s*=\s*(.*)', text)
+   for variable, policy in policies:
+      policy_variables.append("FOR: " + variable)
+      policy_variables.append("AGAINST: " + variable)
+      topics.append(policy)
+   policy_variables.append("other")
+   policy_variables.append("notRelevant")
+
+   if IS_DEBUG:
+      print("\n(DEBUG) topics from key:")
+      print_topics(topics)
+      print("\n(DEBUG) policy_variables from key:")
+      print_list(policy_variables, "Variable")
+
+def analyze_arguments(sampled_args, topics, policy_variables, results_path):
+  create_results_path(results_path)
+  KEY_NAME = "KEY_Session_" + session_num + ".txt"
+  KEY_PATH = os.path.join(results_path, "metrics", KEY_NAME)
+  if os.path.exists(KEY_PATH):
+    read_key(KEY_PATH, topics, policy_variables)
+    return
+  # Generate primary topic [0] and policies [1] - [7]
+  topics = extract_topics(sampled_args)
+  # Generate shorthand variables for each policy and load them into a JSON class
+  policy_variables = generate_policy_variables(topics)
+
+def process_cleaned_data():
+   pass
+
+def analyze_processed_data():
+   pass
+
 def main():
     print("Entering main() of Session", session_num)
 
@@ -532,7 +582,7 @@ def main():
 
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     data_path = os.path.join(DATA_DIR, session_num)
-    clean_data(data_path)
+    clean_input_data(data_path)
     processing_path = os.path.join(PROCESSING_DIR, session_num)
     create_processing_path(processing_path)
     print("\nIdentifying arguments in Session", session_num + "...")
@@ -546,39 +596,36 @@ def main():
         all_args += all_args_indexed[deliberation]
     print("Finished identifying arguments in Session", session_num)
 
+    results_path = os.path.join(RESULTS_DIR, session_num)
+
     # sampling 5 arguments for topic extraction
     sampled_args = random.sample(all_args, 5)
 
-    # Generate primary topic [0] and policies [1] - [7]
-    topics = extract_topics(sampled_args)
-    
-    # Generate shorthand variables for each policy and load them into a JSON class
-    policy_variables = generate_policy_variables(topics)
-    
-    # running inference
-    results_path = os.path.join(RESULTS_DIR, session_num)
+    topics = []
+    policy_variables = []
+
+    analyze_arguments(sampled_args, topics, policy_variables, results_path)
 
     # classify all arguments in Excel files
     arg_sort(all_args_indexed, topics, policy_variables, results_path)
 
+    # running inference
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
     # running post-evaluation
     cumulative_df = get_metric_sums(delibs, policy_variables[0])
     get_metric_dist(cumulative_df, results_path)
-    print("Exiting main() of Session", session_num)
+    print("\nExiting main() of Session", session_num)
 
 # Code starts here
 if __name__ == '__main__':
-    print("Program Started")
+    print("\nProgram Started")
     # If all sessions should be analyzed
     if IS_ANALYZE_ALL_SESSIONS:
       # Iterate through all sessions from 1 through TOTAL_SESSIONS
       for session in range(TOTAL_SESSIONS):
         session_num = str(session + 1)
-        if session_num == '1' or session_num == '2': # Skip 1 - 1 is analyzed
-           continue
         main()
     # Else, analyze only Session number 'session_num'.
     else: main()
-    print("Program Finished")
+    print("Program Finished\n")

@@ -1,0 +1,3 @@
+deliberation,FOR: NationalHolidayVoting (bool),AGAINST: NationalHolidayVoting (bool),FOR: VoteAt16 (bool),AGAINST: VoteAt16 (bool),FOR: AccountabilityInPolitics (bool),AGAINST: AccountabilityInPolitics (bool),FOR: ExamineCorpPolDonations (bool),AGAINST: ExamineCorpPolDonations (bool),FOR: BanCorpPolDonations (bool),AGAINST: BanCorpPolDonations (bool),FOR: EqualDonationLimits (bool),AGAINST: EqualDonationLimits (bool),FOR: IndividualRightsOverCorp (bool),AGAINST: IndividualRightsOverCorp (bool),other (bool),notRelevant (bool)
+test3/EVALUATED20230604-a1r-nc-session4-n_transcript.csv,2,0,0,1,3,0,3,4,0,0,1,0,1,1,6,19
+test3/EVALUATED20230615-a1r-nc-session4-d_transcript.csv,2,2,2,2,2,0,7,8,1,1,1,1,3,1,9,16
