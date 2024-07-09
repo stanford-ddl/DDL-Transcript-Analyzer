@@ -17,7 +17,7 @@ from datetime import datetime
 
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
-IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
+IS_SKIP_DATA_PROCESS = True # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
 session_num = 'test3' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
@@ -29,7 +29,7 @@ sys.path.append(os.getcwd())
 
 # collecting arguments in a deliberation
 def extract_args(path, deliberation):
-    df = pd.DataFrame(pd.read_excel(path)) 
+    df = pd.DataFrame(pd.read_excel(path)) # TODO: Catch errors here if path does not exist. That means data has not been processed.
     start_col = df.columns.get_loc("All Arguments Summarized")
     cols = df.columns[start_col:]
 
@@ -182,7 +182,7 @@ def generate_policy_variables(topics, attempts = 0):
 # print it
 def print_list(list, header = ""):
    for i in range(len(list)):
-      print(header, str(i) + ":", list[i])
+      print(header, str(i + 1) + ":", list[i])
 
 # Given a list of categories,
 # construct a JSON class for the model to use.
@@ -239,23 +239,24 @@ def add_results(response, df, line):
 # classifies all arguments in all deliberations based on the extracted topics
 # note: most time-expensive function to call / may need to increase token size
 def arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json):
+  return # TEMP
   print("\nAnalyzing Session", session_num, "deliberations...")
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
     args = all_args_indexed[deliberation]
     path = os.path.join(PROCESSING_DIR, session_num, deliberation)
 
-    # initializing df and fields
-    df = pd.DataFrame(pd.read_excel(path)) 
-    for key in json.model_fields.keys():
-      df[key] = False
+    ## initializing df and fields
+    #df = pd.DataFrame(pd.read_excel(path)) 
+    #for key in json.model_fields.keys():
+      #df[key] = False
 
-    # loop over a deliberation's arguments
-    for arg in args:
-      prompt = argument_analysis_prompt
-      response = util.json_llm_call(prompt, arg[0], json)
-      line = arg[1]
-      add_results(response, df, line)
+    ## loop over a deliberation's arguments
+    #for arg in args:
+      #prompt = argument_analysis_prompt
+      #response = util.json_llm_call(prompt, arg[0], json)
+      #line = arg[1]
+      #add_results(response, df, line)
     new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
     df.to_csv(os.path.join(results_path, new_filename), index=False)
     print("Created", new_filename)
@@ -357,8 +358,7 @@ def create_args_sheet(file_path, destination_folder):
 
     # Load the duplicated file with openpyxl to add columns
     wb = load_workbook(duplicated_file_path)
-    for sheet in wb.sheetnames:
-       ws = wb[sheet]
+    ws = wb.worksheets[0]
     
     # Define columns
     ORDER_COL = 1 # Order
@@ -431,30 +431,19 @@ def csv_to_xlsx(data_path, deliberation):
     os.remove(path)
 
 # Upades excel file with "for", "against", "other", and "not relevant" columns
-def format_excel(path, topics):
-   # Read the existing Excel file
-    wb = openpyxl.load_workbook(path)
-    ws = wb.active
-
-    # Convert worksheet to DataFrame
-    df = pd.DataFrame(ws.values)
-
-    # Set the first row as column headers
-    df.columns = df.iloc[0]
-    df = df[1:]
-
+def format_excel(ws, policy_variables):
     # Start adding new columns from column 7
-    start_col = 6
-
-    # Add columns for each policy (up to 7)
-    for i, policy in enumerate(topics[1:8], start=1):  # Skip the first item (primary topic)
-        df.insert(start_col, f"for: {policy}", "")
-        df.insert(start_col + 1, f"against: {policy}", "")
-        start_col += 2
-
-    # Add "other" and "not relevant" columns
-    df.insert(start_col, "other", "")
-    df.insert(start_col + 1, "not relevant", "")
+    column = 7
+    label = ""
+    # Do this twice
+    for _ in range(2):
+      # Add columns for each policy (up to 7)
+      for i in range(len(policy_variables)):
+          ws.cell(row=1, column=column, value=policy_variables[i] + label)
+          column += 1
+      label = " (bool)"
+    
+    return
 
     # Clear the worksheet and write the updated DataFrame
     ws.delete_rows(1, ws.max_row)
@@ -466,16 +455,12 @@ def format_excel(path, topics):
     print(f"Updated {path} with new policy columns")
   
 # adds the classified argument to the Excel sheet
-def add_arg_result(int_response, line, path, arg):
-   # Load the workbook and select the active sheet
-    wb = openpyxl.load_workbook(path)
-    sheet = wb.active
-
+def add_arg_result(int_response, line, ws, arg):
     # Calculate the actual row number (add 1 because Excel is 1-indexed)
     actual_row = line + 1
 
     # Get the current cell value
-    current_value = sheet.cell(row=actual_row, column=int_response).value
+    current_value = ws.cell(row=actual_row, column=int_response).value
 
     # If there's already content, append the new arg. Otherwise, use the new arg.
     if current_value:
@@ -484,12 +469,9 @@ def add_arg_result(int_response, line, path, arg):
         new_value = arg
 
     # Update the cell with the new value
-    sheet.cell(row=actual_row, column=int_response, value=new_value)
+    ws.cell(row=actual_row, column=int_response, value=new_value)
 
-    # Save the workbook
-    wb.save(path)
-
-    print(f"Added '{arg}' to row {actual_row}, column {int_response}")
+    if IS_DEBUG: print(f"(DEBUG) Added '{arg}' to row {actual_row}, column {int_response}")
 
 #cleans up output repsponse by stopping before first newline character
 def response_clean(response):
@@ -507,9 +489,22 @@ def response_clean(response):
   response = response.replace("'", "").replace('"', "").replace('`', "").replace(" ", "")
   return response
 
+# Given a deliberation,
+# fill in the TRUE/FALSE ending columns.
+def label_policy_variables(ws):
+   FIRST_SORTED_COL = int(7)
+   LAST_SORTED_COL = int(22)
+   SORTED_LENGTH = int(LAST_SORTED_COL - FIRST_SORTED_COL + 1)
+   for row in range(2, ws.max_row + 1):
+      for col in range(FIRST_SORTED_COL, LAST_SORTED_COL + 1):
+         cell = ws.cell(row=row, column=col)
+         if isinstance(cell.value, str) and cell.value.strip():
+            ws.cell(row=row, column=col + SORTED_LENGTH, value="True")
+         else: ws.cell(row=row, column=col + SORTED_LENGTH, value="False")
+
 # classifies all arguments in all deliberations in session_num based on the generated topics
 # note: time-expensive
-def arg_sort(all_args_indexed, topics):
+def arg_sort(all_args_indexed, topics, policy_variables, results_path):
   print("\nAnalyzing Session", session_num, "deliberations...")
 
   prompt = """You are a skilled annotator tasked with catagorizing the type of arguments made in a deliberation about """ + topics[0] + """.
@@ -532,15 +527,19 @@ def arg_sort(all_args_indexed, topics):
             If the argument is not relevant to the discussion of """ + topics[0] + """, return "22".
             Only return one of these number options.  Do not include punctuation or any words except for the number.  Do not add extra text after the answer.  Your response should only be one or two characters depening if the answer is a one or two digit number.  Do not put a space before the answer. Create the shortest possible response.
             """
-  print(prompt)
+  if IS_DEBUG: print("\n(DEBUG) arg_sort prompt:\n" + prompt)
 
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
     args = all_args_indexed[deliberation]
     path = os.path.join(PROCESSING_DIR, session_num, deliberation)
 
+    df = pd.DataFrame(pd.read_excel(path))
+    wb = load_workbook(path)
+    ws = wb.worksheets[0]
+
     # add columns to Excel sheets to prepare for classification
-    format_excel(path, topics)
+    format_excel(ws, policy_variables)
 
     # loop over a deliberation's arguments
     for arg_group in args:
@@ -552,17 +551,25 @@ def arg_sort(all_args_indexed, topics):
         response = util.simple_llm_call(prompt, arg)
         response = response_clean(response)
         counter = 0
-        print("RESPONSE:" + response)
+        if IS_DEBUG: print("\n(DEBUG) RESPONSE:", response)
         while response not in [str(i) for i in range(7, 23)]:
            response = util.simple_llm_call(prompt, arg)
            response = response_clean(response)
            counter += 1
-           print("RETRY:" + str(counter))
+           if IS_DEBUG: print("\n(DEBUG) RETRY:", str(counter))
            if counter >= 5: # couter to prevent infinite loops
               response = "22"
               break
         int_response = int(response)
-        add_arg_result(int_response, line, path, arg)
+        add_arg_result(int_response, line, ws, arg)
+    label_policy_variables(ws)
+
+    basename = os.path.basename(path)
+    new_filename = "EVALUATED" + basename.replace("xlsx", "csv")
+    df = pd.DataFrame(ws.values)
+    df.to_csv(os.path.join(results_path, new_filename), index=False, header=False)
+    print("Created", new_filename)
+  print("Finished analyzing deliberations in Session", session_num)
 
 def generate_key(topics, policy_variables, results_path):
    KEY_NAME = "KEY_Session_" + session_num + ".txt"
@@ -604,8 +611,8 @@ def main():
         all_args += all_args_indexed[deliberation]
     print("Finished identifying arguments in Session", session_num)
 
-    # sampling 400 arguments for topic extraction
-    sampled_args = random.sample(all_args, 400)
+    # sampling 5 arguments for topic extraction
+    sampled_args = random.sample(all_args, 5)
 
     # Generate primary topic [0] and policies [1] - [7]
     topics = extract_topics(sampled_args)
@@ -613,12 +620,13 @@ def main():
     # Generate shorthand variables for each policy and load them into a JSON class
     policy_variables = generate_policy_variables(topics)
     json = build_JSON_class(policy_variables)
-
-    # classify all arguments in Excel files
-    #arg_sort(all_args_indexed, topics)
     
     # running inference
     results_path = os.path.join(RESULTS_DIR, session_num)
+
+    # classify all arguments in Excel files
+    arg_sort(all_args_indexed, topics, policy_variables, results_path)
+
     argument_analysis_prompt = build_argument_analysis_prompt(topics, policy_variables) if json else error("Cannot generate API prompt: No JSON class")
     arg_inference(all_args_indexed, results_path, argument_analysis_prompt, json)
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]

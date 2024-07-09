@@ -11,7 +11,7 @@ def get_metric_sums(delibs, first_category_var):
   for delib in delibs:
     if delib.endswith(".csv"):
       df = pd.read_csv(delib)
-      start_metric_col = df.columns.get_loc(first_category_var)
+      start_metric_col = df.columns.get_loc(first_category_var + " (bool)")
       metric_cols = df.columns[start_metric_col:]
       df_metrics = df[metric_cols]
       df_metric_sums = df_metrics.sum(axis=0).to_frame().T
