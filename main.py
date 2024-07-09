@@ -555,7 +555,7 @@ def read_key(key, topics, policy_variables):
       print("\n(DEBUG) policy_variables from key:")
       print_list(policy_variables, "Variable")
 
-def analyze_arguments(sampled_args, topics, policy_variables, results_path):
+def generate_policy_data(sampled_args, topics, policy_variables, results_path):
   create_results_path(results_path)
   KEY_NAME = "KEY_Session_" + session_num + ".txt"
   KEY_PATH = os.path.join(results_path, "metrics", KEY_NAME)
@@ -567,25 +567,11 @@ def analyze_arguments(sampled_args, topics, policy_variables, results_path):
   # Generate shorthand variables for each policy and load them into a JSON class
   policy_variables = generate_policy_variables(topics)
 
-def process_cleaned_data():
-   pass
-
-def analyze_processed_data():
-   pass
-
-def main():
-    print("Entering main() of Session", session_num)
-
-    # keys = deliberation ids, values = (argument, index in deliberation)
-    all_args_indexed = {}
-    all_args = []
-
-    # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
-    data_path = os.path.join(DATA_DIR, session_num)
-    clean_input_data(data_path)
+def process_cleaned_data(data_path, all_args_indexed, all_args):
     processing_path = os.path.join(PROCESSING_DIR, session_num)
     create_processing_path(processing_path)
     print("\nIdentifying arguments in Session", session_num + "...")
+    # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
       if path.endswith('xlsx') or path.endswith('csv'):
@@ -596,26 +582,35 @@ def main():
         all_args += all_args_indexed[deliberation]
     print("Finished identifying arguments in Session", session_num)
 
-    results_path = os.path.join(RESULTS_DIR, session_num)
+def analyze_processed_data(results_path, all_args_indexed, all_args, topics, policy_variables):
+  results_path = os.path.join(RESULTS_DIR, session_num)
+  topics = []
+  policy_variables = []
+  sampled_args = random.sample(all_args, 400) # sampling 400 arguments for policy generation
+  generate_policy_data(sampled_args, topics, policy_variables, results_path) # generate or read topics[] and policy_variables[]
 
-    # sampling 5 arguments for topic extraction
-    sampled_args = random.sample(all_args, 5)
+  arg_sort(all_args_indexed, topics, policy_variables, results_path) # classify all arguments in Excel files
 
-    topics = []
-    policy_variables = []
+  # Generate Metrics
+  delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
+  cumulative_df = get_metric_sums(delibs, policy_variables[0])
+  get_metric_dist(cumulative_df, results_path)
+  print("\nExiting main() of Session", session_num)
 
-    analyze_arguments(sampled_args, topics, policy_variables, results_path)
+def main():
+    print("Entering main() of Session", session_num)
 
-    # classify all arguments in Excel files
-    arg_sort(all_args_indexed, topics, policy_variables, results_path)
+    # Clean the input data
+    data_path = os.path.join(DATA_DIR, session_num)
+    clean_input_data(data_path)
 
-    # running inference
-    delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
+    # Process the cleaned data (search the text for arguments)
+    all_args_indexed = {} # keys = deliberation ids, values = (argument, index in deliberation)
+    all_args = []
+    process_cleaned_data(data_path, all_args_indexed, all_args)
 
-    # running post-evaluation
-    cumulative_df = get_metric_sums(delibs, policy_variables[0])
-    get_metric_dist(cumulative_df, results_path)
-    print("\nExiting main() of Session", session_num)
+    # Analyze the processed data (compare arguments to generated policies)
+    analyze_processed_data(all_args_indexed, all_args)
 
 # Code starts here
 if __name__ == '__main__':
