@@ -194,42 +194,6 @@ def build_JSON_class(category_variables):
     categories_instance = Categories()
     print("\n(DEBUG) JSON Categories:\n" + categories_instance.model_dump_json(indent=2) + "\n")
   return Categories()
-  
-# Given a primary topic and specific policies,
-# return a prompt that the model will use to judge arguments.
-def build_argument_analysis_prompt(topics, policy_variables):
-  NUM_POLICIES = len(topics) - 1
-  PRIMARY_TOPIC = topics[0]
-
-  policies = []
-  for_policies = []
-  against_policies = []
-  for i in range(NUM_POLICIES):
-     policies.append(topics[i + 1])
-     for_policies.append(policy_variables[i * 2])
-     against_policies.append(policy_variables[i * 2 + 1])
-
-  policy_instructions = """"""
-  for i in range(NUM_POLICIES):
-     policy_instructions += """\nReturn true for """ + for_policies[i] + """ if the argument is IN SUPPORT OF """ + policies[i] + """.\nReturn false for """ + for_policies[i] + """ otherwise.
-     Return true for """ + against_policies[i] + """ if the argument is IN OPPOSITION TO """ + policies[i] + """\nReturn false for """ + against_policies[i] + """ otherwise.\n"""
-  
-  prompt = """You are a skilled annotator tasked with identifying the type of arguments made in a deliberation about """ + PRIMARY_TOPIC + """.
-          Read through the given arguments presented.
-          Your job is to extract the type of arguments made and load them into the JSON object containing true/false parameters.
-          """ + policy_instructions + """
-          Return true for other if the argument is relevant to """ + PRIMARY_TOPIC + """
-          but not covered by the other categories.
-
-          Return true for notRelevant if the argument is not relevant to the discussion of """ + PRIMARY_TOPIC + """.
-
-          It is possible for a single argument to have multiple true parameters, except for notRelevant.
-          If an argument is not relevant, all other parameters should be false.
-          You should return true for at least one parameter."""
-  
-  if IS_DEBUG: print("\n(DEBUG) build_argument_analysis_prompt Prompt:\n" + prompt + "\n")
-  
-  return prompt
 
 # adds an LLM's topic classifications for an argument to the deliberation df
 def add_results(response, df, line):
@@ -601,7 +565,6 @@ def main():
     # classify all arguments in Excel files
     arg_sort(all_args_indexed, topics, policy_variables, results_path)
 
-    argument_analysis_prompt = build_argument_analysis_prompt(topics, policy_variables) if json else error("Cannot generate API prompt: No JSON class")
     delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
 
     # running post-evaluation
