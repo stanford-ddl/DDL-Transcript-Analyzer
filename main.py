@@ -18,7 +18,6 @@ from openpyxl.styles import Alignment
 
 # Togglable Options
 IS_DEBUG = False # If True, additional debug statements will be printed.
-IS_SKIP_DATA_PROCESS = False # If True, skip 'create_args_sheet' - Use if the program crashes after the data has been processed
 TOTAL_SESSIONS = 4 # The highest numbered session in the data
 IS_ANALYZE_ALL_SESSIONS = False # If True, all sessions will be analyzed. If False, only 'session_num' will be analyzed.
 session_num = 'test3' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
@@ -292,6 +291,13 @@ def create_args_sheet(file_path, destination_folder):
     wb = load_workbook(file_path)
     ws = wb.worksheets[0]
 
+    file_name = os.path.basename(file_path)
+    new_file_path = os.path.join(destination_folder, file_name)
+
+    if os.path.exists(new_file_path):
+       print(file_name, "has previously been processed, skipping")
+       return
+
     format_sheet(ws) # Format the file
     
     # Define columns
@@ -332,9 +338,7 @@ def create_args_sheet(file_path, destination_folder):
 
     wrap_text(ws)
     
-    # Save the modified duplicated file
-    file_name = os.path.basename(file_path)
-    new_file_path = os.path.join(destination_folder, file_name)
+    # Save the modified file
     wb.save(new_file_path)
     print("Processed", file_name)
 
@@ -535,7 +539,7 @@ def main():
     for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
       if path.endswith('xlsx') or path.endswith('csv'):
-        if not IS_SKIP_DATA_PROCESS: create_args_sheet(path, processing_path)
+        create_args_sheet(path, processing_path)
         new_path = os.path.join(processing_path, deliberation)
         formatted_args = extract_args(new_path, deliberation)
         all_args_indexed.update(formatted_args)
