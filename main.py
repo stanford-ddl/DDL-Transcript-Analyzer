@@ -184,17 +184,6 @@ def print_list(list, header = ""):
    for i in range(len(list)):
       print(header, str(i + 1) + ":", list[i])
 
-# Given a list of categories,
-# construct a JSON class for the model to use.
-def build_JSON_class(category_variables):
-  print("\nBuilding JSON class for the model...")
-  fields = {var: (bool, Field(default=False)) for var in category_variables}
-  Categories = create_model("Categories", **fields)
-  if IS_DEBUG:
-    categories_instance = Categories()
-    print("\n(DEBUG) JSON Categories:\n" + categories_instance.model_dump_json(indent=2) + "\n")
-  return Categories()
-
 # adds an LLM's topic classifications for an argument to the deliberation df
 def add_results(response, df, line):
    for key in response.keys():
@@ -557,7 +546,6 @@ def main():
     
     # Generate shorthand variables for each policy and load them into a JSON class
     policy_variables = generate_policy_variables(topics)
-    json = build_JSON_class(policy_variables)
     
     # running inference
     results_path = os.path.join(RESULTS_DIR, session_num)
