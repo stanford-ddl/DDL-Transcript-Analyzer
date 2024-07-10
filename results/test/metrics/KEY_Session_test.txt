@@ -1,13 +1,13 @@
 Session test Key
-Generated on: 2024-07-08 at 16:51:25
+Generated on: 2024-07-09 at 18:27:11
 
-Primary Topic: Voting methods and access
+Primary Topic: Voting rights and access
 
 Policy Key:
-* autoRegistration = Implement automatic voter registration through state agencies
-* onlineRegistration = Allow for online voter registration
-* secureOnlineVoting = Provide a secure online voting system
-* nationwideVotingStandard = Establish a nationwide standard for in-person, mail-in, and early voting
-* equalVotingAccess = Ensure equal access to voting for all eligible citizens
-* strengthenElectionSecurity = Strengthen election security measures
-* promoteTransparency = Promote transparency and accountability in the election process
+* autoRegistration = Implement automatic voter registration for eligible citizens
+* onlineRegistrationVoting = Allow for online voter registration and voting
+* nationwideVotingStandards = Establish nationwide standards for ballot boxes and voting locations
+* accessibilityForVoters = Ensure accessibility for voters with disabilities and transportation issues
+* prohibitIntimidationHarassment = Prohibit intimidation and harassment at voting locations
+* adequateFundingElectionAdmin = Provide adequate funding for election administration at the federal level
+* promoteVotingEducationAwareness = Promote education and awareness about voting rights and processes

@@ -185,7 +185,7 @@ def generate_policy_variables(topics, attempts = 0):
    for i in range(int(NUM_VARIABLES)):
       policy_list.append(topics[i + 1])
 
-   if attempts == 0: print("Generating variables for the", NUM_VARIABLES, "policies regarding", PRIMARY_TOPIC + "...")
+   if attempts == 0: print("\nGenerating variables for the", NUM_VARIABLES, "policies regarding", PRIMARY_TOPIC + "...")
    
    prompt = """This is a list of policies representing arguments made in a deliberation about """ + PRIMARY_TOPIC + """.
    Your job is to create variable names for each policy in a Python list of strings, with each string being a variable name.
@@ -316,6 +316,7 @@ def print_topics(topic_list):
 # Given a key,
 # read it and set topics[] and policy_variables[]
 def read_key(key, topics, policy_variables):
+   print("Reading pre-existing", key, "key...", end=" ")
    with open(key, 'r') as file:
       text = file.read()
    
@@ -338,6 +339,7 @@ def read_key(key, topics, policy_variables):
       print_topics(topics)
       print("\n(DEBUG) policy_variables from key:")
       print_list(policy_variables, "Variable")
+   print("Done!")
 
 # Given a path for a 'results' folder,
 # create that folder and a 'metrics' subfolder if needed.
@@ -356,20 +358,28 @@ def create_results_path(results_path):
 # otherwise, generate it.
 def generate_policy_data(sampled_args, topics, policy_variables, results_path):
   create_results_path(results_path)
+
+  # Check for a pre-existing key
   KEY_NAME = "KEY_Session_" + session_num + ".txt"
   KEY_PATH = os.path.join(results_path, "metrics", KEY_NAME)
   if os.path.exists(KEY_PATH):
     read_key(KEY_PATH, topics, policy_variables)
     return
+  
   # Generate primary topic [0] and policies [1] - [7]
-  topics = extract_topics(sampled_args)
+  topics_list = extract_topics(sampled_args)
+  for i in range(len(topics_list)):
+     topics.append(topics_list[i])
+  
   # Generate shorthand variables for each policy and load them into a JSON class
-  policy_variables = generate_policy_variables(topics)
+  policy_variables_list = generate_policy_variables(topics)
+  for i in range(len(policy_variables_list)):
+     policy_variables.append(policy_variables_list[i])
 
 # Code starts here
 # Given a results folder and arguments,
 # analyze all of the arguments and generate results
-def analyze_processed_data(results_path, all_args_indexed, all_args):
+def analyze_processed_data(all_args_indexed, all_args):
   results_path = os.path.join(RESULTS_DIR, session_num)
   topics = []
   policy_variables = []

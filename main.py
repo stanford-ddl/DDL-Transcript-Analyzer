@@ -8,8 +8,10 @@ from config import IS_DEBUG, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_nu
 
 sys.path.append(os.getcwd())
 
+# READ THIS - VERY IMPORTANT
 # To change the Togglable Options that affect how the code runs,
 # see config.py
+# VERY IMPORTANT - READ THIS
 
 def main():
     print("Entering main() of Session", session_num)

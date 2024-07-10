@@ -37,13 +37,31 @@ def csv_to_xlsx(data_path, deliberation):
 
     os.remove(path)
 
+# Given a path to a data folder,
+# ensure that it already exists;
+# otherwise, create it and error
+def check_data_exists(data_path):
+   print("\nValidating Session", session_num, "data folder...", end=" ")
+   if not os.path.exists(data_path):
+       os.makedirs(data_path, exist_ok=True)
+       print() # overrides end=" " from previous print statement
+       error("The session " + session_num + "data folder does not exist and will now be created.\nPlease place your data into " + data_path + " and restart the program")
+   print("Done")
+
 # Code starts here
 # Given a data folder,
 # clean the data in it.
 def clean_input_data(data_path):
+
+   check_data_exists(data_path)
+   
    print("\nCleaning Session", session_num, "data folder...")
+
+   # Convert all CSV files to XLSX files - throws an error for NUMBERS files
    for deliberation in os.listdir(data_path):
       csv_to_xlsx(data_path, deliberation)
+   
+   # Remove all sheets except for the first one from each Workbook
    for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
       if path.endswith('xlsx'):
