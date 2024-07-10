@@ -1,10 +1,10 @@
 import os
 import pandas as pd
-import util
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
 
-from config import IS_DEBUG, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase import util
+from codebase.config import IS_DEBUG, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 
 # cleaning arguments
 def concat_args(arguments, deliberation):

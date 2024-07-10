@@ -1,10 +1,10 @@
 import os
 import sys
 
-from clean import clean_input_data
-from process import process_cleaned_data
-from analyze import analyze_processed_data
-from config import IS_DEBUG, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase.clean import clean_input_data
+from codebase.process import process_cleaned_data
+from codebase.analyze import analyze_processed_data
+from codebase.config import IS_DEBUG, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 
 sys.path.append(os.getcwd())
 

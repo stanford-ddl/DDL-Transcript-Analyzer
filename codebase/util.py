@@ -7,7 +7,7 @@ from openai import OpenAI, APIConnectionError
 def load_together_client():
     together_client = None
     try:
-        from api_keys import TOGETHER_API_KEY
+        from codebase.api_keys import TOGETHER_API_KEY
 
         together_client = OpenAI(api_key=TOGETHER_API_KEY,
             base_url='https://api.together.xyz',

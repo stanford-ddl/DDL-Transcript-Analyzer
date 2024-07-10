@@ -3,7 +3,7 @@ import sys
 import pandas as pd
 from openpyxl import load_workbook
 
-from config import IS_DEBUG, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase.config import IS_DEBUG, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 
 # Called when an error occurs
 def error(reason = "No reason provided"):
