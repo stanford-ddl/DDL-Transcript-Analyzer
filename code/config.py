@@ -15,5 +15,5 @@ session_num = '1' # The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' i
 
 # Global Variables
 DATA_DIR = 'data'
-PROCESSING_DIR = 'code/processing'
+PROCESSING_DIR = 'processing'
 RESULTS_DIR = 'results'
