@@ -14,7 +14,7 @@ sys.path.append(os.getcwd())
 # VERY IMPORTANT - READ THIS
 
 def main():
-    print("Entering main() of Session", session_num)
+    print("Started working with Session", session_num)
 
     # Clean the input data
     data_path = os.path.join(DATA_DIR, session_num)
@@ -27,6 +27,8 @@ def main():
 
     # Analyze the processed data (compare arguments to generated policies)
     analyze_processed_data(all_args_indexed, all_args)
+    
+    print("\nFinished working with Session", session_num)
 
 # Code starts here
 if __name__ == '__main__':

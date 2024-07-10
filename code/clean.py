@@ -45,7 +45,7 @@ def check_data_exists(data_path):
    if not os.path.exists(data_path):
        os.makedirs(data_path, exist_ok=True)
        print() # overrides end=" " from previous print statement
-       error("The session " + session_num + "data folder does not exist and will now be created.\nPlease place your data into " + data_path + " and restart the program")
+       error("The session " + session_num + " data folder does not exist and will now be created.\nPlease place your data into " + data_path + " and restart the program.\nAlternatively, open config.py and select a different session.")
    print("Done")
 
 # Code starts here

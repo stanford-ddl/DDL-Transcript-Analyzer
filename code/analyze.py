@@ -339,7 +339,7 @@ def read_key(key, topics, policy_variables):
       print_topics(topics)
       print("\n(DEBUG) policy_variables from key:")
       print_list(policy_variables, "Variable")
-   print("Done!")
+   print("Done")
 
 # Given a path for a 'results' folder,
 # create that folder and a 'metrics' subfolder if needed.
@@ -392,4 +392,3 @@ def analyze_processed_data(all_args_indexed, all_args):
   delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
   cumulative_df = get_metric_sums(delibs, policy_variables[0])
   get_metric_dist(cumulative_df, results_path)
-  print("\nExiting main() of Session", session_num)
