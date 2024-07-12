@@ -218,7 +218,7 @@ def generate_policy_variables(topics, attempts = 0):
      print("Failed attempt #" + str(attempts))
      # If failed too many times, give up
      if attempts >= 5:
-       error("Failed to generate variables for each policy")
+       error("Failed to generate variables for each policy.\nThe AI is not cooperating.\nRerun the program, and it should (hopefully) work after a few tries.")
      # Else, try again
      print("Retrying...")
      return generate_policy_variables(topics, attempts)
@@ -292,7 +292,7 @@ def extract_topics(sampled_args, attempts = 0):
      print("Failed attempt #" + str(attempts))
      # If failed too many times, give up
      if attempts >= 5:
-       error("Failed to generate a primary topic and policies")
+       error("Failed to generate a primary topic and policies.\nThe AI is not cooperating.\nRerun the program, and it should (hopefully) work after a few tries.")
      # Else, try again
      print("Retrying...")
      return extract_topics(sampled_args, attempts)
