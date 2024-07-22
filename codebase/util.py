@@ -29,7 +29,7 @@ def api_call(system_content, user_content, max_tokens=256):
         print("Warning: Content is None.")
         content = ""
 
-    print(content)
+    print("CONTENT" + content)
     return content
 
 def json_api_call(system_content, user_content, json_class, max_tokens=256):
@@ -119,8 +119,7 @@ def stream_llm_to_console(messages, client, model="mistralai/Mixtral-8x7B-Instru
 #   max_tokens: The maximum number of tokens to generate in the response.
 #  Returns the response from the API.
 def simple_llm_call(system_prompt, message, model="mistralai/Mixtral-8x7B-Instruct-v0.1", max_tokens=256, stop=None):
-    api_call(system_prompt, message, max_tokens)
-    return #early return
+    return api_call(system_prompt, message, max_tokens) #early return
     client = load_together_client()
     chat_completion = client.chat.completions.create(
         messages=[{
@@ -145,8 +144,7 @@ def simple_llm_call(system_prompt, message, model="mistralai/Mixtral-8x7B-Instru
 #   max_tokens: The maximum number of tokens to generate in the response.
 #  Returns the response from the API as a JSON object
 def json_llm_call(system_prompt, message, json_class, model="mistralai/Mixtral-8x7B-Instruct-v0.1", max_tokens=256):
-    json_api_call(system_prompt, message, json_class, max_tokens)
-    return # early return
+    return json_api_call(system_prompt, message, json_class, max_tokens) #early return
     client = load_together_client()
     chat_completion = client.chat.completions.create(
         messages=[{
