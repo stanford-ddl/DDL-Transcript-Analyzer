@@ -8,41 +8,60 @@ from openai import OpenAI, APIConnectionError
 def api_call(system_content, user_content, max_tokens=256):
     from openai import OpenAI
     client = OpenAI()
+   
+    try:
+        completion = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_content},
+                {"role": "user", "content": user_content}
+            ],
+            max_tokens=max_tokens
+        )
+    except Exception as e:
+        print(f"Error during API call: {e}")
+        return ""
+    
 
-    completion = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": system_content},
-            {"role": "user", "content": user_content}
-        ],
-        max_tokens=max_tokens
-    )
-    response = completion.choices[0].message.content
-    print(response)
-    return response
+    content = completion.choices[0].message.content if completion.choices else None
+    
+    if content is None:
+        print("Warning: Content is None.")
+        content = ""
+
+    print(content)
+    return content
 
 def json_api_call(system_content, user_content, json_class, max_tokens=256):
     from openai import OpenAI
     client = OpenAI()
+   
+    try:
+        completion = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_content},
+                {"role": "user", "content": user_content}
+            ],
+            max_tokens=max_tokens,
+            response_format={
+                "type": "json_object",
+                "schema": json_class.model_json_schema()
+            }
+        )
+    except Exception as e:
+        print(f"Error during API call: {e}")
+        return ""
+    
 
-    completion = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": system_content},
-            {"role": "user", "content": user_content}
-        ],
-        max_tokens=max_tokens,
-        response_format={
-            "type": "json_object",
-            "schema": json_class.model_json_schema()
-        }
-    )
+    content = completion.choices[0].message.content if completion.choices else None
     
-    response = completion.choices[0].message.content
-    
-    print(response)
-    return response
-    
+    if content is None:
+        print("Warning: Content is None.")
+        content = ""
+
+    print(content)
+    return content
 
 
 @lru_cache
