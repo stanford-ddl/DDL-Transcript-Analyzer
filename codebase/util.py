@@ -3,6 +3,48 @@ from functools import lru_cache
 
 from openai import OpenAI, APIConnectionError
 
+# takes in system content (eg: "You are a poet."") and user content (eg: "Compose a poem.")
+# as strings and returns the API call (model: gbt 40 mini)
+def api_call(system_content, user_content, max_tokens=256):
+    from openai import OpenAI
+    client = OpenAI()
+
+    completion = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": system_content},
+            {"role": "user", "content": user_content}
+        ],
+        max_tokens=max_tokens
+    )
+    response = completion.choices[0].message.content
+    print(response)
+    return response
+
+def json_api_call(system_content, user_content, json_class, max_tokens=256):
+    from openai import OpenAI
+    client = OpenAI()
+
+    completion = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": system_content},
+            {"role": "user", "content": user_content}
+        ],
+        max_tokens=max_tokens,
+        response_format={
+            "type": "json_object",
+            "schema": json_class.model_json_schema()
+        }
+    )
+    
+    response = completion.choices[0].message.content
+    
+    print(response)
+    return response
+    
+
+
 @lru_cache
 def load_together_client():
     together_client = None
@@ -58,6 +100,8 @@ def stream_llm_to_console(messages, client, model="mistralai/Mixtral-8x7B-Instru
 #   max_tokens: The maximum number of tokens to generate in the response.
 #  Returns the response from the API.
 def simple_llm_call(system_prompt, message, model="mistralai/Mixtral-8x7B-Instruct-v0.1", max_tokens=256, stop=None):
+    api_call(system_prompt, message, max_tokens)
+    return #early return
     client = load_together_client()
     chat_completion = client.chat.completions.create(
         messages=[{
@@ -82,6 +126,8 @@ def simple_llm_call(system_prompt, message, model="mistralai/Mixtral-8x7B-Instru
 #   max_tokens: The maximum number of tokens to generate in the response.
 #  Returns the response from the API as a JSON object
 def json_llm_call(system_prompt, message, json_class, model="mistralai/Mixtral-8x7B-Instruct-v0.1", max_tokens=256):
+    json_api_call(system_prompt, message, json_class, max_tokens)
+    return # early return
     client = load_together_client()
     chat_completion = client.chat.completions.create(
         messages=[{
