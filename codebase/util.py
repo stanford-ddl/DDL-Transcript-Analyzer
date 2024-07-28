@@ -1,13 +1,16 @@
 import json
 from functools import lru_cache
+from .api_keys import MY_API_KEY
 
+
+# import openai
+# from openai import OpenAI
 from openai import OpenAI, APIConnectionError
 
 # takes in system content (eg: "You are a poet."") and user content (eg: "Compose a poem.")
 # as strings and returns the API call (model: gbt 40 mini)
 def api_call(system_content, user_content, max_tokens=256):
-    from openai import OpenAI
-    client = OpenAI()
+    client = OpenAI(api_key=MY_API_KEY)
    
     try:
         completion = client.chat.completions.create(
@@ -22,6 +25,16 @@ def api_call(system_content, user_content, max_tokens=256):
         print(f"Error during API call: {e}")
         return ""
     
+    # except openai.APIConnectionError as e:
+    #     #Handle connection error here
+    #     print(f"Failed to connect to OpenAI API: {e}")
+    #     return api_call(system_content, user_content)
+    
+    # except openai.RateLimitError as e:
+    #     #Handle rate limit error (we recommend using exponential backoff)
+    #     print(f"OpenAI API request exceeded rate limit: {e}")
+    #     return api_call(system_content, user_content)
+    
 
     content = completion.choices[0].message.content if completion.choices else None
     
@@ -33,8 +46,7 @@ def api_call(system_content, user_content, max_tokens=256):
     return content
 
 def json_api_call(system_content, user_content, json_class, max_tokens=256):
-    from openai import OpenAI
-    client = OpenAI()
+    client = OpenAI(api_key=MY_API_KEY)
    
     try:
         completion = client.chat.completions.create(
@@ -49,9 +61,18 @@ def json_api_call(system_content, user_content, json_class, max_tokens=256):
                 "schema": json_class.model_json_schema()
             }
         )
-    except Exception as e:
-        print(f"Error during API call: {e}")
-        return ""
+    except openai.APIError as e:
+        #Handle API error here, e.g. retry or log
+        print(f"OpenAI API returned an API Error: {e}")
+        pass
+    except openai.APIConnectionError as e:
+        #Handle connection error here
+        print(f"Failed to connect to OpenAI API: {e}")
+        pass
+    except openai.RateLimitError as e:
+        #Handle rate limit error (we recommend using exponential backoff)
+        print(f"OpenAI API request exceeded rate limit: {e}")
+        pass
     
 
     content = completion.choices[0].message.content if completion.choices else None
