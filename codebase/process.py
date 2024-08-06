@@ -113,29 +113,24 @@ def create_args_sheet(file_path, destination_folder):
     ws.cell(row=1, column=HAS_ARG_COL, value="Has Arguments")
     ws.cell(row=1, column=ARG_SUM_COL, value="All Arguments Summarized")
 
-    # Iterate over the rows and populate the "has arguments" column
-    for row in range(2, ws.max_row + 1):
-        text = ws.cell(row=row, column=TEXT_COL).value
-        if text is not None:  # Check if the cell is not empty
-            has_arguments = check_arguments(text)
-            ws.cell(row=row, column=HAS_ARG_COL, value="yes" if has_arguments else "no")
-        else:
-            ws.cell(row=row, column=HAS_ARG_COL, value="no")
-        # Construct the "Order" column
-        ws.cell(row=row, column=ORDER_COL, value=row-1)
-    
-    resize_columns(ws)
-
-    # Iterate over the rows again to populate the "all arguments summarized" column
-    for row in range(2, ws.max_row + 1):
-        has_arguments = ws.cell(row=row, column=HAS_ARG_COL).value
-        if has_arguments == "yes":
-            text = ws.cell(row=row, column=TEXT_COL).value
-            # summarized_text = util.simple_llm_call("Summarize the following text in a numbered list. For example, the text input ' thank you. so the last thing was that if there's ten candidates and you only pick your top two, then your and they don't get it, your vote doesn't count it all. so the best thing to do is you got to rank all 10, but again, not enough data on the subject to make predictions. and i think mike use' should be summarized as '1. If you only pick your top two candidates out of ten, your vote doesn't count if they don't win. 2. The best approach is to rank all ten candidates. 3. There is not enough data available to make predictions on the subject.' Follow this formatting exactly.", text)
-            summarized_text = util.simple_llm_call("Summarize the following text in a numbered list.  Follow the output format '1. argument 1 \n 2. argument 2 \n' etcetera. Every argument MUST be on a different line. There could be one or more arguments.", text)
+    # populate "All Arguments Summarized" column
+   for row in range(2, ws.max_row + 1):
+      text = ws.cell(row=row, column=TEXT_COL).value
+      if text is not None:
+         summarized_text = util.simple_llm_call("Summarize the following text in a numbered list.  Follow the output format '1. argument 1 \n 2. argument 2 \n' etcetera. Every argument MUST be on a different line. There could be one or more arguments. But if the text does not contain arguments, simply respond \" NO ARGUMENTS \" ", text)
+         print(summarized_text)
+         if "no argument" not in summarized_text.lower():
             ws.cell(row=row, column=ARG_SUM_COL).value = summarized_text
-            #print("+++++++++" + text)
-            #print("==========" + summarized_text)
+    
+    # populate "Has Arguments" column
+   for row in ws.iter_rows(min_row=2):  # Start from the second row (excluding the first row which is titles)
+        cell_f = row[5]  # Column F (index 5, since columns are 0-indexed in the iter_rows output)
+        cell_e = row[4]  # Column E (index 4)
+        if cell_f.value:
+            cell_e.value = "yes"
+        else:
+            cell_e.value = "no"
+
 
     wrap_text(ws)
     
