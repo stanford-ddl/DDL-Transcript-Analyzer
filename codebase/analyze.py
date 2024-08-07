@@ -85,26 +85,18 @@ def add_policy_columns(ws, policy_variables):
 def arg_sort(all_args_indexed, topics, policy_variables, results_path):
   print("\nAnalyzing Session", session_num, "deliberations...")
 
-  prompt = """You are a skilled annotator tasked with catagorizing the type of arguments made in a deliberation about """ + topics[0] + """.
-            Read through the given argument presented.
-            If the argument is in favor of """ + topics[1] + """, return "7".
-            If the argument is against """ + topics[1] + """, return "8".
-            If the argument is in favor of """ + topics[2] + """, return "9".
-            If the argument is against """ + topics[2] + """, return "10".
-            If the argument is in favor of """ + topics[3] + """, return "11".
-            If the argument is against """ + topics[3] + """, return "12".
-            If the argument is in favor of """ + topics[4] + """, return "13".
-            If the argument is against """ + topics[4] + """, return "14".
-            If the argument is in favor of """ + topics[5] + """, return "15".
-            If the argument is against """ + topics[5] + """, return "16".
-            If the argument is in favor of """ + topics[6] + """, return "17".
-            If the argument is against """ + topics[6] + """, return "18".
-            If the argument is in favor of """ + topics[7] + """, return "19".
-            If the argument is against """ + topics[7] + """, return "20".
-            If the argument discusses a category that is relevant to """ + topics[0] + """ but not covered by the other categories, return '21'.
-            If the argument is not relevant to the discussion of """ + topics[0] + """, return "22".
-            Only return one of these number options.  Do not include punctuation or any words except for the number.  Do not add extra text after the answer.  Your response should only be one or two characters depening if the answer is a one or two digit number.  Do not put a space before the answer. Create the shortest possible response.
-            """
+  prompt = f"""
+You are an annotator categorizing arguments about {topics[0]}. 
+If the argument favors {topics[1]}, return "7". If against, return "8".
+If the argument favors {topics[2]}, return "9". If against, return "10".
+If the argument favors {topics[3]}, return "11". If against, return "12".
+If the argument favors {topics[4]}, return "13". If against, return "14".
+If the argument favors {topics[5]}, return "15". If against, return "16".
+If the argument favors {topics[6]}, return "17". If against, return "18".
+If the argument favors {topics[7]}, return "19". If against, return "20".
+If relevant but not covered, return "21". If not relevant, return "22".
+Return only the number, no extra text or spaces.
+"""
   if IS_DEBUG: print("\n(DEBUG) arg_sort prompt:\n" + prompt)
 
   # looping over all deliberations
