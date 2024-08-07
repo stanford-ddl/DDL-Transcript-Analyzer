@@ -134,24 +134,24 @@ Return only the number, no extra text or spaces.
 # as for or against one of the topics listed in the prompt and adds it to the appropriate column in the ws.
 def process_arg_group(arg_group, prompt, ws):
    line = arg_group[1] # zero based indexed (eg 9 means line 10 of the Excel sheet)
-      arg_group_parsed = arg_group[0].split(".")
-      for arg in arg_group_parsed:
-        if arg == "": # skip empty strings
-           continue
+   arg_group_parsed = arg_group[0].split(".")
+   for arg in arg_group_parsed:
+      if arg == "": # skip empty strings
+         continue
+      response = util.simple_llm_call(prompt, arg)
+      response = response_clean(response)
+      counter = 0
+      if IS_DEBUG: print("\n(DEBUG) RESPONSE:", response)
+      while response not in [str(i) for i in range(7, 23)]:
         response = util.simple_llm_call(prompt, arg)
         response = response_clean(response)
-        counter = 0
-        if IS_DEBUG: print("\n(DEBUG) RESPONSE:", response)
-        while response not in [str(i) for i in range(7, 23)]:
-           response = util.simple_llm_call(prompt, arg)
-           response = response_clean(response)
-           counter += 1
-           if IS_DEBUG: print("\n(DEBUG) RETRY:", str(counter))
-           if counter >= 5: # couter to prevent infinite loops
-              response = "22"
-              break
-        int_response = int(response)
-        add_arg_result(int_response, line, ws, arg)
+        counter += 1
+        if IS_DEBUG: print("\n(DEBUG) RETRY:", str(counter))
+        if counter >= 5: # couter to prevent infinite loops
+           response = "22"
+           break
+      int_response = int(response)
+      add_arg_result(int_response, line, ws, arg)
 
 
 # Given a list of policies and their corresponding variables,
