@@ -120,7 +120,20 @@ Return only the number, no extra text or spaces.
 
     # loop over a deliberation's arguments
     for arg_group in args:
-      line = arg_group[1] # zero based indexed (eg 9 means line 10 of the Excel sheet)
+      process_arg_group(arg_group, prompt, ws)
+    
+    label_policy_variables(ws)
+    wrap_text(ws)
+
+    df = pd.DataFrame(ws.values)
+    df.to_csv(new_filepath, index=False, header=False)
+    print("Analyzed", deliberation)
+  print("Finished analyzing deliberations in Session", session_num)
+
+# this function takes in a group of arguments, the prompt, and a ws.  It catagorizes every arg in the group
+# as for or against one of the topics listed in the prompt and adds it to the appropriate column in the ws.
+def process_arg_group(arg_group, prompt, ws):
+   line = arg_group[1] # zero based indexed (eg 9 means line 10 of the Excel sheet)
       arg_group_parsed = arg_group[0].split(".")
       for arg in arg_group_parsed:
         if arg == "": # skip empty strings
@@ -139,14 +152,7 @@ Return only the number, no extra text or spaces.
               break
         int_response = int(response)
         add_arg_result(int_response, line, ws, arg)
-    
-    label_policy_variables(ws)
-    wrap_text(ws)
 
-    df = pd.DataFrame(ws.values)
-    df.to_csv(new_filepath, index=False, header=False)
-    print("Analyzed", deliberation)
-  print("Finished analyzing deliberations in Session", session_num)
 
 # Given a list of policies and their corresponding variables,
 # generate and save a key.
