@@ -114,7 +114,7 @@ def create_args_sheet(file_path, destination_folder):
     ws.cell(row=1, column=ARG_SUM_COL, value="All Arguments Summarized")
 
     # populate "All Arguments Summarized" column
-   for row in range(2, ws.max_row + 1):
+    for row in range(2, ws.max_row + 1):
       text = ws.cell(row=row, column=TEXT_COL).value
       if text is not None:
          summarized_text = util.simple_llm_call("Summarize the following text in a numbered list.  Follow the output format '1. argument 1 \n 2. argument 2 \n' etcetera. Every argument MUST be on a different line. There could be one or more arguments. But if the text does not contain arguments, simply respond \" NO ARGUMENTS \" ", text)
@@ -123,7 +123,7 @@ def create_args_sheet(file_path, destination_folder):
             ws.cell(row=row, column=ARG_SUM_COL).value = summarized_text
     
     # populate "Has Arguments" column
-   for row in ws.iter_rows(min_row=2):  # Start from the second row (excluding the first row which is titles)
+    for row in ws.iter_rows(min_row=2):  # Start from the second row (excluding the first row which is titles)
         cell_f = row[5]  # Column F (index 5, since columns are 0-indexed in the iter_rows output)
         cell_e = row[4]  # Column E (index 4)
         if cell_f.value:
