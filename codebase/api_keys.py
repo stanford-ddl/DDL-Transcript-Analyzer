@@ -1,1 +1,1 @@
-TOGETHER_API_KEY='sk-proj-bVENjFcdCgDyeAocPu2QT3BlbkFJBdxAivBCbEbA5WYSK1tQ'
+MY_API_KEY='sk-proj-bVENjFcdCgDyeAocPu2QT3BlbkFJBdxAivBCbEbA5WYSK1tQ'
