@@ -71,7 +71,7 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     num_transcripts = 10 # TODO: Calculate number of transcripts based on 'data' folder
 
     selected_sessions = [f"{i+1}" for i, var in enumerate(session_vars) if var.get() == 1]
-    is_debug = debug_var.get() == 1
+    config.is_debug = debug_var.get() == 1
     hard_restart = restart_var.get() == 1
     
     # Text above the Phase Progress Bar
