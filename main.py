@@ -47,6 +47,54 @@ def main():
     else: run_session()
     print("Program Finished\n")
 
+# GUI Progress Bar Screen
+def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
+    current_frame.destroy()
+    root.title("Progress Bar")
+    frame = tk.Frame(root)
+    frame.pack(fill='both', expand=True)
+    frame.columnconfigure(0, weight=1)
+    frame.columnconfigure(1, weight=1)
+    frame.columnconfigure(2, weight=1)
+    frame.rowconfigure(3, weight=1)
+
+    num_transcripts = 10 # TODO: Calculate number of transcripts based on 'data' folder
+
+    selected_sessions = [f"{i+1}" for i, var in enumerate(session_vars) if var.get() == 1]
+    debug_mode = debug_var.get() == 1
+    hard_restart = restart_var.get() == 1
+    
+    # Text above the Phase Progress Bar
+    phases = ["Cleaning", "Processing", "Analyzing"]
+    for i, phase in enumerate(phases):
+        phase_progress_text = tk.Label(frame, text=phase)
+        phase_progress_text.grid(row=0, column=i)
+    
+    # Phase Progress Bar
+    phase_progress_bar = ttk.Progressbar(frame, orient="horizontal", mode="determinate")
+    phase_progress_bar.grid(row=1, column=0, columnspan=3, pady=5, padx=10, sticky='ew')
+
+    # Transcript Progress Bar
+    transcript_progress_bar = ttk.Progressbar(frame, orient="horizontal", mode="determinate")
+    transcript_progress_bar.grid(row=2, column=1, pady=5, padx=10, sticky='ew')
+
+    # Text to the right of the Transcript Progress Bar
+    transcript_progress_text = tk.Label(frame, text=f"0/{num_transcripts}")
+    transcript_progress_text.grid(row=2, column=2, padx=10, sticky='w')
+
+    # Console/Terminal Output Textbox
+    text = tk.Text(frame, wrap='word', state='normal')
+    text.grid(row=3, column=0, columnspan=3, padx=10, pady=10, sticky='nsew')
+
+    sys.stdout = RedirectOutput(text)
+
+    phase_progress_bar['value'] = 0
+    phase_progress_bar['maximum'] = 100
+    transcript_progress_bar['value'] = 0
+    transcript_progress_bar['maximum'] = 100
+
+    threading.Thread(target=main, daemon=True).start()
+
 # Clear the GUI and restart the program
 def restart_program(root, current_frame):
     current_frame.destroy()
