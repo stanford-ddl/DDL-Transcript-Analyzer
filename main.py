@@ -47,6 +47,18 @@ def main():
     else: run_session()
     print("Program Finished\n")
 
+# Display Console/Terminal output on GUI Progress Bar Screen
+class RedirectOutput:
+    def __init__(self, text_widget):
+        self.text_widget = text_widget
+
+    def write(self, string):
+        self.text_widget.insert(tk.END, string)
+        self.text_widget.see(tk.END)
+
+    def flush(self):
+        pass
+
 # GUI Progress Bar Screen
 def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     current_frame.destroy()
