@@ -47,6 +47,45 @@ def main():
     else: run_session()
     print("Program Finished\n")
 
+# GUI HelpBox with instructions
+class HelpBox:
+    def __init__(self, parent, text):
+        self.parent = parent
+        self.text = text
+        self.tooltip = None
+
+    def show_tooltip(self, event):
+        if self.tooltip:
+            return
+        x = event.x_root + 10
+        y = event.y_root + 10
+        self.tooltip = tk.Toplevel(self.parent)
+        self.tooltip.wm_overrideredirect(True)
+        self.tooltip.wm_geometry(f"+{x}+{y}")
+        label = tk.Label(self.tooltip, text=self.text, background="light yellow", relief="solid", borderwidth=3, padx=10, pady=5)
+        label.pack(expand=True)
+
+    def hide_tooltip(self, event):
+        if self.tooltip:
+            self.tooltip.destroy()
+            self.tooltip = None
+
+# GUI Icon of a circle with an 'i' inside it
+def create_info_icon(parent, row, column, text):
+    canvas = tk.Canvas(parent, width=20, height=20)
+    canvas.grid(row=row, column=column, padx=10, pady=10)
+    
+    # Draw the icon
+    canvas.create_oval(4, 4, 20, 20, outline="black", fill="white", tags="info")
+    canvas.create_text(13, 12, text="i", fill="black", tags="info")
+
+    # Create the HelpBox
+    help_box = HelpBox(canvas, text)
+    
+    # Bind hover events
+    canvas.tag_bind("info", "<Enter>", help_box.show_tooltip)
+    canvas.tag_bind("info", "<Leave>", help_box.hide_tooltip)
+
 # GUI Session Selection and Options Menu
 def session_selection(root, current_frame):
     current_frame.destroy()
