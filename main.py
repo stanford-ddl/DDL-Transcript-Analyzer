@@ -75,7 +75,7 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     hard_restart = restart_var.get() == 1
     
     # Text above the Phase Progress Bar
-    phases = ["Cleaning", "Processing", "Analyzing"]
+    phases = ["Transcript Cleaning", "Argument Identification", "Argument Analysis"]
     for i, phase in enumerate(phases):
         phase_progress_text = tk.Label(frame, text=phase)
         phase_progress_text.grid(row=0, column=i)
