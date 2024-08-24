@@ -47,6 +47,11 @@ def main():
     else: run_session()
     print("Program Finished\n")
 
+# Clear the GUI and restart the program
+def restart_program(root, current_frame):
+    current_frame.destroy()
+    main_menu(root)
+
 # GUI HelpBox with instructions
 class HelpBox:
     def __init__(self, parent, text):
