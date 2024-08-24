@@ -3,8 +3,7 @@ import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
 
-from codebase import util
-from codebase.config import is_debug, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase import config, util
 
 # cleaning arguments
 def concat_args(arguments, deliberation):
@@ -141,7 +140,7 @@ def create_args_sheet(file_path, destination_folder):
 # Given a path for a 'processing' folder,
 # create that folder if needed.
 def create_processing_path(processing_path):
-   print("\nCreating Session", session_num, "processing folder...", end=" ")
+   print("\nCreating Session", config.session_num, "processing folder...", end=" ")
    # Creates the required results folder if it does not already exist
    os.makedirs(processing_path, exist_ok=True)
    print("Done")
@@ -150,9 +149,9 @@ def create_processing_path(processing_path):
 # Given a data folder and empty argument variables,
 # process all of the data and find arguments in the text.
 def process_cleaned_data(data_path, all_args_indexed, all_args):
-    processing_path = os.path.join(PROCESSING_DIR, session_num)
+    processing_path = os.path.join(config.PROCESSING_DIR, config.session_num)
     create_processing_path(processing_path)
-    print("\nIdentifying arguments in Session", session_num + "...")
+    print("\nIdentifying arguments in Session", config.session_num + "...")
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
@@ -162,4 +161,4 @@ def process_cleaned_data(data_path, all_args_indexed, all_args):
         formatted_args = extract_args(new_path, deliberation)
         all_args_indexed.update(formatted_args)
         all_args += all_args_indexed[deliberation]
-    print("Finished identifying arguments in Session", session_num)
+    print("Finished identifying arguments in Session", config.session_num)

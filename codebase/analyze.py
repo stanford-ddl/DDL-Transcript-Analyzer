@@ -8,7 +8,7 @@ from datetime import datetime
 from openpyxl.styles import Alignment
 import re
 
-from codebase import util
+from codebase import config, util
 from codebase.eval import get_metric_sums, get_metric_dist
 from codebase.config import is_debug, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 
@@ -49,7 +49,7 @@ def add_arg_result(int_response, line, ws, arg):
     # Update the cell with the new value
     ws.cell(row=actual_row, column=int_response, value=new_value)
 
-    if is_debug: print(f"(DEBUG) Added '{arg}' to row {actual_row}, column {int_response}")
+    if config.is_debug: print(f"(DEBUG) Added '{arg}' to row {actual_row}, column {int_response}")
 
 #cleans up output repsponse by stopping before first newline character
 def response_clean(response):
@@ -83,7 +83,7 @@ def add_policy_columns(ws, policy_variables):
 # classifies all arguments in all deliberations in session_num based on the generated topics
 # note: time-expensive
 def arg_sort(all_args_indexed, topics, policy_variables, results_path):
-  print("\nAnalyzing Session", session_num, "deliberations...")
+  print("\nAnalyzing Session", config.session_num, "deliberations...")
 
   prompt = f"""
 You are an annotator categorizing arguments about {topics[0]}. 
@@ -97,7 +97,7 @@ If the argument favors {topics[7]}, return "19". If against, return "20".
 If relevant but not covered, return "21". If not relevant, return "22".
 Return only the number, no extra text or spaces.
 """
-  if is_debug: print("\n(DEBUG) arg_sort prompt:\n" + prompt)
+  if config.is_debug: print("\n(DEBUG) arg_sort prompt:\n" + prompt)
 
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
@@ -141,12 +141,12 @@ def process_arg_group(arg_group, prompt, ws):
       response = util.simple_llm_call(prompt, arg)
       response = response_clean(response)
       counter = 0
-      if is_debug: print("\n(DEBUG) RESPONSE:", response)
+      if config.is_debug: print("\n(DEBUG) RESPONSE:", response)
       while response not in [str(i) for i in range(7, 23)]:
         response = util.simple_llm_call(prompt, arg)
         response = response_clean(response)
         counter += 1
-        if is_debug: print("\n(DEBUG) RETRY:", str(counter))
+        if config.is_debug: print("\n(DEBUG) RETRY:", str(counter))
         if counter >= 5: # couter to prevent infinite loops
            response = "22"
            break
@@ -168,7 +168,7 @@ def generate_key(topics, policy_variables, results_path):
    for i in range(len(policy_variables)):
       key_text += "\n* " + policy_variables[i] + " = " + topics[i+1]
    
-   if is_debug: print("\n(DEBUG) key_text:\n" + key_text)
+   if config.is_debug: print("\n(DEBUG) key_text:\n" + key_text)
    
    with open(key_path, 'w') as key:
       key.write(key_text)
@@ -208,7 +208,7 @@ def generate_policy_variables(topics, attempts = 0):
    The Python list you return should contain EXACTLY """ + NUM_VARIABLES + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, policy_list)
-   if is_debug: print("\n(DEBUG) Raw response:", response + "\n")
+   if config.is_debug: print("\n(DEBUG) Raw response:", response + "\n")
    response_list = ast.literal_eval(response.strip())
    # If invalid response, try again
    if len(response_list) != int(NUM_VARIABLES) or type(response_list) != list:
@@ -233,7 +233,7 @@ def generate_policy_variables(topics, attempts = 0):
       variable_list.append("AGAINST: " + response_list[i])
    variable_list.append("other")
    variable_list.append("notRelevant")
-   if is_debug:
+   if config.is_debug:
       print("\n(DEBUG) variable_list:")
       print_list(variable_list)
    return variable_list
@@ -282,7 +282,7 @@ def extract_topics(sampled_args, attempts = 0):
    Please, the Python list you return should contain EXACTLY """ + str(int(NUM_TOPICS)+1) + """ strings.
    Thank you!"""
    response = util.simple_llm_call(prompt, sampled_args)
-   if is_debug: print("\n(DEBUG) Raw response:", response + "\n")
+   if config.is_debug: print("\n(DEBUG) Raw response:", response + "\n")
    topic_list = ast.literal_eval(response.strip())
    # If invalid response, try again
    if len(topic_list) != (int(NUM_TOPICS) + 1) or type(topic_list) != list:
@@ -332,7 +332,7 @@ def read_key(key, topics, policy_variables):
    policy_variables.append("other")
    policy_variables.append("notRelevant")
 
-   if is_debug:
+   if config.is_debug:
       print("\n(DEBUG) topics from key:")
       print_topics(topics)
       print("\n(DEBUG) policy_variables from key:")

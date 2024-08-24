@@ -3,7 +3,7 @@ import sys
 import pandas as pd
 from openpyxl import load_workbook
 
-from codebase.config import is_debug, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase import config
 
 # Called when an error occurs
 def error(reason = "No reason provided"):
@@ -41,11 +41,11 @@ def csv_to_xlsx(data_path, deliberation):
 # ensure that it already exists;
 # otherwise, create it and error
 def check_data_exists(data_path):
-   print("\nValidating Session", session_num, "data folder...", end=" ")
+   print("\nValidating Session", config.session_num, "data folder...", end=" ")
    if not os.path.exists(data_path):
        os.makedirs(data_path, exist_ok=True)
        print() # overrides end=" " from previous print statement
-       error("The session " + session_num + " data folder does not exist and will now be created.\nPlease place your data into " + data_path + " and restart the program.\nAlternatively, open config.py and select a different session.")
+       error("The session " + config.session_num + " data folder does not exist and will now be created.\nPlease place your data into " + data_path + " and restart the program.\nAlternatively, open config.py and select a different session.")
    print("Done")
 
 # Code starts here
@@ -55,7 +55,7 @@ def clean_input_data(data_path):
 
    check_data_exists(data_path)
    
-   print("\nCleaning Session", session_num, "data folder...")
+   print("\nCleaning Session", config.session_num, "data folder...")
 
    # Convert all CSV files to XLSX files - throws an error for NUMBERS files
    for deliberation in os.listdir(data_path):
@@ -81,4 +81,4 @@ def clean_input_data(data_path):
 
         wb.save(path)
         print("Cleaned", deliberation)
-   print("Finished cleaning Session", session_num, "data folder")
+   print("Finished cleaning Session", config.session_num, "data folder")

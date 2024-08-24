@@ -6,10 +6,11 @@ import sys
 import time
 import threading
 
+from codebase import config
+from codebase.config import is_debug, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 from codebase.clean import clean_input_data
 from codebase.process import process_cleaned_data
 from codebase.analyze import analyze_processed_data
-from codebase.config import is_debug, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 
 sys.path.append(os.getcwd())
 
@@ -18,11 +19,12 @@ sys.path.append(os.getcwd())
 # see config.py
 # VERY IMPORTANT - READ THIS
 
+# Run current session_num
 def run_session():
-    print("Started working with Session", session_num)
+    print("Started working with Session", config.session_num)
 
     # Clean the input data
-    data_path = os.path.join(DATA_DIR, session_num)
+    data_path = os.path.join(DATA_DIR, config.session_num)
     clean_input_data(data_path)
 
     # Process the cleaned data (search the text for arguments)
@@ -33,18 +35,14 @@ def run_session():
     # Analyze the processed data (compare arguments to generated policies)
     analyze_processed_data(all_args_indexed, all_args)
     
-    print("\nFinished working with Session", session_num)
+    print("\nFinished working with Session", config.session_num)
 
+# Run all selected sessions
 def main(*selected_sessions):
     print("\nProgram Started")
-    # If all sessions should be analyzed
-    if IS_ANALYZE_ALL_SESSIONS:
-      # Iterate through all sessions from 1 through TOTAL_SESSIONS
-      for session in range(TOTAL_SESSIONS):
-        session_num = str(session + 1)
+    for session in selected_sessions:
+        config.session_num = session
         run_session()
-    # Else, analyze only Session number 'session_num'.
-    else: run_session()
     print("Program Finished\n")
 
 # Display Console/Terminal output on GUI Progress Bar Screen
