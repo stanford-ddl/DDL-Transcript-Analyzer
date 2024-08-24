@@ -9,7 +9,7 @@ import threading
 from codebase.clean import clean_input_data
 from codebase.process import process_cleaned_data
 from codebase.analyze import analyze_processed_data
-from codebase.config import IS_DEBUG, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase.config import is_debug, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 
 sys.path.append(os.getcwd())
 
@@ -35,7 +35,7 @@ def run_session():
     
     print("\nFinished working with Session", session_num)
 
-def main():
+def main(*selected_sessions):
     print("\nProgram Started")
     # If all sessions should be analyzed
     if IS_ANALYZE_ALL_SESSIONS:
@@ -73,7 +73,7 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     num_transcripts = 10 # TODO: Calculate number of transcripts based on 'data' folder
 
     selected_sessions = [f"{i+1}" for i, var in enumerate(session_vars) if var.get() == 1]
-    debug_mode = debug_var.get() == 1
+    is_debug = debug_var.get() == 1
     hard_restart = restart_var.get() == 1
     
     # Text above the Phase Progress Bar
@@ -105,7 +105,7 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     transcript_progress_bar['value'] = 0
     transcript_progress_bar['maximum'] = 100
 
-    threading.Thread(target=main, daemon=True).start()
+    threading.Thread(target=main, args=(selected_sessions), daemon=True).start()
 
 # Clear the GUI and restart the program
 def restart_program(root, current_frame):
