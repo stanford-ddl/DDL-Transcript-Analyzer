@@ -1,5 +1,10 @@
 import os
 import sys
+import tkinter as tk
+from tkinter import ttk
+import sys
+import time
+import threading
 
 from codebase.clean import clean_input_data
 from codebase.process import process_cleaned_data
@@ -13,7 +18,7 @@ sys.path.append(os.getcwd())
 # see config.py
 # VERY IMPORTANT - READ THIS
 
-def main():
+def run_session():
     print("Started working with Session", session_num)
 
     # Clean the input data
@@ -30,15 +35,25 @@ def main():
     
     print("\nFinished working with Session", session_num)
 
-# Code starts here
-if __name__ == '__main__':
+def main():
     print("\nProgram Started")
     # If all sessions should be analyzed
     if IS_ANALYZE_ALL_SESSIONS:
       # Iterate through all sessions from 1 through TOTAL_SESSIONS
       for session in range(TOTAL_SESSIONS):
         session_num = str(session + 1)
-        main()
+        run_session()
     # Else, analyze only Session number 'session_num'.
-    else: main()
+    else: run_session()
     print("Program Finished\n")
+
+# Code starts here
+if __name__ == '__main__':
+    root = tk.Tk()
+    root.geometry("500x312")
+    root.minsize(500, 312)
+    root.eval('tk::PlaceWindow . center')
+
+    main_menu(root)
+
+    root.mainloop()
