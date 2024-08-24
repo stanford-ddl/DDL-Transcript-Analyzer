@@ -47,6 +47,28 @@ def main():
     else: run_session()
     print("Program Finished\n")
 
+# GUI Main Menu
+def main_menu(root):
+    root.title("Stanford DDL Transcript Analyzer")
+    frame = tk.Frame(root)
+    frame.pack(expand=True)
+
+    # Logo
+    logo_text = tk.Label(frame, text="LOGO", font=("Arial", 24))
+    logo_text.grid(row=0, column=0, columnspan=2, padx=20, pady=20)
+    
+    # Instructions Text
+    instructions_text = tk.Label(frame, text="Welcome to the Stanford DDL Transcript Analyzer!\n\nThis program will generate an argument\nanalysis when given raw transcripts.\n\nPlease select an option below.", font=("Arial", 14))
+    instructions_text.grid(row=1, column=0, columnspan=2, padx=20, pady=20)
+
+    # Exit Button
+    exit_button = tk.Button(frame, text="Exit", command=root.destroy)
+    exit_button.grid(row=2, column=0, pady=20, padx=20)
+    
+    # Start Button
+    start_button = tk.Button(frame, text="Start", command=lambda: session_selection(root, frame))
+    start_button.grid(row=2, column=1, pady=20, padx=20)
+
 # Code starts here
 if __name__ == '__main__':
     root = tk.Tk()
