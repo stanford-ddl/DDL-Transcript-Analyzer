@@ -4,7 +4,6 @@ import sys
 import tkinter as tk
 from tkinter import ttk
 import sys
-import time
 import threading
 
 from codebase import config
@@ -20,18 +19,30 @@ sys.path.append(os.getcwd())
 # see config.py
 # VERY IMPORTANT - READ THIS
 
+# Increase the phase progress bar and reset the transcript progress bar
+def advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts):
+    phase_progress_bar['value'] += 100 / 3
+    transcript_progress_bar['value'] = 0
+    transcript_progress_text.config(text=f"0/{num_transcripts}")
+
 # Run current session_num
-def run_session():
+def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress_text):
     print("Started working with Session", config.session_num)
 
     # Clean the input data
     data_path = os.path.join(DATA_DIR, config.session_num)
     clean_input_data(data_path)
 
+    # Transcript Cleaning -> Argument Identification
+    advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)
+
     # Process the cleaned data (search the text for arguments)
     all_args_indexed = {} # keys = deliberation ids, values = (argument, index in deliberation)
     all_args = []
     process_cleaned_data(data_path, all_args_indexed, all_args)
+
+    # Argument Identification -> Argument Analysis
+    advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
     # Analyze the processed data (compare arguments to generated policies)
     analyze_processed_data(all_args_indexed, all_args)
@@ -39,11 +50,14 @@ def run_session():
     print("\nFinished working with Session", config.session_num)
 
 # Run all selected sessions
-def main(*selected_sessions):
+def main(selected_sessions, phase_progress_bar, transcript_progress_bar, transcript_progress_text):
     print("Program Started")
     for session in selected_sessions:
         config.session_num = session
-        run_session()
+        phase_progress_bar['value'] = 0
+        transcript_progress_bar['value'] = 0
+        transcript_progress_text.config(text="0")
+        run_session(phase_progress_bar, transcript_progress_bar, transcript_progress_text)
     print("Program Finished", end="")
 
 # Display Console/Terminal output on GUI Progress Bar Screen
@@ -123,7 +137,7 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     transcript_progress_bar['value'] = 0
     transcript_progress_bar['maximum'] = 100
 
-    threading.Thread(target=main, args=(selected_sessions), daemon=True).start()
+    threading.Thread(target=main, args=(selected_sessions, phase_progress_bar, transcript_progress_bar, transcript_progress_text), daemon=True).start()
 
 # Clear the GUI and restart the program
 def restart_program(root, current_frame):
