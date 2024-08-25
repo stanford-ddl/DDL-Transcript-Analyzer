@@ -135,8 +135,9 @@ def progress_bar(root, sessions, session_vars, debug_var, restart_var, current_f
     text = tk.Text(frame, wrap='word', state='normal')
     text.grid(row=3, column=0, columnspan=3, padx=10, pady=10, sticky='nsew')
 
-    # Display print() statement in GUI
+    # Display print and error statement in GUI
     sys.stdout = RedirectOutput(text)
+    sys.stderr = RedirectOutput(text)
 
     # Set is_debug
     config.is_debug = debug_var.get() == 1
