@@ -10,7 +10,7 @@ import re
 
 from codebase import config, util
 from codebase.eval import get_metric_sums, get_metric_dist
-from codebase.config import is_debug, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase.config import TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 
 # Given a Worksheet,
 # wrap all text cells.
@@ -109,7 +109,7 @@ Return only the number, no extra text or spaces.
       continue
 
     args = all_args_indexed[deliberation]
-    path = os.path.join(PROCESSING_DIR, session_num, deliberation)
+    path = os.path.join(PROCESSING_DIR, config.session_num, deliberation)
 
     df = pd.DataFrame(pd.read_excel(path))
     wb = load_workbook(path)
@@ -128,7 +128,7 @@ Return only the number, no extra text or spaces.
     df = pd.DataFrame(ws.values)
     df.to_csv(new_filepath, index=False, header=False)
     print("Analyzed", deliberation)
-  print("Finished analyzing deliberations in Session", session_num)
+  print("Finished analyzing deliberations in Session", config.session_num)
 
 # this function takes in a group of arguments, the prompt, and a ws.  It catagorizes every arg in the group
 # as for or against one of the topics listed in the prompt and adds it to the appropriate column in the ws.
@@ -157,10 +157,10 @@ def process_arg_group(arg_group, prompt, ws):
 # Given a list of policies and their corresponding variables,
 # generate and save a key.
 def generate_key(topics, policy_variables, results_path):
-   KEY_NAME = "KEY_Session_" + session_num + ".txt"
+   KEY_NAME = "KEY_Session_" + config.session_num + ".txt"
    key_path = os.path.join(results_path, "metrics", KEY_NAME)
 
-   key_text = "Session " + session_num + " Key"
+   key_text = "Session " + config.session_num + " Key"
    time = datetime.now().strftime("%Y-%m-%d at %H:%M:%S")
    key_text += "\nGenerated on: " + time
    key_text += "\n\nPrimary Topic: " + topics[0]
@@ -224,7 +224,7 @@ def generate_policy_variables(topics, attempts = 0):
    print_list(response_list, "Variable")
 
    # Generate results, metrics, and key
-   results_path = os.path.join(RESULTS_DIR, session_num)
+   results_path = os.path.join(RESULTS_DIR, config.session_num)
    generate_key(topics, response_list, results_path)
    
    variable_list = []
@@ -248,7 +248,7 @@ def error(reason = "No reason provided"):
 # return a list of topics that most arguments deliberate on.
 def extract_topics(sampled_args, attempts = 0):
    NUM_TOPICS = '7'
-   if attempts == 0: print("\nGenerating", NUM_TOPICS, "topics from Session", session_num + "...")
+   if attempts == 0: print("\nGenerating", NUM_TOPICS, "topics from Session", config.session_num + "...")
 
    prompt = """This is a list of arguments presented in a deliberation. Your job is to identify the single, primary topic deliberated on and write
    """ + NUM_TOPICS + """ distinct policies regarding the primary topic in a Python list of strings, with each string being a policy.
@@ -342,7 +342,7 @@ def read_key(key, topics, policy_variables):
 # Given a path for a 'results' folder,
 # create that folder and a 'metrics' subfolder if needed.
 def create_results_path(results_path):
-  print("\nCreating Session", session_num, "results and metrics folders...", end=" ")
+  print("\nCreating Session", config.session_num, "results and metrics folders...", end=" ")
   # Creates the required results folder if it does not already exist
   os.makedirs(results_path, exist_ok=True)
 
@@ -358,7 +358,7 @@ def generate_policy_data(sampled_args, topics, policy_variables, results_path):
   create_results_path(results_path)
 
   # Check for a pre-existing key
-  KEY_NAME = "KEY_Session_" + session_num + ".txt"
+  KEY_NAME = "KEY_Session_" + config.session_num + ".txt"
   KEY_PATH = os.path.join(results_path, "metrics", KEY_NAME)
   if os.path.exists(KEY_PATH):
     read_key(KEY_PATH, topics, policy_variables)
@@ -378,7 +378,7 @@ def generate_policy_data(sampled_args, topics, policy_variables, results_path):
 # Given a results folder and arguments,
 # analyze all of the arguments and generate results
 def analyze_processed_data(all_args_indexed, all_args):
-  results_path = os.path.join(RESULTS_DIR, session_num)
+  results_path = os.path.join(RESULTS_DIR, config.session_num)
   topics = []
   policy_variables = []
   sampled_args = random.sample(all_args, 400) # sampling 400 arguments for policy generation

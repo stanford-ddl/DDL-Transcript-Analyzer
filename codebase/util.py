@@ -3,8 +3,7 @@ from functools import lru_cache
 from .api_keys import MY_API_KEY
 
 
-# import openai
-# from openai import OpenAI
+import openai
 from openai import OpenAI, APIConnectionError
 
 # takes in system content (eg: "You are a poet."") and user content (eg: "Compose a poem.")

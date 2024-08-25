@@ -1,4 +1,5 @@
 import os
+import shutil
 import sys
 import tkinter as tk
 from tkinter import ttk
@@ -7,7 +8,7 @@ import time
 import threading
 
 from codebase import config
-from codebase.config import is_debug, TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, session_num, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase.config import TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 from codebase.clean import clean_input_data
 from codebase.process import process_cleaned_data
 from codebase.analyze import analyze_processed_data
@@ -57,6 +58,17 @@ class RedirectOutput:
     def flush(self):
         pass
 
+# Given a session,
+# delete its processing and results folders (if they exist)
+def hard_restart(session):
+    print("\nPerforming a hard restart on Session", session + "...", end=" ")
+    processing_path = os.path.join(PROCESSING_DIR, session)
+    if os.path.exists(processing_path): shutil.rmtree(processing_path)
+
+    results_path = os.path.join(RESULTS_DIR, session)
+    if os.path.exists(results_path): shutil.rmtree(results_path)
+    print("Done")
+
 # GUI Progress Bar Screen
 def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     current_frame.destroy()
@@ -69,10 +81,6 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     frame.rowconfigure(3, weight=1)
 
     num_transcripts = 10 # TODO: Calculate number of transcripts based on 'data' folder
-
-    selected_sessions = [f"{i+1}" for i, var in enumerate(session_vars) if var.get() == 1]
-    config.is_debug = debug_var.get() == 1
-    hard_restart = restart_var.get() == 1
     
     # Text above the Phase Progress Bar
     phases = ["Transcript Cleaning", "Argument Identification", "Argument Analysis"]
@@ -96,7 +104,19 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     text = tk.Text(frame, wrap='word', state='normal')
     text.grid(row=3, column=0, columnspan=3, padx=10, pady=10, sticky='nsew')
 
+    # Display print() statement in GUI
     sys.stdout = RedirectOutput(text)
+
+    # Grab Selected Sessions
+    selected_sessions = [f"{i+1}" for i, var in enumerate(session_vars) if var.get() == 1]
+
+    # Set is_debug
+    config.is_debug = debug_var.get() == 1
+
+    # Hard Restart if needed
+    if restart_var.get() == 1:
+        for session in selected_sessions:
+            hard_restart(session)
 
     phase_progress_bar['value'] = 0
     phase_progress_bar['maximum'] = 100
