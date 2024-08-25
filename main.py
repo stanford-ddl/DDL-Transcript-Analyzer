@@ -45,7 +45,7 @@ def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress
     advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
     # Clean the input data
-    clean_input_data(data_path)
+    clean_input_data(data_path, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
     # Transcript Cleaning -> Argument Identification
     advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)

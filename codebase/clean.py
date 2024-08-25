@@ -51,7 +51,7 @@ def check_data_exists(data_path):
 # Code starts here
 # Given a data folder,
 # clean the data in it.
-def clean_input_data(data_path):
+def clean_input_data(data_path, transcript_progress_bar, transcript_progress_text, num_transcripts):
 
    check_data_exists(data_path)
    
@@ -62,6 +62,7 @@ def clean_input_data(data_path):
       csv_to_xlsx(data_path, deliberation)
    
    # Remove all sheets except for the first one from each Workbook
+   deliberations_cleaned = 0
    for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
       if path.endswith('xlsx'):
@@ -80,5 +81,10 @@ def clean_input_data(data_path):
                  cell.value = int(cell.value)
 
         wb.save(path)
+
+        deliberations_cleaned += 1
+        transcript_progress_bar['value'] += 100 / num_transcripts
+        transcript_progress_text.config(text=f"{deliberations_cleaned}/{num_transcripts}")
+        
         print("Cleaned", deliberation)
    print("Finished cleaning Session", config.session_num, "data folder")
