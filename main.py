@@ -60,6 +60,9 @@ def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress
 
     # Analyze the processed data (compare arguments to generated policies)
     analyze_processed_data(all_args_indexed, all_args)
+
+    # Delete this sessions processing path so it does not interfere with future sessions
+    delete_processing_path(config.session_num)
     
     print("\nFinished working with Session", config.session_num)
 
@@ -87,14 +90,23 @@ class RedirectOutput:
         pass
 
 # Given a session,
-# delete its processing and results folders (if they exist)
-def hard_restart(session):
-    print("Performing a hard restart on Session", session + "...", end=" ")
+# delete its processing folder (if it exists)
+def delete_processing_path(session):
     processing_path = os.path.join(PROCESSING_DIR, session)
     if os.path.exists(processing_path): shutil.rmtree(processing_path)
 
+# Given a session,
+# delete its results folder (if it exists)
+def delete_results_path(session):
     results_path = os.path.join(RESULTS_DIR, session)
     if os.path.exists(results_path): shutil.rmtree(results_path)
+
+# Given a session,
+# delete its processing and results folders (if they exist)
+def hard_restart(session):
+    print("Performing a hard restart on Session", session + "...", end=" ")
+    delete_processing_path(session)
+    delete_results_path(session)
     print("Done")
 
 # GUI Progress Bar Screen
