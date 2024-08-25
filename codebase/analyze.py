@@ -241,7 +241,7 @@ def generate_policy_variables(topics, attempts = 0):
 # Called when an error occurs
 def error(reason = "No reason provided"):
    print("\n\nERROR:", reason)
-   print("\nProgram Terminated\n")
+   print("\nProgram Terminated")
    sys.exit()
 
 # Given a subset of arguments,
@@ -382,7 +382,10 @@ def analyze_processed_data(all_args_indexed, all_args):
   results_path = os.path.join(RESULTS_DIR, config.session_num)
   topics = []
   policy_variables = []
-  sampled_args = random.sample(all_args, 400) # sampling 400 arguments for policy generation
+  try:
+     sampled_args = random.sample(all_args, 400) # sampling 400 arguments for policy generation
+  except ValueError:
+     error("There are not enough arguments in this session for a proper analysis!\nGo to analyze_processed_data() in analyze.py if this must be overwritten.")
   generate_policy_data(sampled_args, topics, policy_variables, results_path) # generate or read topics[] and policy_variables[]
 
   arg_sort(all_args_indexed, topics, policy_variables, results_path) # classify all arguments in Excel files
