@@ -110,7 +110,7 @@ def single_deliberation_analysis(deliberation, results_path, all_args_indexed, p
 
 # classifies all arguments in all deliberations in session_num based on the generated topics
 # note: time-expensive
-def arg_sort(all_args_indexed, topics, policy_variables, results_path, transcript_progress_bar, transcript_progress_text, num_transcripts):
+def arg_sort(all_args_indexed, topics, policy_variables, results_path, transcript_progress_bar, transcript_progress_text, num_transcripts, root):
   print("\nAnalyzing Session", config.session_num, "deliberations...")
 
   prompt = f"""
@@ -135,6 +135,7 @@ Return only the number, no extra text or spaces.
     deliberations_analyzed += 1
     transcript_progress_bar['value'] += 100 / num_transcripts
     transcript_progress_text.config(text=f"{deliberations_analyzed}/{num_transcripts}")
+    root.title(f"Session {config.session_num} - {(((deliberations_analyzed + (num_transcripts * 2)) / (num_transcripts * 3)) * 100):.2f}% Complete")
     
     print("Analyzed", deliberation)
   print("Finished analyzing deliberations in Session", config.session_num)
@@ -387,7 +388,7 @@ def generate_policy_data(sampled_args, topics, policy_variables, results_path):
 # Code starts here
 # Given a results folder and arguments,
 # analyze all of the arguments and generate results
-def analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts):
+def analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts, root):
   results_path = os.path.join(RESULTS_DIR, config.session_num)
   topics = []
   policy_variables = []
@@ -398,7 +399,7 @@ def analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, 
   generate_policy_data(sampled_args, topics, policy_variables, results_path) # generate or read topics[] and policy_variables[]
 
   # Classify all arguments in Excel files
-  arg_sort(all_args_indexed, topics, policy_variables, results_path, transcript_progress_bar, transcript_progress_text, num_transcripts)
+  arg_sort(all_args_indexed, topics, policy_variables, results_path, transcript_progress_bar, transcript_progress_text, num_transcripts, root)
 
   # Generate Metrics
   delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]

@@ -51,7 +51,7 @@ def check_data_exists(data_path):
 # Code starts here
 # Given a data folder,
 # clean the data in it.
-def clean_input_data(data_path, transcript_progress_bar, transcript_progress_text, num_transcripts):
+def clean_input_data(data_path, transcript_progress_bar, transcript_progress_text, num_transcripts, root):
 
    check_data_exists(data_path)
    
@@ -85,6 +85,7 @@ def clean_input_data(data_path, transcript_progress_bar, transcript_progress_tex
         deliberations_cleaned += 1
         transcript_progress_bar['value'] += 100 / num_transcripts
         transcript_progress_text.config(text=f"{deliberations_cleaned}/{num_transcripts}")
+        root.title(f"Session {config.session_num} - {((deliberations_cleaned / (num_transcripts * 3)) * 100):.2f}% Complete")
 
         print("Cleaned", deliberation)
    print("Finished cleaning Session", config.session_num, "data folder")

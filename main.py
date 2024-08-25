@@ -36,8 +36,9 @@ def get_num_deliberations(data_path):
     return num_transcripts
 
 # Run current session_num
-def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress_text):
+def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress_text, root):
     print("Started working with Session", config.session_num)
+    root.title(f"Session {config.session_num} - 0% Complete")
 
     # Clean the input data
     data_path = os.path.join(DATA_DIR, config.session_num)
@@ -45,7 +46,7 @@ def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress
     advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
     # Clean the input data
-    clean_input_data(data_path, transcript_progress_bar, transcript_progress_text, num_transcripts)
+    clean_input_data(data_path, transcript_progress_bar, transcript_progress_text, num_transcripts, root)
 
     # Transcript Cleaning -> Argument Identification
     advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)
@@ -53,28 +54,29 @@ def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress
     # Process the cleaned data (search the text for arguments)
     all_args_indexed = {} # keys = deliberation ids, values = (argument, index in deliberation)
     all_args = []
-    process_cleaned_data(data_path, all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts)
+    process_cleaned_data(data_path, all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts, root)
 
     # Argument Identification -> Argument Analysis
     advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
     # Analyze the processed data (compare arguments to generated policies)
-    analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts)
+    analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts, root)
 
-    # Delete this sessions processing path so it does not interfere with future sessions
+    # Delete this session's processing path so it does not interfere with future sessions
     #delete_processing_path(config.session_num) TODO: Uncommet this when testing is finished
     
+    root.title(f"Session {config.session_num} - 100% Complete")
     print("\nFinished working with Session", config.session_num)
 
 # Run all selected sessions
-def main(selected_sessions, phase_progress_bar, transcript_progress_bar, transcript_progress_text):
+def main(selected_sessions, phase_progress_bar, transcript_progress_bar, transcript_progress_text, root):
     print("Program Started")
     for session in selected_sessions:
         config.session_num = session
         phase_progress_bar['value'] = 0
         transcript_progress_bar['value'] = 0
         transcript_progress_text.config(text="0")
-        run_session(phase_progress_bar, transcript_progress_bar, transcript_progress_text)
+        run_session(phase_progress_bar, transcript_progress_bar, transcript_progress_text, root)
     print("Program Finished", end="")
 
 # Display Console/Terminal output on GUI Progress Bar Screen
@@ -117,7 +119,6 @@ def progress_bar(root, sessions, session_vars, debug_var, restart_var, current_f
     if not selected_sessions: return
 
     current_frame.destroy()
-    root.title("Progress Bar")
     frame = tk.Frame(root)
     frame.pack(fill='both', expand=True)
     frame.columnconfigure(0, weight=1)
@@ -164,7 +165,7 @@ def progress_bar(root, sessions, session_vars, debug_var, restart_var, current_f
     transcript_progress_bar['value'] = 0
     transcript_progress_bar['maximum'] = 100
 
-    threading.Thread(target=main, args=(selected_sessions, phase_progress_bar, transcript_progress_bar, transcript_progress_text), daemon=True).start()
+    threading.Thread(target=main, args=(selected_sessions, phase_progress_bar, transcript_progress_bar, transcript_progress_text, root), daemon=True).start()
 
 # Clear the GUI and restart the program
 def restart_program(root, current_frame):
@@ -222,7 +223,6 @@ def sort_sessions_key(session):
 # GUI Session Selection and Options Menu
 def session_selection(root, current_frame):
     current_frame.destroy()
-    root.title("Options")
     frame = tk.Frame(root)
     frame.pack(expand=True, padx=20, pady=20)
 
