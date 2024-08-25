@@ -15,5 +15,5 @@ session_num = '4' # THIS IS A STRING - The single session to analyze if 'IS_ANAL
 
 # Global Variables
 DATA_DIR = 'data'
-PROCESSING_DIR = 'processing'
+PROCESSING_DIR = 'codebase/processing'
 RESULTS_DIR = 'results'
