@@ -40,11 +40,11 @@ def run_session():
 
 # Run all selected sessions
 def main(*selected_sessions):
-    print("\nProgram Started")
+    print("Program Started")
     for session in selected_sessions:
         config.session_num = session
         run_session()
-    print("Program Finished\n")
+    print("Program Finished", end="")
 
 # Display Console/Terminal output on GUI Progress Bar Screen
 class RedirectOutput:
@@ -61,7 +61,7 @@ class RedirectOutput:
 # Given a session,
 # delete its processing and results folders (if they exist)
 def hard_restart(session):
-    print("\nPerforming a hard restart on Session", session + "...", end=" ")
+    print("Performing a hard restart on Session", session + "...", end=" ")
     processing_path = os.path.join(PROCESSING_DIR, session)
     if os.path.exists(processing_path): shutil.rmtree(processing_path)
 

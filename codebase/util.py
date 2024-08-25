@@ -23,17 +23,6 @@ def api_call(system_content, user_content, max_tokens=256):
     except Exception as e:
         print(f"Error during API call: {e}")
         return ""
-    
-    # except openai.APIConnectionError as e:
-    #     #Handle connection error here
-    #     print(f"Failed to connect to OpenAI API: {e}")
-    #     return api_call(system_content, user_content)
-    
-    # except openai.RateLimitError as e:
-    #     #Handle rate limit error (we recommend using exponential backoff)
-    #     print(f"OpenAI API request exceeded rate limit: {e}")
-    #     return api_call(system_content, user_content)
-    
 
     content = completion.choices[0].message.content if completion.choices else None
     
@@ -41,7 +30,6 @@ def api_call(system_content, user_content, max_tokens=256):
         print("Warning: Content is None.")
         content = ""
 
-    print("CONTENT" + content)
     return content
 
 def json_api_call(system_content, user_content, json_class, max_tokens=256):
@@ -80,7 +68,6 @@ def json_api_call(system_content, user_content, json_class, max_tokens=256):
         print("Warning: Content is None.")
         content = ""
 
-    print(content)
     return content
 
 

@@ -97,7 +97,7 @@ If the argument favors {topics[7]}, return "19". If against, return "20".
 If relevant but not covered, return "21". If not relevant, return "22".
 Return only the number, no extra text or spaces.
 """
-  if config.is_debug: print("\n(DEBUG) arg_sort prompt:\n" + prompt)
+  if config.is_debug: print("\n(DEBUG) arg_sort prompt:" + prompt)
 
   # looping over all deliberations
   for deliberation in all_args_indexed.keys():
@@ -314,7 +314,7 @@ def print_topics(topic_list):
 # Given a key,
 # read it and set topics[] and policy_variables[]
 def read_key(key, topics, policy_variables):
-   print("Reading pre-existing", key, "key...", end=" ")
+   print("\nReading pre-existing", key, "key...", end=" ")
    with open(key, 'r') as file:
       text = file.read()
    
@@ -333,11 +333,12 @@ def read_key(key, topics, policy_variables):
    policy_variables.append("notRelevant")
 
    if config.is_debug:
+      print()
       print("\n(DEBUG) topics from key:")
       print_topics(topics)
       print("\n(DEBUG) policy_variables from key:")
       print_list(policy_variables, "Variable")
-   print("Done")
+   else: print("Done")
 
 # Given a path for a 'results' folder,
 # create that folder and a 'metrics' subfolder if needed.

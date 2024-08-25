@@ -57,9 +57,7 @@ def check_arguments(text):
     response = util.simple_llm_call(system_prompt, text)
     # if invalid response, try again
     if response not in ['yes', 'no']:
-        # print("bad output")
         response = util.simple_llm_call(system_prompt, text)
-    # print(text + "----->" + response)
     return response.strip().lower() == 'yes'
 
 # Given a sheet,
@@ -117,7 +115,9 @@ def create_args_sheet(file_path, destination_folder):
       text = ws.cell(row=row, column=TEXT_COL).value
       if text is not None:
          summarized_text = util.simple_llm_call("Summarize the following text in a numbered list.  Follow the output format '1. argument 1 \n 2. argument 2 \n' etcetera. Every argument MUST be on a different line. There could be one or more arguments. But if the text does not contain arguments, simply respond \" NO ARGUMENTS \" ", text)
-         print(summarized_text)
+         if config.is_debug:
+            print("\n(DEBUG) Transcript Text:", text)
+            print("(DEBUG) Summarized Arguments:", summarized_text)
          if "no argument" not in summarized_text.lower():
             ws.cell(row=row, column=ARG_SUM_COL).value = summarized_text
     
