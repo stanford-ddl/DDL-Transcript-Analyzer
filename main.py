@@ -25,12 +25,26 @@ def advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, trans
     transcript_progress_bar['value'] = 0
     transcript_progress_text.config(text=f"0/{num_transcripts}")
 
+# Given a directory,
+# return the number of deliberations in it.
+def get_num_deliberations(data_path):
+    num_transcripts = 0
+    for deliberation in os.listdir(data_path):
+      path = os.path.join(data_path, deliberation)
+      if path.endswith('xlsx') or path.endswith('csv') or path.endswith('numbers'):
+          num_transcripts += 1
+    return num_transcripts
+
 # Run current session_num
 def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress_text):
     print("Started working with Session", config.session_num)
 
     # Clean the input data
     data_path = os.path.join(DATA_DIR, config.session_num)
+    num_transcripts = get_num_deliberations(data_path)
+    advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)
+
+    # Clean the input data
     clean_input_data(data_path)
 
     # Transcript Cleaning -> Argument Identification
@@ -98,8 +112,6 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     frame.columnconfigure(1, weight=1)
     frame.columnconfigure(2, weight=1)
     frame.rowconfigure(3, weight=1)
-
-    num_transcripts = 10 # TODO: Calculate number of transcripts based on 'data' folder
     
     # Text above the Phase Progress Bar
     phases = ["Transcript Cleaning", "Argument Identification", "Argument Analysis"]
@@ -116,7 +128,7 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
     transcript_progress_bar.grid(row=2, column=1, pady=5, padx=10, sticky='ew')
 
     # Text to the right of the Transcript Progress Bar
-    transcript_progress_text = tk.Label(frame, text=f"0/{num_transcripts}")
+    transcript_progress_text = tk.Label(frame, text="0")
     transcript_progress_text.grid(row=2, column=2, padx=10, sticky='w')
 
     # Console/Terminal Output Textbox
