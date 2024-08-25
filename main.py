@@ -98,9 +98,9 @@ def hard_restart(session):
     print("Done")
 
 # GUI Progress Bar Screen
-def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
+def progress_bar(root, sessions, session_vars, debug_var, restart_var, current_frame):
     # Grab Selected Sessions
-    selected_sessions = [f"{i+1}" for i, var in enumerate(session_vars) if var.get() == 1]
+    selected_sessions = [sessions[i] for i, var in enumerate(session_vars) if var.get() == 1]
 
     if not selected_sessions: return
 
@@ -197,6 +197,15 @@ def create_info_icon(parent, row, column, text):
     canvas.tag_bind("info", "<Enter>", help_box.show_tooltip)
     canvas.tag_bind("info", "<Leave>", help_box.hide_tooltip)
 
+# The key for sorting sessions.
+# This sorts all numerical sessions (theoretically, all of them)
+# followed by string sessions
+def sort_sessions_key(session):
+    try:
+        return (0, int(session))
+    except ValueError:
+        return (1, session)
+
 # GUI Session Selection and Options Menu
 def session_selection(root, current_frame):
     current_frame.destroy()
@@ -204,7 +213,7 @@ def session_selection(root, current_frame):
     frame = tk.Frame(root)
     frame.pack(expand=True, padx=20, pady=20)
 
-    session_count = 4  #TODO: GRAB FROM DATA FOLDER
+    sessions = sorted([f.name for f in os.scandir(DATA_DIR) if f.is_dir()], key=sort_sessions_key)
 
     # Instructions Text
     instructions_text = tk.Label(frame, text="Please hover over the info icons below:")
@@ -217,9 +226,9 @@ def session_selection(root, current_frame):
     create_info_icon(frame, 1, 2, "Additionally, you may toggle the following options:\n\nDebug Mode: Debug statements will be shown.\nUse if the program is outputting odd results\n\nHard Restart: Normally, the program will resume where it\nleft off if you must restart due to an error.\nHowever, this option will make the program delete all previous\nprogress and complete reanalyze the selected sessions.")
 
     # Session Checkboxes
-    session_vars = [tk.IntVar(value=1) for _ in range(session_count)]
-    for i in range(session_count):
-        tk.Checkbutton(frame, text=f"Session {i+1}", variable=session_vars[i]).grid(row=i+2, column=0, sticky='w', pady=2)
+    session_vars = [tk.IntVar(value=1) for _ in range(len(sessions))]
+    for i in range(len(sessions)):
+        tk.Checkbutton(frame, text=f"Session {sessions[i]}", variable=session_vars[i]).grid(row=i+2, column=0, sticky='w', pady=2)
     
     # Debug Mode Checkbox
     debug_var = tk.IntVar(value=0)
@@ -229,18 +238,18 @@ def session_selection(root, current_frame):
     restart_var = tk.IntVar(value=0)
     tk.Checkbutton(frame, text="Hard Restart", variable=restart_var).grid(row=3, column=2, sticky='w', pady=2)
 
-    button_row = max(4, session_count + 2)
+    button_row = max(4, len(sessions) + 2)
 
     # Back Button
     back_button = tk.Button(frame, text="Back", command=lambda: restart_program(root, frame))
     back_button.grid(row=button_row, column=0, pady=20, sticky='w')
 
     # Start Button
-    start_button = tk.Button(frame, text="Start", command=lambda: progress_bar(root, session_vars, debug_var, restart_var, frame))
+    start_button = tk.Button(frame, text="Start", command=lambda: progress_bar(root, sessions, session_vars, debug_var, restart_var, frame))
     start_button.grid(row=button_row, column=2, pady=20, sticky='e')
 
     # Increase window size if needed
-    new_height = max(300, 200 + session_count * 28)
+    new_height = max(300, 200 + len(sessions) * 28)
     root.minsize(500, new_height)
 
 # GUI Main Menu
