@@ -80,33 +80,13 @@ def add_policy_columns(ws, policy_variables):
           column += 1
       label = " (bool)"
 
-# classifies all arguments in all deliberations in session_num based on the generated topics
-# note: time-expensive
-def arg_sort(all_args_indexed, topics, policy_variables, results_path):
-  print("\nAnalyzing Session", config.session_num, "deliberations...")
-
-  prompt = f"""
-You are an annotator categorizing arguments about {topics[0]}. 
-If the argument favors {topics[1]}, return "7". If against, return "8".
-If the argument favors {topics[2]}, return "9". If against, return "10".
-If the argument favors {topics[3]}, return "11". If against, return "12".
-If the argument favors {topics[4]}, return "13". If against, return "14".
-If the argument favors {topics[5]}, return "15". If against, return "16".
-If the argument favors {topics[6]}, return "17". If against, return "18".
-If the argument favors {topics[7]}, return "19". If against, return "20".
-If relevant but not covered, return "21". If not relevant, return "22".
-Return only the number, no extra text or spaces.
-"""
-  if config.is_debug: print("\n(DEBUG) arg_sort prompt:" + prompt)
-
-  # looping over all deliberations
-  for deliberation in all_args_indexed.keys():
+def single_deliberation_analysis(deliberation, results_path, all_args_indexed, policy_variables, prompt):
     new_filename = "EVALUATED" + deliberation.replace("xlsx", "csv")
     new_filepath = os.path.join(results_path, new_filename)
 
     if os.path.exists(new_filepath):
       print("Skipped", deliberation, "because it has previously been analyzed")
-      continue
+      return
 
     args = all_args_indexed[deliberation]
     path = os.path.join(PROCESSING_DIR, config.session_num, deliberation)
@@ -127,6 +107,35 @@ Return only the number, no extra text or spaces.
 
     df = pd.DataFrame(ws.values)
     df.to_csv(new_filepath, index=False, header=False)
+
+# classifies all arguments in all deliberations in session_num based on the generated topics
+# note: time-expensive
+def arg_sort(all_args_indexed, topics, policy_variables, results_path, transcript_progress_bar, transcript_progress_text, num_transcripts):
+  print("\nAnalyzing Session", config.session_num, "deliberations...")
+
+  prompt = f"""
+You are an annotator categorizing arguments about {topics[0]}. 
+If the argument favors {topics[1]}, return "7". If against, return "8".
+If the argument favors {topics[2]}, return "9". If against, return "10".
+If the argument favors {topics[3]}, return "11". If against, return "12".
+If the argument favors {topics[4]}, return "13". If against, return "14".
+If the argument favors {topics[5]}, return "15". If against, return "16".
+If the argument favors {topics[6]}, return "17". If against, return "18".
+If the argument favors {topics[7]}, return "19". If against, return "20".
+If relevant but not covered, return "21". If not relevant, return "22".
+Return only the number, no extra text or spaces.
+"""
+  if config.is_debug: print("\n(DEBUG) arg_sort prompt:" + prompt)
+
+  deliberations_analyzed = 0
+  # looping over all deliberations
+  for deliberation in all_args_indexed.keys():
+    single_deliberation_analysis(deliberation, results_path, all_args_indexed, policy_variables, prompt)
+
+    deliberations_analyzed += 1
+    transcript_progress_bar['value'] += 100 / num_transcripts
+    transcript_progress_text.config(text=f"{deliberations_analyzed}/{num_transcripts}")
+    
     print("Analyzed", deliberation)
   print("Finished analyzing deliberations in Session", config.session_num)
 
@@ -378,7 +387,7 @@ def generate_policy_data(sampled_args, topics, policy_variables, results_path):
 # Code starts here
 # Given a results folder and arguments,
 # analyze all of the arguments and generate results
-def analyze_processed_data(all_args_indexed, all_args):
+def analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts):
   results_path = os.path.join(RESULTS_DIR, config.session_num)
   topics = []
   policy_variables = []
@@ -388,7 +397,8 @@ def analyze_processed_data(all_args_indexed, all_args):
      error("There are not enough arguments in this session for a proper analysis!\nGo to analyze_processed_data() in analyze.py if this must be overwritten.")
   generate_policy_data(sampled_args, topics, policy_variables, results_path) # generate or read topics[] and policy_variables[]
 
-  arg_sort(all_args_indexed, topics, policy_variables, results_path) # classify all arguments in Excel files
+  # Classify all arguments in Excel files
+  arg_sort(all_args_indexed, topics, policy_variables, results_path, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
   # Generate Metrics
   delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]

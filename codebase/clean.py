@@ -61,8 +61,8 @@ def clean_input_data(data_path, transcript_progress_bar, transcript_progress_tex
    for deliberation in os.listdir(data_path):
       csv_to_xlsx(data_path, deliberation)
    
-   # Remove all sheets except for the first one from each Workbook
    deliberations_cleaned = 0
+   # Remove all sheets except for the first one from each Workbook
    for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
       if path.endswith('xlsx'):
@@ -85,6 +85,6 @@ def clean_input_data(data_path, transcript_progress_bar, transcript_progress_tex
         deliberations_cleaned += 1
         transcript_progress_bar['value'] += 100 / num_transcripts
         transcript_progress_text.config(text=f"{deliberations_cleaned}/{num_transcripts}")
-        
+
         print("Cleaned", deliberation)
    print("Finished cleaning Session", config.session_num, "data folder")

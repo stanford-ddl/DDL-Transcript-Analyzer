@@ -59,10 +59,10 @@ def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress
     advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
     # Analyze the processed data (compare arguments to generated policies)
-    analyze_processed_data(all_args_indexed, all_args)
+    analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
     # Delete this sessions processing path so it does not interfere with future sessions
-    delete_processing_path(config.session_num)
+    #delete_processing_path(config.session_num) TODO: Uncommet this when testing is finished
     
     print("\nFinished working with Session", config.session_num)
 
