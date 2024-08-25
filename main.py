@@ -85,6 +85,11 @@ def hard_restart(session):
 
 # GUI Progress Bar Screen
 def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
+    # Grab Selected Sessions
+    selected_sessions = [f"{i+1}" for i, var in enumerate(session_vars) if var.get() == 1]
+
+    if not selected_sessions: return
+
     current_frame.destroy()
     root.title("Progress Bar")
     frame = tk.Frame(root)
@@ -120,9 +125,6 @@ def progress_bar(root, session_vars, debug_var, restart_var, current_frame):
 
     # Display print() statement in GUI
     sys.stdout = RedirectOutput(text)
-
-    # Grab Selected Sessions
-    selected_sessions = [f"{i+1}" for i, var in enumerate(session_vars) if var.get() == 1]
 
     # Set is_debug
     config.is_debug = debug_var.get() == 1
