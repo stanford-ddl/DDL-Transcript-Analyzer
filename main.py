@@ -53,7 +53,7 @@ def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress
     # Process the cleaned data (search the text for arguments)
     all_args_indexed = {} # keys = deliberation ids, values = (argument, index in deliberation)
     all_args = []
-    process_cleaned_data(data_path, all_args_indexed, all_args)
+    process_cleaned_data(data_path, all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts)
 
     # Argument Identification -> Argument Analysis
     advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts)

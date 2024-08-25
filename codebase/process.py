@@ -148,10 +148,12 @@ def create_processing_path(processing_path):
 # Code starts here
 # Given a data folder and empty argument variables,
 # process all of the data and find arguments in the text.
-def process_cleaned_data(data_path, all_args_indexed, all_args):
+def process_cleaned_data(data_path, all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts):
     processing_path = os.path.join(config.PROCESSING_DIR, config.session_num)
     create_processing_path(processing_path)
     print("\nIdentifying arguments in Session", config.session_num + "...")
+
+    deliberations_processed = 0
     # looping over all deliberations and collecting 1) the arguments presented and 2) the index of each argument in that deliberation
     for deliberation in os.listdir(data_path):
       path = os.path.join(data_path, deliberation)
@@ -161,4 +163,8 @@ def process_cleaned_data(data_path, all_args_indexed, all_args):
         formatted_args = extract_args(new_path, deliberation)
         all_args_indexed.update(formatted_args)
         all_args += all_args_indexed[deliberation]
+
+        deliberations_processed += 1
+        transcript_progress_bar['value'] += 100 / num_transcripts
+        transcript_progress_text.config(text=f"{deliberations_processed}/{num_transcripts}")
     print("Finished identifying arguments in Session", config.session_num)
