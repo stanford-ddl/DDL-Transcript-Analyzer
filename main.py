@@ -14,11 +14,6 @@ from codebase.analyze import analyze_processed_data
 
 sys.path.append(os.getcwd())
 
-# READ THIS - VERY IMPORTANT
-# To change the Togglable Options that affect how the code runs,
-# see config.py
-# VERY IMPORTANT - READ THIS
-
 # Increase the phase progress bar and reset the transcript progress bar
 def advance_GUI_to_next_phase(phase_progress_bar, transcript_progress_bar, transcript_progress_text, num_transcripts):
     phase_progress_bar['value'] += 100 / 3
