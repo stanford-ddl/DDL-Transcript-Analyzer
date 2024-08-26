@@ -262,7 +262,7 @@ def session_selection(root, current_frame):
 
 # GUI Main Menu
 def main_menu(root):
-    root.title("Stanford DDL Transcript Analyzer")
+    root.title("Stanford DDL Transcript Analyzer v1.0")
     frame = tk.Frame(root)
     frame.pack(expand=True)
 
