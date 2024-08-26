@@ -10,7 +10,7 @@ import re
 
 from codebase import config, util
 from codebase.eval import get_metric_sums, get_metric_dist
-from codebase.config import TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase.config import RESULTS_DIR, PROCESSING_DIR
 
 # Given a Worksheet,
 # wrap all text cells.

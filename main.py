@@ -7,7 +7,7 @@ import sys
 import threading
 
 from codebase import config
-from codebase.config import TOTAL_SESSIONS, IS_ANALYZE_ALL_SESSIONS, DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase.config import DATA_DIR, RESULTS_DIR, PROCESSING_DIR
 from codebase.clean import clean_input_data
 from codebase.process import process_cleaned_data
 from codebase.analyze import analyze_processed_data

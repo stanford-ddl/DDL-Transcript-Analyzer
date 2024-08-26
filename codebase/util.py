@@ -2,7 +2,6 @@ import json
 from functools import lru_cache
 from .api_keys import MY_API_KEY
 
-
 import openai
 from openai import OpenAI, APIConnectionError
 
