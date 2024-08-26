@@ -1,6 +1,6 @@
 # Togglable Options
 is_debug = False # If True, additional debug statements will be printed.
-session_num = '1' # THIS IS A STRING - The single session to analyze if 'IS_ANALYZE_ALL_SESSIONS' is False
+session_num = '1' # THIS IS A STRING - The session currently being analyzed.
 
 # Static Directories
 DATA_DIR = 'data'
