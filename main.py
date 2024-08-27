@@ -221,6 +221,7 @@ def session_selection(root, current_frame):
     frame = tk.Frame(root)
     frame.pack(expand=True)
 
+    # Grab all sessions from the 'data' folder
     sessions = sorted([f.name for f in os.scandir(DATA_DIR) if f.is_dir()], key=sort_sessions_key)
 
     # Instructions Text
