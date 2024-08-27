@@ -1,2 +1,2 @@
 # Paste your API Key between the two apostrophes below!
-MY_API_KEY='test'
+MY_API_KEY=''
