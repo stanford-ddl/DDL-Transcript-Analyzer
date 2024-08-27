@@ -1,0 +1,5 @@
+# Ignore the api_keys.py file
+codebase/api_keys.py
+
+# Ignore the processing folder and all its contents
+codebase/processing/
