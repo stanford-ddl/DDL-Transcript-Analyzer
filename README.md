@@ -1,15 +1,29 @@
-This project is part of an ongoing initiative within the Deliberative Democracy Lab at Stanford to extract, evaluate, and quantify the unique arguments presented in a deliberation.
+# DDL Transcript Analyzer
+The Stanford DDL Transcript Analyzer takes in raw transcripts from deliberations and performs argument analysis on them.
 
-Current work has focused on ranked-choice voting (RCV) deliberations. The code written so far does the following:
-- Collects all arguments (only those identified and summarized by the Fileread system) across RCV deliberations
-- Condenses the RCV arguments, using a sample of arguments, into distinct argument topics by prompting LLM
-- Runs LLM evaluation on all arguments for which topics are present
-- Accumulates counts and distributions for topics across deliberations
+## Table of Contents
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installing](#installing)
+* [Usage](#usage)
+* [Notes for Future Developers](#notes-for-future-developers)
+* [Gallery](#gallery)
+          
+## Getting Started
+### Prerequisites
+TODO
 
-Future work should likely involve the following:
-- Run sanity checks on the model's evaluation of arguments 
-- Adapt and scale the code for other types of deliberations
+### Installing
+TODO
 
-The data/1 folder contains the deliberation transcripts that we evaluated the current methods on in an initial round of testing. These results can be found in results/1. 
+## Usage
+TODO
 
-Access to LLMs is currently provided by a together.ai key. This may need to be replaced in the future if credits get used up.
+## Notes for Future Developers
+TODO
+
+## Gallery
+<img width="495" alt="Image1-DDL_Transcript_Analyzer" src="https://github.com/user-attachments/assets/718a8a96-5ba5-4455-8bbe-639137e9dda1">
+<img width="495" alt="Image2-DDL_Transcript_Analyzer" src="https://github.com/user-attachments/assets/81db9979-047f-4428-b4d2-950f751147b4">
+<img width="495" alt="Image3-DDL_Transcript_Analyzer" src="https://github.com/user-attachments/assets/53ca5361-7e3d-47d3-96ad-86ab82f57201">
+<img width="495" alt="Image4-DDL_Transcript_Analyzer" src="https://github.com/user-attachments/assets/51de531f-3a7c-4b6b-abc4-40cd45f45625">
