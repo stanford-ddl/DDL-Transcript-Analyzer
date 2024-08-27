@@ -1,5 +1,11 @@
-# Ignore the api_keys.py file
+# API Key
 codebase/api_keys.py
 
-# Ignore the processing folder and all its contents
+# Data Folder
+data/
+
+# Processing Folder
 codebase/processing/
+
+# Results Folder
+results/
