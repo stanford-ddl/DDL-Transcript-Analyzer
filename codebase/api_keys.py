@@ -1,1 +1,2 @@
-MY_API_KEY='sk-proj-bVENjFcdCgDyeAocPu2QT3BlbkFJBdxAivBCbEbA5WYSK1tQ'
+# Paste your API Key between the two apostrophes below!
+MY_API_KEY=''
