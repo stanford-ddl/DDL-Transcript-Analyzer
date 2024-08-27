@@ -1,0 +1,343 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electionProcessChanges,partyInfluenceImpact,votingConfusion,proportionalRepresentation,moralResponsibility,preferenceVotingCriticism,politicsUnderstandingChallenges,other,notRelevant
+0,48418,"""2:11""",My name is Ben and I'm a pharmacist at Rochester.,no,,1,False,False,False,False,False,False,False,False,False
+1,48349,"""2:23""",,no,,2,False,False,False,False,False,False,False,False,False
+2,48349,"""2:23""","Hi, my name is William. I'm a retired computer programmer or wired sector.",no,,3,False,False,False,False,False,False,False,False,False
+3,48312,"""2:36""","Hi, I'm Marilyn. And I'm a retired, social worker living on the West Coast.",no,,4,False,False,False,False,False,False,False,False,False
+4,10607,"""2:46""","Hi, my name is Noel and the medical assistant living in New Jersey.",no,,5,False,False,False,False,False,False,False,False,False
+5,48331,"""2:52""",I'm Tyler. I'm a high school teacher from Georgia.,no,,6,False,False,False,False,False,False,False,False,False
+6,48300,"""3:03""",,no,,7,False,False,False,False,False,False,False,False,False
+7,48300,"""3:03""","I'm John, it's supposed to work. A retired for the last 25 years. Made it be here.",no,,8,False,False,False,False,False,False,False,False,False
+8,48296,"""3:12""",James grocery executive live in Arkansas.,no,,9,False,False,False,False,False,False,False,False,False
+9,48319,"""3:18""","Hi, my name is Lee. I live in Wisconsin and I work for a electrical distribution firm.",no,,10,False,False,False,False,False,False,False,False,False
+10,9625,"""3:28""","I am Steve, I live in Connecticut elevator mechanic.",no,,11,False,False,False,False,False,False,False,False,False
+11,48341,"""3:38""",Hi. I'm hope I'm a composer. I just got my bachelor's and I'm applying for masters programs.,no,,12,False,False,False,False,False,False,False,False,False
+12,9686,"""3:45""","My name is Tyler. I'm retired in Las Vegas, but I spent most of my working life in Chicago in financial services.",no,,13,False,False,False,False,False,False,False,False,False
+13,9686,"""3:45""",,no,,14,False,False,False,False,False,False,False,False,False
+14,48334,"""4:04""",,no,,15,False,False,False,False,False,False,False,False,False
+15,48312,"""12:27""","I'm wondering if anyone in the group lives in a state or District, who has used one of these Alternatives. And if so, if they could speak with us about how they think that went,",yes," 1. The text is asking if anyone in the group lives in a state or District.
+2. It is inquiring if any of these individuals have used an alternative.
+3. The text requests that these individuals share their experiences with using the alternative.
+4. The text also asks for the individuals' opinions on how the process went.",16,False,False,False,False,False,False,False,False,True
+16,48331,"""12:54""","we've we've never used any of these systems, but",no,,17,False,False,False,False,False,False,False,False,False
+17,48331,"""12:54"""," I live in Georgia, and I can kind of, we recently had a Herschel Walker versus professional Warnock, and that only went to one run off, but just that one run off kind of really showed how how sick of of the election stuff people get, because people really,",no,,18,False,False,False,False,False,False,False,False,False
+18,48331,"""12:54"""," you really have to drag people to go back and do the second time just for that one. So I kind of wonder if people would be willing to put up with something, a little more complicated compared to that.",no,,19,False,False,False,False,False,False,False,False,False
+19,48341,"""13:39""","Well, I will say, I think, if you're using rank Choice voting. I think the idea of using the instant runoff swear, like they just automatically calculate it, instead of having to go back into voting is better because like you said that people don't want to go back in to vote again. So, if you're going to use this system, I think you've got to do it to where it's the instant runoff stuff, where they're automatically calculating it by eliminating people and just Reach Out.",no,,20,False,False,False,False,False,False,False,False,False
+20,48296,"""14:15""","I agree with that. If you do the first past the post and you got to try to get people to come back, we get election fatigue, we get tired of it. We're already starting on the 2024 cycle and we started that in late 2022. So yeah, definitely, I can see Ranch toys. Instant run offs, that would be a very good idea.",yes," 1. The speaker agrees with a previous statement.
+2. The speaker brings up the issue of ""first past the post"" and how it can lead to ""election fatigue.""
+3. The speaker notes that election cycles are starting earlier and earlier, with the 2024 cycle beginning in late 2022.
+4. The speaker expresses support for the idea of instant runoffs.",21,True,False,False,False,False,False,True,False,False
+21,48349,"""14:38""","In general I'm opposed to make choices building. I know that if they do in Alaska, not sure other places. That one here is that generally the person that gets the most votes originally chose not to ultimately live.",no,,22,False,False,False,False,False,False,False,False,False
+22,48349,"""14:38""",,no,,23,False,False,False,False,False,False,False,False,False
+23,48296,"""15:06""","Even though that person doesn't ultimately win, does it not does the electric not really win because we end up getting a more moderate candidate. We're not so polarized.",yes," 1. The person who was initially competing does not ultimately win.
+2. The electric car, mentioned earlier in the conversation, does not truly win either.
+3. Instead, we get a more moderate candidate as a result.
+4. The overall level of polarization is reduced.",24,False,False,False,False,False,False,False,True,False
+24,48349,"""15:18""",I don't think that that's necessarily how it works.,no,,25,False,False,False,False,False,False,False,False,False
+25,48349,"""15:18""", I think in Alaska where it's a very conservative State and then they ended up threw Rachel's whirring electing a relatively liberal Busan,yes," 1. Alaska is a very conservative state.
+2. Rachel was elected in Alaska.
+3. Rachel's political views are relatively liberal.
+4. Rachel won the election in Alaska, which is unexpected due to the state's conservative nature.",26,False,False,False,False,False,False,False,True,False
+26,9625,"""15:41""",,no,,27,False,False,False,False,False,False,False,False,False
+27,9625,"""15:41""",,no,,28,False,False,False,False,False,False,False,False,False
+28,9625,"""15:41""","Yes, you're right. Pretty much. I was saying, as long as they streamline the process there won't be any voting fatigue. But confusion is also another part of it that might be difficult to overcome.",no,,29,False,False,False,False,False,False,False,False,False
+29,48418,"""15:52""","Steve, I think you're muted.",no,,30,False,False,False,False,False,False,False,False,False
+30,48418,"""16:13""","I do believe that the confusion aspect of it would be significant but the fact that it's new, I think is more scary for most voters. It took me a bit of time to figure out what how, how the system worked for want this? Once the rank Choice, voting system was a bit more explain to me.",yes," 1. The confusion aspect of the ranked choice voting system is significant.
+2. The newness of the system is more scary for most voters.
+3. It took some time to understand how the ranked choice voting system works.
+4. The voter needs to be explained how the system works.",31,True,False,True,False,False,False,True,False,False
+31,48418,"""16:13""", I do believe it's a much better alternative.,no,,32,False,False,False,False,False,False,False,False,False
+32,10607,"""16:47""","Yeah, looking at the PDF, it seems like the pros for it seemed pretty nice in the you have the instant runoffs and also with when you rank things, you're kind of creating a voice with that and you're getting a person to another person who wants to Second preference.",yes," 1. The pros for instant runoffs are highlighted in the PDF.
+2. Ranking preferences creates a voice for the voter.
+3. Second preference voting is enabled, allowing for the selection of a second choice for voters.",33,True,False,False,False,False,False,False,False,False
+33,10607,"""16:47"""," To be a little bit more cooperative and appeal to that side. So I guess it does have that Pro of appealing to more people and being less extreme the end. The one thing that kind of seems a bit confusing is how you can only use one, but if you only, if you want like a couple of rank that it's eliminated. So I",no,,34,False,False,False,False,False,False,False,False,False
+34,48349,"""17:32""",I think that we have trouble counting one round. You look at all the ballot problems and issues that they have. We just exacerbate that if we had to go through the balance number of times.,no,,35,False,False,False,False,False,False,False,False,False
+35,48341,"""17:55""","Yeah, well I from reading the stuff I do prefer the ranked Choice voting. I do think it is a good point that all of our current problems with like, actually regulating our voting systems and like voter fraud and everything else are going to be present if we use ranked Choice voting. So like, that is a good point to bring up and it's like even with this system like if all of the other problems are there it's going to get",no,,36,False,False,False,False,False,False,False,False,False
+36,48341,"""17:55""", Gamed and then it's more complicated to try and fix any issues that do come up.,no,,37,False,False,False,False,False,False,False,False,False
+37,48334,"""18:32""",,no,,38,False,False,False,False,False,False,False,False,False
+38,48334,"""18:32""",,no,,39,False,False,False,False,False,False,False,False,False
+39,48334,"""18:32""",,no,,40,False,False,False,False,False,False,False,False,False
+40,48334,"""18:32""",,no,,41,False,False,False,False,False,False,False,False,False
+41,48334,"""18:32""",,no,,42,False,False,False,False,False,False,False,False,False
+42,48418,"""18:39""",You're muted STD.,no,,43,False,False,False,False,False,False,False,False,False
+43,48418,"""19:02""","Sorry, I still can't hear you my man.",no,,44,False,False,False,False,False,False,False,False,False
+44,48300,"""19:24""","Time we voted and 9, 1776 more or less at the wedding party. Speaking of running, there was just boot the people and they took the best, the most votes got been divorced who ever liked it, and that's what we're basically going back to",yes," 1. We need to vote
+2. The number of people who should vote is around 9, plus or minus 1776
+3. This discussion took place at a wedding party
+4. There was a mention of running or managing something
+5. The best people were chosen based on votes
+6. The person with the most votes won
+7. The system being described is similar to a divorce in that people can't always choose who they ""divorce"" or remove from the group
+8. The system is going back to this method.",45,True,False,False,False,False,False,True,False,False
+45,48349,"""19:45""",You're the fella see I think is that with right choice voting I don't think you get a more moderate candidate because what happens is the most extreme candidate is the one who considers both redistributed is a verbose redistributed. And therefore,yes," 1. The selection of candidates through right choice voting may not result in a more moderate candidate.
+2. The most extreme candidate might consider both redistribution and verbose redistribution.
+3. Therefore, the most extreme candidate could become the chosen option.",46,False,False,False,False,False,True,False,False,False
+46,48349,"""19:45""", They're just adding the extreme people back in.,no,,47,False,False,False,False,False,False,False,False,False
+47,48341,"""20:10""","Well, I think I think that basically depends on how you look at it. If you think that we're currently electing extreme people than the system brings a modern people, but if you think we're currently electing moderate people than the system would bring in extreme people, so I guess it depends on like do you think it's currently extremists or do you think it's currently like more moderate?",yes," 1. The summary depends on how one views the current political climate.
+2. If one believes that extremists are currently being elected, then the system is bringing in modern people.
+3. However, if one believes that moderate individuals are being elected, then the system would be bringing in extremists.
+4. Therefore, the outcome depends on whether one thinks the current political landscape is dominated by extremists or moderates.",48,False,False,False,False,False,False,True,False,False
+48,48418,"""20:35""","The other aspect to it too, is that the current system appeals to folks that go towards the extreme. So the more extreme you get, the more votes again. So if you were to appeal to more moderate voters like myself, sometimes I feel like my vote doesn't count, and it just is it doesn't it? Sometimes I feel like my vote doesn't matter, unfortunately, but with a rank Choice voting. I",yes," 1. The current system appeals to people who hold extreme views.
+2. The more extreme a person's views are, the more votes they are likely to receive.
+3. Moderate voters, such as the speaker, sometimes feel like their votes do not count.
+4. The speaker sometimes feels like their vote does not matter.
+5. With ranked-choice voting, moderate voters may feel like their votes are more significant.",49,True,False,False,False,False,False,False,False,False
+49,48418,"""20:35""", Leave that my voice would be better heard if that makes any sense.,yes," 1. The text suggests that the author's voice would be more effective in conveying their message.
+2. The phrase ""that makes any sense"" implies that the author is unsure if their preference for their own voice is understandable or reasonable.",50,False,False,False,False,False,False,False,False,True
+50,48296,"""21:09""",,no,,51,False,False,False,False,False,False,False,False,False
+51,48296,"""21:09""","Yeah, that's where I was completely wanted to go with the whole situation is that we have. Yeah, you have to appeal to a more more to a Centrist position in order to get the rank Choice boats.",no,,52,False,False,False,False,False,False,False,False,False
+52,9686,"""21:30""",,no,,53,False,False,False,False,False,False,False,False,False
+53,9686,"""21:30""","I'm in favor of right choice. I think the the other term before the alternative, the present system is winner-takes-all to me. That sounds like almost a futile Relic. I mean for example in the German Thirty Years War, if your feudal Lord who one had been Protestant, it doesn't matter what your opinion was, they would like basically beat the religion into you and I think since we're all pretty much the same culture. Now we can reason with each other where we",yes," 1. The speaker is in favor of making the right choice.
+2. They describe the current system as ""winner-takes-all,"" which they see as outdated and futile.
+3. The speaker uses the example of the German Thirty Years War to illustrate their point, where a person's religion was imposed on them based on their feudal lord's beliefs, regardless of their own opinions.
+4. The speaker suggests that since people now share a similar culture, they are able to reason with each other and make choices that reflect their own beliefs and opinions.",54,False,False,False,True,False,False,False,False,False
+54,9686,"""21:30"""," don't have one person. Getting all the power one party and then basically telling everybody else what to do and that's really present in today's politics, we're more polarized than I think any time in my lifetime and I",yes," 1. The text discusses the issue of power being held by a single entity or group in politics.
+2. The speaker expresses concern about a political situation where one party has all the power and dictates terms to everyone else.
+3. The speaker observes that today's politics is more polarized than at any time in their lifetime.",55,False,True,False,False,False,False,False,False,False
+55,48349,"""22:23""","Is it still water take all? I mean, whoever wins however they get their tanks at all.",yes," 1. The speaker is raising a question about the fairness of a situation.
+2. They are wondering if the outcome is already determined, with the winner being the one who can amass the most tanks.
+3. The phrase ""however they get their tanks"" suggests concerns about the methods used to acquire these tanks.
+4. The rhetorical question ""whoever wins however they get their tanks at all"" implies skepticism about the legitimacy of the victory.
+5. The repetition of ""all"" in the question ""Is it still water take all?"" may be a play on the phrase ""winner takes all,"" further emphasizing the speaker's concern about the fairness of the situation.",56,False,False,False,False,False,False,False,True,False
+56,9686,"""22:38""","Right, it's winner, take all I'm saying that especially in today's climate. We need to move something that mitigates these differences because we're not so far apart. We're not some, you know, we don't have such a totally alien cultures in this country that we can't reason with each other. So we don't have to have just one party winning in the just beating everything into the other party and that's what we have right now and I think that's bad.",no,,57,False,False,False,False,False,False,False,False,False
+57,48418,"""23:06""",Also I think the other issue with the current system is that single-issue voters have a much more significant impact on the vote then say folks that are that have more opinions on more issues and that is a bit concerning to me.,yes," 1. The current system has an issue with the impact of single-issue voters.
+2. Single-issue voters have a more significant impact on the vote than those with opinions on multiple issues.
+3. This concern is related to the unequal influence of single-issue voters in the current system.",58,False,False,False,False,False,False,False,True,False
+58,48300,"""23:30""","What what concerns me is that the last few elections money talked. A lot of people walked and seem like one party had more money than the other one, and that's how I got in. I think they would be a better idea. Wouldn't be giving that money as talking to smooth everybody, you know?",no,,59,False,False,False,False,False,False,False,False,False
+59,48418,"""23:51""","That's exactly what. That's exactly, right because you pay you care enough about one single issue you dump enough money onto one single issue. And in this kind of the, in the current system. Unfortunately, that's, that's how you went.",no,,60,False,False,False,False,False,False,False,False,False
+60,48341,"""24:11""","I think, I think one of the benefits of implementing something like ranked Choice voting into, like at least some level of government, even if you don't put it on everything. All at once is that it is,",yes," 1. The implementation of ranked-choice voting in some level of government can be beneficial.
+2. This voting method can be introduced gradually, not necessarily applied to everything all at once.
+3. Ranked-choice voting can promote fairer representation and better election outcomes.
+4. It allows voters to rank candidates in order of preference.
+5. This system can help eliminate the problem of vote-splitting and the ""spoiler effect.""
+6. Ranked-choice voting can encourage more positive campaigns, as candidates need to appeal to a broader range of voters.
+7. This voting method fosters greater consensus and less polarization.
+8. It can be an effective solution for improving the voting process and election results.",61,True,False,False,False,False,False,False,False,False
+61,48341,"""24:11"""," It is more complicated than what we have now, but it's not really, it's much more hard to implement something. Like, we're going to have multiple people electronegative. Winner Takes all. So it's",yes," 1. The proposed system is more complicated than the current one.
+2. It involves having multiple electronegative people.
+3. The system uses the ""Winner Takes all"" approach.",62,False,False,False,False,False,False,True,False,False
+62,48341,"""24:11"""," It's a like a, like a easier stepping stone with our current election system rather than trying to radicalize Everything. At Once, which probably just won't really",yes," 1. The new system is proposed as a more gradual and easier alternative to the current election system.
+2. It is considered as a step to avoid radicalizing the entire system at once.
+3. The approach of implementing the new system all at once is seen as less feasible.",63,True,False,False,False,False,False,False,False,False
+63,48418,"""26:28""",So the I'm just gonna come out and say it but the current system is is just not working.,no,,64,False,False,False,False,False,False,False,False,False
+64,48418,"""26:28""", And I'm not sure what the best alternative would be.,no,,65,False,False,False,False,False,False,False,False,False
+65,10607,"""26:46""","Yeah, even like listening to all these proposals is I find it kind of hard to conceptualize all the pros and cons and I know that they have them here but it's not kind of organized too well. But I'm considering out of all the ones that are proposed. I guess the last one kind of seems a way that I can. Oh no. Would you could we discuss that last one? Where? It's like four to five and then you do ranked Choice. Voting just to keep things a little bit more.",yes," 1. The text is about discussing proposals and finding it difficult to conceptualize the pros and cons of each.
+2. The proposals are not organized in a clear manner.
+3. The last proposal is being considered.
+4. The last proposal involves ranked choice voting and is described as ""four to five and then you do ranked choice voting.""
+5. The speaker is asking if they could discuss the last proposal.",66,True,False,False,False,False,True,True,False,False
+66,10607,"""26:46""", Or I guess organized in terms of what we're talking about.,no,,67,False,False,False,False,False,False,False,False,False
+67,48418,"""27:21""","Yeah, I'm cuz right now the current system is just you're either for a system one or system to, and it doesn't speak for the many other views that other people might have. And that's that's what's confusing to me because I'm not confusing. But that's that's what's concerning to me, rather because you don't want to expand it to like an infinite number of views in such but still",yes," 1. The current system only allows for two opposing views, which does not account for the range of views held by others.
+2. The speaker finds this situation confusing.
+3. The speaker is concerned that the system does not accommodate a wider range of views.
+4. The speaker does not advocate for an infinite number of views, but rather a more inclusive system.",68,False,False,False,False,False,False,True,False,False
+68,48418,"""27:21""", I believe that I agree with you. I think the last option would be best.,no,,69,False,False,False,False,False,False,False,False,False
+69,48331,"""28:02""","Herman, Kahn feels like what we have now is kind of like a symptom of the way, our general elections are kind of how things have been split up and like the two, two major parties of kind of like diverged and gone into doing their own thing kind of",yes," 1. Herman, Kahn believes the current situation is a symptom of the way general elections are conducted.
+2. The two major parties have split up and gone in their own separate directions.
+3. This has led to the current state of affairs.",70,True,True,False,False,False,False,False,False,False
+70,48331,"""28:02"""," makes it hard for most people to keep track of everything, kind of Juggle, all the different",yes," 1. Modern life is fast-paced and demanding.
+2. Many things require people's attention and response.
+3. This makes it difficult for most people to keep track of everything.
+4. It's like constantly juggling different things.",71,False,False,False,False,False,False,True,False,False
+71,48331,"""28:02""",,no,,72,False,False,False,False,False,False,False,False,False
+72,48331,"""28:02"""," Procedurals, they have both parties.",no,,73,False,False,False,False,False,False,False,False,False
+73,48300,"""28:41""","Yes in a way, you're right but here's what I'm finding every time I go to election if I register as a Democrat I got to vote Democrat nominee by registered. Republican Republican nominee. I realize right independent and dependent. Now I give the in the pan completely out. He's not going to get too far, it gives the rest of it, the Republicans and Democrats a chance. But now with this new way or they just Satan, they're going to be Republican Democrat. So I can they be all Republicans? All Democrats or can it be",no,,74,False,False,False,False,False,False,False,False,False
+74,48300,"""28:41"""," A mixture like the president vice president before I was Republican and Democrat. Vice president, is that what we're talking to will go into this deal?",no,,75,False,False,False,False,False,False,False,False,False
+75,48296,"""29:23""","You know, after what, you just spoke to here in Arkansas, we don't have to declare a party. We choose which primary were going to vote in and that makes it, that makes it to where we actually have an option. Because if we didn't, we would only have one option here in our state.",no,,76,False,False,False,False,False,False,False,False,False
+76,48418,"""29:40""","So, I am not registered to a political party, so unfortunately, I can't participate in the primary process but that also gives me the freedom to vote how I truly feel rather than just voting party lines. So that's that's another concern I have with the current system is that people feel forced to vote party lines option, A or option.",yes," 1. The person is not registered to a political party.
+2. They cannot participate in the primary process due to this.
+3. This gives them the freedom to vote based on their true feelings.
+4. They have a concern that people feel forced to vote based on party lines.
+5. They mention the current system may not provide enough flexibility for voters to express their true preferences.",77,True,True,False,False,False,True,False,False,False
+77,48418,"""29:40"""," Ian be or nothing at all, and",no,,78,False,False,False,False,False,False,False,False,False
+78,48349,"""30:15""",I think the party line is more lazy than being forced. I recently compelling for me where they do we keep people primary and it doesn't doesn't facilitate modern calendar because I think that leads to work.,no,,79,False,False,False,False,False,False,False,False,False
+79,48349,"""30:15""",,no,,80,False,False,False,False,False,False,False,False,False
+80,48341,"""30:51""","Yeah, I think.",no,,81,False,False,False,False,False,False,False,False,False
+81,48341,"""30:51"""," I think this section really shows, my lack of knowledge because what I do know is like when it comes to both the parties, I have things that I agree with and disagree with or like and dislike on both sides, but I can really tell, I don't fully understand, even hell parties work. And part of that is on me, not like going and finding out more. But on the other hand it's also just such a baked in thing to our culture and system that feels obvious but it makes it hard for me to decide what would be the best option since I don't really.",yes," 1. The text expresses a lack of understanding regarding political parties.
+2. There are points of agreement and disagreement with both sides.
+3. The speaker admits to not fully understanding how political parties work.
+4. The speaker acknowledges that their lack of understanding is partly their own fault for not seeking more information.
+5. The pervasiveness of political parties in the culture and system makes it difficult for the speaker to decide on the best option.",82,False,True,False,False,False,False,True,False,False
+82,48341,"""30:51""", I understand the current system as is.,no,,83,False,False,False,False,False,False,False,False,False
+83,48418,"""31:31""","That's a good point to make to because over time with a two-party system, I forget exactly how I've I forget exactly where I saw it, but with the two-party system, it tends to run into overtime that parties polarize. So,",yes," 1. The two-party system has a tendency to run into overtime.
+2. Over time, political parties in a two-party system tend to polarize.
+3. There is a forgetfulness that sets in regarding the specifics of where certain viewpoints were seen.",84,False,True,False,False,False,False,False,False,False
+84,48418,"""31:31"""," With multiple points of view, I believe that would be avoided.",yes," 1. The text expresses the belief that having multiple points of view is a way to prevent issues.
+2. The specific points of view or issues are not detailed in the text.",85,False,False,False,False,False,False,True,False,False
+85,48312,"""32:01""","I think we're trying to discuss something in look for a consensus about what goes on nationally. When in reality each state party has their own rules about how they determine their general election candidates. And so II, there is no consistency state to state. You're in one state, you may move. And for example, in my state, the secretary of state every election cycle, produces a document with here's the issue. Here are the",no,,86,False,False,False,False,False,False,False,False,False
+86,48312,"""32:01"""," Rose. Here's the cons and when my daughter moved to another state her thing was, when are we going to get our voter pamphlet? They didn't have it in that state. Every state has their own rules and we're not going to come to a consensus because we live Across the Nation here.",yes," 1. Rose's daughter moved to another state and was expecting to receive a voter pamphlet there.
+2. The other state did not provide a voter pamphlet.
+3. Different states have different rules regarding voting.
+4. It is unlikely that there will be a nationwide consensus on voting procedures.",87,False,False,False,False,False,False,True,False,False
+87,10607,"""32:49""","I think we're all voicing concerns that were kind that were pointing out flaws in the way that the system is currently run and though, their and and finding solution is a bit difficult. I do remember, I can't remember the South American country, but I was listening to person say that we're besides the US, there's one other countries as a two-party system and currently that country, their democracy was failing. So I feel like there should be it",yes," 1. Concerns have been raised regarding flaws in the current system.
+2. Identified a South American country, besides the US, that has a two-party system and is currently experiencing democracy failure.
+3. It has been suggested that there should be efforts to find solutions to these issues.
+4. There is difficulty in finding solutions to the identified problems.",88,False,False,False,False,False,False,True,False,False
+88,10607,"""32:49"""," a change in some way. I think it's on page 7, where they list on the PDF that lists all the different proposals.",no,,89,False,False,False,False,False,False,False,False,False
+89,48349,"""33:34""",,no,,90,False,False,False,False,False,False,False,False,False
+90,48349,"""33:34""","Well, I think the real issue, and I think we want to cut out the extreme. Partisanship is the people in the middle, don't show up. Whoa, you know, and because of that, we were partying in electric local school in Canada, because the people who are really passionate are the ones who wrote the primary.",no,,91,False,False,False,False,False,False,False,False,False
+91,48418,"""33:59""","I absolutely agree because, yeah, you're right. The current system rewards. Those that have extreme points of view and those in the middle feel like their voice their votes. Unfortunately, don't count, and I believe getting rid of getting rid of the whole I believe in one or I believe into when there is a whole range of views in between",yes," 1. The current system rewards individuals with extreme points of view.
+2. Those who hold moderate views may feel unheard or uncounted.
+3. The speaker believes in recognizing and considering the whole range of views, rather than just two extreme positions.",92,False,False,False,False,False,False,True,False,False
+92,48418,"""33:59""", What happened would be helpful. I believe that.,no,,93,False,False,False,False,False,False,False,False,False
+93,48334,"""34:31""",,no,,94,False,False,False,False,False,False,False,False,False
+94,48334,"""34:31""",,no,,95,False,False,False,False,False,False,False,False,False
+95,48334,"""34:31""",,no,,96,False,False,False,False,False,False,False,False,False
+96,9625,"""34:58""",Mic is not working.,no,,97,False,False,False,False,False,False,False,False,False
+97,48418,"""35:03""","Yeah, I can't hurt me, either.",no,,98,False,False,False,False,False,False,False,False,False
+98,48300,"""35:05""","Yes, Simon Stern two-party system or three-party system right now. You're right. Some states, do have that in some states. Don't let them in the problem. I had with all these elections, all of them are we thought the best qualified was going to be the one of the leading that party not necessarily well, I'm finding out now is the most popular like you're going for, you know, probably prize. And this is like, I mean we got to change that part of it and that's why I'm liking to see the",no,,99,False,False,False,False,False,False,False,False,False
+99,48300,"""35:05""", The one word that everybody's man more or less against each other. There's not a certain party against another party.,no,,100,False,False,False,False,False,False,False,False,False
+100,48418,"""35:55""","So I agree, yeah, so like instead of likes a certain individual wanting to make their way into politics and such, they feel the need to mold themselves into that public image of that party. So, rather than presenting themselves as their own individual with their own views, they feel almost forced to be, hey, I'm the perfect right wing or and the perfect left Winger",yes," 1. An individual may consider going into politics.
+2. This person may feel the need to fit a certain public image of a political party.
+3. The individual may feel pressured to present themselves as the ""perfect"" right-winger or left-winger.
+4. Instead of expressing their own views, they may mold their views to fit the party's views.",101,False,True,False,False,False,False,False,False,False
+101,48418,"""35:55""", And I don't think that that works.,no,,102,False,False,False,False,False,False,False,False,False
+102,48349,"""36:30""","I think that's true after they get elected and then the parties force them into the Orthodoxy. I think in the primaries, people have the opportunity to say what they believe and they would get support or nope.",yes," 1. The person thinks that politicians often conform to party orthodoxy after getting elected.
+2. They believe that during primaries, politicians have the opportunity to express their true beliefs.
+3. The politician would receive support or opposition based on what they believe during the primaries.",103,False,True,False,False,False,False,False,False,False
+103,10607,"""37:03""","I guess. Yeah, in the Prime, in the party primaries. If you're, if it had like ranked Choice, voting voting or one of these proposals the I guess that the ideas are kind of hard to conceptualize, but the end goal that we people want is for perhaps, less extreme ideas and less like single Choice. Like, igniting the ideas of the people on one idea.",yes," 1. The context of the discussion is the Prime, specifically party primaries.
+2. The concept of ranked-choice voting or similar proposals is being introduced.
+3. The goal of these proposals is to promote less extreme ideas and encourage a diversity of ideas, rather than focusing on a single position.",104,True,True,False,False,False,True,True,True,False
+104,10607,"""37:03"""," Dia. Get someone that feels a little bit more stable and has like a well-conceived plan for all four, more areas of politics, I guess.",no,,105,False,False,False,False,False,False,False,False,False
+105,48312,"""38:39""","Again, I ask does anyone live in a state where this seems to be in play. I don't, I'm not familiar with it.",no,,106,False,False,False,False,False,False,False,False,False
+106,48312,"""38:39""",,no,,107,False,False,False,False,False,False,False,False,False
+107,48331,"""38:52""","Yeah. No I've actually never heard of that before. It sounds interesting I'm seeing on the cons on the list of cons, it says, it could be used to deceive or hijack, labels, which I think is probably could be a risk but",no,,108,False,False,False,False,False,False,False,False,False
+108,48331,"""38:52"""," you know, if anyone's more familiar with that that does sound interesting but like I said, I've never, I've never even heard of that, so",no,,109,False,False,False,False,False,False,False,False,False
+109,48349,"""39:22""","Yeah, I am not aware of any state in our country that does that. So I would be interested to know where that happens.",no,,110,False,False,False,False,False,False,False,False,False
+110,9625,"""39:32""","Yeah, living in Connecticut, we don't have anything such as a third party Coalition, so that's actually new to me, but it would be interesting to learn more about that.",no,,111,False,False,False,False,False,False,False,False,False
+111,10607,"""39:46""","Yeah, I don't all the ones that seem like the most like strangest. Well, I guess considering like the just reading the bullet point because that's all we really have to go on that. It seems pointed towards",no,,112,False,False,False,False,False,False,False,False,False
+112,10607,"""39:46""", It's a shift in.,no,,113,False,False,False,False,False,False,False,False,False
+113,10607,"""39:46"""," Showing how much that single party or whatever that party is behind, how much people value it and want it. And I guess if it the point is to form a coalition you're kind of, you're forcing people's hand to appeal to that group and it depends how like strong, how many people buy into that.",no,,114,False,False,False,False,False,False,False,False,False
+114,9625,"""40:31""",,no,,115,False,False,False,False,False,False,False,False,False
+115,9625,"""40:31""",,no,,116,False,False,False,False,False,False,False,False,False
+116,48418,"""40:44""","So yeah. So I believe this. So the third party Coalition idea is draws a lot of parallels to the parliamentary system where there are so best example, is that in the UK we're sure that they do are they are polarized too conservative and liberal but they have multiple parties. So they're allowed to",no,,117,False,False,False,False,False,False,False,False,False
+117,48418,"""40:44""", Form coalition's and such too.,no,,118,False,False,False,False,False,False,False,False,False
+118,48418,"""40:44""", Associate more views into their into their own use.,no,,119,False,False,False,False,False,False,False,False,False
+119,48349,"""41:27""","Is it? Good job? What this would do? Is it encourages Party Line voting? You know, because you can just go and vote for whatever candidate is, is over your picture and you don't even really have to think about it.",no,,120,False,False,False,False,False,False,False,False,False
+120,48341,"""41:47""","Yeah, I read all the, I've read the stuff, like, in the PDF on this, and I am still confused more. So I'm uncertain. What? The true outcome of it is like, does it help third parties or does it just basically integrate them into the main parties? Like, I'm I really have no idea what this would actually look like implement it. But I might also just not understand the actual description it's giving so",no,,121,False,False,False,False,False,False,False,False,False
+121,48341,"""41:47""", I've hard for me to have any thoughts on.,no,,122,False,False,False,False,False,False,False,False,False
+122,48418,"""42:19""",so I think also that like is say say for instance you have a bit more of a moderate point of view with the majority party and they,no,,123,False,False,False,False,False,False,False,False,False
+123,48418,"""42:19"""," Sorry I deliberately left off. I'm sorry. But the idea that your view could lend towards the overall view with that is that has their voice I think is important too, because like, say the majority party wins but their Coalition includes a second party that you voted for your voice count. I think that's important.",no,,124,False,False,False,False,False,False,False,False,False
+124,9686,"""42:28""",,no,,125,False,False,False,False,False,False,False,False,False
+125,9686,"""42:28""",Bend your cameras been off the hook.,no,,126,False,False,False,False,False,False,False,False,False
+126,48300,"""43:03""","I don't think I don't think their voice or count I think is if you look back on History this is textbook ideas. Human nature will not go without idea and having the second party, another party, get together, without some problems going with it. And that's, I've Dead Set against that. I don't think we ought to have Coalition at all.",yes," 1. The speaker is against the idea of a coalition, which involves two or more parties coming together.
+2. The speaker believes that history shows that such collaborations often come with problems.
+3. Human nature does not easily accept the idea of working with a second party or another group without some issues arising.
+4. The speaker is firmly against the notion of forming a coalition.",127,False,True,False,False,False,False,False,False,False
+127,48418,"""43:31""","Well to that point so in the current system is that if there is like say there is a third Independent party compared to the Republican /, Democrat Party. If that voice has more of a support it unfortunately steal votes from the the sole say Democrat is more independent or related to more than",yes," 1. The current system can present a challenge if there is a third Independent party, compared to the Republican and Democrat parties.
+2. If this third party gains significant support, it may ""steal"" votes from a party that is more Democrat-leaning or independent.
+3. This is because voters who support the Independent party may have previously voted for the more Democrat-leaning party.
+4. As a result, the Democrat-leaning party could potentially lose votes to the Independent party.",128,False,True,False,False,False,False,False,False,False
+128,48418,"""43:31"""," The impact at the end of pendant candidate, then unfortunately, the Democratic or and or republican voter candidate will have votes taken from them.",no,,129,False,False,False,False,False,False,False,False,False
+129,48341,"""45:06""","So my first question here or like thing that makes me wonder is that it says that there's currently a federal ban on multi-member districts for Congress. And my first question is, why do we currently have the bands? I feel like because like I don't know, maybe if someone does know that I'd love to know because I feel like that gives like context for like why is it banned in the first",yes," 1. The text mentions a federal ban on multi-member districts for Congress.
+2. The first question posed is why the ban currently exists.
+3. The questioner expresses a desire to understand the context behind the ban.",130,False,False,False,True,False,False,True,False,False
+130,48539,"""45:29""","In a state like where I'm from, you would have two cities deciding all the representation for the entire state. So the rural areas would not have any inclusion in the ideas that are states trying to put forward or just in the overall agenda, what our representation needs to represent.",yes," 1. In some states, only two cities decide on representation for the entire state.
+2. Rural areas have no inclusion in the ideas and agenda of the state's representation.
+3. This lack of inclusion means that the needs and perspectives of rural areas may not be considered in decision-making.",131,False,False,False,True,False,False,False,False,False
+131,48418,"""45:50""","Yeah, same for New York state where the majority of the population tends to be indifferent in very focused, areas of the state. So there need I in that aspect, I believe that balance needs to be there.",yes," 1. The majority of the population in New York state tends to be indifferent in specific areas.
+2. There needs to be a balance in this aspect according to the speaker.",132,False,False,False,False,False,False,False,False,True
+132,48312,"""46:06""",The only area that I know that that's practice locally to my area. I'm north of Seattle is our County Council seems to have districts that are multi representational there at large. Some Physicians are by their chunk of the county and other seats are by at large in the county.,no,,133,False,False,False,False,False,False,False,False,False
+133,48300,"""46:32""","And in New Jersey we got a problem because we got New York at the top and we got Philadelphia at the bottom and between the two of New York, usually overruns Philadelphia. So it all goes according to what New York voters. When I don't say New York voted because they live in New Jersey and they work in New York like I'm New York voters. What they determined going to be for the pr",no,,134,False,False,False,False,False,False,False,False,False
+134,9625,"""46:55""",So does this vary depending on state to state? Almost seems that way.,yes," 1. The text suggests that certain factors may vary depending on the state.
+2. This is implied when the reader questions if something varies by state.
+3. The answer seems to imply that this is indeed the case.",135,False,False,False,False,False,False,False,False,True
+135,48334,"""47:06""",,no,,136,False,False,False,False,False,False,False,False,False
+136,48334,"""47:06""","I don't think the current system in. She continued, his two polarizing. I think that the possibility of using PR makes it a little more democratic, but it would be hard to",yes," 1. The system being discussed is not clearly defined.
+2. The speaker does not think the current system is suitable.
+3. The system involves two opposing sides or polarizing views.
+4. The speaker mentions the possibility of using Public Relations (PR), which could make the system more democratic.
+5. The speaker suggests that implementing PR would be challenging.",137,False,False,False,False,False,False,False,True,False
+137,48334,"""47:06"""," To implement. I think at this point, I don't know how costly would be to do that. Whether people would buy into this particular idea, very theoretically, seems that would be more democratic",yes," 1. A plan to implement an idea needs to be developed.
+2. The cost of implementing the idea is uncertain.
+3. It is unclear if people will support this particular idea.
+4. The idea is theoretically democratic in nature.",138,False,False,False,False,False,False,True,False,False
+138,48418,"""47:43""","So state state to state, I do believe it is different. It is different state to state, because they are allowed to have different rules and regulations.",yes," 1. The belief that different states have varying conditions and characteristics.
+2. The variation is due to each state's ability to create unique rules and regulations.
+3. This difference applies to all 50 states in the United States.",139,False,False,False,False,False,False,False,False,True
+139,48418,"""47:43""",,no,,140,False,False,False,False,False,False,False,False,False
+140,48418,"""47:43""", I'm not sure. So it's so a state that is more sparsely populated is going to have a smaller voice in this. In this system versus like a state that has a lot of big cities is going to have a larger larger voice. So I'm not sure how to balance that out right now.,no,,141,False,False,False,False,False,False,False,False,False
+141,48539,"""48:19""",,no,,142,False,False,False,False,False,False,False,False,False
+142,10607,"""48:23""","I guess one aspect is that you would have more people which could be a good or bad thing depending on how people vote. Because you in one way, you could have people that represent the minority of a district. But other ways like considering the environment could have like people with single choice, you just have like people who just represents single Choice votes in a position in a scenario in which there would only be one person.",yes," 1. Having more people elected in the system can be seen as a positive or negative aspect, depending on how people cast their votes.
+2. This system could result in representatives from minority groups within a district.
+3. On the other hand, considering specific issues like the environment could lead to representatives who only cater to single-issue voters.
+4. In a scenario where only one person is elected, there might be a lack of representation for diverse viewpoints.",143,False,False,False,False,False,False,True,False,False
+143,10607,"""48:23"""," and instead of multiple people,",no,,144,False,False,False,False,False,False,False,False,False
+144,48349,"""49:02""","The current system, you know? I mean, it is subject to gerrymandering, we all know that both both sides do it. But you have one person who's accountable and you can vote them out and you know, the states, do the, the district's and you can vote on your state representatives if you don't feel that they're representing a while.",no,,145,False,False,False,False,False,False,False,False,False
+145,48418,"""49:24""",Just cute. I'm just curious to hear what the folks that haven't spoken in this group feel about this issue.,yes," 1. The person is expressing curiosity.
+2. They are addressing a group of people who haven't spoken yet.
+3. They are interested in hearing the group's opinions about a certain issue.
+4. The phrase ""Just cute"" is unrelated to the main point and may indicate the speaker's attitude or tone.",146,False,False,False,False,False,False,False,False,True
+146,48315,"""49:37""","To be honest, this subjects in the last one, about the fusion boating is it's just been very confusing for me. I'm not sure what",yes," 1. The subject of fusion boating has been difficult to understand.
+2. The specific details of the subject are unclear.
+3. The person speaking is having trouble grasping the concept of fusion boating.
+4. There may be a lack of proper explanation or understanding of the subject matter.",147,False,False,False,False,False,False,True,False,False
+147,48315,"""49:37"""," Or how I feel about it. At this moment, I'm trying to, I'm still reading notes and figure it out and which ones y'all might I say is just confusing to me.",no,,148,False,False,False,False,False,False,False,False,False
+148,48341,"""49:58""","No, I totally get that. It didn't get is confusing but I think speaks to one of the issues because like whenever that I run into is like just understanding everything and being educated. Also where do you learn this stuff? When you have things that are like polarized for like, you know, more liberal or conservative or whatever? When they're coming from a biased perspective, where do you learn to just like, how any of this stuff works in a way, that's not super confused.",no,,149,False,False,False,False,False,False,False,False,False
+149,10607,"""50:32""","One thing that I used to do, there is an app, I think it's called countable, and it's basically got social media site for representatives. And it tells you how to vote how they voted in Congress to make sure that they're keeping in touch with what they promise or what, or what they said, and things like that. And I've the time that I used it before, I got kind of draining. I thought that was like a nice way of saying politically like active as well.",no,,150,False,False,False,False,False,False,False,False,False
+150,10607,"""50:32"""," Liz just regularly emailing your representatives, and letting them know what you think. Just so there is like, some kind of expression of what you want for must, I just have like one member to",no,,151,False,False,False,False,False,False,False,False,False
+151,48418,"""51:16""",So it's keeping up-to-date keeping in touch with the folks that are representing you in such is a lot of work. I guess it's something that that it feels like work to me but I believe that the more that you're involved and the more people that do that is I think that's just better overall,no,,152,False,False,False,False,False,False,False,False,False
+152,48349,"""51:51""","I agree, we need to get more people involved. I just don't see how any of these proposals would accomplish that are solved the basic issue.",yes," 1. The need to involve more people is agreed upon.
+2. The proposals presented do not effectively solve the basic issue.
+3. The specifics of the proposals or the basic issue are not detailed in the text.",153,False,False,False,False,False,False,False,False,True
+153,10607,"""52:04""","Yeah, I definitely got that feeling. I was reading a lot of these because I feel like at the root of it, people, it's tough because it's base because a lot of it games on human behavior, and rash, emotions and things like that, and it's hard to do it. Genuinely when there's a lot of systems that override that and things like that can persuade you and like shift you in ways, you don't realize but one aspect of I do like that's being tackled",no,,154,False,False,False,False,False,False,False,False,False
+154,10607,"""52:04"""," gold is gerrymandering and having that being real line based off of like,",no,,155,False,False,False,False,False,False,False,False,False
+155,10607,"""52:04"""," something more like unbiased when they get like political science people to like,",no,,156,False,False,False,False,False,False,False,False,False
+156,48418,"""52:48""",,no,,157,False,False,False,False,False,False,False,False,False
+157,48418,"""52:48""","So yeah, it's like true representation, like kind of compared to like, what the gerrymandering that you just mentioned previously, is that if it were true representation, then, yes, I feel like my vote would count. And I feel like a lot of people are so tired of like, hey, I like, what difference does it make that? Like, I'm going to go vote, but my district, that is so ridiculous.",yes," 1. True representation is compared to gerrymandering.
+2. If it were true representation, the voter's vote would count.
+3. Many people feel that their vote does not make a difference due to gerrymandering.
+4. People are tired of going to vote in districts that are ridiculous or unfairly drawn.",158,True,False,False,True,False,False,True,False,False
+158,48418,"""52:48""", Lee misrepresented like that. My vote doesn't count. So why even bother so they don't even vote.,no,,159,False,False,False,False,False,False,False,False,False
+159,48312,"""53:29""","You know, it's hard to say what will happen in the future, but just remember that people are way more comfortable with what they already know. Then they are with change. It's just how humans are making some changes. Whether they be large changes or moderate changes, will encourage some people to become more informed, which I think many of us believe is a good course for people to take",yes," 1. People are generally more comfortable with what they already know.
+2. Humans tend to be resistant to change, whether it is large or moderate.
+3. Some changes may encourage people to seek out more information.
+4. Becoming more informed is often considered a good course of action.",160,False,False,False,False,False,False,True,False,False
+160,48312,"""53:29""", But a lot of people will simply resist change because it's their natural way to approach life in the world.,no,,161,False,False,False,False,False,False,False,False,False
+161,48418,"""54:13""","That's very true. I mean myself I'm not I don't like change myself but if it's for the better good if it's for the to improve everything overall, I think it's worth it.",no,,162,False,False,False,False,False,False,False,False,False
+162,48418,"""54:13""",,no,,163,False,False,False,False,False,False,False,False,False
+163,48418,"""54:13""",,no,,164,False,False,False,False,False,False,False,False,False
+164,48418,"""54:13""",,no,,165,False,False,False,False,False,False,False,False,False
+165,48315,"""54:41""","I think any changes that take place all changes at a time and like I said, more education and Noel. I'm going to download that countable out because",no,,166,False,False,False,False,False,False,False,False,False
+166,48315,"""54:41"""," Half the time, I don't even know like what's going on with my you know the governors and state everything. I don't know. Like I try to keep up to date with it gets confusing and there's so much information coming every which way and then, you know, then there's the false information that gets mixed in with stuff and it's like sometimes it can be hard to",yes," 1. The individual expresses confusion about current affairs related to governors and states.
+2. They find it challenging to stay updated due to the overwhelming amount of information.
+3. False information is a concern, as it can complicate understanding of the situation.",167,False,False,False,False,False,False,True,False,False
+167,48315,"""54:41""", Weed that out.,no,,168,False,False,False,False,False,False,False,False,False
+168,48418,"""59:58""",That's actually a good question. And I don't I don't think these systems inherently will increase voters to participate and be more aware of the system.,yes," 1. The text raises a question about the impact of certain systems on increasing voter participation and awareness.
+2. The response suggests that these systems may not inherently lead to higher voter participation and awareness.
+3. The response expresses uncertainty about the ability of these systems to promote voter engagement.",169,False,False,False,False,False,False,True,False,False
+169,48341,"""60:17""","Yeah, I will say, I think on the one hand, I don't think these inherently by themselves. Do anything to change like awareness and will probably make some people participate more in others, participate less like a might just kind of equal out. But at the same time though, I think you could also Implement these systems and then do something else. That raises",no,,170,False,False,False,False,False,False,False,False,False
+170,48341,"""60:17"""," awareness and increase participation. So I don't, you know, it, you could have multiple things.",no,,171,False,False,False,False,False,False,False,False,False
+171,9625,"""60:53""",,no,,172,False,False,False,False,False,False,False,False,False
+172,9625,"""60:53""",Doesn't it start with educating the people of the proposed systems which increases the awareness as well as hopefully participation of the new system.,yes," 1. The text begins by discussing the importance of educating people about proposed systems.
+2. This education is meant to increase awareness of the new systems.
+3. It is also hoped that this increased awareness will lead to greater participation in the new systems.",173,False,False,False,False,False,False,True,False,False
+173,48418,"""61:11""","There's there's one thing that purely a personal opinion, but I've always believed that election day should be a national holiday, but that's my own opinion.",yes," 1. The author believes that election day should be a national holiday.
+2. This opinion is based on the author's personal beliefs.",174,False,False,False,False,False,False,False,False,True
+174,48341,"""61:22""","Yeah, embarrassing. Whenever I took the survey, you know, before this were asked that I did not realize that it wasn't. I mean I've been a student. So like, you know, it's not been the same for me, but yeah, I think it should to I kind of bought it.",no,,175,False,False,False,False,False,False,False,False,False
+175,48349,"""61:54""","Well yeah, I think that's the $64 question. Who who's been to make these changes? And why should we assume that there any more unbiased than anybody else?",yes," 1. The text raises a question about who has been making certain changes.
+2. It is suggested that any person making changes could have their own biases.
+3. There is a skeptical tone towards the motivations and impartiality of the change-makers.",176,False,False,False,False,False,False,False,False,True
+176,48300,"""62:14""",,no,,177,False,False,False,False,False,False,False,False,False
+177,48300,"""62:14""","They probably figure out a way with Congress or the president to appoint a special committee to investigate the changes that, you know, over time.",no,,178,False,False,False,False,False,False,False,False,False
+178,9625,"""62:30""",,no,,179,False,False,False,False,False,False,False,False,False
+179,48349,"""62:38""","If we look at Congress and the special committees, now there's really no reason to believe that this would be any more useful.",yes," 1. The text discusses Congress and special committees.
+2. There is no reason given in the text to believe that these would be useful.
+3. This lack of belief is based on previous experiences or knowledge about Congress and special committees.
+4. The text implies that past experiences with these entities have not been positive or productive.",180,False,False,False,False,False,False,False,False,True
+180,48300,"""63:05""",,no,,181,False,False,False,False,False,False,False,False,False
+181,48300,"""63:05""","He went to change, ranked Choice, voting in a national election. Do you think the federal government should be involved in sang, the election rules or should the state's be involved?",yes," 1. He went to vote in a national election using ranked choice voting.
+2. The question is raised about who should be involved in election rules: the federal government or the states?",182,True,False,False,False,False,True,True,False,False
+182,48300,"""63:05""", I don't think the federal government will give us a chance to be independent.,yes," 1. The federal government may not provide an opportunity for independence.
+2. This is the opinion of the speaker.
+3. No specific reasons or evidence are given to support this view.",183,False,False,False,False,False,False,False,False,True
+183,48312,"""63:38""","I think it's hard to say where all that would go because it all four National has to start with the electrical Electoral College, which I know is a topic for a later discussion. So",no,,184,False,False,False,False,False,False,False,False,False
+184,48312,"""63:38""", Hard.,no,,185,False,False,False,False,False,False,False,False,False
+185,48418,"""64:07""","That's a very good question, but I do not have the expertise to answer that.",no,,186,False,False,False,False,False,False,False,False,False
+186,48341,"""64:36""","yeah, I think this is a good question to have like practically, you know, once we know we look who would do it and things like that, I do think maybe starting small or like with pieces of it like maybe wearing like if we were to do it not jumping to stray to every single election is now this, you know, maybe like starting small and then",no,,187,False,False,False,False,False,False,False,False,False
+187,48341,"""64:36"""," you know, any, you know, the ads they run for elections and stuff like that, including information.",no,,188,False,False,False,False,False,False,False,False,False
+188,48418,"""65:42""","I think standard two-party, political systems.",no,,189,False,False,False,False,False,False,False,False,False
+189,48418,"""65:42"""," Such as our own compared to like, say, parliamentary systems. They like, so rather than just one or two, just two political parties, there are multiple parties that represent multiple points of view.",yes," 1. Our political system compared to parliamentary systems.
+2. Parliamentary systems have multiple political parties.
+3. These parties represent multiple points of view.
+4. In contrast, our system often has just one or two dominant political parties.",190,False,True,False,False,False,False,False,False,False
+190,48418,"""65:42"""," They form coalition's to obtain a majority, and I think that I still think that system works.",no,,191,False,False,False,False,False,False,False,False,False

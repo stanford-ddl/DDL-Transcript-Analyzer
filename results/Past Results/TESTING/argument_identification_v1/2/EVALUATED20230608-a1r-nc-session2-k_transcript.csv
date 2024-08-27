@@ -1,0 +1,106 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electoralCollegeIssues,supreme CourtPowerLimits,mathEducationImportance,voterInfluenceInElections,civicEducationAndAccountability,educationFundingAndTeacherShortages,electionProcessSimplification,other,notRelevant
+0,10056,"""2:11""","Hi, my name is Josh and I live in Denver Colorado.",no,,1,False,False,False,False,False,False,False,False,False
+1,48714,"""2:20""",,no,,2,False,False,False,False,False,False,False,False,False
+2,48706,"""2:32""","My name is John, I live in Buffalo New York.",no,,3,False,False,False,False,False,False,False,False,False
+3,10369,"""2:38""","Hi, I'm Laura and I'm in southern Missouri.",no,,4,False,False,False,False,False,False,False,False,False
+4,48708,"""2:46""",Hi. My name is Lana and I'm in Pennsylvania.,no,,5,False,False,False,False,False,False,False,False,False
+5,48717,"""2:51""",,no,,6,False,False,False,False,False,False,False,False,False
+6,48717,"""2:51""","Hi, I'm Brittany. I'm from Indiana.",no,,7,False,False,False,False,False,False,False,False,False
+7,9699,"""2:56""",I am Raylan from San Diego.,no,,8,False,False,False,False,False,False,False,False,False
+8,9699,"""11:15""",I will speak then I think it's a good proposal. I think 25% would,no,,9,False,False,False,False,False,False,False,False,False
+9,9699,"""11:15""", maybe not be enough money for them to do what they need to do. But it could be a star.,no,,10,False,False,False,False,False,False,False,False,False
+10,10056,"""11:36""","I would, I would disagree with that, I'm against setting aside chunks of delegates, so that party leaders can kind of crown the king that they want instead of listening to the voice of the people.",yes," 1. The speaker disagrees with setting aside chunks of delegates.
+2. They are against party leaders crowning their preferred candidate.
+3. The speaker believes in listening to the voice of the people.",11,False,False,False,True,False,False,False,False,False
+11,48714,"""11:55""",,no,,12,False,False,False,False,False,False,False,False,False
+12,10369,"""12:06""","Amy, I think you're muted, I think.",no,,13,False,False,False,False,False,False,False,False,False
+13,48714,"""12:18""",,no,,14,False,False,False,False,False,False,False,False,False
+14,48706,"""12:28""",I'm against as well. The party leaders already have way too much influence.,yes," 1. The person is against something, but the text does not specify what they are against.
+2. The person believes that party leaders already have too much influence.",15,False,False,False,True,False,False,False,False,False
+15,48714,"""12:36""",,no,,16,False,False,False,False,False,False,False,False,False
+16,10369,"""12:48""","I'm against it as well, cuz I totally agree. I think that the party has too much influence and I would rather have my vote count as far as who's elected.",yes," 1. The reader is against a certain party.
+2. The reader believes that the party has too much influence.
+3. The reader wants their vote to count towards who is elected.",17,False,False,False,True,False,False,False,False,False
+17,48714,"""13:15""",,no,,18,False,False,False,False,False,False,False,False,False
+18,48714,"""14:50""",,no,,19,False,False,False,False,False,False,False,False,False
+19,9699,"""14:58""",I think we talked about this yesterday.,no,,20,False,False,False,False,False,False,False,False,False
+20,48714,"""15:13""",,no,,21,False,False,False,False,False,False,False,False,False
+21,48714,"""15:15""","Can you hear me now? Oh, Hallelujah. I was just saying, last time, I was disagreeing with that. Finally, I'm telling you what this microphone. Okay. Well, hello everybody. Last time I wasn't trying to be a DOT on our panel. So I'll continue to speak tonight.",no,,22,False,False,False,False,False,False,False,False,False
+22,10056,"""15:35""","So, I am personally a big fan of the Electoral College because it kind of ID forces candidates to only like National candidates to only worry about getting, you know, fifty one percent of most States populations. So they're not running up the score in areas. So more of the country gets addressed and even if they're not campaigning in specific states there at least looking at policies or LM factors that affect all of",no,,23,False,False,False,False,False,False,False,False,False
+23,10056,"""15:35"""," All of those different states. So their representative, although I would be interested in exploring like using rank Choice. Voting for the, for the key candidate.",no,,24,False,False,False,False,False,False,False,False,False
+24,10369,"""16:22""","I'm not a fan of the rank Choice voting, because from what I'm reading your vote is counting more than once each time that it goes to a different vote. Your vote counts again. It should. I think, you know, you get one vote vote for one person that's it.",yes," 1. The author expresses their dislike for rank choice voting.
+2. They argue that in rank choice voting, a vote can be counted more than once.
+3. Each time a vote goes to a different candidate, it is counted again.
+4. The author believes that each person should only get one vote for one candidate.",25,False,False,False,True,True,False,False,False,False
+25,48714,"""16:47""","I agree. I'm in Virginia. And I have I work like with the GOP office and stuff and I've seen corruption on both sides. So I think I would like to see maybe the right the rank loading, but I also agree that we should only have one vote on that because we have people with the last elections. Double-dipping people voting, they're dead? I mean, and I think it would just cause more may be problems, but that's just my opinion.",yes," 1. The speaker is in agreement with the previous discussion.
+2. The speaker has experience working with the GOP office.
+3. The speaker has observed corruption on both sides of the political spectrum.
+4. The speaker is interested in seeing ranked-choice voting implemented.
+5. The speaker believes that only one vote should be allowed in elections.
+6. The speaker is concerned about voter fraud, such as double-dipping and voting by deceased individuals.
+7. The speaker thinks that allowing multiple votes in ranked-choice voting could cause more problems.
+8. The speaker's opinions are based on their personal experiences and observations.",26,False,False,False,True,True,False,True,False,False
+26,10369,"""17:19""",I would also say that I keep the Electoral College the way it is possibly. The only tweak I would make to the Electoral colleges maybe each district would get,yes," 1. The speaker is open to keeping the Electoral College as is.
+2. They would consider making a modification to the Electoral College system.
+3. The modification being considered is allocating one electoral vote to each district.
+4. The number of districts is not specified in the text.",27,True,False,False,True,True,False,False,False,False
+27,10369,"""17:19""", Be able to assign an electoral vote.,no,,28,False,False,False,False,False,False,False,False,False
+28,10369,"""17:19"""," Her whoever wins that District, but I definitely would keep the Electoral College.",no,,29,False,False,False,False,False,False,False,False,False
+29,48706,"""17:50""",,no,,30,False,False,False,False,False,False,False,False,False
+30,48706,"""17:54""","I prefer popular vote, I live in New York state and they don't even show up here during elections because they know it's one by the Democrat Party.",yes," 1. The person prefers the popular vote system.
+2. They are a resident of New York state.
+3. During elections, other states' votes are not given much attention in New York.
+4. The state of New York typically votes for the Democratic Party in elections.",31,False,False,False,True,False,False,False,False,False
+31,48714,"""18:05""","I was surprised when our state took, we swung, we swung the pendulum all the way blue. And then we came back and went all the way red. And I was hoping with all this voting last time, we would probably level out that's been my thought on it because it's been so crazy, but we're not seeing that and I think what's interesting that the electoral votes, you know, use I think Josh you said about the 50%, well, I think they're saying to, if a candidate receives more than 50% of the First Choice votes, they are the winners so that's kind of interesting to me as",no,,32,False,False,False,False,False,False,False,False,False
+32,48714,"""18:05""", Well.,no,,33,False,False,False,False,False,False,False,False,False
+33,10056,"""18:40""","Right. Yeah, cuz with the, with the, the rent Choice one, it's it's pretty much whatever can do to get can get to 50%. So if you know someone's in the second choice than that kind of will push him over. But admittedly again I'd like to see how it plays out in a couple of States that's being used in or maybe in some local elections before it has the opportunity to create too much havoc on the national stage.",no,,34,False,False,False,False,False,False,False,False,False
+34,10056,"""20:20""","I'm really not a fan of this because pretty much it's just designed to negate the Electoral College and in Colorado, we've were part of that packed so pretty much, it doesn't matter who we all vote for it matters, who everyone else votes for",yes," 1. The person speaking is not fond of a certain concept.
+2. This concept is designed to invalidate the Electoral College.
+3. In the state of Colorado, the state participated in a process called the ""national popular vote interstate compact.""
+4. The speaker believes that this participation means that the individual votes in Colorado are not significant.
+5. Instead, the speaker thinks that the total number of votes across the country is what matters.",35,True,False,False,True,False,False,False,False,False
+35,48714,"""20:43""","Yeah with us here because of where were so dominant. Okay, so I'm in Southwest Virginia. So it's crazy because DC pretty much because we're close to DC, its wings. So many of its wings are whole state basically and then the rest of us little ones down on the parts that really matter. We get we just get trashed because of the upper part by DC and stuff. It's crazy. So I don't know if I'm really okay with that.",no,,36,False,False,False,False,False,False,False,False,False
+36,10369,"""21:22""",I'm definitely against the national interstate compact.,yes," 1. The author is against the national interstate compact.
+2. No reasons or arguments for their stance are provided in the text.",37,False,False,False,False,False,False,False,False,True
+37,9699,"""22:50""","I'm 100% for term limits. I think serving until the day you die, no matter if you're competent or not to do so is never a good thing. So term limits would help change up, you know the roster a little bit.",yes," 1. Supports term limits for politicians
+2. Believes serving until death, regardless of competence, is not good
+3. Thinks term limits would help to ""change up the roster"" periodically",38,False,False,False,False,True,False,False,False,False
+38,10056,"""23:15""","Yeah, I personally think that the the Supreme Court is kind of absorbs more power than it should, it should currently have. So I'm kind of in favor and all three of these of kind of limiting, the current size establishing term limits. And also, I think the ethics guidelines, I'm all for standard ethics guidelines for, you know, all government employees, not just them, I think they should operate above any repair.",yes," 1. The Supreme Court should have its power limited.
+2. The speaker is in favor of establishing term limits for the Supreme Court.
+3. The speaker believes that ethics guidelines should be implemented for all government employees, including the Supreme Court.
+4. The Supreme Court should operate above reproach.",39,False,True,False,False,False,False,False,False,False
+39,10056,"""23:15"""," Roach, and that's not really happening anywhere.",no,,40,False,False,False,False,False,False,False,False,False
+40,48706,"""23:56""",I'm in favor of term limits for any public office.,yes," 1. The speaker is in favor of term limits.
+2. The term limits apply to any public office.",41,False,False,False,False,True,False,False,False,False
+41,48714,"""24:04""",I think it's important with the term limits to have that accountability and I just don't feel like it's there on either party at this point. I think it's just become kind of a wash and I don't think they meant it to be that way when we originally built the Constitution. But I really think term limits aren't a bad idea and then they can go back to their civil duties like the rest of us. What do you guys think?,no,,42,False,False,False,False,False,False,False,False,False
+42,10056,"""24:31""","Another thing I'll just bring up is in in Colorado we actually vote on Municipal and state judges which in theory, most people just vote. Yes. All the time but at least in that case, if there's an issue we can get somebody out. I think with the, you know, with the term limit, you know, even if there is someone that's",no,,43,False,False,False,False,False,False,False,False,False
+43,10056,"""24:31""","That is some kind of jerk. I guess. I don't know how to express it, but that's a problem there. Their time is only limited. They don't have 40 50, 60 years ago, cause issues.",no,,44,False,False,False,False,False,False,False,False,False
+44,48714,"""26:42""","I'm going to speak to this. I don't think increasing more funds for the public school system. I think that it's so broke already and that's why we're having violence and rapes and everything on the increase. Because our teachers hands are tied because it goes back to our school boards. And I am pretty, pretty open about this, but I think that it's got to start with our school boards. To make the right and proper change. That would be benefits for the families. Throwing more money at something is not going to fix the problem. It's got to start at home.",yes," 1. The speaker does not think increasing funds for the public school system is a good idea.
+2. The speaker believes the public school system is already broken, which is why violence, rapes, and other issues are increasing.
+3. The speaker thinks the problem originates from school boards, whose policies allegedly tie teachers' hands.
+4. The speaker emphasizes the need to start with school boards to make the right and proper changes.
+5. The speaker suggests that these changes would benefit families.
+6. The speaker does not believe that throwing more money at the problem will fix it.
+7. The speaker thinks the solution should start at home.",45,False,False,False,False,False,True,False,False,False
+45,48714,"""26:42""",,no,,46,False,False,False,False,False,False,False,False,False
+46,10369,"""27:14""","Well, in throwing more money at it is not going to fix the problem of once. They get to College, the absolute One Way structure of college,",no,,47,False,False,False,False,False,False,False,False,False
+47,48714,"""27:30""","And I think we're going anymore. There's so many opportunities for students with like trades and apprenticeships that they can do for free to learn. And a lot of people businesses are looking like on linked LinkedIn and stuff, they're looking for students that are looking for trades or apprenticeships to help them. And so, because they're looking for T people with like a teachability. Good workmanship works independently. And I think just throwing more money at it just is like putting a bandaid on it in my mind.",yes," 1. The speaker believes that there are many opportunities for students to learn through trades and apprenticeships for free.
+2. Businesses are looking for students who are willing to learn trades and apprenticeships.
+3. Businesses value students who have teachability, good workmanship, and the ability to work independently.
+4. The speaker thinks that throwing more money at the problem is not an effective solution, and it is similar to putting a bandaid on it.",48,False,False,False,False,False,False,False,True,False
+48,10056,"""27:57""","Yeah, I agree with the sentiment that providing more funding isn't what's necessary. If they want to dedicate more funding to that within existing budgets, I think that's great. There's way too much Administration oversight and waste as speaking as someone whose wife was a teacher for a number of years and then I'm all for promoting opportunities to try to diverse views backgrounds. I don't know if the governor, if the state",no,,49,False,False,False,False,False,False,False,False,False
+49,10056,"""27:57""","Sponsored schools should be driving that, but like when I was in high school, 12 teacher had the assignment during a presidential election. We had to go to like rallies for each like one candidate for each party just to get a feel for what was",no,,50,False,False,False,False,False,False,False,False,False
+50,48714,"""28:45""","I think that's a great idea for students. You know I'm saying for debate. It's so they can learn to debate healthy and not be disrespectful to each other. I think that's great Josh that they do that and that you I don't know if you said you had the opportunity that. But yeah, I just think that throwing money. And I've had three friends this year that our teachers, and I'm talking long-term teachers, 30-plus years, they've just up and quit because the system is so broke. I think they need to get back to figure out. Okay, how can we make this work? Because teachers hands are tied principles hands are tied. I mean, they told our resource officers,",no,,51,False,False,False,False,False,False,False,False,False
+51,48714,"""28:45"""," do not confront them. If there's a problem in the classroom, you take care of it, we're not recording it. I mean, this thing goes way deeper than just like, let's go ahead and fix the Civil duties and give people diversity. I think we're very diverse in America personally.",no,,52,False,False,False,False,False,False,False,False,False
+52,10369,"""29:29""",I absolutely.,no,,53,False,False,False,False,False,False,False,False,False
+53,10369,"""29:34""",Absolutely agree with you.,no,,54,False,False,False,False,False,False,False,False,False
+54,9699,"""32:57""","In the editing, we can totally replace my question. If somebody didn't have enough time to type what they were trying to say.",no,,55,False,False,False,False,False,False,False,False,False
+55,10056,"""34:17""",I'm open to any feedback anyone might have.,yes," 1. The text is about receiving feedback.
+2. The author is open to any feedback.
+3. This shows the author's willingness to improve.
+4. The author encourages readers to provide their feedback.
+5. The process of receiving feedback is important for growth and improvement.",56,False,False,False,False,True,False,False,False,False
+56,9699,"""34:23""",I don't think you would have to change anything. It looks pretty good to me.,no,,57,False,False,False,False,False,False,False,False,False
+57,9699,"""35:00""",I just tried to get something in here since we only had two questions yesterday. I ran out of time yesterday so I was typing as fast as I could.,no,,58,False,False,False,False,False,False,False,False,False
+58,10056,"""35:13""","Yeah, I had that same issue where I was still typing when it ran out yesterday. As I was like, oh, well, never mind. I got to try to type faster today.",no,,59,False,False,False,False,False,False,False,False,False
+59,10056,"""35:27""","But also, I think I think the way your question is phrases solid. I don't really have any",no,,60,False,False,False,False,False,False,False,False,False

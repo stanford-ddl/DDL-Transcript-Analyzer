@@ -1,0 +1,209 @@
+,speaker,time,text,Has Arguments,All Arguments Summarized,Order,electionProcessChanges,partyInfluenceImpact,votingConfusion,proportionalRepresentation,moralResponsibility,preferenceVotingCriticism,politicsUnderstandingChallenges,other,notRelevant
+0,48615,"""2:04""","Hi, Mark, can you hear me?",no,,1,False,False,False,False,False,False,False,False,False
+1,48689,"""2:09""",,no,,2,False,False,False,False,False,False,False,False,False
+2,9856,"""2:19""","Hello, I'm Carla. I'm from Texas. Nice to see you all.",no,,3,False,False,False,False,False,False,False,False,False
+3,48686,"""2:26""","Hello, I'm Christopher. I'm a government worker in the state of Vermont.",no,,4,False,False,False,False,False,False,False,False,False
+4,48639,"""2:31""","Hi, I'm Joe nice. I'm from Altadena, California.",no,,5,False,False,False,False,False,False,False,False,False
+5,10017,"""2:40""",Hi everyone. My name is Daniel. I'm from New York.,no,,6,False,False,False,False,False,False,False,False,False
+6,48638,"""2:44""","Hi, I'm Krista, and I'm also from New York but almost Canada, New York, not the city.",no,,7,False,False,False,False,False,False,False,False,False
+7,48689,"""2:51""",,no,,8,False,False,False,False,False,False,False,False,False
+8,48615,"""3:04""",Can we didn't hear her? Can you hear me?,no,,9,False,False,False,False,False,False,False,False,False
+9,48638,"""3:10""","Yes, we can hear you.",yes," 1. The text to be summarized is about the process of photosynthesis.
+2. Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy, usually from the sun, into chemical energy in the form of glucose or other sugars.
+3. This process takes place in the chloroplasts, which contain the pigment chlorophyll.
+4. The first stage of photosynthesis is the light-dependent reactions, where light energy is absorbed by chlorophyll and used to produce ATP and NADPH.
+5. The second stage is the light-independent reactions, also known as the Calvin cycle, where ATP and NADPH are used to convert carbon dioxide into glucose.
+6. Photosynthesis is essential for life on Earth, as it is the primary source of all oxygen in the atmosphere, and it is the basis for the food chain.
+7. Human activities, such as burning fossil fuels, are increasing the concentration of carbon dioxide in the atmosphere, which can negatively impact photosynthesis and lead to climate change.",10,False,False,False,False,False,False,False,True,False
+10,10017,"""3:14""",I heard Mark but I can't hear Diane.,no,,11,False,False,False,False,False,False,False,False,False
+11,48689,"""3:25""",,no,,12,False,False,False,False,False,False,False,False,False
+12,48639,"""3:30""",I can't hear Diane.,no,,13,False,False,False,False,False,False,False,False,False
+13,48638,"""4:05""",Diane. Have you figured out your microphone yet?,no,,14,False,False,False,False,False,False,False,False,False
+14,48689,"""12:11""",Can anybody hear me?,no,,15,False,False,False,False,False,False,False,False,False
+15,48689,"""12:11"""," Okay, I can't hear you but I did listen to everything. I'm trying to get on my other system. I do have to say that my preference is to keep things the way they are because it's less confusing and it seems like it's been a pretty fair system that's been working for quite a long time. Thank you.",no,,16,False,False,False,False,False,False,False,False,False
+16,48639,"""12:34""",,no,,17,False,False,False,False,False,False,False,False,False
+17,48639,"""12:34""",I think that we should keep the same system we have. The other thing is too complicated.,yes," 1. The author thinks that the current system should be kept.
+2. The author believes that the alternative system is too complicated.",18,False,False,False,False,False,False,True,False,False
+18,48686,"""12:49""","I just I'm a voice opposed to using a rank Choice voting system, it purports to solve the problem of quote-unquote, a wasted vote for for a third or lesser Party candidate. But what I feel it does is instead it just kind of makes it more of a show vote. It still doesn't have the same, the same value and and it gives voters like a second extra opportunity to vote. And I think one vote should have, you know, the consequence of that choice and",yes," 1. The speaker expresses their opposition to using a rank-choice voting system.
+2. The system is said to solve the problem of a ""wasted vote"" for a third or lesser party candidate.
+3. The speaker believes that the system does not give the same value to votes for third-party candidates and instead makes it a ""show vote.""
+4. The speaker thinks that one vote should have the full consequence of that choice.
+5. The rank-choice voting system gives voters an extra opportunity to vote, which the speaker does not support.",19,True,False,False,False,False,True,False,False,False
+19,48686,"""12:49""", and it should be followed that way. Thank you.,no,,20,False,False,False,False,False,False,False,False,False
+20,9856,"""13:24""",I also like the system just the way it is. I think our forefathers did a great job and how they could see into the future that well I have no idea. Thank you.,no,,21,False,False,False,False,False,False,False,False,False
+21,48689,"""13:36""","By the way, I can hear you guys know. I don't know what happened, but I want to let you know,",no,,22,False,False,False,False,False,False,False,False,False
+22,48615,"""13:42""",That's good. I'm for the rank Choice voting because just to try it basically even if it's on a city or local level. But from what I've heard it's something that could benefit.,yes," 1. The person is in favor of Ranked Choice voting.
+2. They believe that it should be tried, even on a city or local level.
+3. The person has heard that Ranked Choice voting could have benefits.",23,True,False,False,False,False,False,False,False,False
+23,10017,"""14:11""","In New York City. We've done ranked Choice, voting. I thought it was a, it was a good idea. I think it gives a lot of people, the chance to get their voice heard. But similarly, to what a lot of people have already said, a lot of people have spoken to afterwards, kind of spoke about how it was very complicated and they had to do more research into the different candidates, and it took a lot of time.",yes," 1. The text is about ranked choice voting in New York City.
+2. The author initially thought ranked choice voting was a good idea.
+3. The author believes ranked choice voting gives more people a chance to have their voice heard.
+4. However, the author also notes that many people found the system to be complicated.
+5. After the implementation of ranked choice voting, many people said they needed to do more research on the candidates.
+6. People also reported that the new voting system took up more of their time.",24,True,False,True,False,False,False,True,False,False
+24,10017,"""14:11"""," Time. And I think a lot of people ended up either just voting just to put in the the votes because it was ranked so whether it ended up being a good system here, I'm not sure.",no,,25,False,False,False,False,False,False,False,False,False
+25,48615,"""15:00""","I don't think the fact that it might be complicated to start or even the fact that there could be a cost involved would prevent us from again, trying it or trying parts of it. Everything new is difficult at first or can be",yes," 1. The text suggests that initial complications or costs should not deter us from trying new things.
+2. Every new endeavor may initially seem difficult.
+3. Despite challenges, it is worth trying new things or parts of them.
+4. The cost of trying new things is not mentioned as a deterrent.",26,False,False,False,False,False,False,False,True,False
+26,48689,"""15:24""","It does make it where people really have to look at the candidates. So they would know who their second choices. I'm pretty happy. When I know my first choice. I've looked into it in detail. It takes me a lot of time to make sure I know who my first choice is. But if I had to keep picking down the line, I think it had it might confuse me enough. It would not stop me from voting because I'm an absolute voter, but I think it could stop some other people who don't have the energy to put the time into it.",no,,27,False,False,False,False,False,False,False,False,False
+27,48689,"""15:24""",,no,,28,False,False,False,False,False,False,False,False,False
+28,48686,"""15:55""","I also think it has the potential of creating an inequality in that if you have one person who votes, the ranked choice, and you have another person who just makes one selection and leaves their ballot blank. Now, you've got two separate votes that have a different weight to them in the end result and I think that could be problematic.",yes," 1. The use of ranked-choice voting can result in two votes having different weights.
+2. This occurs when one voter uses the ranked-choice option and another voter only makes one selection and leaves the rest of the ballot blank.
+3. The difference in the number of choices made by each voter can lead to an unequal weighting of their votes in the final result.
+4. This inequality could potentially be problematic.",29,True,False,False,False,False,True,True,False,False
+29,48615,"""16:18""","I think the benefit wouldn't be seen by us. Initially, it's something that has when you're first starting out, voting, if you're, if you know that you have to investigate all the candidates, you'll be more likely to do, so it may not help us now, and are in the first five years. But on down the line, the younger generation they want to be more involved in this encourages them to be more involved.",yes," 1. The benefit of investigating all candidates when voting may not be immediately visible to the current generation.
+2. Having to investigate candidates in the initial stages of voting, such as the first five years, might not help.
+3. This process could potentially encourage the younger generation to be more involved in voting.",30,False,False,False,False,False,False,True,False,False
+30,48639,"""16:47""",I agree with what you just said about the younger people.,no,,31,False,False,False,False,False,False,False,False,False
+31,48639,"""16:47""", It gives I can see them doing RCV more than the older population.,no,,32,False,False,False,False,False,False,False,False,False
+32,48689,"""17:11""","I do have a couple of younger people that are my grandkids and I'm not seeing unfortunately, as much energy put into their voting is my energy. Being put into my boating. I, I know that they have a first choice, they kind of sway into which direction they want, but I don't see them researching anything. I'm usually talking to him about it, to try to make sure they understand the options and what's going on in the world. But I",yes," 1. The speaker has some grandchildren who are young in age.
+2. The speaker observes less energy being put into the grandchildren's voting compared to their interest in boating.
+3. The grandchildren have a preferred candidate, but they don't seem to research or investigate the issues.
+4. The speaker tries to engage the grandchildren in conversations about politics and encourages them to understand the options and world events.",33,False,False,False,False,True,True,True,False,False
+33,48689,"""17:11"""," But I haven't seen the app or problem, so it still would concern me.",yes," 1. The author has not seen the specific app or problem being referred to.
+2. This lack of familiarity with the subject causes concern for the author.",34,False,False,False,False,False,False,False,False,True
+34,48689,"""17:58""","Would we be ready to move on now, should we press the button?",no,,35,False,False,False,False,False,False,False,False,False
+35,48689,"""18:11""","Does anybody else have anything? Otherwise, I'll hit the button over here but I don't want to interrupt anybody from the",no,,36,False,False,False,False,False,False,False,False,False
+36,48689,"""19:52""","Once again, I'd be voting to keep the status quo of what we've been doing. It seems to be working. The one that I fear the most is to have a primary where there's the possibility of having two Democrats or two Republicans going against each other and not having one party for each. I really think it's a good system to have a Democrat and Republican going against each other. And I certainly would want the choice between the two of them so that I can make the best.",yes," 1. The speaker would vote to maintain the current approach.
+2. They believe the current system is working.
+3. The speaker is concerned about a primary where two Democrats or two Republicans might run against each other, leaving one party without a candidate.
+4. They think it's beneficial to have a Democrat and a Republican competing against each other.
+5. The speaker wants the option to choose between the two parties to make an informed decision.",37,False,True,False,False,False,False,False,False,False
+37,48689,"""19:52"""," possible choice, but keeping in mind that the parties are both represented",yes," 1. The decision to hire a mediator is a possible choice.
+2. The mediator should be a neutral third party.
+3. The mediator's role is to facilitate communication and negotiation.
+4. The parties should be prepared to make compromises.
+5. The parties should be represented during the mediation process.
+6. Keeping the parties represented helps ensure that their interests are protected.",38,False,False,False,False,False,False,False,False,False
+38,48639,"""20:27""",I agree. I I'm going toward keeping the current system. It's tried in Peru's that good work.,no,,39,False,False,False,False,False,False,False,False,False
+39,48686,"""20:47""","I would disagree. And I would actually be in favor of the Open primary system much like they use in the state of Louisiana where everybody runs in one primary. I think the main advantage to that is that when you have a separate Republican in a separate Democratic primary, the issues in those in those elections, tend to get narrow on each side to their specific, you know, don't party inclinations, and if you are in an",yes," 1. The text discusses the author's preference for an Open primary system, such as the one used in Louisiana.
+2. In a separate Republican and Democratic primary, the issues tend to narrow down to specific party inclinations.
+3. The author believes that an Open primary system would result in more diverse issues being discussed during elections.",40,True,False,False,False,False,True,True,False,False
+40,48686,"""20:47"""," Open primary. I feel that you're going to have to be kept more honest than you have to be abreast of all the issues involved and I think it results in better outcomes, even if that means you get to two party members facing off in the final.",yes," 1. The speaker believes in open primary.
+2. They think it is important to keep political parties more honest.
+3. It is necessary for those in power to be aware of all the issues involved.
+4. The speaker thinks that open primary results in better outcomes, even if it means two party members facing off in the final.",41,True,True,False,False,False,False,False,False,False
+41,48686,"""21:29""",,no,,42,False,False,False,False,False,False,False,False,False
+42,48615,"""21:33""","I'll have to admit at, I'm not entirely sure this, but if it's an Open Primary than if someone's an independent, then they can choose. Whoever is on the, you know, the whoever's up for a vote, because my son has an independent always wishes that he could have voted in the primaries when he can't, and I'm in PA,",yes," 1. The text is about an Open Primary system.
+2. In an Open Primary, if someone is an independent, they have the ability to choose.
+3. The choice is available for whoever is up for a vote.
+4. The speaker's son, who is an independent, wishes he could have voted in past primaries.
+5. The speaker is from Pennsylvania (PA).",43,False,False,False,False,False,False,False,False,True
+43,48686,"""21:58""","That's interesting. I used to live in the state of Ohio and in Ohio for the primaries, you have the option of choosing which ballot you wanted to vote in and it didn't matter what your party registration was, it was, what ballot you requested? Was the primary that you got the vote?",no,,44,False,False,False,False,False,False,False,False,False
+44,10017,"""22:18""",That's interesting. I didn't knows it differs by state because the New York Independents are unable to vote in the primaries.,yes," 1. The New York Independents are unable to vote in primaries.
+2. This differs by state.",45,False,False,False,False,False,False,True,False,False
+45,48615,"""22:32""","Yeah. So the change that I would hope for is just more more participation and general and the election system but even if you're an independent, you get a chance to vote on the bigger field rather than one narrow Focus.",no,,46,False,False,False,False,False,False,False,False,False
+46,48686,"""23:21""","I will add that on the other one of the other portions of the system, which is whether, you know, a defeated defeated person, the primaries could reruns. And independent. I generally feel that that should be a valid option and if that person can, you know, you know, generate a following and when win an election when facing the broader constituency than that, should be allowed. I don't think the fact that they might act as a spoiler to the party that they lost to should necessarily be a consideration.",yes," 1. The speaker believes that people who are defeated in primaries should have the option to run again.
+2. They think this option should be available regardless of whether there is a rerun of the primaries.
+3. An independent run should be allowed for defeated candidates if they can generate a following.
+4. The speaker believes that a candidate's ability to win an election in a broader constituency should be the primary consideration.
+5. The speaker does not think that the possibility of a defeated candidate acting as a ""spoiler"" to the party they lost to should be a factor in determining their eligibility to run again.",47,True,False,False,False,False,False,False,False,False
+47,48686,"""23:21""", No.,no,,48,False,False,False,False,False,False,False,False,False
+48,48689,"""23:59""","Yeah, I go both ways on that subject. As far as it goes, I mean, politics are politics and whoever's up there. Getting voted should be able to present themselves in the and participate, but I do fear that it would take away from candidate that did win the primary.",yes," 1. The speaker has a neutral stance on the subject of political affiliations.
+2. They believe that all candidates, regardless of political affiliations, should be able to present themselves and participate in politics.
+3. The speaker acknowledges that getting voted should be based on the candidate who won the primary.
+4. They express a fear that including candidates from other political affiliations could take away from the candidate who won the primary.",49,True,True,False,False,False,False,True,False,False
+49,48689,"""24:32""","And I also did want to make a point of with the having two Democrats and two Republicans come up for the general election. It's really probably would keep the candidates more in the middle and have better thought, process out for both sides because they'd have to be pleasing both sides, my fear would be that once the election occurred and it was over. They go back into",yes," 1. The goal is to have two Democrats and two Republicans in the general election.
+2. This setup would ideally keep the candidates more in the middle.
+3. The candidates would need to consider both sides and have better thought-out ideas.
+4. The candidates would have to please both sides.
+5. There is a fear that after the election, the candidates may revert to their original political leanings.",50,True,True,False,False,False,False,True,False,False
+50,48689,"""24:32"""," they're either left or right side and that really changed their views, but they will be saying them during the election. So I still think I'd rather have the Democrat Republican general election.",no,,51,False,False,False,False,False,False,False,False,False
+51,48689,"""26:44""","Again, I would not like that. I think it's confusing. I think it complicates and I think the system that we use is a really good system currently",no,,52,False,False,False,False,False,False,False,False,False
+52,48639,"""26:55""",I don't think we should have Fusion system. It's confusing and I don't think you,no,,53,False,False,False,False,False,False,False,False,False
+53,48686,"""27:06""",,no,,54,False,False,False,False,False,False,False,False,False
+54,48686,"""27:06""","I think that such a labeling disincentivizes, educating yourself about the candidate. And I mean, I think we have enough problems as it is with people who just go into the polling booth and they just hit the party label and that's all the thought they put in the voting. I think this just accelerates that.",yes," 1. The use of labels for candidates can discourage education about the candidate.
+2. There are already issues with people voting based solely on party labels.
+3. The use of labels in voting may exacerbate this issue.",55,False,True,False,False,False,True,False,False,False
+55,48638,"""27:28""",I'm in agreement with you.,yes," I cannot summarize the text as there is no text provided to summarize. However, I can provide an example of the output format you requested:
+
+1. Argument one is a point of agreement.
+2. Argument two is another point of agreement.",56,False,False,False,False,False,False,False,False,False
+56,48689,"""27:38""",Does anybody favorite? I sure I sure do.,no,,57,False,False,False,False,False,False,False,False,False
+57,9856,"""27:44""",I agree with all of y'all. I think that would just be very that this thing could be more confusing to see somebody's name on there twice.,yes," 1. You agree with the group.
+2. It would be confusing to see someone's name on the list twice.
+3. This situation could make the thing more confusing.",58,False,False,True,False,False,False,False,False,False
+58,48639,"""27:53""",I agree.,no,,59,False,False,False,False,False,False,False,False,False
+59,9809,"""27:57""",I agree.,no,,60,False,False,False,False,False,False,False,False,False
+60,48639,"""29:11""",I vote for keeping the current system.,no,,61,False,False,False,False,False,False,False,False,False
+61,48689,"""29:16""",I'm glad you said it before me this time but I do too.,no,,62,False,False,False,False,False,False,False,False,False
+62,9856,"""29:20""",And I do third.,no,,63,False,False,False,False,False,False,False,False,False
+63,48638,"""29:23""",I also do.,no,,64,False,False,False,False,False,False,False,False,False
+64,48686,"""29:26""","I'll mix it up a little bit. I don't agree with it federally because it because there's too few representatives in a state that if you use proportional representation, each state would would have a different result and states that only have one represented or two representative be different than ones that had, you know, 15 or 20. So it wouldn't be even, I do think it's a possibility that you could use it at maybe the state level or like at the local level where you have like, you know, like City council's where you have like each district.",yes," 1. The speaker does not agree with using proportional representation at the federal level.
+2. The reason for this is that there are too few representatives in some states, which would lead to an uneven distribution of representation.
+3. The speaker suggests that proportional representation could be used at the state level or local level, such as in city councils.
+4. In these cases, each district would have a set number of representatives, leading to a more even distribution of representation.",65,False,False,False,True,False,False,False,False,False
+65,48686,"""29:26"""," Has their own representative but then you also have at-large members. So I think the the smaller the constituency. I think the and you know, the wider the pool though. The better that it might",no,,66,False,False,False,False,False,False,False,False,False
+66,48686,"""30:07""",,no,,67,False,False,False,False,False,False,False,False,False
+67,48689,"""30:13""","I don't think I'd be opposed to that. I certainly would be at a federal level without a doubt, but at the state level in some situations I think I could go along with it.",yes," 1. The speaker would not object to the matter at a federal level.
+2. The speaker might consider agreeing with the matter at the state level, in certain situations.",68,False,False,False,False,False,False,False,False,True
+68,48689,"""33:17""","I take it. We're supposed to start discussing these issues at this point and I put in, are there any changes that anybody would propose that they feel comfortable with outside of what we're talking about? I really support the current system that's going forward. Some of the topics that we're going to be addressing such as, you know, political investments from outside corporations and stuff. That's a whole nother topic that we'll be talking about.",no,,69,False,False,False,False,False,False,False,False,False
+69,48689,"""33:17""", And I think that there's some changes that are necessary there. I certainly think that there are some changes necessary with the protection of the voting process but we're going to be discussing that if we just looked at exactly what we've been discussing. I've been trying to think of,no,,70,False,False,False,False,False,False,False,False,False
+70,48639,"""35:50""",,no,,71,False,False,False,False,False,False,False,False,False
+71,48639,"""35:50""","Daniel, I think bad.",no,,72,False,False,False,False,False,False,False,False,False
+72,48639,"""35:50"""," If we could try out this new arson be system before being implemented. As a great idea, I think I would feel more comfortable doing",no,,73,False,False,False,False,False,False,False,False,False
+73,48615,"""36:06""","yeah, I agree, I couldn't think of how to say that but that was simple and that would be a, my choice for a",no,,74,False,False,False,False,False,False,False,False,False
+74,48638,"""36:16""",I would absolutely be in favor of doing that as well. It would be interesting to see how it work for sure.,no,,75,False,False,False,False,False,False,False,False,False
+75,48686,"""36:23""","I don't I don't think the question needs to be changed and I do think the answer is yes, I think there are ways. You probably have to put a disclaimer on the ballot but I think it certainly could be done.",yes," 1. The question does not need to be changed.
+2. The answer is yes, it is possible to have ways.
+3. A disclaimer might need to be added to the ballot.
+4. It is certain that it could be done.",76,False,False,False,False,False,False,False,True,False
+76,48689,"""36:36""","I would hope not to try to do it with presidential election. I would propose to do it on a much smaller scale, because we're not really good at making changes with what we do.",no,,77,False,False,False,False,False,False,False,False,False
+77,10017,"""36:56""","Yeah, I think, you know where this question came from. I I feel like a lot of us are are comfortable with with how the system is. I'm open to some of the changes. I think one of the questions previously was, you know what you do a big change or would you do small changes? I'm open to small changes. The, the only thing is, you know, so I like to try things out before actually making a huge change especially to something like, like voting. So,",yes," 1. The person is familiar with the current system.
+2. They are open to some changes.
+3. They prefer small changes over big ones.
+4. They like to try out changes before implementing them, especially for important matters like voting.",78,False,False,False,False,False,False,True,False,False
+78,10017,"""36:56"""," And I think more people would be on board if they're like, well I'm open to it but I'm not fully on board to have it implemented on a wide scale. So if that's that's why I was like if we can try something out I think more people would be fine with that.",yes," 1. The speaker thinks more people would be open to the idea if they can try it out first.
+2. Those people may not be fully convinced, but they are open to the idea.
+3. The speaker suggests a trial implementation to get more people on board.
+4. The speaker believes that more people would be fine with this approach.",79,False,False,False,False,False,False,False,True,False
+79,48686,"""37:39""","This is just kind of a strangest side, but RCV voting is very similar to the way they select Olympics Olympic hosting sites. You know there's usually five or six candidates and then they vote and then they drop the bottom voter. The only difference is instead of ranking their choices, they just vote. They just revote amongst the survivors until you get to the one that wins.",no,,80,False,False,False,False,False,False,False,False,False
+80,48689,"""38:04""","I'd have a strong continuing concern that people would know who their first choice is and kind of throw in their second through fifth choice, and it just concerns me. I know when I'm looking at who I want as a president. I look hard. I was strong. But when I pick him, I pick on him. And I just don't think there's that much effort from some people, and that would concern me. I think they'll pick their first choice. I don't think they're going to put as much effort.",no,,81,False,False,False,False,False,False,False,False,False
+81,48689,"""38:04"""," Effort into their second third, and fourth and fifth.",no,,82,False,False,False,False,False,False,False,False,False
+82,48615,"""38:40""","I think in not to go over the RC B again, but I just keep thinking back to the, my boys, the younger generation at least from my experience really want to be engaged and want more choices. And that's where my hope lies in implementing or on down the road.",no,,83,False,False,False,False,False,False,False,False,False
+83,48615,"""38:40""", Having this being implemented.,no,,84,False,False,False,False,False,False,False,False,False
+84,48689,"""39:17""","I know some of this comes because I've got grandkids, my grandkids are extremely smart, they're extremely interested, and change the ready for all sorts of changes with the world, which I'm glad for, and they support it and they like it. But",no,,85,False,False,False,False,False,False,False,False,False
+85,48689,"""39:17""", And they will know who they're they want as our president. But I don't think they're going to have too much on the next choices and that's still where I'm concerned.,no,,86,False,False,False,False,False,False,False,False,False
+86,48639,"""39:43""","I agree with the choices, they know who they want for president the grandkids, but the rest of the know,",no,,87,False,False,False,False,False,False,False,False,False
+87,10017,"""40:08""","Yeah, I think for large elections. I think a majority of people are are with you. When you say, you know, I know who I'm voting for just going to be either this person or that person, I think maybe for the smaller elections, that's where ranked Choice voting might be helpful. And maybe for those those people I think, Mark, you mentioned, there are, there is a population out there that that do want more of a choice and aren't just so black and white and",yes," 1. The topic is about elections and voting systems.
+2. The speaker believes that a majority of people have already decided who they will vote for in large elections.
+3. In smaller elections, ranked-choice voting might be helpful.
+4. There is a population that wants more choices and are not decided between two candidates.",88,True,False,False,False,False,True,True,False,False
+88,10017,"""40:08"""," and they're the ones that dig into it and want to vote and have their vote counted that way. But that's why, that's why I actually voted for the best balance how to best balance and RCV election question because I think that's",yes," 1. The text discusses the topic of Ranked Choice Voting (RCV) elections.
+2. Some people are keen on participating in RCV elections and want their votes to be counted.
+3. The author of the text voted for the best balance in an RCV election question.
+4. The author believes that striking a balance is crucial in RCV elections.",89,True,False,False,False,False,False,False,False,False
+89,48689,"""41:09""","I do have to say, probably the best balances to do it on smaller elections.",no,,90,False,False,False,False,False,False,False,False,False
+90,48689,"""41:09"""," Try, I need at some point in the future. Maybe, maybe somebody could convince me but boy, not until they tried a lot on smaller elections and show me the energy that people are going to have to look into alternate choices and be able to write their choices.",yes," 1. The person is hesitant to support trying something new in the future.
+2. They may potentially be convinced, but it would require significant effort.
+3. They believe that people need to show interest and energy in exploring alternate choices.
+4. They want to see people engaging in this exploration through smaller elections.
+5. They emphasize the importance of being able to write in their choices.",91,True,False,False,False,False,False,True,False,False
+91,48639,"""41:32""","Yes, I agree. It's got to be at the local level, the little State elections for your city or whatever, but not in the big Federer.",yes," 1. The importance of local-level elections is highlighted.
+2. These elections are for positions such as city officials.
+3. The contrast is made with larger-scale federal elections.
+4. The context of the statement refers to tennis player Roger Federer, but it is unclear how this relates to the main point.",92,False,False,False,False,False,False,True,False,False
+92,48686,"""41:45""","So if it was like, so I think it was like a situation where it's a rank Choice voting, and it's like seven candidates for three seats to me, that would make some sense. I think it becomes more problematic when you've got multiple candidates and you've got only one winner.",yes," 1. A situation with rank choice voting and seven candidates for three seats was described.
+2. It was mentioned that this type of system makes sense.
+3. The situation was contrasted with having multiple candidates and only one winner, which was described as more problematic.",93,True,False,False,False,False,False,False,False,False
+93,48689,"""42:02""",That's a good point.,no,,94,False,False,False,False,False,False,False,False,False
+94,9856,"""42:08""",I like your question Clemens because I think if a lot of people they don't keep up with what's going on anyhow and some people aren't going to rank all those people. They're just going to pick the number one and and move on. Is that fair?,no,,95,False,False,False,False,False,False,False,False,False
+95,48638,"""42:26""","I agree with you there. That's exactly what they're going to do. That's kind of how things go now depending on the person, but I agree.",no,,96,False,False,False,False,False,False,False,False,False
+96,10017,"""42:39""","Kind of go back and forth in this because like I said before, when I had to do it for the New York City mayoral election, I was never more involved in kind of like the research because I wanted to look into every single one and there were so many candidates. But you know after quite a few hours of research I was getting tired and I was like, well I know the top three. I'm just going to kind of list the the remaining ones and in whatever order because you know, it was a lot of research and to be honest, I know that a lot of my friends did.",no,,97,False,False,False,False,False,False,False,False,False
+97,10017,"""42:39"""," Don't do the same because they're not as invested. And that's why I think this question so important because I want to make sure that there is a fair and equal vote. Well, don't rank their second. Third fourth choice or don't even put the time in to the",no,,98,False,False,False,False,False,False,False,False,False
+98,48689,"""43:25""","And if they don't put more than one, they can lose their vote. A lot of people could lose their vote, and I'd be very fearful",yes," 1. If some people do not put more than one vote in the election
+2. They can lose their vote
+3. A large number of people could lose their vote as a result
+4. This would make the speaker feel fearful",99,True,False,True,False,False,False,True,False,False
+99,48689,"""44:15""","again, I propose this question because I just",no,,100,False,False,False,False,False,False,False,False,False
+100,48689,"""44:15"""," Can't think of any changes that I'd be comfortable with, with the presidential elections. This point, nothing that I've heard would change my my thinking toward how we do it. And I was just wondering if anybody came across anything that they'd had out of their state or whatever that they could propose, that might be even a little change to what we currently do.",no,,101,False,False,False,False,False,False,False,False,False
+101,48639,"""44:43""",Diane I agree. I think that especially the presidential election the way it's set up. The only thing I think we're going to talk about it later. The Electoral College I do have some thoughts about that.,no,,102,False,False,False,False,False,False,False,False,False
+102,48689,"""45:36""",I would be happy to keep it just the way it is.,no,,103,False,False,False,False,False,False,False,False,False
+103,48686,"""45:49""","I think small changes are good. I think even experimentation on a certain level as good as well, but I don't see some fundamental error that needs to be corrected. Here is what I get from all of this.",no,,104,False,False,False,False,False,False,False,False,False
+104,10017,"""46:07""",,no,,105,False,False,False,False,False,False,False,False,False
+105,10017,"""46:07""","yeah, I agree that",no,,106,False,False,False,False,False,False,False,False,False
+106,48639,"""46:15""","This was my question, just keep it simple. I mean, I've been building for 50 years and I can't think of a big, a big change especially in the federal list.",no,,107,False,False,False,False,False,False,False,False,False
+107,10017,"""48:22""",,no,,108,False,False,False,False,False,False,False,False,False
+108,10017,"""48:22""",Guess they're giving us a taste of what rank Choice voting.,no,,109,False,False,False,False,False,False,False,False,False
+109,48689,"""48:30""",,no,,110,False,False,False,False,False,False,False,False,False
