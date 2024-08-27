@@ -20,7 +20,12 @@ TODO
 TODO
 
 ## Notes for Future Developers
-TODO
+Please run <code>git update-index --skip-worktree codebase/api_keys.py</code> before beginning development to avoid leaking API Keys.
+You may also find it helpful to run the following commands to streamline your workflow:
+* <code>git update-index --skip-worktree codebase/api_keys.py</code>
+* <code>git update-index --skip-worktree data/</code>
+* <code>git update-index --skip-worktree codebase/processing</code>
+* <code>git update-index --skip-worktree results/</code>
 
 ## Gallery
 <img width="495" alt="Image1-DDL_Transcript_Analyzer" src="https://github.com/user-attachments/assets/718a8a96-5ba5-4455-8bbe-639137e9dda1">
