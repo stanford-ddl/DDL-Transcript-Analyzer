@@ -6,3 +6,7 @@ session_num = '1' # THIS IS A STRING - The session currently being analyzed.
 DATA_DIR = 'data'
 PROCESSING_DIR = 'codebase/processing'
 RESULTS_DIR = 'results'
+
+# Version Information
+VERSION_NUMBER = '1.0.0'
+VERSION_DATE = "August 26, 2024"

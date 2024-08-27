@@ -7,7 +7,7 @@ import sys
 import threading
 
 from codebase import config
-from codebase.config import DATA_DIR, RESULTS_DIR, PROCESSING_DIR
+from codebase.config import DATA_DIR, RESULTS_DIR, PROCESSING_DIR, VERSION_NUMBER, VERSION_DATE
 from codebase.clean import clean_input_data
 from codebase.process import process_cleaned_data
 from codebase.analyze import analyze_processed_data
@@ -208,7 +208,7 @@ def create_info_icon(parent, row, column, text):
 
 # The key for sorting sessions.
 # This sorts all numerical sessions (theoretically, all of them)
-# followed by string sessions
+# followed by string sessions.
 def sort_sessions_key(session):
     try:
         return (0, int(session))
@@ -219,7 +219,7 @@ def sort_sessions_key(session):
 def session_selection(root, current_frame):
     current_frame.destroy()
     frame = tk.Frame(root)
-    frame.pack(expand=True, padx=20, pady=20)
+    frame.pack(expand=True)
 
     sessions = sorted([f.name for f in os.scandir(DATA_DIR) if f.is_dir()], key=sort_sessions_key)
 
@@ -250,11 +250,15 @@ def session_selection(root, current_frame):
 
     # Back Button
     back_button = tk.Button(frame, text="Back", command=lambda: restart_program(root, frame))
-    back_button.grid(row=button_row, column=0, pady=20, sticky='w')
+    back_button.grid(row=button_row, column=0, pady=20, padx=20)
 
     # Start Button
     start_button = tk.Button(frame, text="Start", command=lambda: progress_bar(root, sessions, session_vars, debug_var, restart_var, frame))
-    start_button.grid(row=button_row, column=2, pady=20, sticky='e')
+    start_button.grid(row=button_row, column=2, pady=20, padx=20)
+
+    # Version Information
+    version_text = tk.Label(frame, text=f"Version {VERSION_NUMBER} - {VERSION_DATE}", font=("Arial", 12))
+    version_text.grid(row=button_row+1, column=0, columnspan=3, padx=20)
 
     # Increase window size if needed
     new_height = max(300, 200 + len(sessions) * 28)
@@ -262,7 +266,7 @@ def session_selection(root, current_frame):
 
 # GUI Main Menu
 def main_menu(root):
-    root.title("Stanford DDL Transcript Analyzer v1.0")
+    root.title("Stanford DDL Transcript Analyzer")
     frame = tk.Frame(root)
     frame.pack(expand=True)
 
@@ -281,6 +285,10 @@ def main_menu(root):
     # Start Button
     start_button = tk.Button(frame, text="Start", command=lambda: session_selection(root, frame))
     start_button.grid(row=2, column=1, pady=20, padx=20)
+
+    # Version Information
+    version_text = tk.Label(frame, text=f"Version {VERSION_NUMBER} - {VERSION_DATE}", font=("Arial", 12))
+    version_text.grid(row=3, column=0, columnspan=2, padx=20)
 
 # Code starts here
 if __name__ == '__main__':
