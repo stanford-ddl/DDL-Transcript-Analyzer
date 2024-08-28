@@ -1,6 +1,8 @@
 # DDL Transcript Analyzer
 The Stanford DDL Transcript Analyzer takes in raw transcripts from deliberations and performs argument analysis on them.
 
+### This project is still in pre-release development. The codebase makes references to "Version 1.0.0", but this version has not been officially released yet.
+
 ## Table of Contents
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
