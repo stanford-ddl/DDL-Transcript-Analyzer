@@ -58,7 +58,7 @@ def run_session(phase_progress_bar, transcript_progress_bar, transcript_progress
     analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts, root)
 
     # Delete this session's processing path so it does not interfere with future sessions
-    #delete_processing_path(config.session_num) TODO: Uncommet this when testing is finished
+    delete_processing_path(config.session_num)
     
     root.title(f"Session {config.session_num} - 100% Complete")
     print("\nFinished working with Session", config.session_num)
