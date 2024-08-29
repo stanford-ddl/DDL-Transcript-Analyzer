@@ -80,6 +80,29 @@ def clean_input_data(data_path, transcript_progress_bar, transcript_progress_tex
               if cell.value and isinstance(cell.value, str) and cell.value.isdigit():
                  cell.value = int(cell.value)
 
+        # Merge consecutive rows with the same speaker and time
+        rows_to_delete = []
+        for row_idx, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
+            if row_idx > 2:
+                prev_row = ws[row_idx - 1]
+                if row[0] == prev_row[0].value and row[1] == prev_row[1].value:  # Same speaker and time
+                    prev_row[2].value += " " + (row[2] or "")  # Concatenate text
+                    rows_to_delete.append(row_idx)
+
+        # Delete merged rows
+        for row_idx in reversed(rows_to_delete):
+            ws.delete_rows(row_idx)
+
+        # Remove rows with empty text
+        rows_to_delete = []
+        for row_idx, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
+            if not row[2]:  # Check if text column is empty
+                rows_to_delete.append(row_idx)
+
+        # Delete rows with empty text
+        for row_idx in reversed(rows_to_delete):
+            ws.delete_rows(row_idx)
+
         wb.save(path)
 
         deliberations_cleaned += 1
