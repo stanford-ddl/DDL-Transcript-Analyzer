@@ -1,5 +1,6 @@
 # API Key
 codebase/api_keys.py
+codebase/__pycache__/api_keys.cpython-312.pyc
 
 # Data Folder
 data/

@@ -8,5 +8,5 @@ PROCESSING_DIR = 'codebase/processing'
 RESULTS_DIR = 'results'
 
 # Version Information
-VERSION_NUMBER = '1.1.0' # major.minor.patch
-VERSION_DATE = "August 27th, 2024"
+VERSION_NUMBER = '1.1.1' # major.minor.patch
+VERSION_DATE = "September 2nd, 2024"

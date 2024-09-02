@@ -229,7 +229,7 @@ def session_selection(root, current_frame):
     instructions_text.grid(row=0, column=0, columnspan=3, pady=10, sticky='ew')
 
     # Session Selection Info Icon
-    create_info_icon(frame, 1, 0, "Please select the sessions you want to run.\n\nTo add or remove sessions, please load your data into\n\"ddl-deliberation-args/data/{session_num}\"\nwith {session_num} being replaced by the\nappropriate session number for your data.")
+    create_info_icon(frame, 1, 0, "Please select the sessions you want to run.\n\nTo add or remove sessions, please load your data into\n\"DDL-Transcipt-Analyzer/data/{session_num}\"\nwith {session_num} being replaced by the\nappropriate session number for your data.")
     
     # Options Info Icon
     create_info_icon(frame, 1, 2, "Additionally, you may toggle the following options:\n\nDebug Mode: Debug statements will be shown.\nUse if the program is outputting odd results\n\nHard Restart: Normally, the program will resume where it\nleft off if you must restart due to an error.\nHowever, this option will make the program delete all previous\nprogress and complete reanalyze the selected sessions.")
