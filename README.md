@@ -17,7 +17,7 @@ The Stanford DDL Transcript Analyzer takes in raw transcripts from deliberations
 8. Open the <code>results</code> folder.
 9. The results can be found in subfolder identical in name to the data folders you created in Step 3.
 
-*In the future, we hope to remove the need for subfolders to simplify ease of use.
+*In the future, we hope to remove the need for subfolders to simplify ease of use: [Issue #36](https://github.com/stanford-ddl/DDL-Transcript-Analyzer/issues/36)
 
 
 ## Notes for Future Developers
