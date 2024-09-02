@@ -7,7 +7,7 @@ The Stanford DDL Transcript Analyzer takes in raw transcripts from deliberations
 * [Gallery](#gallery)
 
 ## Usage
-1. Navigate to the folder this program was downloaded to <code>DDL-Transcript-Analyzer</code>.
+1. Navigate to the folder this program was downloaded to: <code>DDL-Transcript-Analyzer</code>.
 2. Open the <code>data</code> folder.
 3. Create folders for each session you would like to analyze. For example, <code>1</code> for Session 1.* If that folder already exists, please ensure it is empty.
 4. Place your data of <code>.xlsx</code> or <code>.csv</code> files into their appropriate session folder.
@@ -15,7 +15,7 @@ The Stanford DDL Transcript Analyzer takes in raw transcripts from deliberations
 6. Run <code>main.py</code> and follow the on-screen prompts. If the program ever errors, redo this step.
 7. Return to the main <code>DDL-Transcript-Analyzer</code> folder.
 8. Open the <code>results</code> folder.
-9. The results can be found in subfolder identical in name to the data folders you created in Step 3.
+9. The results can be found in subfolders identical in name to the data folders you created in Step 3.
 
 *In the future, we hope to remove the need for subfolders to simplify ease of use: [Issue #36](https://github.com/stanford-ddl/DDL-Transcript-Analyzer/issues/36)
 
