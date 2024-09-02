@@ -2,26 +2,28 @@
 The Stanford DDL Transcript Analyzer takes in raw transcripts from deliberations and performs argument analysis on them.
 
 ## Table of Contents
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installing](#installing)
 * [Usage](#usage)
 * [Notes for Future Developers](#notes-for-future-developers)
 * [Gallery](#gallery)
-          
-## Getting Started
-### Prerequisites
-TODO
-
-### Installing
-TODO
 
 ## Usage
-TODO
+1. Navigate to the folder this program was downloaded to <code>DDL-Transcript-Analyzer</code>.
+2. Open the <code>data</code> folder.
+3. Create folders for each session you would like to analyze. For example, <code>1</code> for Session 1.* If that folder already exists, please ensure it is empty.
+4. Place your data of <code>.xlsx</code> or <code>.csv</code> files into their appropriate session folder.
+5. Exit the <code>data</code> folder and return to the main <code>DDL-Transcript-Analyzer</code> folder.
+6. Run <code>main.py</code> and follow the on-screen prompts. If the program ever errors, redo this step.
+7. Return to the main <code>DDL-Transcript-Analyzer</code> folder.
+8. Open the <code>results</code> folder.
+9. The results can be found in subfolder identical in name to the data folders you created in Step 3.
+
+*In the future, we hope to remove the need for subfolders to simplify ease of use.
+
 
 ## Notes for Future Developers
 Please run the following commands before beginning development to avoid leaking API Keys and mixing up transcripts:
 * <code>git update-index --skip-worktree codebase/api_keys.py</code>
+* <code>git update-index --skip-worktree codebase/\_\_pycache\_\_/api_keys.cpython-312.pyc</code>
 * <code>git update-index --skip-worktree data/</code>
 * <code>git update-index --skip-worktree codebase/processing/</code>
 * <code>git update-index --skip-worktree results/</code>
