@@ -64,46 +64,53 @@ def clean_input_data(data_path, transcript_progress_bar, transcript_progress_tex
    deliberations_cleaned = 0
    # Remove all sheets except for the first one from each Workbook
    for deliberation in os.listdir(data_path):
-      path = os.path.join(data_path, deliberation)
-      if path.endswith('xlsx'):
-        wb = load_workbook(path)
-        ws = wb.worksheets[0]
-        ws.title = "in"
-        for sheet_name in wb.sheetnames:
-            if sheet_name != "in":
-              wb.remove(wb[sheet_name])
-        
-        # If a number is incorrectly stored as a string,
-        # convert it into a number.
-        for row in ws.iter_rows():
-           for cell in row:
-              if cell.value and isinstance(cell.value, str) and cell.value.isdigit():
-                 cell.value = int(cell.value)
+        path = os.path.join(data_path, deliberation)
+        if path.endswith('xlsx'):
+            wb = load_workbook(path)
+            ws = wb.worksheets[0]
+            ws.title = "in"
+            for sheet_name in wb.sheetnames:
+                if sheet_name != "in":
+                    wb.remove(wb[sheet_name])
+            
+            # If a number is incorrectly stored as a string,
+            # convert it into a number.
+            for row in ws.iter_rows():
+                for cell in row:
+                    if cell.value and isinstance(cell.value, str) and cell.value.isdigit():
+                        cell.value = int(cell.value)
 
-        # Merge consecutive rows with the same speaker and time
-        rows_to_delete = []
-        for row_idx, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
-            if row_idx > 2:
-                prev_row = ws[row_idx - 1]
-                if row[0] == prev_row[0].value and row[1] == prev_row[1].value:  # Same speaker and time
-                    prev_row[2].value += " " + (row[2] or "")  # Concatenate text
+            # Merge consecutive rows with the same speaker and time
+            rows_to_delete = []
+            for row_idx, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
+                if row_idx > 2:
+                    prev_row = ws[row_idx - 1]
+                    if row[0] == prev_row[0].value and row[1] == prev_row[1].value:  # Same speaker and time
+                        prev_text = str(prev_row[2].value) if prev_row[2].value is not None else ""
+                        current_text = str(row[2]) if row[2] is not None else ""
+                        
+                        if prev_text:
+                            prev_row[2].value = prev_text + " " + current_text
+                        else:
+                            prev_row[2].value = current_text
+                        
+                        rows_to_delete.append(row_idx)
+
+            # Delete merged rows
+            for row_idx in reversed(rows_to_delete):
+                ws.delete_rows(row_idx)
+
+            # Remove rows with empty text
+            rows_to_delete = []
+            for row_idx, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
+                if not row[2]:  # Check if text column is empty
                     rows_to_delete.append(row_idx)
 
-        # Delete merged rows
-        for row_idx in reversed(rows_to_delete):
-            ws.delete_rows(row_idx)
+            # Delete rows with empty text
+            for row_idx in reversed(rows_to_delete):
+                ws.delete_rows(row_idx)
 
-        # Remove rows with empty text
-        rows_to_delete = []
-        for row_idx, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
-            if not row[2]:  # Check if text column is empty
-                rows_to_delete.append(row_idx)
-
-        # Delete rows with empty text
-        for row_idx in reversed(rows_to_delete):
-            ws.delete_rows(row_idx)
-
-        wb.save(path)
+            wb.save(path)
 
         deliberations_cleaned += 1
         transcript_progress_bar['value'] += 100 / num_transcripts
