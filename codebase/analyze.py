@@ -363,18 +363,7 @@ def create_results_path(results_path):
   print("Done")
 
 # Generate topics[] and policy_variables[].
-# If there is a key, read it;
-# otherwise, generate it.
 def generate_policy_data(sampled_args, topics, policy_variables, results_path):
-  create_results_path(results_path)
-
-  # Check for a pre-existing key
-  KEY_NAME = "KEY_Session_" + config.session_num + ".txt"
-  KEY_PATH = os.path.join(results_path, "metrics", KEY_NAME)
-  if os.path.exists(KEY_PATH):
-    read_key(KEY_PATH, topics, policy_variables)
-    return
-  
   # Generate primary topic [0] and policies [1] - [7]
   topics_list = extract_topics(sampled_args)
   for i in range(len(topics_list)):
@@ -389,19 +378,31 @@ def generate_policy_data(sampled_args, topics, policy_variables, results_path):
 # Given a results folder and arguments,
 # analyze all of the arguments and generate results
 def analyze_processed_data(all_args_indexed, all_args, transcript_progress_bar, transcript_progress_text, num_transcripts, root):
-  results_path = os.path.join(RESULTS_DIR, config.session_num)
-  topics = []
-  policy_variables = []
-  try:
-     sampled_args = random.sample(all_args, 400) # sampling 400 arguments for policy generation
-  except ValueError:
-     error("There are not enough arguments in this session for a proper analysis!\nGo to analyze_processed_data() in analyze.py if this must be overwritten.")
-  generate_policy_data(sampled_args, topics, policy_variables, results_path) # generate or read topics[] and policy_variables[]
+   results_path = os.path.join(RESULTS_DIR, config.session_num)
+   topics = []
+   policy_variables = []
 
-  # Classify all arguments in Excel files
-  arg_sort(all_args_indexed, topics, policy_variables, results_path, transcript_progress_bar, transcript_progress_text, num_transcripts, root)
+   create_results_path(results_path)
 
-  # Generate Metrics
-  delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
-  cumulative_df = get_metric_sums(delibs, policy_variables[0])
-  get_metric_dist(cumulative_df, results_path)
+   # Check for a pre-existing key
+   KEY_NAME = "KEY_Session_" + config.session_num + ".txt"
+   KEY_PATH = os.path.join(results_path, "metrics", KEY_NAME)
+
+   # If a key exists, read it for topics[] and policy_variables[].
+   if os.path.exists(KEY_PATH):
+      read_key(KEY_PATH, topics, policy_variables)
+   # Else, generate topcs[] and policy_variables[].
+   else:
+      try:
+         sampled_args = random.sample(all_args, 400) # sampling 400 arguments for policy generation
+      except ValueError:
+         error("There are not enough arguments in this session for a proper analysis!\nGo to analyze_processed_data() in analyze.py if this must be overwritten.")
+      generate_policy_data(sampled_args, topics, policy_variables, results_path) # generate topics[] and policy_variables[]
+
+   # Classify all arguments in Excel files
+   arg_sort(all_args_indexed, topics, policy_variables, results_path, transcript_progress_bar, transcript_progress_text, num_transcripts, root)
+
+   # Generate Metrics
+   delibs = [os.path.join(results_path, csv) for csv in os.listdir(results_path) if csv.endswith(".csv")]
+   cumulative_df = get_metric_sums(delibs, policy_variables[0])
+   get_metric_dist(cumulative_df, results_path)

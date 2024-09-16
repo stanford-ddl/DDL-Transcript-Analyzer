@@ -24,7 +24,7 @@ def extract_args(path, deliberation):
     filter_cols = [col for col in cols if col.find("debugging") == -1]
     relevant_args_df = df.dropna(subset=filter_cols, how='all')
 
-    # list of Fileread's summarized arguments and their indexed order
+    # list of arguments and their indexed order
     arguments = list((relevant_args_df["All Arguments Summarized"], relevant_args_df["Order"]))
     arguments = [(x, y) for x, y in zip(arguments[0], arguments[1]) if str(x) != 'nan']
     return concat_args(arguments, deliberation)
@@ -109,6 +109,10 @@ def create_args_sheet(file_path, destination_folder):
     ws.cell(row=1, column=ORDER_COL, value="Order")
     ws.cell(row=1, column=HAS_ARG_COL, value="Has Arguments")
     ws.cell(row=1, column=ARG_SUM_COL, value="All Arguments Summarized")
+
+    # populate "Order" column
+    for row in range(2, ws.max_row + 1):
+       ws.cell(row=row, column=ORDER_COL).value = row - 1
 
     # populate "All Arguments Summarized" column
     for row in range(2, ws.max_row + 1):
